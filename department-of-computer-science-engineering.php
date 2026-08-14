@@ -14,7 +14,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1000" height="667" src="../wp-content/uploads/2025/11/computer.html" class="vc_single_image-img attachment-full" alt="" title="computer" srcset="assets/images/computer.jpg 1000w, assets/images/computer-300x200.jpg 300w, assets/images/computer-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1000" height="667" src="uploads/2025/11/computer.jpg" class="vc_single_image-img attachment-full" alt="" title="computer" srcset="assets/images/computer.jpg 1000w, assets/images/computer-300x200.jpg 300w, assets/images/computer-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -47,7 +47,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -63,7 +63,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -114,7 +114,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/07/Dr.Arpit-Solanki.html" alt="Hemant Vishwakarma">
+    <img decoding="async" src="uploads/2025/07/Dr.Arpit-Solanki.jpeg" alt="Hemant Vishwakarma">
     <div class="profile-content">
       <h4>Dr. Arpit Solanki</h4>
       <p>Asst. Professor(Ph.D)</p>
@@ -127,7 +127,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/classroom.jpg" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -138,7 +138,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/library.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Modern Classrooms">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -149,7 +149,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/1-1.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Modern Classrooms">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -160,7 +160,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Modern Classrooms">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -171,9 +171,9 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Syllabus &amp; Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/CS-III-and-IV-Sem-Syllabus.html' target='_blank'>CS III and IV Sem Syllabus</a></td>
+                             <td><a href='uploads/2025/12/CS-III-and-IV-Sem-Syllabus.pdf' target='_blank'>CS III and IV Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/CS-VII-and-VIII-Sem-Syllabus.html' target='_blank'>CS VII and VIII Sem Syllabus</a></td>
+                             <td><a href='uploads/2025/12/CS-VII-and-VIII-Sem-Syllabus.pdf' target='_blank'>CS VII and VIII Sem Syllabus</a></td>
                           </tr></table>
 		</div>
 	</div>
@@ -181,9 +181,9 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Syllabus &amp; Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/CS-III-and-IV-Sem-Syllabus.html' target='_blank'>CS III and IV Sem Syllabus</a></td>
+                             <td><a href='uploads/2025/12/CS-III-and-IV-Sem-Syllabus.pdf' target='_blank'>CS III and IV Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/CS-VII-and-VIII-Sem-Syllabus.html' target='_blank'>CS VII and VIII Sem Syllabus</a></td>
+                             <td><a href='uploads/2025/12/CS-VII-and-VIII-Sem-Syllabus.pdf' target='_blank'>CS VII and VIII Sem Syllabus</a></td>
                           </tr></table>
 		</div>
 	</div>
@@ -191,9 +191,9 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Syllabus &amp; Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/CS-III-and-IV-Sem-Syllabus.html' target='_blank'>CS III and IV Sem Syllabus</a></td>
+                             <td><a href='uploads/2025/12/CS-III-and-IV-Sem-Syllabus.pdf' target='_blank'>CS III and IV Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/CS-VII-and-VIII-Sem-Syllabus.html' target='_blank'>CS VII and VIII Sem Syllabus</a></td>
+                             <td><a href='uploads/2025/12/CS-VII-and-VIII-Sem-Syllabus.pdf' target='_blank'>CS VII and VIII Sem Syllabus</a></td>
                           </tr></table>
 		</div>
 	</div>
@@ -201,25 +201,25 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Notice Board</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/08/POLY-I-SEM-EX-JUNE-2026-BATCH-2025.html' target='_blank'>POLY I SEM EX JUNE 2026 BATCH 2025</a></td>
+                             <td><a href='uploads/2026/08/POLY-I-SEM-EX-JUNE-2026-BATCH-2025.pdf' target='_blank'>POLY I SEM EX JUNE 2026 BATCH 2025</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Notice-24.10.25-1.html' target='_blank'>Notice 24.10.25</a></td>
+                             <td><a href='uploads/2025/12/Notice-24.10.25-1.pdf' target='_blank'>Notice 24.10.25</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Notice-27-10-2025-ABC-id-1.html' target='_blank'>Notice 27-10-2025 ABC id</a></td>
+                             <td><a href='uploads/2025/12/Notice-27-10-2025-ABC-id-1.pdf' target='_blank'>Notice 27-10-2025 ABC id</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Notice-MPTAASC-05.08.25.html' target='_blank'>Notice MPTAASC 05.08.25</a></td>
+                             <td><a href='uploads/2025/12/Notice-MPTAASC-05.08.25.pdf' target='_blank'>Notice MPTAASC 05.08.25</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Notice-MPTAASC-05.08.25.html' target='_blank'>Notice MPTAASC 05.08.25</a></td>
+                             <td><a href='uploads/2025/12/Notice-MPTAASC-05.08.25.pdf' target='_blank'>Notice MPTAASC 05.08.25</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Notice_17.09.2025-1-scaled.html' target='_blank'>Notice_17.09.2025</a></td>
+                             <td><a href='uploads/2025/12/Notice_17.09.2025-1-scaled.jpg' target='_blank'>Notice_17.09.2025</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Urgent-Notice-01.09.2025-1-1.html' target='_blank'>Urgent Notice 01.09.2025-1</a></td>
+                             <td><a href='uploads/2025/12/Urgent-Notice-01.09.2025-1-1.pdf' target='_blank'>Urgent Notice 01.09.2025-1</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Urgent-Notice-01.09.2025-1.html' target='_blank'>Urgent Notice 01.09.2025</a></td>
+                             <td><a href='uploads/2025/12/Urgent-Notice-01.09.2025-1.pdf' target='_blank'>Urgent Notice 01.09.2025</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Notice-MPTAAS-08.11.2025-1.html' target='_blank'>Notice (MPTAAS) 08.11.2025</a></td>
+                             <td><a href='uploads/2025/12/Notice-MPTAAS-08.11.2025-1.pdf' target='_blank'>Notice (MPTAAS) 08.11.2025</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/12/Notice-07.10.2025.html' target='_blank'>Notice 07.10.2025</a></td>
+                             <td><a href='uploads/2025/12/Notice-07.10.2025.pdf' target='_blank'>Notice 07.10.2025</a></td>
                           </tr></table>
 		</div>
 	</div>

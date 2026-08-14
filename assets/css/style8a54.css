@@ -2736,11 +2736,17 @@ ul.sub-menu li {
 
 .stats-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  padding: 60px 30px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 60px 20px;
   background-color: #f9fafb;
   font-family: 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .stats-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .stat-card {

@@ -14,7 +14,7 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Finance Committee</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/03/finance-committee.html' target='_blank'>Finance Committee</a></td>
+                             <td><a href='uploads/2026/03/finance-committee.jpg' target='_blank'>Finance Committee</a></td>
                           </tr></table>
 
 		</div>

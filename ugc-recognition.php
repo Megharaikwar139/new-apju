@@ -14,9 +14,9 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>UGC Approvals</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/03/UGC-Expert-Committee-Visited_10-11-May-2019-Complaince-1.html' target='_blank'>UGC Expert Committee</a></td>
+                             <td><a href='uploads/2026/03/UGC-Expert-Committee-Visited_10-11-May-2019-Complaince-1.pdf' target='_blank'>UGC Expert Committee</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/06/05102020_043755_UGC_APPROVALS.html' target='_blank'>UGC APPROVALS</a></td>
+                             <td><a href='uploads/2025/06/05102020_043755_UGC_APPROVALS.pdf' target='_blank'>UGC APPROVALS</a></td>
                           </tr></table>
 
 		</div>
