@@ -1,0 +1,10 @@
+
+.udm-grid{display:flex;flex-wrap:wrap;gap:16px;}
+.udm-profile-card{display:flex;gap:12px;align-items:center;background:#fff;padding:12px;border-radius:8px;border:1px solid #eee;box-shadow:0 1px 3px rgba(0,0,0,0.03);}
+.udm-photo img{max-width:100px;border-radius:6px;}
+.udm-profile-content h4{margin:0 0 6px 0;font-size:18px;}
+.udm-designation, .udm-qualification{margin:0;font-size:14px;color:#555;}
+/* accordion */
+.udm-accordion .udm-accordion-item{border-bottom:1px solid #eee;margin-bottom:6px;}
+.udm-accordion .udm-accordion-toggle{width:100%;text-align:left;padding:12px;background:#90071c;color:#fff;border:none;cursor:pointer;font-weight:600;border-radius:6px;}
+.udm-accordion .udm-accordion-content{display:none;padding:12px;background:#eef5fb;border-radius:6px;margin-top:8px;}
