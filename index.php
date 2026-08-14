@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 <div id="content" class="site-content">
 <main id="primary" class="site-main">
-   
     
  
 		 
