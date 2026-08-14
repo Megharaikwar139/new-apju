@@ -1,0 +1,37 @@
+RewriteEngine On
+RewriteBase /APJ-WEB/new-apju/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([^/]+)/?$ single.php?type=blog&slug=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^voi/([^/]+)/?$ single.php?type=voi&slug=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^event/([^/]+)/?$ single.php?type=event&slug=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^notice-board/([^/]+)/?$ single.php?type=notice&slug=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^announcements/([^/]+)/?$ single.php?type=announcement&slug=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^media-coverage-aku/([^/]+)/?$ single.php?type=media&slug=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Check if the .php file actually exists before rewriting to it
+RewriteCond %{DOCUMENT_ROOT}/APJ-WEB/new-apju/$1.php -f
+RewriteRule ^([^/]+)/?$ $1.php [NC,L]
+
+# If .php file doesn't exist, route it as a dynamic page
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ single.php?type=page&slug=$1 [L,QSA]
