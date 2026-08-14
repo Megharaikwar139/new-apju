@@ -2,8 +2,6 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-		<?php $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/APJ-WEB/new-apju/'; ?>
-		<base href="<?php echo $base_url; ?>">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
