@@ -1,9 +1,16 @@
 <?php include 'header.php'; ?>
 <main id="primary" class="site-main">
-   
-    
- 
-		 
+    <div class="uk-container">
+        <div class="page-header-brief">
+            <h1>Department of Computer Science and Engineering</h1>
+            <div class="breadcrumb-wrap" aria-label="Breadcrumb">
+                <a href="index.php">Home</a>
+                <span>»</span>
+                <span>Department of Computer Science and Engineering</span>
+            </div>
+        </div>
+    </div>
+
 <article id="post-1746" class="post-1746 page type-page status-publish hentry">
 	 
 	<div class="uk-container">

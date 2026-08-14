@@ -1,20 +1,83 @@
-<?php require_once 'db.php'; ?>
+<?php
+require_once 'db.php';
+$useLiveReferenceAssets = !empty($useLiveReferenceAssets);
+?>
 <!doctype html>
 <html lang="en-US">
 <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
-		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="<?php echo $useLiveReferenceAssets ? 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css' : 'assets/css/owl.carousel.min.css'; ?>">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="assets/css/all.css">
-		<link href="assets/css/lineicons.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="<?php echo $useLiveReferenceAssets ? 'https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css' : 'assets/css/all.css'; ?>">
+		<link href="<?php echo $useLiveReferenceAssets ? 'https://cdn.lineicons.com/5.0/lineicons.css' : 'assets/css/lineicons.css'; ?>" rel="stylesheet">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
-		<link href="assets/css/aos.css" rel="stylesheet" />
+		<link href="<?php echo $useLiveReferenceAssets ? 'https://unpkg.com/aos@2.3.1/dist/aos.css' : 'assets/css/aos.css'; ?>" rel="stylesheet" />
 <link rel="stylesheet"
-href="assets/css/all.min.css">
+href="<?php echo $useLiveReferenceAssets ? 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' : 'assets/css/all.min.css'; ?>">
 
 		<script>
+			(function() {
+				function normalizeBrokenUploadPath(value) {
+					if (!value) return value;
+					let fixed = value.trim();
+					fixed = fixed.replace(/^https?:\/\/[^/]+\/+/, '');
+					fixed = fixed.replace(/^\/+/, '');
+					fixed = fixed.replace(/^(?:.*?\/)?wp-content\/uploads\//i, 'uploads/');
+					fixed = fixed.replace(/^(?:.*?\/)?aku\.thetask\.in\/wp-content\/uploads\//i, 'uploads/');
+					fixed = fixed.replace(/^\.\//, '');
+					fixed = fixed.replace(/^\.\.\//, '');
+					fixed = fixed.replace(/\.(html?|php)$/i, '');
+					if (fixed.indexOf('uploads/') === 0) return fixed;
+					return value;
+				}
+
+				async function resolveExistingUploadUrl(rawUrl) {
+					const base = normalizeBrokenUploadPath(rawUrl);
+					if (!base || base.indexOf('uploads/') !== 0) return null;
+					const candidates = [
+						base,
+						base + '.jpg',
+						base + '.jpeg',
+						base + '.png',
+						base + '.gif',
+						base + '.svg',
+						base + '.webp',
+						base + '.JPG',
+						base + '.JPEG',
+						base + '.PNG',
+						base + '.GIF',
+						base + '.SVG',
+						base + '.WEBP'
+					];
+
+					for (const candidate of candidates) {
+						try {
+							const response = await fetch(candidate, { method: 'HEAD', cache: 'no-store' });
+							if (response.ok) return candidate;
+						} catch (error) {
+							continue;
+						}
+					}
+					return null;
+				}
+
+				document.addEventListener("DOMContentLoaded", async function() {
+					const imageNodes = document.querySelectorAll('img[src*="wp-content/uploads"], img[src*="aku.thetask.in"], img[srcset*="wp-content/uploads"], img[srcset*="aku.thetask.in"]');
+
+					for (const image of imageNodes) {
+						const currentSrc = image.getAttribute('src');
+						const resolvedSrc = currentSrc ? await resolveExistingUploadUrl(currentSrc) : null;
+						if (resolvedSrc) {
+							image.setAttribute('src', resolvedSrc);
+							image.src = resolvedSrc;
+							image.setAttribute('srcset', '');
+						}
+					}
+				});
+			})();
+
 			document.addEventListener("DOMContentLoaded", function() {
 				let menuItems = document.querySelectorAll(".mobile-nav li.menu-item-has-children > a");
 
@@ -50,7 +113,7 @@ href="assets/css/all.min.css">
 
 
 
-		<title>Dr APJ University Indore</title>
+		<title><?php echo htmlspecialchars($pageTitle ?? 'Dr APJ University Indore', ENT_QUOTES, 'UTF-8'); ?></title>
 <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
 <link rel="alternate" type="application/rss+xml" title="Dr APJ University Indore &raquo; Feed" href="feed.php" />
@@ -95,6 +158,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
+<?php if ($useLiveReferenceAssets): ?>
+<link rel='stylesheet' id='udm-frontend-css-css' href='https://aku.ac.in/wp-content/plugins/Faculty_manager/css/udm-frontend.css?ver=6.9.5' media='all' />
+<link rel='stylesheet' id='wp-filr-style-css' href='https://aku.ac.in/wp-content/plugins/fileupload/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='uikit-css' href='https://aku.ac.in/wp-content/themes/aku/assets/uikit/css/uikit.css?ver=6.9.5' media='all' />
+<link rel='stylesheet' id='northforkweb-style-css' href='https://aku.ac.in/wp-content/themes/aku/style.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='main-css' href='https://aku.ac.in/wp-content/themes/aku/assets/main.css?ver=6.9.5' media='all' />
+<link rel='stylesheet' id='responsive-css' href='https://aku.ac.in/wp-content/themes/aku/assets/responsive.css?ver=6.9.5' media='all' />
+<link rel='stylesheet' id='owl-carousel-css-css' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css?ver=6.9.5' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://aku.ac.in/wp-content/tablepress-combined.min.css?ver=11' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=8.7.2' media='all' />
+<link rel='stylesheet' id='js_composer_custom_css-css' href='https://aku.ac.in/wp-content/uploads/js_composer/custom.css?ver=8.7.2' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='https://aku.ac.in/wp-content/uploads/pum/pum-site-styles.css?generated=1758188997&amp;ver=1.21.5' media='all' />
+<?php else: ?>
 <link rel='stylesheet' id='udm-frontend-css-css' href='assets/css/udm-frontend67b1.css' media='all' />
 <link rel='stylesheet' id='wp-filr-style-css' href='assets/css/style5152.css' media='all' />
 <link rel='stylesheet' id='uikit-css' href='assets/css/uikit67b1.css' media='all' />
@@ -106,6 +182,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='js_composer_front-css' href='assets/css/js_composer.mine097.css' media='all' />
 <link rel='stylesheet' id='js_composer_custom_css-css' href='assets/css/custome097.css' media='all' />
 <link rel='stylesheet' id='popup-maker-site-css' href='assets/css/pum-site-styles2722.css' media='all' />
+<?php endif; ?>
 <link rel="stylesheet" type="text/css" href="assets/css/smartslider.mina154.css" media="all">
 <style data-related="n2-ss-2">div#n2-ss-2 .n2-ss-slider-1{display:grid;position:relative;}div#n2-ss-2 .n2-ss-slider-2{display:grid;position:relative;overflow:hidden;padding:0px 0px 0px 0px;border:0px solid RGBA(62,62,62,1);border-radius:0px;background-clip:padding-box;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;z-index:1;}div#n2-ss-2:not(.n2-ss-loaded) .n2-ss-slider-2{background-image:none !important;}div#n2-ss-2 .n2-ss-slider-3{display:grid;grid-template-areas:'cover';position:relative;overflow:hidden;z-index:10;}div#n2-ss-2 .n2-ss-slider-3 > *{grid-area:cover;}div#n2-ss-2 .n2-ss-slide-backgrounds,div#n2-ss-2 .n2-ss-slider-3 > .n2-ss-divider{position:relative;}div#n2-ss-2 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-2 .n2-ss-slide-backgrounds > *{overflow:hidden;}div#n2-ss-2 .n2-ss-slide-background{transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slider-4{place-self:center;position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-2 .n2-ss-slider-4 > *{grid-area:slide;}div#n2-ss-2.n2-ss-full-page--constrain-ratio .n2-ss-slider-4{height:auto;}div#n2-ss-2 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;z-index:20;-webkit-backface-visibility:hidden;transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slide{perspective:1500px;}div#n2-ss-2 .n2-ss-slide-active{z-index:21;}.n2-ss-background-animation{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;}div#n2-ss-2 .n2-ss-background-animation{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;}div#n2-ss-2 .n2-ss-background-animation .n2-ss-slide-background{z-index:auto;}div#n2-ss-2 .n2-bganim-side{position:absolute;left:0;top:0;overflow:hidden;background:RGBA(51,51,51,1);}div#n2-ss-2 .n2-bganim-tile-overlay-colored{z-index:100000;background:RGBA(51,51,51,1);}div#n2-ss-2 .nextend-arrow{cursor:pointer;overflow:hidden;line-height:0 !important;z-index:18;-webkit-user-select:none;}div#n2-ss-2 .nextend-arrow img{position:relative;display:block;}div#n2-ss-2 .nextend-arrow img.n2-arrow-hover-img{display:none;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-hover-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-hover-img{display:inline;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-normal-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-normal-img{display:none;}div#n2-ss-2 .nextend-arrow-animated{overflow:hidden;}div#n2-ss-2 .nextend-arrow-animated > div{position:relative;}div#n2-ss-2 .nextend-arrow-animated .n2-active{position:absolute;}div#n2-ss-2 .nextend-arrow-animated-fade{transition:background 0.3s, opacity 0.4s;}div#n2-ss-2 .nextend-arrow-animated-horizontal > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-horizontal .n2-active{top:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal .n2-active{left:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal .n2-active{right:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(100%);}div#n2-ss-2 .nextend-arrow-animated-vertical > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-vertical .n2-active{left:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical .n2-active{top:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical .n2-active{bottom:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(100%);}div#n2-ss-2 .n2-ss-slide-limiter{max-width:1200px;}div#n2-ss-2 .n-uc-92dVOaBxC7RJ{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-LRwu60J1mxtC{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-MgP7kUMGENoX{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-nSKCIa2bGXBR{padding:10px 10px 10px 10px}div#n2-ss-2 .nextend-arrow img{width: 32px}@media (min-width: 1200px){div#n2-ss-2 [data-hide-desktopportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-2 [data-hide-tabletportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-2 [data-hide-mobileportrait="1"]{display: none !important;}div#n2-ss-2 .nextend-arrow img{width: 16px}}</style>
 <script>(function(){this._N2=this._N2||{_r:[],_d:[],r:function(){this._r.push(arguments)},d:function(){this._d.push(arguments)}}}).call(window);</script><script src="assets/js/n2.mina154.js" defer async></script>
@@ -174,14 +251,19 @@ h2 em {
 
 
 
+	<?php if ($useLiveReferenceAssets): ?>
+	<link rel='stylesheet' id='vc_tta_style-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/css/js_composer_tta.min.css?ver=8.7.2' media='all' />
+	<link rel='stylesheet' id='vc_animate-css-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vendor/dist/animate.css/animate.min.css?ver=8.7.2' media='all' />
+	<link rel='stylesheet' id='vc_font_awesome_5_shims-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vendor/dist/@fortawesome/fontawesome-free/css/v4-shims.min.css?ver=8.7.2' media='all' />
+	<link rel='stylesheet' id='vc_font_awesome_6-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vendor/dist/@fortawesome/fontawesome-free/css/all.min.css?ver=8.7.2' media='all' />
+	<?php else: ?>
 	<link rel='stylesheet' id='vc_animate-css-css' href='assets/css/animate.mine097.css' media='all' />
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href='assets/css/custom-header.css' rel='stylesheet'>
-<link href='assets/css/custom-header.css' rel='stylesheet'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href='assets/css/custom-header.css' rel='stylesheet'>
+	<?php endif; ?>
 </head>
 
-	<body class="home wp-singular page-template page-template-pages page-template-home-page page-template-pageshome-page-php page page-id-7 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive">
+	<body class="<?php echo htmlspecialchars($bodyClass ?? 'home wp-singular page-template page-template-pages page-template-home-page page-template-pageshome-page-php page page-id-7 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive', ENT_QUOTES, 'UTF-8'); ?>">
 				<div id="page" class="site-main">
 			<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
 
@@ -210,7 +292,7 @@ h2 em {
 	    </div>
 	</div> -->
 <div class="uk-container">
-    <div class="top-header-content d-flex justify-content-between align-items-center flex-wrap">  
+    <div class="<?php echo $useLiveReferenceAssets ? 'top-header-content uk-flex uk-flex-center uk-flex-middle' : 'top-header-content d-flex justify-content-between align-items-center flex-wrap'; ?>">
         
         <div class="top-header-left">
             <div class="menu-top-menu-container"><ul id="top-menu" class="navbar-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-264"><a href="iqac.php">IQAC</a>
@@ -280,7 +362,7 @@ h2 em {
 	</div>
 
 				<div class="uk-container">
-					<div class="center-header-content d-flex justify-content-between align-items-center flex-wrap py-3">
+					<div class="<?php echo $useLiveReferenceAssets ? 'center-header-content' : 'center-header-content d-flex justify-content-between align-items-center flex-wrap py-3'; ?>">
 
 
 
@@ -328,10 +410,13 @@ h2 em {
 					
 					<div class="uk-container">
 						
-						<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg bg-white w-100 p-0">
+						<nav id="site-navigation" class="<?php echo $useLiveReferenceAssets ? 'main-navigation' : 'main-navigation navbar navbar-expand-lg bg-white w-100 p-0'; ?>">
 						
-
-							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul id="primary-menu" class="navbar-nav w-100 justify-content-between"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-18"><a href="index.php" aria-current="page">Home</a></li>
+							<?php if ($useLiveReferenceAssets): ?>
+							<div class="menu-main-menu-container"><ul id="primary-menu" class="navbar-nav mobile-nav"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-18"><a href="index.php">Home</a></li>
+							<?php else: ?>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul id="primary-menu" class="navbar-nav w-100 justify-content-between"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-18"><a href="index.php" aria-current="page">Home</a></li>
+							<?php endif; ?>
 <li id="menu-item-836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-836"><a href="#">About Us</a>
 <ul class="sub-menu">
 	<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="why-aku.php">Why AKU</a></li>
@@ -353,13 +438,13 @@ h2 em {
 </ul>
 </li>
 <li id="menu-item-1270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="academic-calendar.php">Academic Calendar</a></li>
-<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65"><a href="#">Faculty</a>
+<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
 <ul class="sub-menu">
-	<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
+	<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
 	<ul class="sub-menu">
-		<li id="menu-item-1870" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
+		<li id="menu-item-1870" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
 		<ul class="sub-menu">
-			<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a href="department-of-civil-engineering.php">Department of Civil Engineering</a></li>
+			<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $useLiveReferenceAssets ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $useLiveReferenceAssets ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
 			<li id="menu-item-1829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1829"><a href="department-of-computer-science-engineering.php">Department of Computer Science &#038; Engineering</a></li>
 			<li id="menu-item-2681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2681"><a href="department-of-information-technology.php">Department of Information Technology</a></li>
 			<li id="menu-item-1865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1865"><a href="department-of-electrical-electronics-engineering.php">Department of Electrical &#038; Electronics Engineering</a></li>
@@ -576,7 +661,11 @@ h2 em {
 </ul>
 </li>
 <li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="world-class-infrastructure.php">Life @ AKU</a></li>
+<?php if ($useLiveReferenceAssets): ?>
+</ul></div></nav><!-- #site-navigation -->
+<?php else: ?>
 </ul></div></div></nav><!-- #site-navigation -->
+<?php endif; ?>
 						 
 					</div>
 				</div>
@@ -587,7 +676,7 @@ h2 em {
 			<div id="offcanvas-slide" uk-offcanvas="overlay: true">
 				<div class="uk-offcanvas-bar  mobile-menu">
 
-					<div class="menu-main-menu-container"><ul id="primary-menu" class="mobile-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-18"><a href="index.php" aria-current="page">Home</a></li>
+					<div class="menu-main-menu-container"><ul id="primary-menu" class="mobile-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home<?php echo $useLiveReferenceAssets ? '' : ' current-menu-item page_item page-item-7 current_page_item'; ?> menu-item-18"><a href="index.php"<?php echo $useLiveReferenceAssets ? '' : ' aria-current="page"'; ?>>Home</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-836"><a href="#">About Us</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="why-aku.php">Why AKU</a></li>
@@ -609,13 +698,13 @@ h2 em {
 </ul>
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="academic-calendar.php">Academic Calendar</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65"><a href="#">Faculty</a>
+<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
 	<ul class="sub-menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
 		<ul class="sub-menu">
-			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a href="department-of-civil-engineering.php">Department of Civil Engineering</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $useLiveReferenceAssets ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $useLiveReferenceAssets ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1829"><a href="department-of-computer-science-engineering.php">Department of Computer Science &#038; Engineering</a></li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2681"><a href="department-of-information-technology.php">Department of Information Technology</a></li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1865"><a href="department-of-electrical-electronics-engineering.php">Department of Electrical &#038; Electronics Engineering</a></li>
