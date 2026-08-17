@@ -27,8 +27,8 @@ include 'header.php';
 			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1536" height="1024" src="uploads/2025/12/civil.png" class="vc_single_image-img attachment-full" alt="" title="civil" srcset="uploads/2025/12/civil.png 1536w, uploads/2025/12/civil-300x200.png 300w, uploads/2025/12/civil-1024x683.png 1024w, uploads/2025/12/civil-768x512.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></div>
 		</figure>
 	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element wpb_animate_when_almost_visible wpb_zoomIn zoomIn vision-box" >
+</div></div></div><div class="wpb_column vc_column_cont wpbntainer vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_eleme_animate_when_almost_visible wpb_zoomIn zoomIn vision-box" >
 		<div class="wpb_wrapper">
 			<p style="text-align: justify; line-height: 150%;"><span lang="EN-IN">The Department of Civil Engineering at the School of Engineering (SOE) stands as a beacon of academic excellence and technological innovation. Committed to cultivating visionary professionals, the department imparts rigorous knowledge across structural systems, geotechnics, hydrology, and sustainable infrastructure. Emphasizing ethical responsibility, environmental stewardship, and multidisciplinary competence, we equip students with cutting-edge tools and real-world insights. Our erudite faculty, state-of-the-art laboratories, and strong industry alliances foster a transformative learning ecosystem. Through pioneering research, societal engagement, and global outlook, we aspire to produce civil engineers who shape resilient cities, empower communities, and contribute profoundly to national and global advancement.</span></p>
 
