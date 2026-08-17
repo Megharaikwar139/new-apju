@@ -1,9 +1,19 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Management Studies – COE – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-2682 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'management-studies-coe';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Management Studies &#8211; COE</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Management Studies &#8211; COE</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-2682" class="post-2682 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
@@ -14,7 +24,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="927" height="577" src="../wp-content/uploads/2026/01/managment.html" class="vc_single_image-img attachment-full" alt="" title="managment" srcset="assets/images/managment.jpg 927w, assets/images/managment-300x187.jpg 300w, assets/images/managment-768x478.jpg 768w" sizes="(max-width: 927px) 100vw, 927px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="927" height="577" src="uploads/2026/01/managment.jpg" class="vc_single_image-img attachment-full" alt="" title="managment" srcset="uploads/2026/01/managment.jpg 927w, uploads/2026/01/managment-300x187.jpg 300w, uploads/2026/01/managment-768x478.jpg 768w" sizes="(max-width: 927px) 100vw, 927px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -43,7 +53,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -60,7 +70,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -106,7 +116,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/classroom.jpg" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -117,7 +127,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/library.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -128,7 +138,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/1-1.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Advanced laboratories">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -139,7 +149,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
