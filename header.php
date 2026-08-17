@@ -1,6 +1,7 @@
 <?php
 require_once 'db.php';
 $useLiveReferenceAssets = !empty($useLiveReferenceAssets);
+$activeDepartmentPage = $activeDepartmentPage ?? ($useLiveReferenceAssets ? 'civil-engineering' : '');
 ?>
 <!doctype html>
 <html lang="en-US">
@@ -438,14 +439,14 @@ h2 em {
 </ul>
 </li>
 <li id="menu-item-1270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="academic-calendar.php">Academic Calendar</a></li>
-<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
+<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
 <ul class="sub-menu">
-	<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
+	<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
 	<ul class="sub-menu">
-		<li id="menu-item-1870" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
+		<li id="menu-item-1870" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
 		<ul class="sub-menu">
-			<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $useLiveReferenceAssets ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $useLiveReferenceAssets ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
-			<li id="menu-item-1829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1829"><a href="department-of-computer-science-engineering.php">Department of Computer Science &#038; Engineering</a></li>
+			<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'civil-engineering' ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $activeDepartmentPage === 'civil-engineering' ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
+			<li id="menu-item-1829" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' current-menu-item page_item page-item-1746 current_page_item' : ''; ?> menu-item-1829"><a href="department-of-computer-science-engineering.php"<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' aria-current="page"' : ''; ?>>Department of Computer Science &#038; Engineering</a></li>
 			<li id="menu-item-2681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2681"><a href="department-of-information-technology.php">Department of Information Technology</a></li>
 			<li id="menu-item-1865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1865"><a href="department-of-electrical-electronics-engineering.php">Department of Electrical &#038; Electronics Engineering</a></li>
 			<li id="menu-item-1867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1867"><a href="department-of-mechanical-engineering.php">Department of Mechanical Engineering</a></li>
@@ -698,14 +699,14 @@ h2 em {
 </ul>
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="academic-calendar.php">Academic Calendar</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
+<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
 	<ul class="sub-menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $useLiveReferenceAssets ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
 		<ul class="sub-menu">
-			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $useLiveReferenceAssets ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $useLiveReferenceAssets ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
-			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1829"><a href="department-of-computer-science-engineering.php">Department of Computer Science &#038; Engineering</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'civil-engineering' ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $activeDepartmentPage === 'civil-engineering' ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' current-menu-item page_item page-item-1746 current_page_item' : ''; ?> menu-item-1829"><a href="department-of-computer-science-engineering.php"<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' aria-current="page"' : ''; ?>>Department of Computer Science &#038; Engineering</a></li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2681"><a href="department-of-information-technology.php">Department of Information Technology</a></li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1865"><a href="department-of-electrical-electronics-engineering.php">Department of Electrical &#038; Electronics Engineering</a></li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1867"><a href="department-of-mechanical-engineering.php">Department of Mechanical Engineering</a></li>
