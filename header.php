@@ -472,11 +472,11 @@ h2 em {
 </li>
 	</ul>
 </li>
-	<li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-292"><a href="#">Faculty of Health Science</a>
+	<li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-292"><a href="#">Faculty of Health Science</a>
 	<ul class="sub-menu">
-		<li id="menu-item-2791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2791"><a href="#">School of Pharmacy</a>
+		<li id="menu-item-2791" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-2791"><a href="#">School of Pharmacy</a>
 		<ul class="sub-menu">
-			<li id="menu-item-2000" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2000"><a href="department-of-pharmacy-sop.php">Department of Pharmacy</a></li>
+			<li id="menu-item-2000" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' current-menu-item page_item page-item-2000 current_page_item' : ''; ?> menu-item-2000"><a href="department-of-pharmacy-sop.php"<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' aria-current="page"' : ''; ?>>Department of Pharmacy</a></li>
 		</ul>
 </li>
 		<li id="menu-item-1311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1311"><a href="college-of-pharmacy.php">College of Pharmacy</a>
@@ -732,11 +732,11 @@ h2 em {
 </li>
 	</ul>
 </li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-292"><a href="#">Faculty of Health Science</a>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-292"><a href="#">Faculty of Health Science</a>
 	<ul class="sub-menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2791"><a href="#">School of Pharmacy</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-2791"><a href="#">School of Pharmacy</a>
 		<ul class="sub-menu">
-			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2000"><a href="department-of-pharmacy-sop.php">Department of Pharmacy</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' current-menu-item page_item page-item-2000 current_page_item' : ''; ?> menu-item-2000"><a href="department-of-pharmacy-sop.php"<?php echo $activeDepartmentPage === 'pharmacy-sop' ? ' aria-current="page"' : ''; ?>>Department of Pharmacy</a></li>
 		</ul>
 </li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1311"><a href="college-of-pharmacy.php">College of Pharmacy</a>
