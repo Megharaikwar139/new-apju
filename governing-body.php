@@ -14,7 +14,7 @@
 	<div class="wpb_text_column wpb_content_element table_row_bold" >
 		<div class="wpb_wrapper">
 			<h2><em>Governing Body</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/03/Governing-Body_final_01.html' target='_blank'>Governing Body</a></td>
+                             <td><a href='uploads/2026/03/Governing-Body_final_01.html' target='_blank'>Governing Body</a></td>
                           </tr></table>
 
 		</div>

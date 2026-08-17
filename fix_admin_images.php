@@ -6,8 +6,8 @@ $files = new RegexIterator($iterator, '/^.+\.php$/i', RecursiveRegexIterator::GE
 foreach ($files as $file) {
     $path = $file[0];
     $content = file_get_contents($path);
-    $new_content = str_replace('../../APJ-WEB/wp-content/uploads/', '../uploads/', $content);
-    $new_content = str_replace('../APJ-WEB/wp-content/uploads/', '../uploads/', $new_content);
+    $new_content = str_replace('../../APJ-WEB/uploads/', '../uploads/', $content);
+    $new_content = str_replace('../APJ-WEB/uploads/', '../uploads/', $new_content);
     if ($content !== $new_content) {
         file_put_contents($path, $new_content);
         echo "Updated $path\n";

@@ -14,7 +14,7 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Board of Management</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/03/BOARD-OF-MANAGEMENT_Final.html' target='_blank'>Board Of Management</a></td>
+                             <td><a href='uploads/2026/03/BOARD-OF-MANAGEMENT_Final.html' target='_blank'>Board Of Management</a></td>
                           </tr></table>
 
 		</div>

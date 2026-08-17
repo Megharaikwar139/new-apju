@@ -14,7 +14,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="500" height="333" src="../wp-content/uploads/2026/01/departmentofmech.html" class="vc_single_image-img attachment-full" alt="" title="departmentofmech" srcset="assets/images/departmentofmech.jpg 500w, assets/images/departmentofmech-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="500" height="333" src="uploads/2026/01/departmentofmech.html" class="vc_single_image-img attachment-full" alt="" title="departmentofmech" srcset="assets/images/departmentofmech.jpg 500w, assets/images/departmentofmech-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -43,7 +43,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -60,7 +60,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -115,7 +115,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/classroom.html" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -126,7 +126,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/library.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/library.html" alt="Modern Classrooms">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -137,7 +137,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/1-1.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/1-1.html" alt="Modern Classrooms">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -148,7 +148,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/101888.html" alt="Modern Classrooms">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -169,7 +169,7 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Time Table</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.html' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
+                             <td><a href='uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.html' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
                           </tr></table>
 
 		</div>

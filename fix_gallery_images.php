@@ -6,8 +6,8 @@ $pages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($pages as $page) {
     // Replace live URLs with local uploads folder path
-    $new_content = str_replace('https://aku.ac.in/wp-content/uploads/', 'uploads/', $page['content']);
-    $new_content = str_replace('http://aku.ac.in/wp-content/uploads/', 'uploads/', $new_content);
+    $new_content = str_replace('uploads/', 'uploads/', $page['content']);
+    $new_content = str_replace('http://aku.ac.in/uploads/', 'uploads/', $new_content);
 
     // Also update any link tags if they point to live gallery URLs
     // e.g. href="https://aku.ac.in/galleries/..." 

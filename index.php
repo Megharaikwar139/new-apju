@@ -278,17 +278,7 @@ foreach ($stats as $stat) {
 <div class="card-main">
   <div class="card">
     <div class="image-container">
-      <?php
-      $video_stmt = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'homepage_video_url'");
-      $video_url = $video_stmt->fetchColumn();
-      if (!$video_url) $video_url = 'uploads/2025/07/aku_reel.mp4'; // fallback
-      
-      if (strpos($video_url, 'assets/') === 0) {
-          $video_src = $video_url;
-      } else {
-          $video_src = $video_url; // It's likely a relative path or absolute URL already
-      }
-      ?>
+      <?php $video_src = "uploads/2025/07/aku_reel.mp4"; ?>
       <video autoplay muted loop playsinline>
         <source src="<?php echo htmlspecialchars($video_src); ?>" type="video/mp4">
         Your browser does not support the video tag.
