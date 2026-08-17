@@ -236,6 +236,11 @@ var pum_popups = {"pum-620":{"triggers":[{"type":"click_open","settings":{"cooki
 <script src="assets/js/pum-site-scripts8b8b.js" id="popup-maker-site-js"></script>
 <script src="assets/js/mobile-detect.min3ba1.js" id="mobile-detect-js"></script>
 <script src="assets/js/js_composer_front.mine097.js" id="wpb_composer_front_js-js"></script>
+<?php if (!empty($useLiveReferenceAssets)): ?>
+<script src="https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vc/vc_accordion/vc-accordion.min.js?ver=8.7.2" id="vc_accordion_script-js"></script>
+<script src="https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vc/vc-tta-autoplay/vc-tta-autoplay.min.js?ver=8.7.2" id="vc_tta_autoplay_script-js"></script>
+<script src="https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vc/vc_tabs/vc-tabs.min.js?ver=8.7.2" id="vc_tabs_script-js"></script>
+<?php endif; ?>
 <script src="assets/js/vc-waypoints.mine097.js" id="vc_waypoints-js"></script>
 
 
@@ -314,7 +319,9 @@ jQuery(document).ready(function ($) {
 
 
 
+<?php if (empty($useLiveReferenceAssets)): ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<?php endif; ?>
 </body>
 
 <!-- Mirrored from aku.ac.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2026 09:19:41 GMT -->

@@ -1,9 +1,19 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Computer Applications – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-2685 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'computer-applications-coe';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Computer Applications</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Computer Applications</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-2685" class="post-2685 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
@@ -14,7 +24,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1000" height="667" src="uploads/2025/11/mca.html" class="vc_single_image-img attachment-full" alt="" title="mca" srcset="assets/images/mca.jpg 1000w, assets/images/mca-300x200.jpg 300w, assets/images/mca-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1000" height="667" src="uploads/2025/11/mca.jpg" class="vc_single_image-img attachment-full" alt="" title="mca" srcset="uploads/2025/11/mca.jpg 1000w, uploads/2025/11/mca-300x200.jpg 300w, uploads/2025/11/mca-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -43,7 +53,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -58,7 +68,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -150,7 +160,7 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/uploads/2025/11/MCA-LAB-PIC-2.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/11/MCA-LAB-PIC-2.jpeg" alt="MCA Lab">
   <h4>MCA LAB</h4>
   <p>MCA Lab is well-equipped environment for practical learning in advanced computing and application development.</p>
 
@@ -161,7 +171,7 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/classroom.jpg" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -172,7 +182,7 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -183,7 +193,7 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/library.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -194,21 +204,21 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Syllabus &amp; Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2025/11/IV-sem.html' target='_blank'>Syllabus IV Sem</a></td>
+                             <td><a href='uploads/2025/11/IV-sem.pdf' target='_blank'>Syllabus IV Sem</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/III-sem.html' target='_blank'>Syllabus III Sem</a></td>
+                             <td><a href='uploads/2025/11/III-sem.pdf' target='_blank'>Syllabus III Sem</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/II-sem.html' target='_blank'>Syllabus II Sem</a></td>
+                             <td><a href='uploads/2025/11/II-sem.pdf' target='_blank'>Syllabus II Sem</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/I-sem.html' target='_blank'>Syllabus I Sem</a></td>
+                             <td><a href='uploads/2025/11/I-sem.pdf' target='_blank'>Syllabus I Sem</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/MCA-IV-SEM-SCHEME.html' target='_blank'>MCA IV SEM SCHEME</a></td>
+                             <td><a href='uploads/2025/11/MCA-IV-SEM-SCHEME.pdf' target='_blank'>MCA IV SEM SCHEME</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/MCA-III-SEM-SCHEME.html' target='_blank'>MCA III SEM SCHEME</a></td>
+                             <td><a href='uploads/2025/11/MCA-III-SEM-SCHEME.pdf' target='_blank'>MCA III SEM SCHEME</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/MCA-II-SEM-SCHEME.html' target='_blank'>MCA II SEM SCHEME</a></td>
+                             <td><a href='uploads/2025/11/MCA-II-SEM-SCHEME.pdf' target='_blank'>MCA II SEM SCHEME</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/MCA-I-SEM-SCHEME.html' target='_blank'>MCA I SEM SCHEME</a></td>
+                             <td><a href='uploads/2025/11/MCA-I-SEM-SCHEME.pdf' target='_blank'>MCA I SEM SCHEME</a></td>
                           </tr></table>
 
 		</div>
@@ -217,9 +227,9 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>SO/PO</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2025/11/mca-po.html' target='_blank'>MCA PO</a></td>
+                             <td><a href='uploads/2025/11/mca-po.pdf' target='_blank'>MCA PO</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/mca-co.html' target='_blank'>MCA CO</a></td>
+                             <td><a href='uploads/2025/11/mca-co.pdf' target='_blank'>MCA CO</a></td>
                           </tr></table>
 
 		</div>
@@ -249,9 +259,9 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Time Table</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2025/11/3-rd-sem-time-table.html' target='_blank'>3 rd Sem Time Table</a></td>
+                             <td><a href='uploads/2025/11/3-rd-sem-time-table.pdf' target='_blank'>3 rd Sem Time Table</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/11/1-st-sem-time-table.html' target='_blank'>1 st Sem Time Table</a></td>
+                             <td><a href='uploads/2025/11/1-st-sem-time-table.pdf' target='_blank'>1 st Sem Time Table</a></td>
                           </tr></table>
 
 		</div>
