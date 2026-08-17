@@ -2,6 +2,15 @@
 require_once 'db.php';
 $useLiveReferenceAssets = !empty($useLiveReferenceAssets);
 $activeDepartmentPage = $activeDepartmentPage ?? ($useLiveReferenceAssets ? 'civil-engineering' : '');
+$engineeringDepartmentPages = [
+	'civil-engineering',
+	'computer-science-engineering',
+	'information-technology',
+	'electrical-electronics-engineering',
+	'mechanical-engineering',
+	'management-studies-coe',
+];
+$isEngineeringDepartment = in_array($activeDepartmentPage, $engineeringDepartmentPages, true);
 ?>
 <!doctype html>
 <html lang="en-US">
@@ -441,9 +450,9 @@ h2 em {
 <li id="menu-item-1270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="academic-calendar.php">Academic Calendar</a></li>
 <li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
 <ul class="sub-menu">
-	<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
+	<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $isEngineeringDepartment ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
 	<ul class="sub-menu">
-		<li id="menu-item-1870" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
+		<li id="menu-item-1870" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $isEngineeringDepartment ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
 		<ul class="sub-menu">
 			<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'civil-engineering' ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $activeDepartmentPage === 'civil-engineering' ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
 			<li id="menu-item-1829" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' current-menu-item page_item page-item-1746 current_page_item' : ''; ?> menu-item-1829"><a href="department-of-computer-science-engineering.php"<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' aria-current="page"' : ''; ?>>Department of Computer Science &#038; Engineering</a></li>
@@ -491,16 +500,16 @@ h2 em {
 </li>
 	</ul>
 </li>
-	<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-287"><a href="#">College of Professional Studies</a>
+	<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'commerce' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-287"><a href="#">College of Professional Studies</a>
 	<ul class="sub-menu">
 		<li id="menu-item-1284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1284"><a href="school-of-business-administration-management.php">College of Management</a>
 		<ul class="sub-menu">
 			<li id="menu-item-1949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1949"><a href="department-of-management-studies.php">Department of Management Studies</a></li>
 		</ul>
 </li>
-		<li id="menu-item-1943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1943"><a href="#">College of Commerce</a>
+		<li id="menu-item-1943" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'commerce' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1943"><a href="#">College of Commerce</a>
 		<ul class="sub-menu">
-			<li id="menu-item-1942" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1942"><a href="department-of-commerce.php">Department Of Commerce</a></li>
+			<li id="menu-item-1942" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'commerce' ? ' current-menu-item page_item page-item-1937 current_page_item' : ''; ?> menu-item-1942"><a href="department-of-commerce.php"<?php echo $activeDepartmentPage === 'commerce' ? ' aria-current="page"' : ''; ?>>Department Of Commerce</a></li>
 		</ul>
 </li>
 		<li id="menu-item-1950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1950"><a href="#">College of Arts and Humanities</a>
@@ -701,9 +710,9 @@ h2 em {
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="academic-calendar.php">Academic Calendar</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-65"><a href="#">Faculty</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $isEngineeringDepartment ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-286"><a href="#">Faculty of Engineering</a>
 	<ul class="sub-menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage !== '' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $isEngineeringDepartment ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1870"><a href="#">College of Engineering</a>
 		<ul class="sub-menu">
 			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'civil-engineering' ? ' current-menu-item page_item page-item-1857 current_page_item' : ''; ?> menu-item-1866"><a href="department-of-civil-engineering.php"<?php echo $activeDepartmentPage === 'civil-engineering' ? ' aria-current="page"' : ''; ?>>Department of Civil Engineering</a></li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' current-menu-item page_item page-item-1746 current_page_item' : ''; ?> menu-item-1829"><a href="department-of-computer-science-engineering.php"<?php echo $activeDepartmentPage === 'computer-science-engineering' ? ' aria-current="page"' : ''; ?>>Department of Computer Science &#038; Engineering</a></li>
@@ -751,16 +760,16 @@ h2 em {
 </li>
 	</ul>
 </li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-287"><a href="#">College of Professional Studies</a>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'commerce' ? ' current-menu-ancestor' : ''; ?> menu-item-has-children menu-item-287"><a href="#">College of Professional Studies</a>
 	<ul class="sub-menu">
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1284"><a href="school-of-business-administration-management.php">College of Management</a>
 		<ul class="sub-menu">
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1949"><a href="department-of-management-studies.php">Department of Management Studies</a></li>
 		</ul>
 </li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1943"><a href="#">College of Commerce</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'commerce' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1943"><a href="#">College of Commerce</a>
 		<ul class="sub-menu">
-			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1942"><a href="department-of-commerce.php">Department Of Commerce</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'commerce' ? ' current-menu-item page_item page-item-1937 current_page_item' : ''; ?> menu-item-1942"><a href="department-of-commerce.php"<?php echo $activeDepartmentPage === 'commerce' ? ' aria-current="page"' : ''; ?>>Department Of Commerce</a></li>
 		</ul>
 </li>
 		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1950"><a href="#">College of Arts and Humanities</a>
