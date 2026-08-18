@@ -323,7 +323,7 @@ h2 em {
 	    </div>
 	</div> -->
 <div class="uk-container">
-    <div class="<?php echo $useLiveReferenceAssets ? 'top-header-content uk-flex uk-flex-center uk-flex-middle' : 'top-header-content d-flex justify-content-between align-items-center flex-wrap'; ?>">
+    <div class="top-header-content uk-flex uk-flex-center uk-flex-middle">
         
         <div class="top-header-left">
             <div class="menu-top-menu-container"><ul id="top-menu" class="navbar-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-264"><a href="iqac.php">IQAC</a>
@@ -393,7 +393,7 @@ h2 em {
 	</div>
 
 				<div class="uk-container">
-					<div class="<?php echo $useLiveReferenceAssets ? 'center-header-content' : 'center-header-content d-flex justify-content-between align-items-center flex-wrap py-3'; ?>">
+					<div class="center-header-content">
 
 
 
@@ -441,13 +441,9 @@ h2 em {
 					
 					<div class="uk-container">
 						
-						<nav id="site-navigation" class="<?php echo $useLiveReferenceAssets ? 'main-navigation' : 'main-navigation navbar navbar-expand-lg bg-white w-100 p-0'; ?>">
-						
-							<?php if ($useLiveReferenceAssets): ?>
+						<nav id="site-navigation" class="main-navigation">
+							
 							<div class="menu-main-menu-container"><ul id="primary-menu" class="navbar-nav mobile-nav"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-18"><a href="index.php">Home</a></li>
-							<?php else: ?>
-							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul id="primary-menu" class="navbar-nav w-100 justify-content-between"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-18"><a href="index.php" aria-current="page">Home</a></li>
-							<?php endif; ?>
 <li id="menu-item-836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-836"><a href="#">About Us</a>
 <ul class="sub-menu">
 	<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="why-aku.php">Why AKU</a></li>
