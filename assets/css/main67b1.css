@@ -1366,6 +1366,11 @@ section.shop{
     font-weight: bold;
   line-height: 32px;
 }
+.grid-item a,
+.grid-item a:hover {
+    color: #333;
+    text-decoration: none;
+}
 
 
 /* event section css */

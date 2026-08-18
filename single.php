@@ -162,18 +162,16 @@ if (!$data) {
 <?php else: ?>
 
     <?php if ($type == 'page'): ?>
-    
-    <div class="page-header-blog" style="padding: 60px 0; background: linear-gradient(rgba(11, 44, 77, 0.8), rgba(11, 44, 77, 0.9)), url('assets/images/bg-header.jpg') center/cover no-repeat;">
-        <div class="container">
-            <h1 style="font-size: 32px; color: #fff; text-align: center; margin-bottom: 10px;"><?php echo htmlspecialchars($data['title']); ?></h1>
-            <div class="breadcrumbs" style="color: #ddd; text-align: center; font-size: 15px;">
-                <a href="index.php" style="color: #ddd;">Home</a> &raquo; <?php echo htmlspecialchars($data['title']); ?>
-            </div>
+
+    <section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+        <div class="uk-container" style="text-align: center;">
+            <h1 style="text-align: center;"><?php echo htmlspecialchars($data['title']); ?></h1>
+            <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; <?php echo htmlspecialchars($data['title']); ?></nav>
         </div>
-    </div>
+    </section>
 
     <!-- For dynamic pages from WPBakery, output directly without blog container but with a standard container -->
-    <div class="container dynamic-page-content" style="padding: 40px 0; min-height: 40vh;">
+    <div class="uk-container dynamic-page-content" style="padding: 40px 0; min-height: 40vh;">
         <?php echo $data['content']; ?>
     </div>
 

@@ -14,7 +14,7 @@
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
 			<h2><em>Fee Structure</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2026/03/FEES_2025-26.html' target='_blank'>Fee Structure</a></td>
+                             <td><a href='uploads/2026/03/FEES_2025-26.pdf' target='_blank'>Fee Structure</a></td>
                           </tr></table>
 
 		</div>

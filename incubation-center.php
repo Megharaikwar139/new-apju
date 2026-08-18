@@ -138,11 +138,11 @@ Ministry of Micro, Small & Medium Enterprises, Government of India.
 
 <div class="aku-incubation-gallery">
 
-<img decoding="async" src="uploads/2026/03/Incubation-Center-AKU_page-0002.html" alt="Incubation Centre Entrance">
+<img decoding="async" src="uploads/2026/03/Incubation-Center-AKU_page-0002.jpg" alt="Incubation Centre Entrance">
 
-<img decoding="async" src="uploads/2026/03/Incubation-Center-AKU_page-0004-scaled.html" alt="Incubation Workspace">
+<img decoding="async" src="uploads/2026/03/Incubation-Center-AKU_page-0004-scaled.jpg" alt="Incubation Workspace">
 
-<img decoding="async" src="uploads/2026/03/Incubation-Center-AKU_page-0003.html" alt="Incubation Facility">
+<img decoding="async" src="uploads/2026/03/Incubation-Center-AKU_page-0003.jpg" alt="Incubation Facility">
 
 </div>
 
@@ -165,7 +165,7 @@ of the incubation component under MSME Innovative Scheme
 <div class="aku-download-box">
 
 <a class="aku-download-btn"
-href="uploads/2026/03/Incubation-Center-AKU_page-0001.html"
+href="uploads/2026/03/Incubation-Center-AKU_page-0001.jpg"
 target="_blank">
 
 Download Official Letter

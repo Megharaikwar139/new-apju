@@ -14,7 +14,7 @@
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
 			<h2><em>SGRS</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2026/03/SGRS.html' target='_blank'>SRGS Order</a></td>
+                             <td><a href='uploads/2026/03/SGRS.jpeg' target='_blank'>SRGS Order</a></td>
                           </tr></table>
 
 		</div>
