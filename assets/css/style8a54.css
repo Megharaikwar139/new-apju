@@ -2283,6 +2283,10 @@ background-position: center;
 
 }
 
+.message_page .row {
+  gap: 0;
+}
+
 .message-photo img {
   width: 100%;
   border-radius: 10px;

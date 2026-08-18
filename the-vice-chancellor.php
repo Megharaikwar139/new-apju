@@ -1,4 +1,13 @@
 <?php include 'header.php'; ?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+    <div class="uk-container" style="text-align: center;">
+        <h1 style="text-align: center;">Vice Chancellor</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; Vice Chancellor</nav>
+    </div>
+</section>
+<div class="uk-container" style="margin-top: 60px;">
+<div class="vc_column-inner">
 <main id="primary" class="site-main">
     <div class="message_page">
       <div class="container">
@@ -28,4 +37,5 @@
       </div>
     </div>
   </main>
+</div></div>
 <?php include 'footer.php'; ?>

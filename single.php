@@ -142,7 +142,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['SCRIPT_N
                         if (strpos($data['image_path'], 'assets/') === 0) {
                             $img_src = $data['image_path'];
                         } else {
-                            $img_src = '../APJ-WEB/wp-content/uploads/' . $data['image_path'];
+                            $img_src = 'uploads/' . $data['image_path'];
                         }
                         echo '<img src="'.htmlspecialchars($img_src).'" class="blog-featured-img" alt="'.htmlspecialchars($data['title']).'">';
                     } else {
@@ -215,7 +215,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['SCRIPT_N
                                     if (strpos($data['image_path'], 'assets/') === 0) {
                                         $img_src = $data['image_path'];
                                     } else {
-                                        $img_src = '../APJ-WEB/wp-content/uploads/' . $data['image_path'];
+                                        $img_src = 'uploads/' . $data['image_path'];
                                     }
                                 ?>
                                 <img src="<?php echo htmlspecialchars($img_src); ?>" style="max-width: 100%; max-height: 500px; object-fit: contain; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" alt="<?php echo htmlspecialchars($data['title']); ?>">

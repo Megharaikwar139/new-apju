@@ -1,4 +1,12 @@
 <?php include 'header.php'; ?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+    <div class="uk-container" style="text-align: center;">
+        <h1 style="text-align: center;">Mandatory Disclosers</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; Mandatory Disclosers</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
    
     
@@ -14,14 +22,14 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			
-    <iframe src="assets/images/Gazetted_Notification.pdf" frameborder="0"></iframe>
+    <iframe src="uploads/2025/04/Gazetted_Notification.pdf" frameborder="0"></iframe>
 
 		</div>
 	</div>
 </div></div><div class="vc_tta-panel" id="1749703988747-c95a7846-fe16" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1749703988747-c95a7846-fe16" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">UGC Approvals</span></a></h4></div><div class="vc_tta-panel-body">
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
-			<h2><em>UGC Approvals</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
+			<h2>UGC Approvals</h2><table class='filr-table'><tr><th>Title</th></tr><tr>
                              <td><a href='uploads/2026/03/UGC-Expert-Committee-Visited_10-11-May-2019-Complaince-1.pdf' target='_blank'>UGC Expert Committee</a></td>
                           </tr><tr>
                              <td><a href='uploads/2025/06/05102020_043755_UGC_APPROVALS.pdf' target='_blank'>UGC APPROVALS</a></td>
@@ -32,7 +40,7 @@
 </div></div><div class="vc_tta-panel" id="1754886881391-bb6f04cf-c62d" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1754886881391-bb6f04cf-c62d" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Statutes</span></a></h4></div><div class="vc_tta-panel-body">
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
-			 <iframe src="assets/images/aku_statutes.pdf" frameborder="0"></iframe>
+			 <iframe src="uploads/2025/04/aku_statutes.pdf" frameborder="0"></iframe>
 		</div>
 	</div>
 </div></div><div class="vc_tta-panel" id="1754886880607-26937f66-3710" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1754886880607-26937f66-3710" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Ordinance</span></a></h4></div><div class="vc_tta-panel-body">
@@ -40,7 +48,7 @@
 		<div class="wpb_wrapper">
 			<!--<iframe src="assets/images/aku_statutes.pdf" frameborder="0"></iframe>-->
 
-<h2><em>ordinance</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
+<h2>Ordinance</h2><table class='filr-table'><tr><th>Title</th></tr><tr>
                              <td><a href='uploads/2026/04/Published-Subsequent-Ordinanace-79-to-85.pdf' target='_blank'>Subsequent Ordinance 79 to 85</a></td>
                           </tr><tr>
                              <td><a href='uploads/2026/04/Subsequent-Ordinance-78-A-Publish.pdf' target='_blank'>Subsequent Ordinance 78 A</a></td>
@@ -52,7 +60,7 @@
 </div></div><div class="vc_tta-panel" id="1749703692662-877f19c7-f645" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1749703692662-877f19c7-f645" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Course Approvals</span></a></h4></div><div class="vc_tta-panel-body">
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
-			<h2><em>Course Approvals</em></h2><h3 style='margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>AICTE Approvals</h3><table class='filr-table'><tr>
+			<h2>Course Approvals</h2><h3 style='margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>AICTE Approvals</h3><table class='filr-table'><tr>
                                 <td><a href='uploads/2026/03/SOE-EOA-2025-26.pdf' target='_blank'>SOE EOA 2025-26</a></td>
                               </tr><tr>
                                 <td><a href='uploads/2026/03/COE-EOA-2025-26.pdf' target='_blank'>COE EOA 2025-26</a></td>
@@ -63,7 +71,7 @@
                               </tr><tr>
                                 <td><a href='assets/images/SOE13112024_103217_SOE-EOA-REPORT-2024-2025.pdf' target='_blank'>School of Engineering AICTE Approval Letter 2024-25</a></td>
                               </tr><tr>
-                                <td><a href='#' target='_blank'>College of Engineering AICTE Approval Letter 2024-25</a></td>
+                                <td><a href='uploads/2025/04/13112024_103210_COE-EOA-REPORT-2024-2025.pdf' target='_blank'>College of Engineering AICTE Approval Letter 2024-25</a></td>
                               </tr></table><h3 style='margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>ASSOCIATION OF INDIAN UNIVERSITIES</h3><table class='filr-table'><tr>
                                 <td><a href='uploads/2025/06/09082021_121610_AIU-Approval-of-Dr.-APJ-Abdul-Kalam-University-scaled.jpg' target='_blank'>Membership of AIU</a></td>
                               </tr></table><h3 style='margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>ASSOCIATION OF THE UNIVERSITIES OF ASIA AND THE PACIFIC</h3><table class='filr-table'><tr>

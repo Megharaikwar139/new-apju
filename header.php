@@ -106,6 +106,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='owl-carousel-css-css' href='assets/css/owl.carousel.min67b1.css' media='all' />
 <link rel='stylesheet' id='tablepress-default-css' href='assets/css/tablepress-combined.min8bb0.css' media='all' />
 <link rel='stylesheet' id='js_composer_front-css' href='assets/css/js_composer.mine097.css' media='all' />
+<link rel='stylesheet' id='vc_tta_style-css' href='assets/css/js_composer_tta.min.css' media='all' />
 <link rel='stylesheet' id='js_composer_custom_css-css' href='assets/css/custome097.css' media='all' />
 <link rel='stylesheet' id='popup-maker-site-css' href='assets/css/pum-site-styles2722.css' media='all' />
 <link rel="stylesheet" type="text/css" href="assets/css/smartslider.mina154.css" media="all">
