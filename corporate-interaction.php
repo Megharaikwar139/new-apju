@@ -14,59 +14,59 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Corporate Interaction</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/07/Selection-of-our-Bachelor-of-Mechanical-Engineering-student-at-Universal-Ltd.-UMPESL-Limited-.html' target='_blank'>Selection of our Bachelor of Mechanical Engineering student at Universal Ltd. UMPESL Limited</a></td>
+                             <td><a href='uploads/2026/07/Selection-of-our-Bachelor-of-Mechanical-Engineering-student-at-Universal-Ltd.-UMPESL-Limited-.pdf' target='_blank'>Selection of our Bachelor of Mechanical Engineering student at Universal Ltd. UMPESL Limited</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-B-E-EEE-student-Mr-Vinod-Pawar-at-Godrej-Consumer-Supplies-Limited.html' target='_blank'>Selection of our B E EEE student Mr Vinod Pawar at Godrej Consumer Supplies Limited</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-B-E-EEE-student-Mr-Vinod-Pawar-at-Godrej-Consumer-Supplies-Limited.pdf' target='_blank'>Selection of our B E EEE student Mr Vinod Pawar at Godrej Consumer Supplies Limited</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-B-E-Mechanical-student-Mr-Manoj-S-Rajput-at-JSW-and-JAP-Electrical-Engg-Nasik.html' target='_blank'>Selection of our B E Mechanical student Mr Manoj S Rajput at JSW and JAP Electrical Engg Nasik</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-B-E-Mechanical-student-Mr-Manoj-S-Rajput-at-JSW-and-JAP-Electrical-Engg-Nasik.pdf' target='_blank'>Selection of our B E Mechanical student Mr Manoj S Rajput at JSW and JAP Electrical Engg Nasik</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-BBA-student-Mr-Shivam-Chaturvedi-at-Teleperformance-Indore.html' target='_blank'>Selection of our BBA student Mr Shivam Chaturvedi at Teleperformance Indore</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-BBA-student-Mr-Shivam-Chaturvedi-at-Teleperformance-Indore.pdf' target='_blank'>Selection of our BBA student Mr Shivam Chaturvedi at Teleperformance Indore</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Lokesh-Patil-at-Bharat-Rasayan-Limited-Dahej.html' target='_blank'>Selection of our M Sc Chemistry student Mr Lokesh Patil at Bharat Rasayan Limited Dahej</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Lokesh-Patil-at-Bharat-Rasayan-Limited-Dahej.pdf' target='_blank'>Selection of our M Sc Chemistry student Mr Lokesh Patil at Bharat Rasayan Limited Dahej</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Rohit-Yogi-at-Macleods-Pharma-Ltd-Pithampur.html' target='_blank'>Selection of our M Sc Chemistry student Mr Rohit Yogi at Macleods Pharma Ltd Pithampur</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Rohit-Yogi-at-Macleods-Pharma-Ltd-Pithampur.pdf' target='_blank'>Selection of our M Sc Chemistry student Mr Rohit Yogi at Macleods Pharma Ltd Pithampur</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-MCA-student-Mr-Atharv-N-Yeole-at-Infosys-Pune.html' target='_blank'>Selection of our MCA student Mr Atharv N Yeole at Infosys Pune</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-MCA-student-Mr-Atharv-N-Yeole-at-Infosys-Pune.pdf' target='_blank'>Selection of our MCA student Mr Atharv N Yeole at Infosys Pune</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-student-Mr-Mukund-S-Patil-at-SMFG-India-Credit-Co-Limited.html' target='_blank'>Selection of our student Mr Mukund S Patil at SMFG India Credit Co Limited</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-student-Mr-Mukund-S-Patil-at-SMFG-India-Credit-Co-Limited.pdf' target='_blank'>Selection of our student Mr Mukund S Patil at SMFG India Credit Co Limited</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-B-Com-student-Ms-Mahima-Jain-at-Inet-Technologies-Indore.html' target='_blank'>Selection of our B Com student Ms Mahima Jain at Inet Technologies Indore</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-B-Com-student-Ms-Mahima-Jain-at-Inet-Technologies-Indore.pdf' target='_blank'>Selection of our B Com student Ms Mahima Jain at Inet Technologies Indore</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-B-Sc-student-Mr-Mohit-Gurjar-at-Housofai-Technologies-Pvt-Ltd-Indore.html' target='_blank'>Selection of our B Sc student Mr Mohit Gurjar at Housofai Technologies Pvt Ltd Indore</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-B-Sc-student-Mr-Mohit-Gurjar-at-Housofai-Technologies-Pvt-Ltd-Indore.pdf' target='_blank'>Selection of our B Sc student Mr Mohit Gurjar at Housofai Technologies Pvt Ltd Indore</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Darshan-Patil-at-Alivus-Life-Sciences-Ankleshwar.html' target='_blank'>Selection of our M Sc Chemistry student Mr Darshan Patil at Alivus Life Sciences Ankleshwar</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Darshan-Patil-at-Alivus-Life-Sciences-Ankleshwar.pdf' target='_blank'>Selection of our M Sc Chemistry student Mr Darshan Patil at Alivus Life Sciences Ankleshwar</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Jayesh-Patil-at-Glenmark-Life-Science-Dahej.html' target='_blank'>Selection of our M Sc Chemistry student Mr Jayesh Patil at Glenmark Life Science Dahej</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Jayesh-Patil-at-Glenmark-Life-Science-Dahej.pdf' target='_blank'>Selection of our M Sc Chemistry student Mr Jayesh Patil at Glenmark Life Science Dahej</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Sagar-K-Patil-at-CTX-Life-Sciences-Surat.html' target='_blank'>Selection of our M Sc Chemistry student Mr Sagar K Patil at CTX Life Sciences Surat</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Sagar-K-Patil-at-CTX-Life-Sciences-Surat.pdf' target='_blank'>Selection of our M Sc Chemistry student Mr Sagar K Patil at CTX Life Sciences Surat</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Wadile-Sushil-at-Sumotomo-Chemical-India-P-Ltd-Vapi.html' target='_blank'>Selection of our M Sc Chemistry student Mr Wadile Sushil at Sumotomo Chemical India P Ltd Vapi</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-M-Sc-Chemistry-student-Mr-Wadile-Sushil-at-Sumotomo-Chemical-India-P-Ltd-Vapi.pdf' target='_blank'>Selection of our M Sc Chemistry student Mr Wadile Sushil at Sumotomo Chemical India P Ltd Vapi</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Selection-of-our-MCA-student-Mr-Raj-Kumar-Marathe-at-Choice-Technologies-Lab-Pune.html' target='_blank'>Selection of our MCA student Mr Raj Kumar Marathe at Choice Technologies Lab Pune</a></td>
+                             <td><a href='uploads/2025/08/Selection-of-our-MCA-student-Mr-Raj-Kumar-Marathe-at-Choice-Technologies-Lab-Pune.pdf' target='_blank'>Selection of our MCA student Mr Raj Kumar Marathe at Choice Technologies Lab Pune</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/08/Industrial-visit-of-students-2025.html' target='_blank'>Industrial visit of students 2025</a></td>
+                             <td><a href='uploads/2025/08/Industrial-visit-of-students-2025.pdf' target='_blank'>Industrial visit of students 2025</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-Master-of-Science-in-Chemistry-student-Mr-Mayur-K-Patil-at-Zydas-Lifescience-Limited.html' target='_blank'>Selection of our Master of Science in Chemistry student Mr Mayur K Patil at Zydas Lifescience Limited</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-Master-of-Science-in-Chemistry-student-Mr-Mayur-K-Patil-at-Zydas-Lifescience-Limited.pdf' target='_blank'>Selection of our Master of Science in Chemistry student Mr Mayur K Patil at Zydas Lifescience Limited</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-B-E-EEE-student-Mr-Nitin-Mutekar-at-Rivaan-Tech-Pvt-Limited.html' target='_blank'>Selection of our B E EEE student Mr Nitin Mutekar at Rivaan Tech Pvt Limited</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-B-E-EEE-student-Mr-Nitin-Mutekar-at-Rivaan-Tech-Pvt-Limited.pdf' target='_blank'>Selection of our B E EEE student Mr Nitin Mutekar at Rivaan Tech Pvt Limited</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-Master-of-Computer-Applications-student-Mr-Pallav-Saxena-at-Amazon-Development-Center-Pvt-Limited.html' target='_blank'>Selection of our Master of Computer Applications student Mr Pallav Saxena at Amazon Development Center Pvt Limited</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-Master-of-Computer-Applications-student-Mr-Pallav-Saxena-at-Amazon-Development-Center-Pvt-Limited.pdf' target='_blank'>Selection of our Master of Computer Applications student Mr Pallav Saxena at Amazon Development Center Pvt Limited</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-Master-of-Computer-Applications-student-Mr-Pradeep-K-Prajapati-at-Encore-Sky-Tech-Pvt-Ltd.html' target='_blank'>Selection of our Master of Computer Applications student Mr Pradeep K Prajapati at Encore Sky Tech Pvt Ltd</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-Master-of-Computer-Applications-student-Mr-Pradeep-K-Prajapati-at-Encore-Sky-Tech-Pvt-Ltd.pdf' target='_blank'>Selection of our Master of Computer Applications student Mr Pradeep K Prajapati at Encore Sky Tech Pvt Ltd</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-Bachelor-of-Computer-Applications-student-Mr-Dhruv-K-Goti-at-Invica-Infotech.html' target='_blank'>Selection of our Bachelor of Computer Applications student Mr Dhruv K Goti at Invica Infotech</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-Bachelor-of-Computer-Applications-student-Mr-Dhruv-K-Goti-at-Invica-Infotech.pdf' target='_blank'>Selection of our Bachelor of Computer Applications student Mr Dhruv K Goti at Invica Infotech</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-B-E-ECE-student-Mr-Arun-B-at-International-Inst-of-Technology.html' target='_blank'>Selection of our B E ECE student Mr Arun B at International Inst of Technology</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-B-E-ECE-student-Mr-Arun-B-at-International-Inst-of-Technology.pdf' target='_blank'>Selection of our B E ECE student Mr Arun B at International Inst of Technology</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-M-Sc-Chemistry-student-Mr-Kamlesh-D-Shewale-at-Glenmark-Limited.html' target='_blank'>Selection of our M Sc Chemistry student Mr Kamlesh D Shewale at Glenmark Limited</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-M-Sc-Chemistry-student-Mr-Kamlesh-D-Shewale-at-Glenmark-Limited.pdf' target='_blank'>Selection of our M Sc Chemistry student Mr Kamlesh D Shewale at Glenmark Limited</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/07/Selection-of-our-Bachelor-of-Commerce-student-Mr-Himanshu-Singh-at-WM-Universal-Solutions-Pvt.html' target='_blank'>Selection of our Bachelor of Commerce student Mr Himanshu Singh at WM Universal Solutions Pvt</a></td>
+                             <td><a href='uploads/2025/07/Selection-of-our-Bachelor-of-Commerce-student-Mr-Himanshu-Singh-at-WM-Universal-Solutions-Pvt.pdf' target='_blank'>Selection of our Bachelor of Commerce student Mr Himanshu Singh at WM Universal Solutions Pvt</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/06/Selection-of-our-Students-2024.html' target='_blank'>Selection of our Students 2024</a></td>
+                             <td><a href='uploads/2025/06/Selection-of-our-Students-2024.pdf' target='_blank'>Selection of our Students 2024</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/06/21072023_112736_Selection-of-our-Students-1.html' target='_blank'>Selection of our Students 2023</a></td>
+                             <td><a href='uploads/2025/06/21072023_112736_Selection-of-our-Students-1.pdf' target='_blank'>Selection of our Students 2023</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/06/Prospectus.html' target='_blank'>Placement of our Students during 2018 to 2022</a></td>
+                             <td><a href='uploads/2025/06/Prospectus.pdf' target='_blank'>Placement of our Students during 2018 to 2022</a></td>
                           </tr></table>
 
 		</div>

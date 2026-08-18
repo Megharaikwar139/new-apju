@@ -236,6 +236,9 @@ var pum_popups = {"pum-620":{"triggers":[{"type":"click_open","settings":{"cooki
 <script src="assets/js/pum-site-scripts8b8b.js" id="popup-maker-site-js"></script>
 <script src="assets/js/mobile-detect.min3ba1.js" id="mobile-detect-js"></script>
 <script src="assets/js/js_composer_front.mine097.js" id="wpb_composer_front_js-js"></script>
+<script src="assets/js/vc/vc-accordion.min.js" id="vc_accordion_script-js"></script>
+<script src="assets/js/vc/vc-tta-autoplay.min.js" id="vc_tta_autoplay_script-js"></script>
+<script src="assets/js/vc/vc-tabs.min.js" id="vc_tabs_script-js"></script>
 <script src="assets/js/vc-waypoints.mine097.js" id="vc_waypoints-js"></script>
 
 

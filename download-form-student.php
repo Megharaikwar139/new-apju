@@ -89,7 +89,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form for Issue of Duplicate Degree Certificate.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/01_Application-Form-for-Issue-of-Duplicate-Degree-Certificate.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/01_Application-Form-for-Issue-of-Duplicate-Degree-Certificate.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -98,7 +98,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form for Issue of Degree Certificate.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/02_Application-Form-For-Issue-of-Degree-Certificate.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/02_Application-Form-For-Issue-of-Degree-Certificate.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -107,7 +107,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form for Issue of Migration_Provisional_Transcript Certificate.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/03_Application-Form-For-Issue-of-Migration_Provisional_Transcript-Certificate.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/03_Application-Form-For-Issue-of-Migration_Provisional_Transcript-Certificate.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -116,7 +116,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form For Issue of Duplicate Migration_Provisional Certificate.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/04_Application-Form-For-Issue-of-Duplicate-Migration_Provisional-Certificate.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/04_Application-Form-For-Issue-of-Duplicate-Migration_Provisional-Certificate.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -125,7 +125,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Answer Book Sample.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/05_Answer-Book-Sample.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/05_Answer-Book-Sample.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -134,7 +134,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Student I Card Form.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/06_Student-I-Card-Form.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/06_Student-I-Card-Form.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -143,7 +143,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Exam Help desk form_Student Information Form.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/07_Exam-Help-desk-form_Student-Information-Form.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/07_Exam-Help-desk-form_Student-Information-Form.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -152,7 +152,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form For Issue of Migration_Provisional_Transcript Certificate.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/08_Application-Form-For-Issue-of-Migration_Provisional_Transcript-Certificate.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/08_Application-Form-For-Issue-of-Migration_Provisional_Transcript-Certificate.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -161,7 +161,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form for Issue of Diploma_PG Diploma Certificate.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/09_Application-Form-for-Issue-of-Diploma_PG-Diploma-Certificate.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/09_Application-Form-for-Issue-of-Diploma_PG-Diploma-Certificate.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -170,7 +170,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Admission Cancelleation Form.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/10_Admission-Cancelleation-Form.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/10_Admission-Cancelleation-Form.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -179,7 +179,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form for Issue of Duplicate Diploma_PG Diploma Certificate.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/11_Application-Form-for-Issue-of-Duplicate-Diploma_PG-Diploma-Certificate.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/11_Application-Form-for-Issue-of-Duplicate-Diploma_PG-Diploma-Certificate.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -188,7 +188,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Application Form for Issue of Duplicate_Corrected Marksheet.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/12_Application-Form-for-Issue-of-Duplicate_Corrected-Marksheet.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/12_Application-Form-for-Issue-of-Duplicate_Corrected-Marksheet.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -197,7 +197,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">No Dues Form.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/13_No-Dues-Form.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/13_No-Dues-Form.pdf" target="_blank">Download</a>
 </div>
 
 <div class="pdf-row">
@@ -206,7 +206,7 @@ gap:10px;
 <span class="pdf-icon">📄</span>
 <span class="pdf-title">Fee Refund Form.pdf</span>
 </div>
-<a class="pdf-download" href="../wp-content/uploads/2026/03/14_Fee-Rrefund-Form.html" target="_blank">Download</a>
+<a class="pdf-download" href="uploads/2026/03/14_Fee-Rrefund-Form.pdf" target="_blank">Download</a>
 </div>
 
 </div>

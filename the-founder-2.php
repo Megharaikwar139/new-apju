@@ -1,4 +1,12 @@
 <?php include 'header.php'; ?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+    <div class="uk-container" style="text-align: center;">
+        <h1 style="text-align: center;">The Founder</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; The Founder</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
    
     
@@ -19,7 +27,7 @@
     </div>
     
     <div class="founder-image-container">
-        <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/08/rnkapoor1.html" alt="Late Shri R.N. Kapoor" class="founder-image">
+        <img decoding="async" src="uploads/2025/08/rnkapoor1.png" alt="Late Shri R.N. Kapoor" class="founder-image">
     </div>
     
     <h2 class="founder-name">Late Shri R.N. Kapoor <span class="title-highlight">Spirit of the Skies</span></h2>

@@ -1,4 +1,12 @@
 <?php include 'header.php'; ?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+    <div class="uk-container" style="text-align: center;">
+        <h1 style="text-align: center;">Finance Committee</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; Finance Committee</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
    
     
@@ -13,8 +21,8 @@
 		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
-			<h2><em>Finance Committee</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/03/finance-committee.html' target='_blank'>Finance Committee</a></td>
+			<h2>Finance Committee</h2><table class='filr-table'><tr><th>Title</th></tr><tr>
+                             <td><a href='uploads/2026/03/finance-committee.jpg' target='_blank'>Finance Committee</a></td>
                           </tr></table>
 
 		</div>
