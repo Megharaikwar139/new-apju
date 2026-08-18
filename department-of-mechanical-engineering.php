@@ -1,9 +1,19 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Mechanical Engineering – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-1854 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'mechanical-engineering';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Mechanical Engineering</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Mechanical Engineering</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-1854" class="post-1854 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
@@ -14,7 +24,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="800" height="533" src="uploads/2026/01/deparment-of-mechanical.jpg" class="vc_single_image-img attachment-full" alt="" title="deparment-of-mechanical" srcset="assets/images/deparment-of-mechanical.jpg 800w, assets/images/deparment-of-mechanical-300x200.jpg 300w, assets/images/deparment-of-mechanical-768x512.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="800" height="533" src="uploads/2026/01/deparment-of-mechanical.jpg" class="vc_single_image-img attachment-full" alt="" title="deparment-of-mechanical" srcset="uploads/2026/01/deparment-of-mechanical.jpg 800w, uploads/2026/01/deparment-of-mechanical-300x200.jpg 300w, uploads/2026/01/deparment-of-mechanical-768x512.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -170,7 +180,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -181,7 +191,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Advanced laboratories">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -192,7 +202,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -203,17 +213,17 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Syllabus &amp; Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2025/12/ME-VII-and-VIII-SEM-SYLLABUS.pdf' target='_blank'>ME VII and VIII SEM SYLLABUS</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/ME-VII-and-VIII-SEM-SYLLABUS.html' target='_blank'>ME VII and VIII SEM SYLLABUS</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/ME-V-and-VI-SEM-SYLLABUS.pdf' target='_blank'>ME V and VI SEM SYLLABUS</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/ME-V-and-VI-SEM-SYLLABUS.html' target='_blank'>ME V and VI SEM SYLLABUS</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/ME-III-and-IV-SEM-Syllabus.pdf' target='_blank'>ME III and IV SEM Syllabus</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/ME-III-and-IV-SEM-Syllabus.html' target='_blank'>ME III and IV SEM Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/ME-VII-and-VIII-SEM-Scheme.pdf' target='_blank'>ME VII and VIII SEM Scheme</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/ME-VII-and-VIII-SEM-Scheme.html' target='_blank'>ME VII and VIII SEM Scheme</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/ME-V-and-VI-SEM-Scheme.pdf' target='_blank'>ME V and VI SEM Scheme</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/ME-V-and-VI-SEM-Scheme.html' target='_blank'>ME V and VI SEM Scheme</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/ME-III-and-IV-SEM-Scheme.pdf' target='_blank'>ME III and IV SEM Scheme</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/ME-III-and-IV-SEM-Scheme.html' target='_blank'>ME III and IV SEM Scheme</a></td>
                           </tr></table>
 
 		</div>

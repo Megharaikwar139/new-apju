@@ -138,7 +138,7 @@
 <!-- #colophon -->
 </div><!-- #page -->
 <script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/aku/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/aku/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <div 
 	id="pum-620" 
@@ -236,9 +236,15 @@ var pum_popups = {"pum-620":{"triggers":[{"type":"click_open","settings":{"cooki
 <script src="assets/js/pum-site-scripts8b8b.js" id="popup-maker-site-js"></script>
 <script src="assets/js/mobile-detect.min3ba1.js" id="mobile-detect-js"></script>
 <script src="assets/js/js_composer_front.mine097.js" id="wpb_composer_front_js-js"></script>
+<?php if (!empty($useLiveReferenceAssets)): ?>
+<script src="assets/live_assets/vc-accordion.min.js" id="vc_accordion_script-js"></script>
+<script src="assets/live_assets/vc-tta-autoplay.min.js" id="vc_tta_autoplay_script-js"></script>
+<script src="assets/live_assets/vc-tabs.min.js" id="vc_tabs_script-js"></script>
+<?php else: ?>
 <script src="assets/js/vc/vc-accordion.min.js" id="vc_accordion_script-js"></script>
 <script src="assets/js/vc/vc-tta-autoplay.min.js" id="vc_tta_autoplay_script-js"></script>
 <script src="assets/js/vc/vc-tabs.min.js" id="vc_tabs_script-js"></script>
+<?php endif; ?>
 <script src="assets/js/vc-waypoints.mine097.js" id="vc_waypoints-js"></script>
 
 
@@ -317,7 +323,9 @@ jQuery(document).ready(function ($) {
 
 
 
+<?php if (empty($useLiveReferenceAssets)): ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<?php endif; ?>
 </body>
 
 <!-- Mirrored from aku.ac.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2026 09:19:41 GMT -->

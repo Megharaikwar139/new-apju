@@ -88,7 +88,7 @@ require_once 'header.php';
                     if (strpos($media['image_path'], 'assets/') === 0) {
                         $img_src = '../' . $media['image_path'];
                     } else {
-                        $img_src = $media['image_path'] ? '../../APJ-WEB/wp-content/uploads/' . $media['image_path'] : '../assets/images/placeholder.jpg';
+                        $img_src = $media['image_path'] ? '../uploads/' . $media['image_path'] : '../assets/images/placeholder.jpg';
                     }
                 ?>
                 <tr>

@@ -1,9 +1,19 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Computer Applications – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-2685 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'computer-applications-coe';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Computer Applications</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Computer Applications</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-2685" class="post-2685 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
@@ -14,7 +24,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1000" height="667" src="uploads/2025/11/mca.jpg" class="vc_single_image-img attachment-full" alt="" title="mca" srcset="assets/images/mca.jpg 1000w, assets/images/mca-300x200.jpg 300w, assets/images/mca-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1000" height="667" src="uploads/2025/11/mca.jpg" class="vc_single_image-img attachment-full" alt="" title="mca" srcset="uploads/2025/11/mca.jpg 1000w, uploads/2025/11/mca-300x200.jpg 300w, uploads/2025/11/mca-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -150,7 +160,7 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/11/MCA-LAB-PIC-2.jpeg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/11/MCA-LAB-PIC-2.jpeg" alt="MCA Lab">
   <h4>MCA LAB</h4>
   <p>MCA Lab is well-equipped environment for practical learning in advanced computing and application development.</p>
 
@@ -172,7 +182,7 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -183,7 +193,7 @@ University Aligarh) and PhD-2013 (Indian Institute of Technology Roorkee)</p><br
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 

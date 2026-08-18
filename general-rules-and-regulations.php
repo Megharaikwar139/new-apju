@@ -14,7 +14,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div style="position:relative;padding-bottom:100%;height:0;overflow:hidden;">
-    <iframe src="https://aku.thetask.in/wp-content/uploads/2025/06/प्रवेश_मार्गदर्शिका_सत्र_2025-261.pdf#view=FitH" 
+    <iframe src="uploads/2025/06/प्रवेश_मार्गदर्शिका_सत्र_2025-261.pdf#view=FitH" 
             style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" 
             allowfullscreen>
     </iframe>

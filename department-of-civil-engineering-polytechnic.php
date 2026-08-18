@@ -1,9 +1,19 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Civil Engineering (Polytechnic) – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-2691 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'civil-engineering-polytechnic';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Civil Engineering (Polytechnic)</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Civil Engineering (Polytechnic)</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-2691" class="post-2691 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
@@ -14,7 +24,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_shadow  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="845" height="563" src="uploads/2025/06/101888-1.jpg" class="vc_single_image-img attachment-full" alt="" title="101888" srcset="assets/images/101888-1.jpg 845w, assets/images/101888-1-300x200.jpg 300w, assets/images/101888-1-768x512.jpg 768w" sizes="(max-width: 845px) 100vw, 845px" /></div>
+			<div class="vc_single_image-wrapper vc_box_shadow  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="845" height="563" src="uploads/2025/06/101888-1.jpg" class="vc_single_image-img attachment-full" alt="" title="101888" srcset="uploads/2025/06/101888-1.jpg 845w, uploads/2025/06/101888-1-300x200.jpg 300w, uploads/2025/06/101888-1-768x512.jpg 768w" sizes="(max-width: 845px) 100vw, 845px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -92,306 +102,52 @@ To support professional development through conferences and training programs.</
 </div></div></div></div></div></div><div class="vc_tta-panel" id="1750747217311-04a868cf-eeff" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747217311-04a868cf-eeff" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Faculty &amp; Staff Profile</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Faculty &amp; Staff</h2><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
-			<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Vertical Profile Card</title>
-  <style>
-
-
-    .profile-card {
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
-      max-width: 300px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .profile-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .profile-card img {
-      width: 100%;
-      height: 100%;
-      max-height:220px;
-      object-fit: cover;
-    }
-
-    .profile-content {
-      padding: 20px;
-    }
-
-    .profile-content h4 { text-align:center;
-      margin: 0;
-      font-size: 22px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .profile-content p {
-        text-align:center;
-      margin-top: 6px;
-      font-size: 14px;
-      color: #777;
-    }
-
-    @media (max-width: 480px) {
-      .profile-card {
-        max-width: 90%;
-      }
-
-      .profile-card img {
-        height: 220px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Screenshot-2025-06-25-130058.png" alt="Hemant Vishwakarma">-->
+			<div class="profile-card">
+    <img decoding="async" src="uploads/2025/06/Screenshot-2025-06-25-130058.png" alt="Ms. Himanshi Solanki">
     <div class="profile-content">
-      <h4>Ms. Himanshi Solanki </h4>
+      <h4>Ms. Himanshi Solanki</h4>
       <p>Assistant Professor B.E(Civil Engg.),M.Tech(Structural Engg.)</p>
     </div>
   </div>
-
-</body>
-
-<!-- Mirrored from aku.ac.in/department-of-civil-engineering-polytechnic/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2026 09:21:58 GMT -->
-</html>
 
 		</div>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
-			<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Vertical Profile Card</title>
-  <style>
-
-
-    .profile-card {
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
-      max-width: 300px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .profile-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .profile-card img {
-      width: 100%;
-      height: 100%;
-      max-height:220px;
-      object-fit: cover;
-    }
-
-    .profile-content {
-      padding: 20px;
-    }
-
-    .profile-content h4 { text-align:center;
-      margin: 0;
-      font-size: 22px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .profile-content p {
-        text-align:center;
-      margin-top: 6px;
-      font-size: 14px;
-      color: #777;
-    }
-
-    @media (max-width: 480px) {
-      .profile-card {
-        max-width: 90%;
-      }
-
-      .profile-card img {
-        height: 220px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Screenshot-2025-06-25-130058.png" alt="Hemant Vishwakarma">-->
+			<div class="profile-card">
+    <img decoding="async" src="uploads/2025/06/Screenshot-2025-06-25-130058.png" alt="Mr. Virendra Savaner">
     <div class="profile-content">
       <h4>Mr. Virendra Savaner</h4>
       <p>Assistant Professor B.E(Civil Engg.),M.Tech</p>
     </div>
   </div>
 
-</body>
-</html>
-
 		</div>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
-			<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Vertical Profile Card</title>
-  <style>
-
-
-    .profile-card {
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
-      max-width: 300px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .profile-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .profile-card img {
-      width: 100%;
-      height: 100%;
-      max-height:220px;
-      object-fit: cover;
-    }
-
-    .profile-content {
-      padding: 20px;
-    }
-
-    .profile-content h4 { text-align:center;
-      margin: 0;
-      font-size: 22px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .profile-content p {
-        text-align:center;
-      margin-top: 6px;
-      font-size: 14px;
-      color: #777;
-    }
-
-    @media (max-width: 480px) {
-      .profile-card {
-        max-width: 90%;
-      }
-
-      .profile-card img {
-        height: 220px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="profile-card">
-    <img decoding="async" src="uploads/2025/06/Screenshot-2025-06-25-130058.png" alt="Hemant Vishwakarma">
+			<div class="profile-card">
+    <img decoding="async" src="uploads/2025/06/Screenshot-2025-06-25-130058.png" alt="Rakesh Dubey">
     <div class="profile-content">
       <h4>Rakesh Dubey</h4>
       <p>Professor</p>
     </div>
   </div>
 
-</body>
-</html>
-
 		</div>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
-			<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Vertical Profile Card</title>
-  <style>
-
-
-    .profile-card {
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
-      max-width: 300px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .profile-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .profile-card img {
-      width: 100%;
-      height: 100%;
-      max-height:220px;
-      object-fit: cover;
-    }
-
-    .profile-content {
-      padding: 20px;
-    }
-
-    .profile-content h4 { text-align:center;
-      margin: 0;
-      font-size: 22px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .profile-content p {
-        text-align:center;
-      margin-top: 6px;
-      font-size: 14px;
-      color: #777;
-    }
-
-    @media (max-width: 480px) {
-      .profile-card {
-        max-width: 90%;
-      }
-
-      .profile-card img {
-        height: 220px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="profile-card">
-    <img decoding="async" src="uploads/2025/06/Screenshot-2025-06-25-130058.png" alt="Hemant Vishwakarma">
+			<div class="profile-card">
+    <img decoding="async" src="uploads/2025/06/Screenshot-2025-06-25-130058.png" alt="Rakesh Dubey">
     <div class="profile-content">
       <h4>Rakesh Dubey</h4>
       <p>Professor</p>
     </div>
   </div>
-
-</body>
-</html>
 
 		</div>
 	</div>
@@ -410,7 +166,7 @@ To support professional development through conferences and training programs.</
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -421,7 +177,7 @@ To support professional development through conferences and training programs.</
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Advanced laboratories">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -432,7 +188,7 @@ To support professional development through conferences and training programs.</
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 

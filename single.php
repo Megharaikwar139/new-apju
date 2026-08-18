@@ -70,8 +70,6 @@ if (!$data) {
     exit;
 }
 
-// Ensure proper base path for assets if included
-$base_url = 'http://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
 ?>
 <?php require_once 'header.php'; ?>
 <style>

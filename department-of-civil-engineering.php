@@ -1,9 +1,18 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Civil Engineering – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-1857 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Civil Engineering</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Civil Engineering</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-1857" class="post-1857 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
@@ -14,7 +23,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element wpb_animate_when_almost_visible wpb_zoomIn zoomIn">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_shadow_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1536" height="1024" src="uploads/2025/12/civil.png" class="vc_single_image-img attachment-full" alt="" title="civil" srcset="assets/images/civil.png 1536w, assets/images/civil-300x200.png 300w, assets/images/civil-1024x683.png 1024w, assets/images/civil-768x512.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></div>
+			<div class="vc_single_image-wrapper vc_box_shadow_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1536" height="1024" src="uploads/2025/12/civil.png" class="vc_single_image-img attachment-full" alt="Civil Engineering Department" title="civil" srcset="uploads/2025/12/civil.png 1536w, uploads/2025/12/civil-300x200.png 300w, uploads/2025/12/civil-1024x683.png 1024w, uploads/2025/12/civil-768x512.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -41,7 +50,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="Vision" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -60,7 +69,7 @@ To impart technical knowledge blended with ethical responsibility and leadership
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="Mission" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -139,7 +148,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2026/01/CE-LAB-PIC-3.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2026/01/CIVIL-LAB-PIC-3.jpg" alt="Civil laboratories">
   <h4>Civil laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, etc.</p>
 
@@ -161,7 +170,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -172,7 +181,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2026/01/CIVIL-LAB-PIC-3.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2026/01/CIVIL-LAB-PIC-3.jpg" alt="Civil laboratories">
   <h4>Civil laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, etc.</p>
 
@@ -183,7 +192,7 @@ Experience: 22 years</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -194,11 +203,11 @@ Experience: 22 years</p>
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Syllabus &amp; Scheme COE CIVIL</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2026/01/CE-III-and-IV-SCHEME.pdf' target='_blank'>CE III and IV SCHEME</a></td>
+                             <td><a href='../wp-content/uploads/2026/01/CE-III-and-IV-SCHEME.html' target='_blank'>CE III and IV SCHEME</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2026/01/CIVIL-VII-and-VIII-Sem-Syllabus.pdf' target='_blank'>CIVIL VII and VIII Sem Syllabus</a></td>
+                             <td><a href='../wp-content/uploads/2026/01/CIVIL-VII-and-VIII-Sem-Syllabus.html' target='_blank'>CIVIL VII and VIII Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2026/01/CE-VandVI-SEM-SCHEME.pdf' target='_blank'>CE VandVI SEM SCHEME</a></td>
+                             <td><a href='../wp-content/uploads/2026/01/CE-VandVI-SEM-SCHEME.html' target='_blank'>CE VandVI SEM SCHEME</a></td>
                           </tr></table>
 
 		</div>
@@ -207,9 +216,9 @@ Experience: 22 years</p>
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>SO/PO COE CIVIL</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2025/10/CO_s_M.TECH-SE_I_II_III__IV_SEM11.pdf' target='_blank'>CO_s_M.TECH-SE_I_II_III_&#038;_IV_SEM[1][1]</a></td>
+                             <td><a href='../wp-content/uploads/2025/10/CO_s_M.TECH-SE_I_II_III__IV_SEM11.html' target='_blank'>CO_s_M.TECH-SE_I_II_III_&#038;_IV_SEM[1][1]</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/10/BE-CE-COs_1ST_TO_8TH_SEM1.pdf' target='_blank'>BE-CE-COs(_1ST_TO_8TH_SEM)[1]</a></td>
+                             <td><a href='../wp-content/uploads/2025/10/BE-CE-COs_1ST_TO_8TH_SEM1.html' target='_blank'>BE-CE-COs(_1ST_TO_8TH_SEM)[1]</a></td>
                           </tr></table>
 
 		</div>
@@ -219,15 +228,15 @@ Experience: 22 years</p>
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Notice COE CIVIL</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2025/12/Notice_17.09.2025-scaled.jpg' target='_blank'>Notice_17.09.2025</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/Notice_17.09.2025-scaled.html' target='_blank'>Notice_17.09.2025</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/Notice-MPTAAS-08.11.2025.pdf' target='_blank'>Notice (MPTAAS) 08.11.2025</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/Notice-MPTAAS-08.11.2025.html' target='_blank'>Notice (MPTAAS) 08.11.2025</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/Notice-24.10.25.pdf' target='_blank'>Notice 24.10.25</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/Notice-24.10.25.html' target='_blank'>Notice 24.10.25</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/Notice_08.08.2025.pdf' target='_blank'>Notice_08.08.2025</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/Notice_08.08.2025.html' target='_blank'>Notice_08.08.2025</a></td>
                           </tr><tr>
-                             <td><a href='uploads/2025/12/Urgent-Notice-01.09.2025.pdf' target='_blank'>Urgent Notice 01.09.2025</a></td>
+                             <td><a href='../wp-content/uploads/2025/12/Urgent-Notice-01.09.2025.html' target='_blank'>Urgent Notice 01.09.2025</a></td>
                           </tr></table>
 
 		</div>
@@ -243,7 +252,7 @@ Experience: 22 years</p>
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Time Table</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.pdf' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
+                             <td><a href='../wp-content/uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.html' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
                           </tr></table>
 
 		</div>
