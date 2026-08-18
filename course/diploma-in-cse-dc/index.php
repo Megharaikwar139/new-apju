@@ -1,0 +1,1 @@
+<?php $courseTitle='Diploma in CSE (DC)'; $courseLevel='Diploma'; $courseDescription='The Diploma in Computer Science Engineering program builds a strong foundation in computing, programming, software development and practical technical skills.'; require dirname(__DIR__) . '/course-page.php';

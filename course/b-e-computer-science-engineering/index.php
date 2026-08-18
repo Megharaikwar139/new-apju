@@ -1,0 +1,1 @@
+<?php $courseTitle='B.E. (Computer Science Engineering)'; $courseLevel='Under Graduate'; $courseDescription='The Bachelor of Engineering program in Computer Science Engineering develops the technical knowledge, problem-solving ability and practical skills needed for modern computing careers.'; require dirname(__DIR__) . '/course-page.php';
