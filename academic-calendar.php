@@ -179,7 +179,6 @@
             <tr><td><a href="uploads/2025/06/06022024_044902_Academic-Calendar.pdf" target="_blank">Academic Calendar 2024</a></td></tr>
         </table>
     </div>
-
     <!-- Session 2023-24 -->
     <div class="calendar-content" id="session-23-24">
         <table class="calendar-table">
