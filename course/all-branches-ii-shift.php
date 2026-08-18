@@ -1,7 +1,7 @@
 <?php
-$pageTitle = 'M.Tech. &ndash; Thermal Engineering (TH) - Dr APJ University Indore';
-$bodyClass = 'wp-singular page-template-default page page-id-4025 wp-theme-aku wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
-include 'header.php';
+$pageTitle = 'All Branches (II Shift) - Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template-default page page-id-4071 wp-theme-aku wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+include '../header.php';
 ?>
 <style>
   section.page-header .uk-container { position: relative; }
@@ -27,7 +27,7 @@ include 'header.php';
   }
   section.page-header .breadcrumb a { color: #fff; }
 </style>
-<section class="page-header" style="background-image:url('assets/images/bg-header.jpg')"><div class="uk-container"><h1>M.Tech. &ndash; Thermal Engineering (TH)</h1><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; M.Tech. &ndash; Thermal Engineering (TH)</nav></div></section>
+<section class="page-header" style="background-image:url('assets/images/bg-header.jpg')"><div class="uk-container"><h1>All Branches (II Shift)</h1><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; All Branches (II Shift)</nav></div></section>
 <div class="uk-container uk-container-small uk-margin-large-top uk-margin-large-bottom uk-animation-slide-bottom-small">
     <article class="uk-article uk-card uk-card-default uk-card-body uk-box-shadow-medium">
         <h2 class="uk-heading-line uk-text-center"><span>Overview</span></h2>
@@ -35,7 +35,7 @@ include 'header.php';
 </div>
 <div class="uk-container uk-margin-large-top uk-margin-large-bottom">
     <h4 class="uk-text-bold uk-margin-top">📚 Syllabus</h4>
-    <p class="uk-text-meta"><em>No syllabus files available.</em></p>
+    <table class="filr-table uk-table uk-table-divider uk-table-small uk-table-hover uk-margin-top"></table>
 </div>
 <div class="uk-container uk-text-center uk-margin-medium-top uk-margin-medium-bottom">
     <hr style="border-top: 3px solid #ffc107; width: 100px; margin: 0 auto 20px;">
@@ -98,4 +98,4 @@ include 'header.php';
         </div>
     </div>
 </section>
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>

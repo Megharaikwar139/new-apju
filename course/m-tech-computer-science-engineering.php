@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'M. Tech (Computer Science Engineering) - Dr APJ University Indore';
 $bodyClass = 'wp-singular page-template-default page page-id-4023 wp-theme-aku wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
-include 'header.php';
+include '../header.php';
 ?>
 <style>
   section.page-header .uk-container { position: relative; }
@@ -99,4 +99,4 @@ include 'header.php';
         </div>
     </div>
 </section>
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>
