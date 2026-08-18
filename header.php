@@ -691,7 +691,7 @@ h2 em {
 </li>
 <li id="menu-item-2486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2486"><a href="#">Event</a>
 <ul class="sub-menu">
-	<li id="menu-item-3193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3193"><a href="galleries.php">Gallery</a></li>
+	<li id="menu-item-3193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3193"><a href="gallery.php">Gallery</a></li>
 	<li id="menu-item-226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-226"><a href="visiters-testomonials.php">Visiters Testomonials</a></li>
 	<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="students-testomonials.php">Students Testomonials</a></li>
 </ul>
@@ -956,7 +956,7 @@ h2 em {
 </li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2486"><a href="#">Event</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3193"><a href="galleries.php">Gallery</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3193"><a href="gallery.php">Gallery</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-226"><a href="visiters-testomonials.php">Visiters Testomonials</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="students-testomonials.php">Students Testomonials</a></li>
 </ul>
