@@ -224,7 +224,7 @@ foreach ($stats as $stat) {
             <li>
                 <div class="event-content">
                     <span class="event-icon">
-                        <img decoding="async" src="https://cdn-icons-png.flaticon.com/128/747/747310.png" alt="Calendar">
+                        <img decoding="async" src="assets/images/calendar-icon.png" alt="Calendar">
                         <span class="date"><?php echo htmlspecialchars($formatted_date); ?></span>
                     </span>
                     <span class="event-title"><a href="event/<?php echo $event['post_name']; ?>/"><?php echo htmlspecialchars($event['post_title']); ?></a></span>
