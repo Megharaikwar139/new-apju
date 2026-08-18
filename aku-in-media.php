@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+<section class="page-header" style="background-image: linear-gradient(rgb(84 81 81 / 50%), rgba(0, 0, 0, 0.5)), url('assets/images/bg-header.jpg'); background-size: cover; background-position: center; text-align: center;">
     <div class="uk-container" style="text-align: center;">
         <h1 style="text-align: center;">AKU in Media</h1>
         <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; AKU in Media</nav>
