@@ -424,13 +424,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="owl-carousel page-slider page-carosel">
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="why-aku/" class="slide-img-link">
+                        <a href="why-aku.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/about.jpg" alt="Why AKU">
                         </a>
                         <div class="text-content">
-                            <h3><a href="why-aku/" style="color: inherit; text-decoration: none;">Why AKU</a></h3>
+                            <h3><a href="why-aku.php" style="color: inherit; text-decoration: none;">Why AKU</a></h3>
                             <p>Our Faculty-to-Student Ratio allows faculties to focus on the individual learning styles and needs of each student in our University.</p>
-                            <a href="why-aku/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="why-aku.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -440,13 +440,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="faculty-welfare/" class="slide-img-link">
+                        <a href="faculty-welfare.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/facultywa.jpg" alt="Faculty Welfare">
                         </a>
                         <div class="text-content">
-                            <h3><a href="faculty-welfare/" style="color: inherit; text-decoration: none;">Faculty Welfare</a></h3>
+                            <h3><a href="faculty-welfare.php" style="color: inherit; text-decoration: none;">Faculty Welfare</a></h3>
                             <p>We believe in providing the best environment and support for our faculties to help them excel in their academic endeavors.</p>
-                            <a href="faculty-welfare/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="faculty-welfare.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -456,13 +456,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="awardsand-recognigation/" class="slide-img-link">
+                        <a href="awardsand-recognigation.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/award1.jpg" alt="Awards & Recognition">
                         </a>
                         <div class="text-content">
-                            <h3><a href="awardsand-recognigation/" style="color: inherit; text-decoration: none;">Awards & Recognition</a></h3>
+                            <h3><a href="awardsand-recognigation.php" style="color: inherit; text-decoration: none;">Awards & Recognition</a></h3>
                             <p>Explore the various accolades and milestones achieved by our university, recognizing excellence across multiple disciplines.</p>
-                            <a href="awardsand-recognigation/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="awardsand-recognigation.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -472,13 +472,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="our-recruiters/" class="slide-img-link">
+                        <a href="our-recruiters.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/placement.jpg" alt="Our Recruiters">
                         </a>
                         <div class="text-content">
-                            <h3><a href="our-recruiters/" style="color: inherit; text-decoration: none;">Our Recruiters</a></h3>
+                            <h3><a href="our-recruiters.php" style="color: inherit; text-decoration: none;">Our Recruiters</a></h3>
                             <p>Our strong industry ties ensure that top recruiters visit our campus, providing excellent career opportunities for our students.</p>
-                            <a href="our-recruiters/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="our-recruiters.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -488,13 +488,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="gallery/" class="slide-img-link">
+                        <a href="gallery.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/gallery.jpg" alt="Gallery">
                         </a>
                         <div class="text-content">
-                            <h3><a href="gallery/" style="color: inherit; text-decoration: none;">Gallery</a></h3>
+                            <h3><a href="gallery.php" style="color: inherit; text-decoration: none;">Gallery</a></h3>
                             <p>Take a visual tour of our vibrant campus life, academic events, cultural fests, and state-of-the-art facilities.</p>
-                            <a href="gallery/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="gallery.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
