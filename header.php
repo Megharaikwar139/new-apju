@@ -2,6 +2,7 @@
 require_once 'db.php';
 $useLiveReferenceAssets = !empty($useLiveReferenceAssets);
 $activeDepartmentPage = $activeDepartmentPage ?? ($useLiveReferenceAssets ? 'civil-engineering' : '');
+$activeSectionPage = $activeSectionPage ?? '';
 $engineeringDepartmentPages = [
 	'civil-engineering',
 	'computer-science-engineering',
@@ -538,19 +539,19 @@ h2 em {
 			<li id="menu-item-1931" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'law' ? ' current-menu-item page_item page-item-1938 current_page_item' : ''; ?> menu-item-1931"><a href="department-of-law.php"<?php echo $activeDepartmentPage === 'law' ? ' aria-current="page"' : ''; ?>>Department Of Law</a></li>
 		</ul>
 </li>
-		<li id="menu-item-1958" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1958"><a href="#">College of Life Science</a>
+		<li id="menu-item-1958" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'science' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1958"><a href="#">College of Life Science</a>
 		<ul class="sub-menu">
-			<li id="menu-item-1978" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1978"><a href="department-of-science.php">Department of Science</a></li>
+			<li id="menu-item-1978" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'science' ? ' current-menu-item page_item page-item-1968 current_page_item' : ''; ?> menu-item-1978"><a href="department-of-science.php"<?php echo $activeDepartmentPage === 'science' ? ' aria-current="page"' : ''; ?>>Department of Science</a></li>
 		</ul>
 </li>
-		<li id="menu-item-2008" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2008"><a href="#">School of Agricultural Sciences</a>
+		<li id="menu-item-2008" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'agriculture' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-2008"><a href="#">School of Agricultural Sciences</a>
 		<ul class="sub-menu">
-			<li id="menu-item-1905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1905"><a href="department-of-agriculture.php">Department of Agriculture</a></li>
+			<li id="menu-item-1905" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'agriculture' ? ' current-menu-item page_item page-item-1897 current_page_item' : ''; ?> menu-item-1905"><a href="department-of-agriculture.php"<?php echo $activeDepartmentPage === 'agriculture' ? ' aria-current="page"' : ''; ?>>Department of Agriculture</a></li>
 		</ul>
 </li>
-		<li id="menu-item-1955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1955"><a href="#">College of Education</a>
+		<li id="menu-item-1955" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'education' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1955"><a href="#">College of Education</a>
 		<ul class="sub-menu">
-			<li id="menu-item-1956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1956"><a href="department-of-education.php">Department of Education</a></li>
+			<li id="menu-item-1956" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'education' ? ' current-menu-item page_item page-item-1952 current_page_item' : ''; ?> menu-item-1956"><a href="department-of-education.php"<?php echo $activeDepartmentPage === 'education' ? ' aria-current="page"' : ''; ?>>Department of Education</a></li>
 		</ul>
 </li>
 		<li id="menu-item-2741" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2741"><a href="#">College of Computer Application</a>
@@ -573,9 +574,9 @@ h2 em {
 </li>
 </ul>
 </li>
-<li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-66"><a href="#">Examination</a>
+<li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeSectionPage === 'about-the-section' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-66"><a href="#">Examination</a>
 <ul class="sub-menu">
-	<li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384"><a href="about-the-section.php">About The Section</a></li>
+	<li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeSectionPage === 'about-the-section' ? ' current-menu-item page_item page-item-360 current_page_item' : ''; ?> menu-item-384"><a href="about-the-section.php"<?php echo $activeSectionPage === 'about-the-section' ? ' aria-current="page"' : ''; ?>>About The Section</a></li>
 	<li id="menu-item-2317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2317"><a href="examination-committee.php">Examination Committee</a></li>
 	<li id="menu-item-389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"><a href="exam-policy.php">Examination Policy</a></li>
 	<li id="menu-item-388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="exam-code.php">Examination Code</a></li>
@@ -803,19 +804,19 @@ h2 em {
 			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'law' ? ' current-menu-item page_item page-item-1938 current_page_item' : ''; ?> menu-item-1931"><a href="department-of-law.php"<?php echo $activeDepartmentPage === 'law' ? ' aria-current="page"' : ''; ?>>Department Of Law</a></li>
 		</ul>
 </li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1958"><a href="#">College of Life Science</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'science' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1958"><a href="#">College of Life Science</a>
 		<ul class="sub-menu">
-			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1978"><a href="department-of-science.php">Department of Science</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'science' ? ' current-menu-item page_item page-item-1968 current_page_item' : ''; ?> menu-item-1978"><a href="department-of-science.php"<?php echo $activeDepartmentPage === 'science' ? ' aria-current="page"' : ''; ?>>Department of Science</a></li>
 		</ul>
 </li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2008"><a href="#">School of Agricultural Sciences</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'agriculture' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-2008"><a href="#">School of Agricultural Sciences</a>
 		<ul class="sub-menu">
-			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1905"><a href="department-of-agriculture.php">Department of Agriculture</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'agriculture' ? ' current-menu-item page_item page-item-1897 current_page_item' : ''; ?> menu-item-1905"><a href="department-of-agriculture.php"<?php echo $activeDepartmentPage === 'agriculture' ? ' aria-current="page"' : ''; ?>>Department of Agriculture</a></li>
 		</ul>
 </li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1955"><a href="#">College of Education</a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeDepartmentPage === 'education' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-1955"><a href="#">College of Education</a>
 		<ul class="sub-menu">
-			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1956"><a href="department-of-education.php">Department of Education</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeDepartmentPage === 'education' ? ' current-menu-item page_item page-item-1952 current_page_item' : ''; ?> menu-item-1956"><a href="department-of-education.php"<?php echo $activeDepartmentPage === 'education' ? ' aria-current="page"' : ''; ?>>Department of Education</a></li>
 		</ul>
 </li>
 		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2741"><a href="#">College of Computer Application</a>
@@ -838,9 +839,9 @@ h2 em {
 </li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-66"><a href="#">Examination</a>
+<li class="menu-item menu-item-type-custom menu-item-object-custom<?php echo $activeSectionPage === 'about-the-section' ? ' current-menu-ancestor current-menu-parent' : ''; ?> menu-item-has-children menu-item-66"><a href="#">Examination</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384"><a href="about-the-section.php">About The Section</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page<?php echo $activeSectionPage === 'about-the-section' ? ' current-menu-item page_item page-item-360 current_page_item' : ''; ?> menu-item-384"><a href="about-the-section.php"<?php echo $activeSectionPage === 'about-the-section' ? ' aria-current="page"' : ''; ?>>About The Section</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2317"><a href="examination-committee.php">Examination Committee</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"><a href="exam-policy.php">Examination Policy</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="exam-code.php">Examination Code</a></li>
