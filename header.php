@@ -290,7 +290,6 @@ h2 em {
 	<link rel='stylesheet' id='vc_tta_style-css' href='assets/css/js_composer_tta.min.css' media='all' />
 	<link rel='stylesheet' id='vc_animate-css-css' href='assets/css/animate.mine097.css' media='all' />
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href='assets/css/custom-header.css' rel='stylesheet'>
 	<?php endif; ?>
 </head>
 
