@@ -1,6 +1,6 @@
 <?php
 require_once 'db.php';
-$useLiveReferenceAssets = !empty($useLiveReferenceAssets);
+$useLiveReferenceAssets = true;
 $activeDepartmentPage = $activeDepartmentPage ?? ($useLiveReferenceAssets ? 'civil-engineering' : '');
 $engineeringDepartmentPages = [
 	'civil-engineering',
@@ -170,17 +170,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 
 <?php if ($useLiveReferenceAssets): ?>
-<link rel='stylesheet' id='udm-frontend-css-css' href='https://aku.ac.in/wp-content/plugins/Faculty_manager/css/udm-frontend.css?ver=6.9.5' media='all' />
-<link rel='stylesheet' id='wp-filr-style-css' href='https://aku.ac.in/wp-content/plugins/fileupload/style.css?ver=1.0' media='all' />
-<link rel='stylesheet' id='uikit-css' href='https://aku.ac.in/wp-content/themes/aku/assets/uikit/css/uikit.css?ver=6.9.5' media='all' />
-<link rel='stylesheet' id='northforkweb-style-css' href='https://aku.ac.in/wp-content/themes/aku/style.css?ver=1.0.0' media='all' />
-<link rel='stylesheet' id='main-css' href='https://aku.ac.in/wp-content/themes/aku/assets/main.css?ver=6.9.5' media='all' />
-<link rel='stylesheet' id='responsive-css' href='https://aku.ac.in/wp-content/themes/aku/assets/responsive.css?ver=6.9.5' media='all' />
+<link rel='stylesheet' id='udm-frontend-css-css' href='assets/live_assets/udm-frontend.css' media='all' />
+<link rel='stylesheet' id='wp-filr-style-css' href='assets/live_assets/style.css' media='all' />
+<link rel='stylesheet' id='uikit-css' href='assets/live_assets/uikit.css' media='all' />
+<link rel='stylesheet' id='northforkweb-style-css' href='assets/live_assets/theme-style.css' media='all' />
+<link rel='stylesheet' id='main-css' href='assets/live_assets/main.css' media='all' />
+<link rel='stylesheet' id='responsive-css' href='assets/live_assets/responsive.css' media='all' />
 <link rel='stylesheet' id='owl-carousel-css-css' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css?ver=6.9.5' media='all' />
-<link rel='stylesheet' id='tablepress-default-css' href='https://aku.ac.in/wp-content/tablepress-combined.min.css?ver=11' media='all' />
-<link rel='stylesheet' id='js_composer_front-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=8.7.2' media='all' />
-<link rel='stylesheet' id='js_composer_custom_css-css' href='https://aku.ac.in/wp-content/uploads/js_composer/custom.css?ver=8.7.2' media='all' />
-<link rel='stylesheet' id='popup-maker-site-css' href='https://aku.ac.in/wp-content/uploads/pum/pum-site-styles.css?generated=1758188997&amp;ver=1.21.5' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='assets/live_assets/tablepress-combined.min.css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='assets/live_assets/js_composer.min.css' media='all' />
+<link rel='stylesheet' id='js_composer_custom_css-css' href='assets/live_assets/custom.css' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='assets/live_assets/pum-site-styles.css' media='all' />
 <?php else: ?>
 <link rel='stylesheet' id='udm-frontend-css-css' href='assets/css/udm-frontend67b1.css' media='all' />
 <link rel='stylesheet' id='wp-filr-style-css' href='assets/css/style5152.css' media='all' />
@@ -263,10 +263,10 @@ h2 em {
 
 
 	<?php if ($useLiveReferenceAssets): ?>
-	<link rel='stylesheet' id='vc_tta_style-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/css/js_composer_tta.min.css?ver=8.7.2' media='all' />
-	<link rel='stylesheet' id='vc_animate-css-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vendor/dist/animate.css/animate.min.css?ver=8.7.2' media='all' />
-	<link rel='stylesheet' id='vc_font_awesome_5_shims-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vendor/dist/@fortawesome/fontawesome-free/css/v4-shims.min.css?ver=8.7.2' media='all' />
-	<link rel='stylesheet' id='vc_font_awesome_6-css' href='https://aku.ac.in/wp-content/plugins/js_composer/assets/lib/vendor/dist/@fortawesome/fontawesome-free/css/all.min.css?ver=8.7.2' media='all' />
+	<link rel='stylesheet' id='vc_tta_style-css' href='assets/live_assets/js_composer_tta.min.css' media='all' />
+	<link rel='stylesheet' id='vc_animate-css-css' href='assets/live_assets/animate.min.css' media='all' />
+	<link rel='stylesheet' id='vc_font_awesome_5_shims-css' href='assets/live_assets/v4-shims.min.css' media='all' />
+	<link rel='stylesheet' id='vc_font_awesome_6-css' href='assets/live_assets/all.min.css' media='all' />
 	<?php else: ?>
 	<link rel='stylesheet' id='vc_animate-css-css' href='assets/css/animate.mine097.css' media='all' />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -935,3 +935,5 @@ h2 em {
 </ul></div>				</div>
 			</div>
 	 
+
+
