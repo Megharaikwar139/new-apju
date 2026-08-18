@@ -31,6 +31,8 @@ if ($documentRoot && $projectRoot) {
 <!doctype html>
 <html lang="en-US">
 <head>
+		<?php $base_url = 'http://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/'; ?>
+		<base href="<?php echo $base_url; ?>">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<base href="<?php echo htmlspecialchars($siteBaseHref, ENT_QUOTES, 'UTF-8'); ?>">
@@ -194,6 +196,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='owl-carousel-css-css' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css?ver=6.9.5' media='all' />
 <link rel='stylesheet' id='tablepress-default-css' href='assets/live_assets/tablepress-combined.min.css' media='all' />
 <link rel='stylesheet' id='js_composer_front-css' href='assets/live_assets/js_composer.min.css' media='all' />
+<link rel='stylesheet' id='vc_tta_style-css' href='assets/live_assets/js_composer_tta.min.css' media='all' />
 <link rel='stylesheet' id='js_composer_custom_css-css' href='assets/live_assets/custom.css' media='all' />
 <link rel='stylesheet' id='popup-maker-site-css' href='assets/live_assets/pum-site-styles.css' media='all' />
 <?php else: ?>
@@ -206,6 +209,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='owl-carousel-css-css' href='assets/css/owl.carousel.min67b1.css' media='all' />
 <link rel='stylesheet' id='tablepress-default-css' href='assets/css/tablepress-combined.min8bb0.css' media='all' />
 <link rel='stylesheet' id='js_composer_front-css' href='assets/css/js_composer.mine097.css' media='all' />
+<link rel='stylesheet' id='vc_tta_style-css' href='assets/css/js_composer_tta.min.css' media='all' />
 <link rel='stylesheet' id='js_composer_custom_css-css' href='assets/css/custome097.css' media='all' />
 <link rel='stylesheet' id='popup-maker-site-css' href='assets/css/pum-site-styles2722.css' media='all' />
 <?php endif; ?>
