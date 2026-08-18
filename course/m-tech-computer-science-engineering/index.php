@@ -1,0 +1,1 @@
+<?php $courseTitle='M. Tech (Computer Science Engineering)'; $courseLevel='Post Graduation'; $courseDescription='The M. Tech program in Computer Science Engineering advances specialist knowledge through rigorous coursework, technical practice and research-oriented learning.'; require dirname(__DIR__) . '/course-page.php';

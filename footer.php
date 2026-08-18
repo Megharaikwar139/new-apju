@@ -63,7 +63,7 @@
                   <ul class="uk-list contact-list">
 					   <li>
                         <a href="https://maps.app.goo.gl/qgKjXLEJsbTuZGwf6">
-                        <span class="ls-icon"><span class="material-symbols-rounded">location_on</span></span>
+                        <span class="ls-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
                         <span class="title text-16">Indore- Dewas Bypass Road,<br> 
 						Village- Arandia, P.O. Vijay Nagar,<br>
                        Indore (M.P.) – 452010 INDIA </span>
@@ -71,14 +71,14 @@
                      </li>
                      <li>
                         <a href="tel:">
-                        <span class="ls-icon"><span class="material-symbols-rounded">phone</span></span>
+                        <span class="ls-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
                         <span class="title text-24 bold"><strong>180030026072</strong></span>
                         </a>
                      </li>
                     
                      <li>
                         <a class="" href="mailto:office_university@aku.ac.in">
-                        <span class="ls-icon"><span class="material-symbols-rounded">mail</span></span>
+                        <span class="ls-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
                         <span class="title">office_university@aku.ac.in</span>
                         </a>
                      </li>
@@ -324,7 +324,7 @@ jQuery(document).ready(function ($) {
 
 
 <?php if (empty($useLiveReferenceAssets)): ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 <?php endif; ?>
 </body>
 

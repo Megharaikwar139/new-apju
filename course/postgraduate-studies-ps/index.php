@@ -1,0 +1,1 @@
+<?php $courseTitle='M.Tech. Postgraduate Studies (PS)'; $courseLevel='Post Graduation'; $courseDescription='The M.Tech Postgraduate Studies program supports advanced technical learning, independent inquiry and professional development in engineering.'; require dirname(__DIR__) . '/course-page.php';
