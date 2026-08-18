@@ -1,7 +1,7 @@
 <?php
 require_once 'db.php';
-$useLiveReferenceAssets = true;
-$activeDepartmentPage = $activeDepartmentPage ?? ($useLiveReferenceAssets ? 'civil-engineering' : '');
+$useLiveReferenceAssets = false;
+$activeDepartmentPage = $activeDepartmentPage ?? '';
 $activeSectionPage = $activeSectionPage ?? '';
 $engineeringDepartmentPages = [
 	'civil-engineering',
