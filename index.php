@@ -198,172 +198,449 @@ foreach ($stats as $stat) {
 
 		</div>
 	</div>
-<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-			
-    <div class="event-widget">
-        <div class="event-header">Upcoming Events</div>
-        <ul>
-            <?php
-            $events_stmt = $pdo->prepare("
-                SELECT title AS post_title, slug AS post_name, event_date 
-                FROM events 
-                ORDER BY event_date DESC LIMIT 5
-            ");
-            $events_stmt->execute();
-            $events = $events_stmt->fetchAll();
-            foreach ($events as $event) {
-                $date_raw = $event['event_date'];
-                if ($date_raw) {
-                    $formatted_date = date('d/m/Y', strtotime($date_raw));
-                } else {
-                    $formatted_date = '';
-                }
-            ?>
-            <li>
-                <div class="event-content">
-                    <span class="event-icon">
-                        <img decoding="async" src="assets/images/calendar-icon.png" alt="Calendar">
-                        <span class="date"><?php echo htmlspecialchars($formatted_date); ?></span>
-                    </span>
-                    <span class="event-title"><a href="event/<?php echo $event['post_name']; ?>/"><?php echo htmlspecialchars($event['post_title']); ?></a></span>
-                </div>
-            </li>
-            <?php } ?>
-        </ul>
-    </div>
-
-    
-
-		</div>
-	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element youtube" >
-		<div class="wpb_wrapper">
-			<!--<div class="card-main">-->
-<!--    <div class="card">-->
-<!--        <div class="image-container">-->
-<!--            <video autoplay muted loop playsinline>-->
-<!--                <source src="assets/images/aku_reel.mp4" type="video/mp4">-->
-<!--                Your browser does not support the video tag.-->
-<!--            </video>-->
-<!--            <div class="overlay-360">-->
-<!--                <img decoding="async" src="assets/images/360-degrees.png" alt="360 Overlay Icon">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="card-bottom">-->
-<!--            360° Virtual Tour-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 <style>
-/* --- popup --- */
-.video-popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);
-  justify-content:center;align-items:center;z-index:9999}
-.video-popup-content{position:relative;width:min(90vw,900px);background:#000;
-  border-radius:12px;overflow:hidden}
-.video-popup-close{position:absolute;top:10px;right:14px;color:#fff;font-size:26px;
-  font-weight:700;cursor:pointer;z-index:10000}
-.video-popup iframe{width:100%;height:56.25vw;max-height:62vh}
-/* --- card fixes --- */
-.image-container{position:relative;overflow:hidden;border-radius:16px}
-.image-container video{display:block;width:100%;height:auto}
-.overlay-360{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  z-index:3;pointer-events:auto;cursor:pointer}
-.card-bottom{cursor:pointer;user-select:none}
+/* ==========================================================================
+   Home 3-Card Section: Upcoming Events, 360 Tour, Notice Board (Live Match)
+   ========================================================================== */
+.home-widgets-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home-widgets-col {
+    flex: 1 1 calc(33.333% - 17px);
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. UPCOMING EVENTS */
+.event-widget {
+    background: #ffffff;
+    border: 1px solid #71171C;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    height: 100%;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-header {
+    background: linear-gradient(275deg, #D72C35 -4.64%, #71171C 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.event-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.event-widget ul li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0;
+    transition: background-color 0.2s ease;
+}
+
+.event-widget ul li:hover {
+    background-color: #faf6f6;
+}
+
+.event-widget ul li:last-child {
+    border-bottom: none;
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.event-title {
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.event-title a {
+    color: #1a1a1a !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+    display: block;
+}
+
+.event-title a:hover {
+    color: #84161C !important;
+}
+
+.event-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #555555;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.event-cal-icon {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    object-fit: contain;
+    filter: invert(15%) sepia(55%) saturate(3500%) hue-rotate(345deg) brightness(85%) contrast(90%);
+}
+
+/* 2. 360 VIRTUAL TOUR */
+.card-main {
+    background: linear-gradient(135deg, #c7912a, #d4af37);
+    padding: 8px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 520px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.card-main .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #111111;
+    border: none;
+    box-shadow: none;
+}
+
+.card-main .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    flex: 1 1 auto;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+
+.card-main .image-container video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 380px;
+}
+
+.card-main .overlay-360 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.card-main .overlay-360:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.card-main .overlay-360 img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+}
+
+.card-main .card-bottom {
+    background: linear-gradient(275deg, #D72C35 -4.64%, #71171C 100%);
+    padding: 16px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0 0 12px 12px;
+    margin-top: 0;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.card-main .card-bottom:hover {
+    background: linear-gradient(275deg, #e0323c -4.64%, #84161C 100%);
+}
+
+/* 3. NOTICE BOARD */
+.notice-widget {
+    background: #71171C;
+    border: 1px solid #71171C;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 100%;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+.notice-header {
+    background: linear-gradient(275deg, #D72C35 -4.64%, #71171C 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.notice-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.notice-widget ul li {
+    padding: 13px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin: 0;
+    transition: background-color 0.2s ease;
+}
+
+.notice-widget ul li:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.notice-widget ul li:last-child {
+    border-bottom: none;
+}
+
+.notice-widget ul li a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    display: block;
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.35;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.notice-widget ul li a:hover {
+    color: #ffd6d9 !important;
+    transform: translateX(3px);
+}
+
+/* Video Popup */
+.video-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.video-popup-content {
+    position: relative;
+    width: min(90vw, 900px);
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.video-popup iframe {
+    width: 100%;
+    height: 56.25vw;
+    max-height: 65vh;
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .home-widgets-row {
+        flex-direction: column;
+    }
+    .home-widgets-col {
+        width: 100%;
+        min-height: auto;
+    }
+    .event-widget, .card-main, .notice-widget {
+        min-height: auto;
+    }
+    .card-main .image-container {
+        min-height: 300px;
+    }
+    .card-main .image-container video {
+        min-height: 300px;
+    }
+}
 </style>
 
-<div class="card-main">
-  <div class="card">
-    <div class="image-container">
-      <?php $video_src = "uploads/2025/07/aku_reel.mp4"; ?>
-      <video autoplay muted loop playsinline>
-        <source src="<?php echo htmlspecialchars($video_src); ?>" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- make the 360 icon clickable too -->
-      <div class="overlay-360" role="button" aria-label="Open 360° tour" tabindex="0">
-        <img decoding="async" src="assets/images/360-degrees.png" alt="360 Overlay Icon">
-      </div>
+<div class="home-widgets-row">
+    <!-- 1. UPCOMING EVENTS -->
+    <div class="home-widgets-col">
+        <div class="event-widget">
+            <div class="event-header">Upcoming Events</div>
+            <ul>
+                <?php
+                $events_stmt = $pdo->prepare("
+                    SELECT title AS post_title, slug AS post_name, event_date 
+                    FROM events 
+                    ORDER BY event_date DESC LIMIT 5
+                ");
+                $events_stmt->execute();
+                $events = $events_stmt->fetchAll();
+                foreach ($events as $event) {
+                    $date_raw = $event['event_date'];
+                    if ($date_raw) {
+                        $formatted_date = date('d/m/Y', strtotime($date_raw));
+                    } else {
+                        $formatted_date = '';
+                    }
+                ?>
+                <li>
+                    <div class="event-content">
+                        <span class="event-title"><a href="event/<?php echo $event['post_name']; ?>/"><?php echo htmlspecialchars($event['post_title']); ?></a></span>
+                        <span class="event-date">
+                            <img decoding="async" src="assets/images/calendar-icon.png" alt="Calendar" class="event-cal-icon">
+                            <span class="date"><?php echo htmlspecialchars($formatted_date); ?></span>
+                        </span>
+                    </div>
+                </li>
+                <?php } ?>
+            </ul>
+        </div>
     </div>
-    <div class="card-bottom" id="openTour">360° Virtual Tour</div>
-  </div>
+
+    <!-- 2. 360 VIRTUAL TOUR -->
+    <div class="home-widgets-col">
+        <div class="card-main">
+            <div class="card">
+                <div class="image-container">
+                    <?php $video_src = "uploads/2025/07/aku_reel.mp4"; ?>
+                    <video autoplay muted loop playsinline>
+                        <source src="<?php echo htmlspecialchars($video_src); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="overlay-360" role="button" aria-label="Open 360° tour" tabindex="0">
+                        <img decoding="async" src="assets/images/360-degrees.png" alt="360 Overlay Icon">
+                    </div>
+                </div>
+                <div class="card-bottom" id="openTour">360° Virtual Tour</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. NOTICE BOARD -->
+    <div class="home-widgets-col">
+        <div class="notice-widget">
+            <div class="notice-header">Notice Board</div>
+            <ul>
+                <?php
+                $notices_stmt = $pdo->prepare("
+                    SELECT title AS post_title, slug AS post_name 
+                    FROM notices 
+                    ORDER BY notice_date DESC LIMIT 6
+                ");
+                $notices_stmt->execute();
+                $notices = $notices_stmt->fetchAll();
+                foreach ($notices as $notice) {
+                ?>
+                <li><a href="notice-board/<?php echo $notice['post_name']; ?>/"><?php echo htmlspecialchars($notice['post_title']); ?></a></li>
+                <?php } ?>
+            </ul>
+        </div>
+    </div>
 </div>
 
-<!-- Popup -->
+<!-- Video Popup -->
 <div class="video-popup" id="videoPopup" aria-hidden="true">
-  <div class="video-popup-content">
-    <span class="video-popup-close" id="closePopup" aria-label="Close">&times;</span>
-    <iframe id="youtubeVideo" src="" frameborder="0"
-      allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-  </div>
+    <div class="video-popup-content">
+        <span class="video-popup-close" id="closePopup" aria-label="Close">&times;</span>
+        <iframe id="youtubeVideo" src="" frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const popup = document.getElementById('videoPopup');
-  const iframe = document.getElementById('youtubeVideo');
-  const openers = [document.getElementById('openTour'), ...document.querySelectorAll('.overlay-360')];
-  const YT_ID = 's0s6ePt2K-U';
+    const popup = document.getElementById('videoPopup');
+    const iframe = document.getElementById('youtubeVideo');
+    const openers = [document.getElementById('openTour'), ...document.querySelectorAll('.overlay-360')];
+    const YT_ID = 's0s6ePt2K-U';
 
-  function openVideo() {
-    iframe.src = `https://www.youtube.com/embed/${YT_ID}?autoplay=1&rel=0&modestbranding=1`;
-    popup.style.display = 'flex';
-    popup.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeVideo() {
-    iframe.src = 'about:blank'; // stop playback reliably
-    popup.style.display = 'none';
-    popup.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
+    function openVideo() {
+        iframe.src = `https://www.youtube.com/embed/${YT_ID}?autoplay=1&rel=0&modestbranding=1`;
+        popup.style.display = 'flex';
+        popup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeVideo() {
+        iframe.src = 'about:blank';
+        popup.style.display = 'none';
+        popup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
 
-  openers.forEach(el => {
-    if (!el) return;
-    el.style.cursor = 'pointer';
-    el.addEventListener('click', openVideo);
-    el.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(); }
+    openers.forEach(el => {
+        if (!el) return;
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', openVideo);
+        el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(); }
+        });
     });
-  });
 
-  document.getElementById('closePopup').addEventListener('click', closeVideo);
-  popup.addEventListener('click', (e) => { if (e.target === popup) closeVideo(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideo(); });
+    const closeBtn = document.getElementById('closePopup');
+    if (closeBtn) closeBtn.addEventListener('click', closeVideo);
+    if (popup) {
+        popup.addEventListener('click', (e) => { if (e.target === popup) closeVideo(); });
+    }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideo(); });
 });
-</script>
-
-		</div>
-	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-			
-    <div class="notice-widget">
-        <div class="notice-header">Notice Board</div>
-        <ul>
-            <?php
-            $notices_stmt = $pdo->prepare("
-                SELECT title AS post_title, slug AS post_name 
-                FROM notices 
-                ORDER BY notice_date DESC LIMIT 6
-            ");
-            $notices_stmt->execute();
-            $notices = $notices_stmt->fetchAll();
-            foreach ($notices as $notice) {
-            ?>
-            <li><a href="notice-board/<?php echo $notice['post_name']; ?>/"><?php echo htmlspecialchars($notice['post_title']); ?></a></li>
-            <?php } ?>
-        </ul>
-    </div>
-
-    
-
-		</div>
-	</div>
-</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid section vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading university-heading wpb_animate_when_almost_visible wpb_fadeIn fadeIn" >Voice of Experience</h2><div class="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+</script></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid section vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading university-heading wpb_animate_when_almost_visible wpb_fadeIn fadeIn" >Voice of Experience</h2><div class="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
 			        <div class="owl-carousel author-list voi-carousel">
@@ -392,6 +669,63 @@ document.addEventListener('DOMContentLoaded', function () {
             <?php } ?>
         </div>
 
+        <style>
+        /* VOI Owl Carousel Navigation Arrows */
+        .voi-carousel {
+            position: relative;
+        }
+
+        .voi-carousel .owl-nav {
+            display: block !important;
+        }
+
+        .voi-carousel .owl-nav button.owl-prev,
+        .voi-carousel .owl-nav button.owl-next {
+            position: absolute !important;
+            top: 40% !important;
+            transform: translateY(-50%) !important;
+            width: 42px !important;
+            height: 42px !important;
+            background: #ffffff !important;
+            border-radius: 50% !important;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #71171C !important;
+            font-size: 15px !important;
+            cursor: pointer !important;
+            transition: all 0.25s ease !important;
+            z-index: 10 !important;
+            border: 1px solid rgba(0,0,0,0.06) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            opacity: 1 !important;
+        }
+
+        .voi-carousel .owl-nav button.owl-prev {
+            left: -18px !important;
+        }
+
+        .voi-carousel .owl-nav button.owl-next {
+            right: -18px !important;
+        }
+
+        .voi-carousel .owl-nav button.owl-prev:hover,
+        .voi-carousel .owl-nav button.owl-next:hover {
+            background: #71171C !important;
+            color: #ffffff !important;
+            box-shadow: 0 6px 20px rgba(113,23,28,0.35) !important;
+            transform: translateY(-50%) scale(1.08) !important;
+        }
+
+        .voi-carousel .owl-nav button.owl-prev i,
+        .voi-carousel .owl-nav button.owl-next i {
+            line-height: 1;
+            font-size: 15px;
+        }
+        </style>
+
         <script>
         jQuery(document).ready(function($){
             $('.voi-carousel').owlCarousel({
@@ -402,8 +736,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 autoplay: true,
                 autoplayHoverPause: true,
                 navText: [
-                    "<span class='material-symbols-rounded'>chevron_left</span>",
-                    "<span class='material-symbols-rounded'>chevron_right</span>"
+                    "<i class='fa-solid fa-chevron-left'></i>",
+                    "<i class='fa-solid fa-chevron-right'></i>"
                 ],
                 responsive: {
                     0: { items: 1 },
