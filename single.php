@@ -70,8 +70,6 @@ if (!$data) {
     exit;
 }
 
-// Ensure proper base path for assets if included
-$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/APJ-WEB/new-apju/';
 ?>
 <?php require_once 'header.php'; ?>
 <style>
@@ -142,7 +140,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/APJ-WEB/new-apju/';
                         if (strpos($data['image_path'], 'assets/') === 0) {
                             $img_src = $data['image_path'];
                         } else {
-                            $img_src = '../APJ-WEB/wp-content/uploads/' . $data['image_path'];
+                            $img_src = 'uploads/' . $data['image_path'];
                         }
                         echo '<img src="'.htmlspecialchars($img_src).'" class="blog-featured-img" alt="'.htmlspecialchars($data['title']).'">';
                     } else {
@@ -164,18 +162,16 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/APJ-WEB/new-apju/';
 <?php else: ?>
 
     <?php if ($type == 'page'): ?>
-    
-    <div class="page-header-blog" style="padding: 60px 0; background: linear-gradient(rgba(11, 44, 77, 0.8), rgba(11, 44, 77, 0.9)), url('assets/images/bg-header.jpg') center/cover no-repeat;">
-        <div class="container">
-            <h1 style="font-size: 32px; color: #fff; text-align: center; margin-bottom: 10px;"><?php echo htmlspecialchars($data['title']); ?></h1>
-            <div class="breadcrumbs" style="color: #ddd; text-align: center; font-size: 15px;">
-                <a href="index.php" style="color: #ddd;">Home</a> &raquo; <?php echo htmlspecialchars($data['title']); ?>
-            </div>
+
+    <section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+        <div class="uk-container" style="text-align: center;">
+            <h1 style="text-align: center;"><?php echo htmlspecialchars($data['title']); ?></h1>
+            <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; <?php echo htmlspecialchars($data['title']); ?></nav>
         </div>
-    </div>
+    </section>
 
     <!-- For dynamic pages from WPBakery, output directly without blog container but with a standard container -->
-    <div class="container dynamic-page-content" style="padding: 40px 0; min-height: 40vh;">
+    <div class="uk-container dynamic-page-content" style="padding: 40px 0; min-height: 40vh;">
         <?php echo $data['content']; ?>
     </div>
 
@@ -217,7 +213,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/APJ-WEB/new-apju/';
                                     if (strpos($data['image_path'], 'assets/') === 0) {
                                         $img_src = $data['image_path'];
                                     } else {
-                                        $img_src = '../APJ-WEB/wp-content/uploads/' . $data['image_path'];
+                                        $img_src = 'uploads/' . $data['image_path'];
                                     }
                                 ?>
                                 <img src="<?php echo htmlspecialchars($img_src); ?>" style="max-width: 100%; max-height: 500px; object-fit: contain; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" alt="<?php echo htmlspecialchars($data['title']); ?>">

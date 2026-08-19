@@ -1227,9 +1227,6 @@ span.saprate-line {
     overflow: hidden;
     transition: all .3s ease;
 }
-	
-}
-
 
 .main-navigation ul.navbar-nav>li>a.active{
     display: block;
@@ -1285,6 +1282,7 @@ span.saprate-line {
 
 
 
+/*
 .main-navigation ul.navbar-nav li.menu-item-has-children>a::after {
     content: "\ea7b";
     display: inline-block;
@@ -1307,6 +1305,7 @@ span.saprate-line {
     font-size: 16px;
     right: -10px;
 }
+*/
 
 .main-navigation ul ul ul, .navbar-nav ul ul ul {
     left: -999em;
@@ -2283,6 +2282,10 @@ background-position: center;
 
 }
 
+.message_page .row {
+  gap: 0;
+}
+
 .message-photo img {
   width: 100%;
   border-radius: 10px;
@@ -2736,11 +2739,17 @@ ul.sub-menu li {
 
 .stats-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  padding: 60px 30px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 60px 20px;
   background-color: #f9fafb;
   font-family: 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .stats-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .stat-card {

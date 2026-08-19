@@ -1,0 +1,1 @@
+<?php $courseTitle='M.Tech (Cyber Security)'; $courseLevel='Post Graduation'; $courseDescription='The M.Tech Cyber Security program develops advanced capabilities in information security, secure systems, digital protection and emerging cyber-security practices.'; require dirname(__DIR__) . '/course-page.php';

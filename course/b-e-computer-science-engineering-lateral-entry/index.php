@@ -1,0 +1,1 @@
+<?php $courseTitle='B.E. (CSE – Lateral Entry)'; $courseLevel='Under Graduate'; $courseDescription='The lateral-entry B.E. program in Computer Science Engineering enables eligible diploma holders to continue their engineering education in advanced computing disciplines.'; require dirname(__DIR__) . '/course-page.php';

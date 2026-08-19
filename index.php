@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 <div id="content" class="site-content">
 <main id="primary" class="site-main">
-   
     
  
 		 
@@ -22,7 +21,7 @@
       $banners = $banners_stmt->fetchAll();
       $isFirstBanner = true;
       foreach ($banners as $banner) {
-          $b_img = (strpos($banner['image_path'], 'assets/') === 0) ? $banner['image_path'] : '../../APJ-WEB/wp-content/uploads/' . $banner['image_path'];
+          $b_img = (strpos($banner['image_path'], 'assets/') === 0) ? $banner['image_path'] : 'uploads/' . $banner['image_path'];
       ?>
     <div class="carousel-item <?php echo $isFirstBanner ? 'active' : ''; ?>">
       <img src="<?php echo htmlspecialchars($b_img); ?>" class="d-block w-100" alt="<?php echo htmlspecialchars($banner['title'] ?? 'Campus View'); ?>">
@@ -156,7 +155,7 @@
 $welcome_title = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_title'")->fetchColumn();
 $welcome_content = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_content'")->fetchColumn();
 $welcome_image = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_image'")->fetchColumn();
-$w_img = ($welcome_image && strpos($welcome_image, 'assets/') === 0) ? $welcome_image : (($welcome_image) ? '../../APJ-WEB/wp-content/uploads/' . $welcome_image : 'assets/images/New-Dron-Campus-Pic01-1.jpg');
+$w_img = ($welcome_image && strpos($welcome_image, 'assets/') === 0) ? $welcome_image : (($welcome_image) ? 'uploads/' . $welcome_image : 'assets/images/New-Dron-Campus-Pic01-1.jpg');
 ?>
 <div class="kalam-hero">
     <div class="kalam-grid">
@@ -225,7 +224,7 @@ foreach ($stats as $stat) {
             <li>
                 <div class="event-content">
                     <span class="event-icon">
-                        <img decoding="async" src="https://cdn-icons-png.flaticon.com/128/747/747310.png" alt="Calendar">
+                        <img decoding="async" src="assets/images/calendar-icon.png" alt="Calendar">
                         <span class="date"><?php echo htmlspecialchars($formatted_date); ?></span>
                     </span>
                     <span class="event-title"><a href="event/<?php echo $event['post_name']; ?>/"><?php echo htmlspecialchars($event['post_title']); ?></a></span>
@@ -278,17 +277,7 @@ foreach ($stats as $stat) {
 <div class="card-main">
   <div class="card">
     <div class="image-container">
-      <?php
-      $video_stmt = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'homepage_video_url'");
-      $video_url = $video_stmt->fetchColumn();
-      if (!$video_url) $video_url = '../APJ-WEB/wp-content/uploads/2025/07/aku_reel.mp4'; // fallback
-      
-      if (strpos($video_url, 'assets/') === 0) {
-          $video_src = $video_url;
-      } else {
-          $video_src = $video_url; // It's likely a relative path or absolute URL already
-      }
-      ?>
+      <?php $video_src = "uploads/2025/07/aku_reel.mp4"; ?>
       <video autoplay muted loop playsinline>
         <source src="<?php echo htmlspecialchars($video_src); ?>" type="video/mp4">
         Your browser does not support the video tag.
@@ -383,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $voi_stmt->execute();
             $vois = $voi_stmt->fetchAll();
             foreach ($vois as $voi) {
-                $img_url = $voi['image_path'] ? '../APJ-WEB/wp-content/uploads/' . $voi['image_path'] : 'assets/images/placeholder.jpg';
+                $img_url = $voi['image_path'] ? 'uploads/' . $voi['image_path'] : 'assets/images/placeholder.jpg';
             ?>
                 <div class="author-item voi-card">
                     <!-- Image -->
@@ -435,13 +424,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="owl-carousel page-slider page-carosel">
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="why-aku/" class="slide-img-link">
+                        <a href="why-aku.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/about.jpg" alt="Why AKU">
                         </a>
                         <div class="text-content">
-                            <h3><a href="why-aku/" style="color: inherit; text-decoration: none;">Why AKU</a></h3>
+                            <h3><a href="why-aku.php" style="color: inherit; text-decoration: none;">Why AKU</a></h3>
                             <p>Our Faculty-to-Student Ratio allows faculties to focus on the individual learning styles and needs of each student in our University.</p>
-                            <a href="why-aku/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="why-aku.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -451,13 +440,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="faculty-welfare/" class="slide-img-link">
+                        <a href="faculty-welfare.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/facultywa.jpg" alt="Faculty Welfare">
                         </a>
                         <div class="text-content">
-                            <h3><a href="faculty-welfare/" style="color: inherit; text-decoration: none;">Faculty Welfare</a></h3>
+                            <h3><a href="faculty-welfare.php" style="color: inherit; text-decoration: none;">Faculty Welfare</a></h3>
                             <p>We believe in providing the best environment and support for our faculties to help them excel in their academic endeavors.</p>
-                            <a href="faculty-welfare/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="faculty-welfare.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -467,13 +456,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="awardsand-recognigation/" class="slide-img-link">
+                        <a href="awardsand-recognigation.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/award1.jpg" alt="Awards & Recognition">
                         </a>
                         <div class="text-content">
-                            <h3><a href="awardsand-recognigation/" style="color: inherit; text-decoration: none;">Awards & Recognition</a></h3>
+                            <h3><a href="awardsand-recognigation.php" style="color: inherit; text-decoration: none;">Awards & Recognition</a></h3>
                             <p>Explore the various accolades and milestones achieved by our university, recognizing excellence across multiple disciplines.</p>
-                            <a href="awardsand-recognigation/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="awardsand-recognigation.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -483,13 +472,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="our-recruiters/" class="slide-img-link">
+                        <a href="our-recruiters.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/placement.jpg" alt="Our Recruiters">
                         </a>
                         <div class="text-content">
-                            <h3><a href="our-recruiters/" style="color: inherit; text-decoration: none;">Our Recruiters</a></h3>
+                            <h3><a href="our-recruiters.php" style="color: inherit; text-decoration: none;">Our Recruiters</a></h3>
                             <p>Our strong industry ties ensure that top recruiters visit our campus, providing excellent career opportunities for our students.</p>
-                            <a href="our-recruiters/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="our-recruiters.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -499,13 +488,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="page-slide">
                     <div class="slide-content">
-                        <a href="gallery/" class="slide-img-link">
+                        <a href="gallery.php" class="slide-img-link">
                             <img decoding="async" src="assets/images/gallery.jpg" alt="Gallery">
                         </a>
                         <div class="text-content">
-                            <h3><a href="gallery/" style="color: inherit; text-decoration: none;">Gallery</a></h3>
+                            <h3><a href="gallery.php" style="color: inherit; text-decoration: none;">Gallery</a></h3>
                             <p>Take a visual tour of our vibrant campus life, academic events, cultural fests, and state-of-the-art facilities.</p>
-                            <a href="gallery/" class="read-more btn btn-white" style="text-decoration: none;">
+                            <a href="gallery.php" class="read-more btn btn-white" style="text-decoration: none;">
                                 <span class="btn-text">Read More</span> 
                                 <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
@@ -547,7 +536,7 @@ jQuery(document).ready(function($) {
             $media_stmt->execute();
             $medias = $media_stmt->fetchAll();
             foreach ($medias as $media) {
-                $img_url = $media['image_path'] ? '../APJ-WEB/wp-content/uploads/' . $media['image_path'] : 'assets/images/placeholder.jpg';
+                $img_url = $media['image_path'] ? 'uploads/' . $media['image_path'] : 'assets/images/placeholder.jpg';
             ?>
                 <div class="grid-item">
                     <a href="media-coverage-aku/<?php echo $media['slug']; ?>/">
@@ -580,7 +569,7 @@ jQuery(document).ready(function($) {
                 if (strpos($blog['image_path'], 'assets/') === 0) {
                     $image_src = $blog['image_path'];
                 } else {
-                    $image_src = $blog['image_path'] ? '../APJ-WEB/wp-content/uploads/' . $blog['image_path'] : 'assets/images/placeholder.jpg';
+                    $image_src = $blog['image_path'] ? 'uploads/' . $blog['image_path'] : 'assets/images/placeholder.jpg';
                 }
             ?>
                 <div class="blog-card">

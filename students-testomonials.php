@@ -26,7 +26,7 @@
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/1.mp4" type="video/mp4">
+            <source src="uploads/2026/01/1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
@@ -50,7 +50,7 @@
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/2.mp4" type="video/mp4">
+            <source src="uploads/2026/01/2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
@@ -74,7 +74,7 @@
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/4.mp4" type="video/mp4">
+            <source src="uploads/2026/01/4.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
@@ -98,7 +98,7 @@
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/5.mp4" type="video/mp4">
+            <source src="uploads/2026/01/5.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/3.mp4" type="video/mp4">
+            <source src="uploads/2026/01/3.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/8.mp4" type="video/mp4">
+            <source src="uploads/2026/01/8.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/7.mp4" type="video/mp4">
+            <source src="uploads/2026/01/7.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Play Reel</p>
           </div>
           <video controls>
-            <source src="https://aku.thetask.in/wp-content/uploads/2026/01/6.mp4" type="video/mp4">
+            <source src="uploads/2026/01/6.mp4" type="video/mp4">
           </video>
         </div>
         <div class="content">
