@@ -6,7 +6,7 @@
             <div class="about">
 				     <div class="uk-grid">
             <div class="uk-width-1-1@m">
-               <a href="#" class="custom-logo-link" rel="home" aria-current="page">
+               <a href="index.php" class="custom-logo-link" rel="home">
                <img src="assets/images/footer-logo.png" class="custom-logo" alt="Dr A P J University" decoding="async">
                </a> 
             </div>
@@ -18,11 +18,11 @@
             <div class="footer-menu">
                <div class="footer-menu-center">
                   <div class="widget-title">
-                     <h5>Usefull Links</h5>
+                     <h5>Useful Links</h5>
                   </div>
                   <div class="widget-content">
                      <div class="menu-usefull-links-container"><ul id="menu-usefull-links" class="uk-list"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="university-events.php">University Events</a></li>
-<li id="menu-item-4322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4322"><a href="students-testomonials.php">Students Testomonials</a></li>
+<li id="menu-item-4322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4322"><a href="students-testomonials.php">Students Testimonials</a></li>
 <li id="menu-item-4323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4323"><a href="incubation-center.php">Incubation Center</a></li>
 <li id="menu-item-4325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4325"><a href="download-form-student.php">Download Form</a></li>
 <li id="menu-item-4476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4476"><a href="career.php">Careers</a></li>
@@ -30,16 +30,6 @@
 
 
                   </div>
- 		<!-- 		<div class="">
-                  <div class="widget-title">
-                     <h5>Disclaimer</h5>
-                  </div>
-                  <div class="widget-content">
-                     <p>
-						 Alumni Feedback Form Teachers Feedback on Curriculum Student Feedback on Curriculum
-					  </p>
-                  </div>
-               </div> -->
                   
                </div>
                <div class="">
@@ -47,8 +37,8 @@
                      <h5>Quick Links</h5>
                   </div>
                   <div class="widget-content">
-                     <div class="menu-quick-links-container"><ul id="menu-quick-links" class="uk-list"><li id="menu-item-4320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4320"><a href="https://aiira.iastate.edu/">ARIIA</a></li>
-<li id="menu-item-4321" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4321"><a href="https://www.nirfindia.org/Rankings/2024/Ranking.html">NIRF</a></li>
+                     <div class="menu-quick-links-container"><ul id="menu-quick-links" class="uk-list"><li id="menu-item-4320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4320"><a href="https://aiira.iastate.edu/" target="_blank" rel="noopener noreferrer">ARIIA</a></li>
+<li id="menu-item-4321" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4321"><a href="https://www.nirfindia.org/Rankings/2024/Ranking.html" target="_blank" rel="noopener noreferrer">NIRF</a></li>
 <li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="rti-act.php">RTI Act</a></li>
 <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="mandatory-disclosers.php">Mandatory Disclosers</a></li>
 </ul></div>	 
@@ -62,7 +52,7 @@
                <div class="widget-content">
                   <ul class="uk-list contact-list">
 					   <li>
-                        <a href="https://maps.app.goo.gl/qgKjXLEJsbTuZGwf6">
+                        <a href="https://maps.app.goo.gl/qgKjXLEJsbTuZGwf6" target="_blank" rel="noopener noreferrer">
                         <span class="ls-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
                         <span class="title text-16">Indore- Dewas Bypass Road,<br> 
 						Village- Arandia, P.O. Vijay Nagar,<br>
@@ -70,7 +60,7 @@
                         </a>
                      </li>
                      <li>
-                        <a href="tel:">
+                        <a href="tel:180030026072">
                         <span class="ls-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
                         <span class="title text-24 bold"><strong>180030026072</strong></span>
                         </a>
@@ -123,9 +113,9 @@
          </div>
          <div class="uk-width-1-2">
             <ul class="uk-list-inline">
-               <li><a>Refund & Cancellation</a></li>
-               <li><a>Privacy Policy</a></li>
-               <li><a>Payment Terms</a></li>
+               <li><a href="refund-cancellation.php" style="color: inherit; text-decoration: none;">Refund &amp; Cancellation</a></li>
+               <li><a href="privacy-policy.php" style="color: inherit; text-decoration: none;">Privacy Policy</a></li>
+               <li><a href="payment-terms.php" style="color: inherit; text-decoration: none;">Payment Terms</a></li>
             </ul>
          </div>
       </div>

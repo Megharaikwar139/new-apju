@@ -175,6 +175,88 @@ if (!$data) {
         <?php echo $data['content']; ?>
     </div>
 
+    <?php elseif ($type == 'event'): ?>
+
+    <section class="page-header" style="background-image: url('assets/images/bg-header.jpg'); text-align: center;">
+        <div class="uk-container" style="text-align: center;">
+            <h1 style="text-align: center;"><?php echo htmlspecialchars_decode($data['title']); ?></h1>
+            <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;">
+                <a href="index.php">Home</a> &raquo; <a href="university-events.php">Events</a> &raquo; <?php echo htmlspecialchars_decode($data['title']); ?>
+            </nav>	
+        </div>
+    </section>
+
+    <main id="primary" class="site-main single-blog">
+        <section class="uk-section uk-section-default" style="padding: 60px 0 90px 0;">
+            <div class="uk-container">
+
+                <div class="uk-grid-large uk-flex-middle" uk-grid>
+
+                    <!-- Left: Event Content -->
+                    <div class="uk-width-1-2@m">
+                        <div class="uk-card uk-card-body uk-padding-remove">
+
+                            <!-- Date & Venue -->
+                            <div class="uk-margin-small-bottom">
+                                <?php if (!empty($data['event_date'])): ?>
+                                <strong class="uk-margin-small-right">Event Date</strong> 
+                                <span class="uk-label uk-label-success uk-margin-small-right" style="background-color: #32d296; color: #fff; font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 3px;">
+                                    <?php echo date('d/m/Y', strtotime($data['event_date'])); ?>
+                                </span>
+                                <?php endif; ?>
+                                
+                                <strong class="uk-margin-small-right">Venue</strong>
+                                <span class="uk-label uk-label-warning" style="background-color: #faa05a; color: #fff; font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 3px;">
+                                    Indore
+                                </span>
+                            </div>
+
+                            <!-- Title -->
+                            <h2 style="font-size: 26px; font-weight: 700; color: #1e293b; margin: 15px 0 20px 0; line-height: 1.35;">
+                                <?php echo htmlspecialchars_decode($data['title']); ?>
+                            </h2>
+
+                            <!-- Content -->
+                            <div class="event-body-text" style="font-size: 15px; line-height: 1.8; color: #334155;">
+                                <?php 
+                                if (!empty($data['content'])) {
+                                    echo $data['content'];
+                                } else {
+                                    echo "<p style='color: #64748b;'><em>No detailed circular content available for this event yet.</em></p>";
+                                }
+                                ?>
+                            </div>
+
+                            <div style="margin-top: 30px;">
+                                <a href="university-events.php" class="uk-button uk-button-default" style="border-radius: 4px; font-size: 13px; font-weight: 600; text-transform: uppercase;">
+                                    <i class="fa-solid fa-arrow-left"></i> Back to University Events
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right: Event Image -->
+                    <div class="uk-width-1-2@m">
+                        <div class="uk-card uk-overflow-hidden uk-border-rounded uk-box-shadow-medium" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.1);">
+                            <?php 
+                                $img_src = '';
+                                if (!empty($data['image_path'])) {
+                                    $img_src = (strpos($data['image_path'], 'assets/') === 0) ? $data['image_path'] : 'uploads/' . $data['image_path'];
+                                } else {
+                                    $img_src = 'uploads/2025/03/events.jpg';
+                                }
+                            ?>
+                            <img src="<?php echo htmlspecialchars($img_src); ?>" alt="<?php echo htmlspecialchars_decode($data['title']); ?>" class="uk-border-rounded uk-width-1-1" style="width: 100%; display: block;">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
     <?php else: ?>
 
     <div class="page-header-blog" style="padding: 60px 0; background: linear-gradient(rgba(11, 44, 77, 0.8), rgba(11, 44, 77, 0.9)), url('assets/images/bg-header.jpg') center/cover no-repeat;">
@@ -223,7 +305,7 @@ if (!$data) {
                         <div class="col-md-12">
                             <div class="blog-text" style="font-size: 16px;">
                                 <?php 
-                                if (isset($data['content']) && trim($data['content']) !== '') {
+                                 if (isset($data['content']) && trim($data['content']) !== '') {
                                     echo $data['content'];
                                 } else if ($type != 'media') {
                                     echo "<p class='text-muted'><em>No detailed content available for this item.</em></p>";

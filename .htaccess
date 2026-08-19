@@ -1,5 +1,4 @@
 RewriteEngine On
-RewriteBase /new-apju/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -25,10 +24,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^media-coverage-aku/([^/]+)/?$ single.php?type=media&slug=$1 [L,QSA]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-# Check if the .php file actually exists before rewriting to it
-RewriteCond %{DOCUMENT_ROOT}/new-apju/$1.php -f
+# Check if the .php file exists
+RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^([^/]+)/?$ $1.php [NC,L]
 
 # If .php file doesn't exist, route it as a dynamic page
