@@ -31,8 +31,6 @@ if ($documentRoot && $projectRoot) {
 <!doctype html>
 <html lang="en-US">
 <head>
-		<?php $base_url = 'http://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/'; ?>
-		<base href="<?php echo $base_url; ?>">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<base href="<?php echo htmlspecialchars($siteBaseHref, ENT_QUOTES, 'UTF-8'); ?>">
@@ -107,11 +105,12 @@ href="<?php echo $useLiveReferenceAssets ? 'https://cdnjs.cloudflare.com/ajax/li
 			})();
 
 			document.addEventListener("DOMContentLoaded", function() {
-				let menuItems = document.querySelectorAll(".mobile-nav li.menu-item-has-children > a");
+				let menuItems = document.querySelectorAll("#offcanvas-slide .mobile-nav li.menu-item-has-children > a");
 
 				menuItems.forEach(function(item) {
 					let toggleButton = document.createElement("button");
 					toggleButton.classList.add("submenu-toggle");
+					toggleButton.setAttribute("type", "button");
 
 					// SVG Icon ko string me convert karna
 					toggleButton.innerHTML = `<svg width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -292,6 +291,7 @@ h2 em {
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href='assets/css/custom-header.css' rel='stylesheet'>
 	<?php endif; ?>
+	<link rel="stylesheet" href="assets/css/custom-header.css">
 </head>
 
 	<body class="<?php echo htmlspecialchars($bodyClass ?? 'home wp-singular page-template page-template-pages page-template-home-page page-template-pageshome-page-php page page-id-7 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive', ENT_QUOTES, 'UTF-8'); ?>">
@@ -443,7 +443,7 @@ h2 em {
 						
 						<nav id="site-navigation" class="main-navigation">
 							
-							<div class="menu-main-menu-container"><ul id="primary-menu" class="navbar-nav mobile-nav"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-18"><a href="index.php">Home</a></li>
+							<div class="menu-main-menu-container"><ul id="primary-menu" class="navbar-nav desktop-nav"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-18"><a href="index.php">Home</a></li>
 <li id="menu-item-836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-836"><a href="#">About Us</a>
 <ul class="sub-menu">
 	<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="why-aku.php">Why AKU</a></li>
@@ -693,11 +693,7 @@ h2 em {
 </ul>
 </li>
 <li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="world-class-infrastructure.php">Life @ AKU</a></li>
-<?php if ($useLiveReferenceAssets): ?>
 </ul></div></nav><!-- #site-navigation -->
-<?php else: ?>
-</ul></div></div></nav><!-- #site-navigation -->
-<?php endif; ?>
 						 
 					</div>
 				</div>
@@ -706,9 +702,23 @@ h2 em {
 
 			<!-- Sidebar -->
 			<div id="offcanvas-slide" uk-offcanvas="overlay: true">
-				<div class="uk-offcanvas-bar  mobile-menu">
+				<div class="uk-offcanvas-bar mobile-menu">
+					<button class="uk-offcanvas-close" type="button" uk-close></button>
+					
+					<div class="mobile-menu-header">
+						<a href="index.php"><img src="assets/images/logo-1.svg" alt="Dr APJ University" class="mobile-drawer-logo"></a>
+					</div>
 
-					<div class="menu-main-menu-container"><ul id="primary-menu" class="mobile-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home<?php echo $useLiveReferenceAssets ? '' : ' current-menu-item page_item page-item-7 current_page_item'; ?> menu-item-18"><a href="index.php"<?php echo $useLiveReferenceAssets ? '' : ' aria-current="page"'; ?>>Home</a></li>
+					<div class="mobile-menu-actions">
+						<a href="https://www.universitymanagementsystem.in/aku/Home/Dashboard" class="btn-outline-mobile">
+							Document Verify
+						</a>
+						<a href="https://login.rssrcampusconnect.com/" class="btn-green-mobile">
+							Login <i class="fa-solid fa-user" style="margin-left: 4px;"></i>
+						</a>
+					</div>
+
+					<div class="menu-main-menu-container"><ul id="mobile-primary-menu" class="mobile-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home<?php echo $useLiveReferenceAssets ? '' : ' current-menu-item page_item page-item-7 current_page_item'; ?> menu-item-18"><a href="index.php"<?php echo $useLiveReferenceAssets ? '' : ' aria-current="page"'; ?>>Home</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-836"><a href="#">About Us</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="why-aku.php">Why AKU</a></li>

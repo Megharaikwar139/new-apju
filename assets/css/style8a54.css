@@ -1227,9 +1227,6 @@ span.saprate-line {
     overflow: hidden;
     transition: all .3s ease;
 }
-	
-}
-
 
 .main-navigation ul.navbar-nav>li>a.active{
     display: block;
@@ -1285,6 +1282,7 @@ span.saprate-line {
 
 
 
+/*
 .main-navigation ul.navbar-nav li.menu-item-has-children>a::after {
     content: "\ea7b";
     display: inline-block;
@@ -1307,6 +1305,7 @@ span.saprate-line {
     font-size: 16px;
     right: -10px;
 }
+*/
 
 .main-navigation ul ul ul, .navbar-nav ul ul ul {
     left: -999em;
