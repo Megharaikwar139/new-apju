@@ -1,20 +1,30 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Pharmacy – Institute of Pharmacy – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-2002 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'pharmacy-iop';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Pharmacy</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Pharmacy</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-2002" class="post-2002 page type-page status-publish hentry">
-	 
+
 	<div class="uk-container">
-		
+
 
 	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-spacing-4 vc_tta-tabs-position-left vc_tta-controls-align-left "><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list" role="tablist"><li class="vc_tta-tab vc_active" data-vc-tab role="presentation"><a href="#1750742984600-7b507db3-7e91" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984600-7b507db3-7e91"><span class="vc_tta-title-text">About the Department</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750742984608-e7040b2b-79e7" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984608-e7040b2b-79e7"><span class="vc_tta-title-text">Vision &amp; Mission</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747215725-d96c76a8-3766" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747215725-d96c76a8-3766"><span class="vc_tta-title-text">Dean/Principal Messege</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747217311-04a868cf-eeff" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747217311-04a868cf-eeff"><span class="vc_tta-title-text">Faculty &amp; Staff Profile</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747218570-d2853e54-a5be" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747218570-d2853e54-a5be"><span class="vc_tta-title-text">Infrastructure</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747220286-5955f30b-b898" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747220286-5955f30b-b898"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747295155-d91060b0-a3a2" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747295155-d91060b0-a3a2"><span class="vc_tta-title-text">CO/PO</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747296369-abd8e91b-5aae" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747296369-abd8e91b-5aae"><span class="vc_tta-title-text">Activities</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747297052-e7c45dfd-dbc9"><span class="vc_tta-title-text">Notice Board</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747379267-e9f73c21-6ccf" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747379267-e9f73c21-6ccf"><span class="vc_tta-title-text">Events and News</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747404814-ed6438b8-8042" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747404814-ed6438b8-8042"><span class="vc_tta-title-text">Time Table</span></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1750742984600-7b507db3-7e91" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750742984600-7b507db3-7e91" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">About the Department</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >About The Department</h2><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 60px"><span class="vc_empty_space_inner"></span></div><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-gap-20 vc_tta-tabs-position-left vc_tta-controls-align-left "><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list" role="tablist"><li class="vc_tta-tab vc_active" data-vc-tab role="presentation"><a href="#1750742984600-7b507db3-7e91" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984600-7b507db3-7e91"><span class="vc_tta-title-text">About the Department</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750742984608-e7040b2b-79e7" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984608-e7040b2b-79e7"><span class="vc_tta-title-text">Vision &amp; Mission</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747215725-d96c76a8-3766" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747215725-d96c76a8-3766"><span class="vc_tta-title-text">Dean/Principal Messege</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747217311-04a868cf-eeff" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747217311-04a868cf-eeff"><span class="vc_tta-title-text">Faculty &amp; Staff Profile</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747218570-d2853e54-a5be" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747218570-d2853e54-a5be"><span class="vc_tta-title-text">Infrastructure</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747220286-5955f30b-b898" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747220286-5955f30b-b898"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747295155-d91060b0-a3a2" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747295155-d91060b0-a3a2"><span class="vc_tta-title-text">CO/PO</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747296369-abd8e91b-5aae" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747296369-abd8e91b-5aae"><span class="vc_tta-title-text">Activities</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747297052-e7c45dfd-dbc9"><span class="vc_tta-title-text">Notice Board</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747379267-e9f73c21-6ccf" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747379267-e9f73c21-6ccf"><span class="vc_tta-title-text">Events and News</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747404814-ed6438b8-8042" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747404814-ed6438b8-8042"><span class="vc_tta-title-text">Time Table</span></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1750742984600-7b507db3-7e91" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750742984600-7b507db3-7e91" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">About the Department</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >About The Department</h2><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1000" height="667" src="../wp-content/uploads/2025/11/department_of_pharmacy.html" class="vc_single_image-img attachment-full" alt="" title="department_of_pharmacy" srcset="assets/images/department_of_pharmacy.jpg 1000w, assets/images/department_of_pharmacy-300x200.jpg 300w, assets/images/department_of_pharmacy-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="768" height="512" src="uploads/2025/11/department_of_pharmacy.jpg" class="vc_single_image-img attachment-full" alt="" title="department_of_pharmacy" srcset="uploads/2025/11/department_of_pharmacy.jpg 768w, uploads/2025/11/department_of_pharmacy-300x200.jpg 300w, uploads/2025/11/department_of_pharmacy-150x150.jpg 150w" sizes="(max-width: 768px) 100vw, 768px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -29,7 +39,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -46,7 +56,7 @@ professionals and researchers towards global health care.</p>
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -70,7 +80,7 @@ professionals and researchers towards global health care.</p>
 			
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/revathi_mam-e1767599596170.html" alt="Dr. J.C. Sharma">
+    <img decoding="async" src="uploads/2026/01/revathi_mam-e1767599596170.jpeg" alt="Dr. J.C. Sharma">
     <div class="profile-content">
       <h4>Dr. Revathi A Gupta
 
@@ -104,7 +114,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/PRIYANKA-YADU-Assistant-Professor.html" alt="">
+    <img decoding="async" src="uploads/2026/01/PRIYANKA-YADU-Assistant-Professor.jpg" alt="">
     <div class="profile-content">
       <h4>Priyanka Yadu</h4>
       <p>Assistant Professor</p>
@@ -118,7 +128,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Dnyeshwari-Jogi-Lecturer.html" alt="Dnyeshwari Jogi">
+    <img decoding="async" src="uploads/2026/01/Dnyeshwari-Jogi-Lecturer.jpg" alt="Dnyeshwari Jogi">
     <div class="profile-content">
         <h4>Dnyeshwari Jogi</h4>
         <p>Lecturer</p>
@@ -131,7 +141,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Ajra-Shaikh-Assistant-Professor.html" alt="Ajra Shaikh">
+    <img decoding="async" src="uploads/2026/01/Ajra-Shaikh-Assistant-Professor.jpeg" alt="Ajra Shaikh">
     <div class="profile-content">
         <h4>Ajra Shaikh</h4>
         <p>Assistant Professor</p>
@@ -144,7 +154,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Ankit-Chouhan-Lecturer.html" alt="Ankit Chouhan">
+    <img decoding="async" src="uploads/2026/01/Ankit-Chouhan-Lecturer.jpeg" alt="Ankit Chouhan">
     <div class="profile-content">
         <h4>Ankit Chouhan</h4>
         <p>Lecturer</p>
@@ -157,7 +167,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Archana-Jogi-Lecturer.html" alt="Archana Jogi">
+    <img decoding="async" src="uploads/2026/01/Archana-Jogi-Lecturer.jpg" alt="Archana Jogi">
     <div class="profile-content">
         <h4>Archana Jogi</h4>
         <p>Lecturer</p>
@@ -170,7 +180,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Archana-Pachore-Assistant-Professor.html" alt="Archana Pachore">
+    <img decoding="async" src="uploads/2026/01/Archana-Pachore-Assistant-Professor.jpg" alt="Archana Pachore">
     <div class="profile-content">
         <h4>Archana Pachore</h4>
         <p>Assistant Professor</p>
@@ -183,7 +193,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Arshi-Shaikh-Lecturer.html" alt="Arshi Shaikh">
+    <img decoding="async" src="uploads/2026/01/Arshi-Shaikh-Lecturer.jpeg" alt="Arshi Shaikh">
     <div class="profile-content">
         <h4>Arshi Shaikh</h4>
         <p>Lecturer</p>
@@ -196,7 +206,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Arti-Mehta-Lecturer.html" alt="Arti Mehta">
+    <img decoding="async" src="uploads/2026/01/Arti-Mehta-Lecturer.jpg" alt="Arti Mehta">
     <div class="profile-content">
         <h4>Arti Mehta</h4>
         <p>Lecturer</p>
@@ -209,7 +219,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Ayush-Nimbalkar-Lecturer.html" alt="Ayush Nimbalkar">
+    <img decoding="async" src="uploads/2026/01/Ayush-Nimbalkar-Lecturer.jpeg" alt="Ayush Nimbalkar">
     <div class="profile-content">
         <h4>Ayush Nimbalkar</h4>
         <p>Lecturer</p>
@@ -222,7 +232,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Bharti-VARATHE-ASSISTANT-PROFESSOR.html" alt="Bharti Varathe">
+    <img decoding="async" src="uploads/2026/01/Bharti-VARATHE-ASSISTANT-PROFESSOR.jpg" alt="Bharti Varathe">
     <div class="profile-content">
         <h4>Bharti Varathe</h4>
         <p>Assistant Professor</p>
@@ -235,7 +245,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Deeksha-Bhojak-Assistant-Professor.html" alt="Deeksha Bhojak">
+    <img decoding="async" src="uploads/2026/01/Deeksha-Bhojak-Assistant-Professor.jpg" alt="Deeksha Bhojak">
     <div class="profile-content">
         <h4>Deeksha Bhojak</h4>
         <p>Assistant Professor</p>
@@ -248,7 +258,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Mamta-Choudhary-Assistant-Professor.html" alt="Mamta Choudhary">
+    <img decoding="async" src="uploads/2026/01/Mamta-Choudhary-Assistant-Professor.jpeg" alt="Mamta Choudhary">
     <div class="profile-content">
         <h4>Mamta Choudhary</h4>
         <p>Assistant Professor</p>
@@ -261,7 +271,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Megha-Sonaniya-Assistant-Professor.html" alt="Megha Sonaniya">
+    <img decoding="async" src="uploads/2026/01/Megha-Sonaniya-Assistant-Professor.jpg" alt="Megha Sonaniya">
     <div class="profile-content">
         <h4>Megha Sonaniya</h4>
         <p>Assistant Professor</p>
@@ -274,7 +284,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Shatakshi-Tiwari-Assistant-Professor.html" alt="Shatakshi Tiwari">
+    <img decoding="async" src="uploads/2026/01/Shatakshi-Tiwari-Assistant-Professor.jpeg" alt="Shatakshi Tiwari">
     <div class="profile-content">
         <h4>Shatakshi Tiwari</h4>
         <p>Assistant Professor</p>
@@ -287,7 +297,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Nutan-Mimrot-Gothwal-Associate-Professor.html" alt="Nutan Mimrot Gothwal">
+    <img decoding="async" src="uploads/2026/01/Nutan-Mimrot-Gothwal-Associate-Professor.jpg" alt="Nutan Mimrot Gothwal">
     <div class="profile-content">
         <h4>Nutan Mimrot Gothwal</h4>
         <p>Associate Professor</p>
@@ -300,7 +310,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Prajakta-Shelke-ASSISTANT-PROFESSOR.html" alt="Prajakta Shelke">
+    <img decoding="async" src="uploads/2026/01/Prajakta-Shelke-ASSISTANT-PROFESSOR.jpg" alt="Prajakta Shelke">
     <div class="profile-content">
         <h4>Prajakta Shelke</h4>
         <p>Assistant Professor</p>
@@ -313,7 +323,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Rahul-Maskawade-Assistant-Professor.html" alt="Rahul Maskawade">
+    <img decoding="async" src="uploads/2026/01/Rahul-Maskawade-Assistant-Professor.jpg" alt="Rahul Maskawade">
     <div class="profile-content">
         <h4>Rahul Maskawade</h4>
         <p>Assistant Professor</p>
@@ -326,7 +336,7 @@ Institute of Pharmacy</p>
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<iframe loading="lazy"
-  src="https://aku.thetask.in/wp-content/uploads/2026/01/iop.pdf#toolbar=0&navpanes=0&scrollbar=0"
+  src="uploads/2026/01/iop.pdf#toolbar=0&navpanes=0&scrollbar=0"
   width="100%"
   height="900"
   frameborder="0"
@@ -340,36 +350,36 @@ Institute of Pharmacy</p>
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Syllabus &amp; Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/DPHARM_ER_20-_syllabus_2021-22.html' target='_blank'>DPHARM_ER_20 _syllabus_2021-22</a></td>
+                             <td><a href='uploads/2026/01/DPHARM_ER_20-_syllabus_2021-22.pdf' target='_blank'>DPHARM_ER_20 _syllabus_2021-22</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/D.Pharm-1-and-2-Year-Syllabus.html' target='_blank'>D.Pharm 1 and 2 Year Syllabus</a></td>
+                             <td><a href='uploads/2026/01/D.Pharm-1-and-2-Year-Syllabus.pdf' target='_blank'>D.Pharm 1 and 2 Year Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/D.Pharm-1and-2-Year-Scheme-and-Rules.html' target='_blank'>D.Pharm 1and 2 Year Scheme and Rules</a></td>
+                             <td><a href='uploads/2026/01/D.Pharm-1and-2-Year-Scheme-and-Rules.pdf' target='_blank'>D.Pharm 1and 2 Year Scheme and Rules</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/B.-Pharma-VII-and-VIII-Sem-Syllabus.html' target='_blank'>B. Pharma VII and VIII Sem Syllabus</a></td>
+                             <td><a href='uploads/2026/01/B.-Pharma-VII-and-VIII-Sem-Syllabus.pdf' target='_blank'>B. Pharma VII and VIII Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/B.-Pharma-V-and-VI-Sem-Syllabus.html' target='_blank'>B. Pharma V and VI Sem Syllabus</a></td>
+                             <td><a href='uploads/2026/01/B.-Pharma-V-and-VI-Sem-Syllabus.pdf' target='_blank'>B. Pharma V and VI Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/B.-Pharma-III-and-IV-Sem-Syllabus.html' target='_blank'>B. Pharma III and IV Sem Syllabus</a></td>
+                             <td><a href='uploads/2026/01/B.-Pharma-III-and-IV-Sem-Syllabus.pdf' target='_blank'>B. Pharma III and IV Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/B.-Pharma-I-and-II-Sem-Syllabus.html' target='_blank'>B. Pharma I and II Sem Syllabus</a></td>
+                             <td><a href='uploads/2026/01/B.-Pharma-I-and-II-Sem-Syllabus.pdf' target='_blank'>B. Pharma I and II Sem Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/B-Pharma-All-Sem-Schemes.html' target='_blank'>B Pharma All Sem Schemes</a></td>
+                             <td><a href='uploads/2026/01/B-Pharma-All-Sem-Schemes.pdf' target='_blank'>B Pharma All Sem Schemes</a></td>
                           </tr></table>
 
 		</div>
 	</div>
-</div></div><div class="vc_tta-panel" id="1750747295155-d91060b0-a3a2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747295155-d91060b0-a3a2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">CO/PO</span></a></h4></div><div class="vc_tta-panel-body"></div></div><div class="vc_tta-panel" id="1750747296369-abd8e91b-5aae" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747296369-abd8e91b-5aae" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Activities</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Diwali Celebration</h2><div class="wpb_images_carousel wpb_content_element vc_clearfix wpb_content_element"><div class="wpb_wrapper"><div id="vc_images-carousel-1-1786612776" data-ride="vc_carousel" data-wrap="true" style="width: 1200px;" data-interval="2800" data-auto-height="yes" data-mode="horizontal" data-partial="false" data-per-view="2" data-hide-on-end="false" class="vc_slide vc_images_carousel"><div class="vc_carousel-inner"><div class="vc_carousel-slideline"><div class="vc_carousel-slideline-inner"><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-2-768x1024.html" data-lightbox="lightbox[rel-2002-1260513091]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-2-e1767784248660-960x700.html" width="960" height="700" alt="IOP_Diwali Celebration (2)" title="IOP_Diwali Celebration (2)" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-1024x576.html" data-lightbox="lightbox[rel-2002-1260513091]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-1200x700.html" width="1200" height="700" alt="IOP_Diwali Celebration" title="IOP_Diwali Celebration" loading="lazy" /></a></div></div></div></div></div></div></div></div><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Poster Making Competition</h2><div class="wpb_images_carousel wpb_content_element vc_clearfix wpb_content_element"><div class="wpb_wrapper"><div id="vc_images-carousel-2-1786612776" data-ride="vc_carousel" data-wrap="true" style="width: 1200px;" data-interval="2800" data-auto-height="yes" data-mode="horizontal" data-partial="false" data-per-view="2" data-hide-on-end="false" class="vc_slide vc_images_carousel"><div class="vc_carousel-inner"><div class="vc_carousel-slideline"><div class="vc_carousel-slideline-inner"><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-2-1024x768.html" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-2-1200x700.html" width="1200" height="700" alt="IOP_Diwali Celebration Poster Making Compititon 2" title="IOP_Diwali Celebration Poster Making Compititon 2" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-1024x768.html" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-1200x700.html" width="1200" height="700" alt="IOP_Diwali Celebration Poster Making Compititon" title="IOP_Diwali Celebration Poster Making Compititon" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Dr.-APJ-Abdul-kalam-day-Celebration-1024x768.html" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Dr.-APJ-Abdul-kalam-day-Celebration-1200x700.html" width="1200" height="700" alt="IOP_Dr. APJ Abdul kalam day Celebration" title="IOP_Dr. APJ Abdul kalam day Celebration" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-1-1024x576.html" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-1-1200x700.html" width="1200" height="700" alt="IOP_Faculty Devlopment Programme 1" title="IOP_Faculty Devlopment Programme 1" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-2-1024x576.html" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-2-1200x700.html" width="1200" height="700" alt="IOP_Faculty Devlopment Programme 2" title="IOP_Faculty Devlopment Programme 2" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-3-576x1024.html" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-3-720x700.html" width="720" height="700" alt="IOP_Faculty Devlopment Programme 3" title="IOP_Faculty Devlopment Programme 3" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-1024x576.html" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="../wp-content/uploads/2026/01/IOP_Faculty-Devlopment-Programme-1200x700.html" width="1200" height="700" alt="IOP_Faculty Devlopment Programme" title="IOP_Faculty Devlopment Programme" loading="lazy" /></a></div></div></div></div></div></div></div></div></div></div><div class="vc_tta-panel" id="1750747297052-e7c45dfd-dbc9" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Notice Board</span></a></h4></div><div class="vc_tta-panel-body">
+</div></div><div class="vc_tta-panel" id="1750747295155-d91060b0-a3a2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747295155-d91060b0-a3a2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">CO/PO</span></a></h4></div><div class="vc_tta-panel-body"></div></div><div class="vc_tta-panel" id="1750747296369-abd8e91b-5aae" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747296369-abd8e91b-5aae" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Activities</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Diwali Celebration</h2><div class="wpb_images_carousel wpb_content_element vc_clearfix wpb_content_element"><div class="wpb_wrapper"><div id="vc_images-carousel-1-1786612776" data-ride="vc_carousel" data-wrap="true" style="width: 1200px;" data-interval="2800" data-auto-height="yes" data-mode="horizontal" data-partial="false" data-per-view="2" data-hide-on-end="false" class="vc_slide vc_images_carousel"><div class="vc_carousel-inner"><div class="vc_carousel-slideline"><div class="vc_carousel-slideline-inner"><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Diwali-Celebration-2-768x1024.jpeg" data-lightbox="lightbox[rel-2002-1260513091]"><img decoding="async" class="" src="uploads/2026/01/IOP_Diwali-Celebration-2-e1767784248660-960x700.jpeg" width="960" height="700" alt="IOP_Diwali Celebration (2)" title="IOP_Diwali Celebration (2)" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Diwali-Celebration-1024x576.jpeg" data-lightbox="lightbox[rel-2002-1260513091]"><img decoding="async" class="" src="uploads/2026/01/IOP_Diwali-Celebration-1200x700.jpeg" width="1200" height="700" alt="IOP_Diwali Celebration" title="IOP_Diwali Celebration" loading="lazy" /></a></div></div></div></div></div></div></div></div><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Poster Making Competition</h2><div class="wpb_images_carousel wpb_content_element vc_clearfix wpb_content_element"><div class="wpb_wrapper"><div id="vc_images-carousel-2-1786612776" data-ride="vc_carousel" data-wrap="true" style="width: 1200px;" data-interval="2800" data-auto-height="yes" data-mode="horizontal" data-partial="false" data-per-view="2" data-hide-on-end="false" class="vc_slide vc_images_carousel"><div class="vc_carousel-inner"><div class="vc_carousel-slideline"><div class="vc_carousel-slideline-inner"><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-2-1024x768.jpeg" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-2-1200x700.jpeg" width="1200" height="700" alt="IOP_Diwali Celebration Poster Making Compititon 2" title="IOP_Diwali Celebration Poster Making Compititon 2" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-1024x768.jpeg" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="uploads/2026/01/IOP_Diwali-Celebration-Poster-Making-Compititon-1200x700.jpeg" width="1200" height="700" alt="IOP_Diwali Celebration Poster Making Compititon" title="IOP_Diwali Celebration Poster Making Compititon" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Dr.-APJ-Abdul-kalam-day-Celebration-1024x768.jpeg" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="uploads/2026/01/IOP_Dr.-APJ-Abdul-kalam-day-Celebration-1200x700.jpeg" width="1200" height="700" alt="IOP_Dr. APJ Abdul kalam day Celebration" title="IOP_Dr. APJ Abdul kalam day Celebration" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Faculty-Devlopment-Programme-1-1024x576.jpeg" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="uploads/2026/01/IOP_Faculty-Devlopment-Programme-1-1200x700.jpeg" width="1200" height="700" alt="IOP_Faculty Devlopment Programme 1" title="IOP_Faculty Devlopment Programme 1" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Faculty-Devlopment-Programme-2-1024x576.jpeg" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="uploads/2026/01/IOP_Faculty-Devlopment-Programme-2-1200x700.jpeg" width="1200" height="700" alt="IOP_Faculty Devlopment Programme 2" title="IOP_Faculty Devlopment Programme 2" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Faculty-Devlopment-Programme-3-576x1024.jpeg" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="uploads/2026/01/IOP_Faculty-Devlopment-Programme-3-720x700.jpeg" width="720" height="700" alt="IOP_Faculty Devlopment Programme 3" title="IOP_Faculty Devlopment Programme 3" loading="lazy" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="uploads/2026/01/IOP_Faculty-Devlopment-Programme-1024x576.jpeg" data-lightbox="lightbox[rel-2002-2173586843]"><img decoding="async" class="" src="uploads/2026/01/IOP_Faculty-Devlopment-Programme-1200x700.jpeg" width="1200" height="700" alt="IOP_Faculty Devlopment Programme" title="IOP_Faculty Devlopment Programme" loading="lazy" /></a></div></div></div></div></div></div></div></div></div></div><div class="vc_tta-panel" id="1750747297052-e7c45dfd-dbc9" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Notice Board</span></a></h4></div><div class="vc_tta-panel-body">
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Notice Board</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NPCI-Scholorship-Notice-for-SC-ST-scaled.html' target='_blank'>NPCI Scholorship Notice for SC , ST</a></td>
+                             <td><a href='uploads/2026/01/NPCI-Scholorship-Notice-for-SC-ST-scaled.jpg' target='_blank'>NPCI Scholorship Notice for SC , ST</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/Scholorship-Notice-OBC-scaled.html' target='_blank'>Scholorship Notice OBC</a></td>
+                             <td><a href='uploads/2026/01/Scholorship-Notice-OBC-scaled.jpg' target='_blank'>Scholorship Notice OBC</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/75-Class-Attendence-scaled.html' target='_blank'>75 % Class Attendence</a></td>
+                             <td><a href='uploads/2026/01/75-Class-Attendence-scaled.jpg' target='_blank'>75 % Class Attendence</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/MP-TASS-Portal-scaled.html' target='_blank'>MP TASS Portal</a></td>
+                             <td><a href='uploads/2026/01/MP-TASS-Portal-scaled.jpg' target='_blank'>MP TASS Portal</a></td>
                           </tr></table>
 
 		</div>
@@ -385,9 +395,9 @@ Institute of Pharmacy</p>
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Time Table</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/Second-Sessional-5th-Sem-scaled.html' target='_blank'>Second Sessional 5th Sem</a></td>
+                             <td><a href='uploads/2026/01/Second-Sessional-5th-Sem-scaled.jpg' target='_blank'>Second Sessional 5th Sem</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/Second-Sessional-7th-Sem-scaled.html' target='_blank'>Second Sessional 7th Sem</a></td>
+                             <td><a href='uploads/2026/01/Second-Sessional-7th-Sem-scaled.jpg' target='_blank'>Second Sessional 7th Sem</a></td>
                           </tr></table>
 
 		</div>
@@ -481,7 +491,7 @@ Institute of Pharmacy</p>
     transform: translateX(0);
 }
     </style>
-    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Diploma Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/d-pharma/index.php">D. Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/b-pharm-lateral-entry/index.php">B.Pharm (Lateral Entry)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/about-b-pharma/index.php">B.Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmaceutical-quality-assurance/index.php">M.Pharma in Pharmaceutical Quality Assurance</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmaceutics/index.php">M.Pharma. in Pharmaceutics</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmacognosy/index.php">M.Pharma. in Pharmacognosy</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmacology/index.php">M.Pharma. in Pharmacology</a></div></div></div></div></div>
+    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Diploma Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/d-pharma.php">D. Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/b-pharm-lateral-entry.php">B.Pharm (Lateral Entry)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/about-b-pharma.php">B.Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmaceutical-quality-assurance.php">M.Pharma in Pharmaceutical Quality Assurance</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmaceutics.php">M.Pharma. in Pharmaceutics</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmacognosy.php">M.Pharma. in Pharmacognosy</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmacology.php">M.Pharma. in Pharmacology</a></div></div></div></div></div>
 
 		</div>
 	</div>

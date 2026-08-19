@@ -1,9 +1,19 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Civil Engineering – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-2142 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'civil-engineering-soe';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Civil Engineering</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Civil Engineering</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-2142" class="post-2142 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
@@ -14,11 +24,11 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1536" height="1024" src="../wp-content/uploads/2025/12/civil.html" class="vc_single_image-img attachment-full" alt="" title="civil" srcset="assets/images/civil.png 1536w, assets/images/civil-300x200.png 300w, assets/images/civil-1024x683.png 1024w, assets/images/civil-768x512.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1536" height="1024" src="uploads/2025/12/civil.png" class="vc_single_image-img attachment-full" alt="" title="civil" srcset="uploads/2025/12/civil.png 1536w, uploads/2025/12/civil-300x200.png 300w, uploads/2025/12/civil-1024x683.png 1024w, uploads/2025/12/civil-768x512.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></div>
 		</figure>
 	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element wpb_animate_when_almost_visible wpb_zoomIn zoomIn vision-box" >
+</div></div></div><div class="wpb_column vc_column_cont wpbntainer vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_eleme_animate_when_almost_visible wpb_zoomIn zoomIn vision-box" >
 		<div class="wpb_wrapper">
 			<p style="text-align: justify; line-height: 150%;"><span lang="EN-IN">The Department of Civil Engineering at the School of Engineering (SOE) stands as a beacon of academic excellence and technological innovation. Committed to cultivating visionary professionals, the department imparts rigorous knowledge across structural systems, geotechnics, hydrology, and sustainable infrastructure. Emphasizing ethical responsibility, environmental stewardship, and multidisciplinary competence, we equip students with cutting-edge tools and real-world insights. Our erudite faculty, state-of-the-art laboratories, and strong industry alliances foster a transformative learning ecosystem. Through pioneering research, societal engagement, and global outlook, we aspire to produce civil engineers who shape resilient cities, empower communities, and contribute profoundly to national and global advancement.</span></p>
 
@@ -47,7 +57,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -62,7 +72,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -86,7 +96,7 @@
 
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/10/Priyanka-Tantwar_HOD_B.E.M.Tech_SOE_civil-engineering-department-1.html" alt="">
+    <img decoding="async" src="uploads/2025/10/Priyanka-Tantwar_HOD_B.E.M.Tech_SOE_civil-engineering-department-1.jpeg" alt="Priyanka Tantwar">
     <div class="profile-content">
       <h4>Priyanka Tantwar</h4>
       <p>HOD B.E. M.Tech</p>
@@ -102,7 +112,7 @@
 
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/Salim-shaikh-lecture_B.E.M.Tech-pursuing_SOE_civil-engineering-department.html" alt="">
+    <img decoding="async" src="uploads/2026/01/Salim-shaikh-lecture_B.E.M.Tech-pursuing_SOE_civil-engineering-department.jpeg" alt="Salim Shaikh">
     <div class="profile-content">
       <h4>Salim Shaikh</h4>
       <p>Lecturer</p>
@@ -118,7 +128,7 @@
 
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/10/Dr.Abhishek-Agrawal_Ph.D_SOE_CE_Asso-Prof.html" alt="">
+    <img decoding="async" src="uploads/2025/10/Dr.Abhishek-Agrawal_Ph.D_SOE_CE_Asso-Prof.jpeg" alt="Dr. Abhishek Agrawal">
     <div class="profile-content">
       <h4>DR. Abhishek Agrawal</h4>
       <p>Assistant Professor</p>
@@ -134,7 +144,7 @@
 
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/10/Chandravati-chouhan.html" alt="">
+    <img decoding="async" src="uploads/2025/10/Chandravati-chouhan.jpeg" alt="Chandravati Chouhan">
     <div class="profile-content">
       <h4>Chandravati Chouhan</h4>
       <p>Assistant Professor</p>
@@ -150,7 +160,7 @@
 
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/10/Anshul-akodiya_B.E.-M.Tech-pursuing_SOE_Lecturer_civil-Engineering-Department.html" alt="">
+    <img decoding="async" src="uploads/2025/10/Anshul-akodiya_B.E.-M.Tech-pursuing_SOE_Lecturer_civil-Engineering-Department.jpeg" alt="Anshul Akodiya">
     <div class="profile-content">
       <h4>Anshul Akodiya</h4>
       <p>Lecturer</p>
@@ -163,7 +173,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/classroom.jpg" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -174,7 +184,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/library.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -185,7 +195,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/1-1.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Advanced laboratories">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -196,7 +206,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -207,17 +217,17 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Soe Civil Syllabus and Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/Diploma-CE-Scheme.html' target='_blank'>Diploma CE Scheme</a></td>
+                             <td><a href='uploads/2025/10/Diploma-CE-Scheme.pdf' target='_blank'>Diploma CE Scheme</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/BE-CE-Scheme.html' target='_blank'>BE CE Scheme</a></td>
+                             <td><a href='uploads/2025/10/BE-CE-Scheme.pdf' target='_blank'>BE CE Scheme</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/M.Tech-SE-Scheme.html' target='_blank'>M.Tech SE Scheme</a></td>
+                             <td><a href='uploads/2025/10/M.Tech-SE-Scheme.pdf' target='_blank'>M.Tech SE Scheme</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/Diploma-CE-Syllabus.html' target='_blank'>Diploma CE Syllabus</a></td>
+                             <td><a href='uploads/2025/10/Diploma-CE-Syllabus.pdf' target='_blank'>Diploma CE Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/BE-CE-Syllabus.html' target='_blank'>BE CE Syllabus</a></td>
+                             <td><a href='uploads/2025/10/BE-CE-Syllabus.pdf' target='_blank'>BE CE Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/M.Tech-SE-Syllabus.html' target='_blank'>M.Tech SE Syllabus</a></td>
+                             <td><a href='uploads/2025/10/M.Tech-SE-Syllabus.pdf' target='_blank'>M.Tech SE Syllabus</a></td>
                           </tr></table>
 
 		</div>
@@ -226,9 +236,9 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>SOE CIVIL SO PO</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/M.TECH-SE-POS-PSOS.html' target='_blank'>M.TECH-SE PO&#8217;S &#038; PSO&#8217;S</a></td>
+                             <td><a href='uploads/2025/10/M.TECH-SE-POS-PSOS.pdf' target='_blank'>M.TECH-SE PO&#8217;S &#038; PSO&#8217;S</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/BE-CE-POS-PSOS.html' target='_blank'>BE-CE PO&#8217;S &#038; PSO&#8217;S</a></td>
+                             <td><a href='uploads/2025/10/BE-CE-POS-PSOS.pdf' target='_blank'>BE-CE PO&#8217;S &#038; PSO&#8217;S</a></td>
                           </tr></table>
 
 		</div>
@@ -246,7 +256,7 @@
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Time Table</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.html' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
+                             <td><a href='uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.pdf' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
                           </tr></table>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -348,7 +358,7 @@
     transform: translateX(0);
 }
     </style>
-    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/b-e-civil-engineering-lateral-entry/index.php">B.E. (Civil Engineering &#8211; Lateral Entry)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/b-e-civil-engg/index.php">B.E. (Civil Engineering)</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-tech-structural-engineering/index.php">M.Tech. (Structural Engineering)</a></div></div></div></div></div>
+    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/b-e-civil-engineering-lateral-entry.php">B.E. (Civil Engineering &#8211; Lateral Entry)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/b-e-civil-engg.php">B.E. (Civil Engineering)</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-tech-structural-engineering.php">M.Tech. (Structural Engineering)</a></div></div></div></div></div>
 
 		</div>
 	</div>

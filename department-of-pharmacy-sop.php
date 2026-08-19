@@ -1,20 +1,30 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Pharmacy – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-1997 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'pharmacy-sop';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Pharmacy</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Pharmacy</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-1997" class="post-1997 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
 		
 
 	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-spacing-4 vc_tta-tabs-position-left vc_tta-controls-align-left "><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list" role="tablist"><li class="vc_tta-tab vc_active" data-vc-tab role="presentation"><a href="#1750742984600-7b507db3-7e91" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984600-7b507db3-7e91"><span class="vc_tta-title-text">About the Department</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750742984608-e7040b2b-79e7" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984608-e7040b2b-79e7"><span class="vc_tta-title-text">Vision &amp; Mission</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747215725-d96c76a8-3766" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747215725-d96c76a8-3766"><span class="vc_tta-title-text">Dean/Principal Messege</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1765870971418-65283fa1-ead5" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1765870971418-65283fa1-ead5"><span class="vc_tta-title-text">HOD Message</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747217311-04a868cf-eeff" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747217311-04a868cf-eeff"><span class="vc_tta-title-text">Faculty &amp; Staff Profile</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747218570-d2853e54-a5be" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747218570-d2853e54-a5be"><span class="vc_tta-title-text">Infrastructure</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747220286-5955f30b-b898" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747220286-5955f30b-b898"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747295155-d91060b0-a3a2" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747295155-d91060b0-a3a2"><span class="vc_tta-title-text">CO/PO</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747296369-abd8e91b-5aae" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747296369-abd8e91b-5aae"><span class="vc_tta-title-text">Activities</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747297052-e7c45dfd-dbc9"><span class="vc_tta-title-text">Notice Board</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747379267-e9f73c21-6ccf" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747379267-e9f73c21-6ccf"><span class="vc_tta-title-text">Events and News</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747404814-ed6438b8-8042" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747404814-ed6438b8-8042"><span class="vc_tta-title-text">Time Table</span></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1750742984600-7b507db3-7e91" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750742984600-7b507db3-7e91" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">About the Department</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >About The Department</h2><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 60px"><span class="vc_empty_space_inner"></span></div><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-gap-20 vc_tta-tabs-position-left vc_tta-controls-align-left "><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list" role="tablist"><li class="vc_tta-tab vc_active" data-vc-tab role="presentation"><a href="#1750742984600-7b507db3-7e91" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984600-7b507db3-7e91"><span class="vc_tta-title-text">About the Department</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750742984608-e7040b2b-79e7" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984608-e7040b2b-79e7"><span class="vc_tta-title-text">Vision &amp; Mission</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747215725-d96c76a8-3766" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747215725-d96c76a8-3766"><span class="vc_tta-title-text">Dean/Principal Messege</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1765870971418-65283fa1-ead5" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1765870971418-65283fa1-ead5"><span class="vc_tta-title-text">HOD Message</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747217311-04a868cf-eeff" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747217311-04a868cf-eeff"><span class="vc_tta-title-text">Faculty &amp; Staff Profile</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747218570-d2853e54-a5be" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747218570-d2853e54-a5be"><span class="vc_tta-title-text">Infrastructure</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747220286-5955f30b-b898" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747220286-5955f30b-b898"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747295155-d91060b0-a3a2" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747295155-d91060b0-a3a2"><span class="vc_tta-title-text">CO/PO</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747296369-abd8e91b-5aae" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747296369-abd8e91b-5aae"><span class="vc_tta-title-text">Activities</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747297052-e7c45dfd-dbc9"><span class="vc_tta-title-text">Notice Board</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747379267-e9f73c21-6ccf" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747379267-e9f73c21-6ccf"><span class="vc_tta-title-text">Events and News</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747404814-ed6438b8-8042" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747404814-ed6438b8-8042"><span class="vc_tta-title-text">Time Table</span></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1750742984600-7b507db3-7e91" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750742984600-7b507db3-7e91" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">About the Department</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >About The Department</h2><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1536" height="1024" src="../wp-content/uploads/2025/12/civil.html" class="vc_single_image-img attachment-full" alt="" title="civil" srcset="assets/images/civil.png 1536w, assets/images/civil-300x200.png 300w, assets/images/civil-1024x683.png 1024w, assets/images/civil-768x512.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="768" height="512" src="uploads/2025/11/department_of_pharmacy.jpg" class="vc_single_image-img attachment-full" alt="" title="department_of_pharmacy" srcset="uploads/2025/11/department_of_pharmacy.jpg 768w, uploads/2025/11/department_of_pharmacy-300x200.jpg 300w, uploads/2025/11/department_of_pharmacy-150x150.jpg 150w" sizes="(max-width: 768px) 100vw, 768px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -44,7 +54,7 @@ Career Support</p>
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -63,7 +73,7 @@ trends and demands of the healthcare industry.”</p>
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -82,7 +92,6 @@ cutting-edge research in Pharmaceutical sciences with a focus on industrial rele
 			
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/11/rakesh_jatav.html" alt="Dr. J.C. Sharma">
     <div class="profile-content">
       <h4>Dr. Rakesh Kumar Jatav
 
@@ -122,7 +131,7 @@ cutting-edge research in Pharmaceutical sciences with a focus on industrial rele
 			
 
   <div class="profile-card">
-    <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/11/Dr.-Govind-Soni.html" alt="Dr.Govind Soni">
+    <img decoding="async" src="uploads/2025/11/Dr.-Govind-Soni.jpg" alt="Dr.Govind Soni">
     <div class="profile-content">
       <h4>Dr.Govind Soni</h4>
       <span class="profile-role">HOD, SOP</span>
@@ -161,7 +170,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Dr.-Govind-Soni.jpg" alt="Dr. Govind Soni">-->
+    <img decoding="async" src="uploads/2025/11/Dr.-Govind-Soni.jpg" alt="Dr. Govind Soni">
     <div class="profile-content">
       <h4>Dr. Govind Soni</h4>
       <p>Professor</p>
@@ -177,7 +186,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Dr.-Ankit-Sahu.jpg" alt="">-->
+    <img decoding="async" src="uploads/2025/11/Dr.-Ankit-Sahu.jpg" alt="Dr. Ankit Sahu">
     <div class="profile-content">
       <h4>Dr. Ankit-Sahu</h4>
       <p>Professor</p>
@@ -193,7 +202,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Ruchika-Shukla.jpeg" alt="">-->
+    <img decoding="async" src="uploads/2025/11/Ruchika-Shukla.jpeg" alt="Ruchika Shukla">
     <div class="profile-content">
       <h4>Ruchika Shukla</h4>
       <p>Professor</p>
@@ -209,7 +218,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Madhuri-Karma.jpg" alt="">-->
+    <img decoding="async" src="uploads/2025/11/Madhuri-Karma.jpg" alt="Madhuri Karma">
     <div class="profile-content">
       <h4>Madhuri Karma</h4>
       <p>Professor</p>
@@ -225,7 +234,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Pranjul-Jain.jpg" alt="Pranjul-Jain">-->
+    <img decoding="async" src="uploads/2025/11/Pranjul-Jain.jpg" alt="Pranjul Jain">
     <div class="profile-content">
       <h4>Pranjul Jain</h4>
       <p>Professor</p>
@@ -241,7 +250,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Anubha-Jain.jpg" alt="Anubha Jain">-->
+    <img decoding="async" src="uploads/2025/11/Anubha-Jain.jpg" alt="Anubha Jain">
     <div class="profile-content">
       <h4>Anubha Jain</h4>
       <p>Professor</p>
@@ -257,7 +266,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Rupali-Patel.jpg" alt="">-->
+    <img decoding="async" src="uploads/2025/11/Rupali-Patel.jpg" alt="Rupali Patel">
     <div class="profile-content">
       <h4>Rupali Patel</h4>
       <p>Professor</p>
@@ -273,7 +282,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Vinita-Mathankar.jpg" alt="">-->
+    <img decoding="async" src="uploads/2025/11/Vinita-Mathankar.jpg" alt="Vinita Mathankar">
     <div class="profile-content">
       <h4>Vinita Mathankar</h4>
       <p>Professor</p>
@@ -289,7 +298,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
 		<div class="wpb_wrapper">
 			<div class="profile-card">
-    <!--<img decoding="async" src="assets/images/Chetna-Malviya.jpg" alt="">-->
+    <img decoding="async" src="uploads/2025/11/Chetna-Malviya.jpg" alt="Chetna Malviya">
     <div class="profile-content">
       <h4>Chetna Malviya</h4>
       <p>Professor</p>
@@ -305,7 +314,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/classroom.jpg" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -316,7 +325,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/library.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -327,7 +336,7 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/1-1.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Advanced laboratories">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -338,22 +347,37 @@ variety of healthcare settings.
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Wi-Fi Smart Campuses">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
 
 		</div>
 	</div>
-</div></div></div></div></div></div><div class="vc_tta-panel" id="1750747220286-5955f30b-b898" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747220286-5955f30b-b898" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></h4></div><div class="vc_tta-panel-body"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Syllabus</h2><div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-info vc_do_message" ><div class="vc_message_box-icon"><i class="fa fa-solid fa-circle-info"></i></div><p>No Syllabus</p>
-</div></div></div></div></div></div></div><div class="vc_tta-panel" id="1750747295155-d91060b0-a3a2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747295155-d91060b0-a3a2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">CO/PO</span></a></h4></div><div class="vc_tta-panel-body">
+</div></div></div></div></div></div><div class="vc_tta-panel" id="1750747220286-5955f30b-b898" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747220286-5955f30b-b898" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></h4></div><div class="vc_tta-panel-body"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Syllabus &amp; Scheme</h2>
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
-			<h2><em>Department of Agriculture SO PO</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/B.Sc_.Agriculture-PSOs.html' target='_blank'>B.Sc.Agriculture PSOs</a></td>
+			<h2><em>SOP Pharmacy Syllabus and Scheme</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
+                             <td><a href='uploads/2025/07/Diploma-Pharmacy-Syllabus_syllabus_2021-22.pdf' target='_blank'>Diploma Pharmacy Syllabus</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2025/10/BSc-Agriculture-POs.html' target='_blank'>BSc Agriculture POs</a></td>
+                             <td><a href='uploads/2026/01/B-Pharma-All-Sem-Schemes.pdf' target='_blank'>B.Pharma All Sem Schemes</a></td>
+                          </tr><tr>
+                             <td><a href='uploads/2025/06/B.-Pharma-I-and-II-Sem-Syllabus.pdf' target='_blank'>B.Pharma I &amp; II Sem Syllabus</a></td>
+                          </tr><tr>
+                             <td><a href='uploads/2025/06/B.-Pharma-III-and-IV-Sem-Syllabus.pdf' target='_blank'>B.Pharma III &amp; IV Sem Syllabus</a></td>
+                          </tr><tr>
+                             <td><a href='uploads/2025/06/B.-Pharma-V-and-VI-Sem-Syllabus.pdf' target='_blank'>B.Pharma V &amp; VI Sem Syllabus</a></td>
+                          </tr><tr>
+                             <td><a href='uploads/2025/06/B.-Pharma-VII-and-VIII-Sem-Syllabus.pdf' target='_blank'>B.Pharma VII &amp; VIII Sem Syllabus</a></td>
                           </tr></table>
+
+		</div>
+	</div>
+</div></div></div></div></div></div><div class="vc_tta-panel" id="1750747295155-d91060b0-a3a2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747295155-d91060b0-a3a2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">CO/PO</span></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element file_page2" >
+		<div class="wpb_wrapper">
+			<h2><em>Department of Pharmacy SO PO</em></h2><div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-info vc_do_message" ><div class="vc_message_box-icon"><i class="fa fa-solid fa-circle-info"></i></div><p>No CO/PO data available</p>
+</div>
 
 		</div>
 	</div>
@@ -370,7 +394,7 @@ variety of healthcare settings.
 	<div class="wpb_text_column wpb_content_element file_page2" >
 		<div class="wpb_wrapper">
 			<h2><em>Time Table</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.html' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
+                             <td><a href='uploads/2025/06/30092024_122749_GUIDELINES-FOR-1.pdf' target='_blank'>GUIDELINES FOR OFFLINE EXAM 2024</a></td>
                           </tr></table>
 
 		</div>
@@ -464,7 +488,7 @@ variety of healthcare settings.
     transform: translateX(0);
 }
     </style>
-    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Diploma Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/d-pharma/index.php">D. Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/b-pharm-lateral-entry/index.php">B.Pharm (Lateral Entry)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/about-b-pharma/index.php">B.Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmaceutical-quality-assurance/index.php">M.Pharma in Pharmaceutical Quality Assurance</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmaceutics/index.php">M.Pharma. in Pharmaceutics</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmacognosy/index.php">M.Pharma. in Pharmacognosy</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-pharma-pharmacology/index.php">M.Pharma. in Pharmacology</a></div></div></div></div></div>
+    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Diploma Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/d-pharma.php">D. Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/b-pharm-lateral-entry.php">B.Pharm (Lateral Entry)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/about-b-pharma.php">B.Pharma</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmaceutical-quality-assurance.php">M.Pharma in Pharmaceutical Quality Assurance</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmaceutics.php">M.Pharma. in Pharmaceutics</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmacognosy.php">M.Pharma. in Pharmacognosy</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-pharma-pharmacology.php">M.Pharma. in Pharmacology</a></div></div></div></div></div>
 
 		</div>
 	</div>

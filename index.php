@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 <div id="content" class="site-content">
 <main id="primary" class="site-main">
-   
     
  
 		 
@@ -22,7 +21,7 @@
       $banners = $banners_stmt->fetchAll();
       $isFirstBanner = true;
       foreach ($banners as $banner) {
-          $b_img = (strpos($banner['image_path'], 'assets/') === 0) ? $banner['image_path'] : '../../APJ-WEB/wp-content/uploads/' . $banner['image_path'];
+          $b_img = (strpos($banner['image_path'], 'assets/') === 0) ? $banner['image_path'] : 'uploads/' . $banner['image_path'];
       ?>
     <div class="carousel-item <?php echo $isFirstBanner ? 'active' : ''; ?>">
       <img src="<?php echo htmlspecialchars($b_img); ?>" class="d-block w-100" alt="<?php echo htmlspecialchars($banner['title'] ?? 'Campus View'); ?>">
@@ -156,7 +155,7 @@
 $welcome_title = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_title'")->fetchColumn();
 $welcome_content = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_content'")->fetchColumn();
 $welcome_image = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_image'")->fetchColumn();
-$w_img = ($welcome_image && strpos($welcome_image, 'assets/') === 0) ? $welcome_image : (($welcome_image) ? '../../APJ-WEB/wp-content/uploads/' . $welcome_image : 'assets/images/New-Dron-Campus-Pic01-1.jpg');
+$w_img = ($welcome_image && strpos($welcome_image, 'assets/') === 0) ? $welcome_image : (($welcome_image) ? 'uploads/' . $welcome_image : 'assets/images/New-Dron-Campus-Pic01-1.jpg');
 ?>
 <div class="kalam-hero">
     <div class="kalam-grid">
@@ -278,17 +277,7 @@ foreach ($stats as $stat) {
 <div class="card-main">
   <div class="card">
     <div class="image-container">
-      <?php
-      $video_stmt = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'homepage_video_url'");
-      $video_url = $video_stmt->fetchColumn();
-      if (!$video_url) $video_url = '../APJ-WEB/wp-content/uploads/2025/07/aku_reel.mp4'; // fallback
-      
-      if (strpos($video_url, 'assets/') === 0) {
-          $video_src = $video_url;
-      } else {
-          $video_src = $video_url; // It's likely a relative path or absolute URL already
-      }
-      ?>
+      <?php $video_src = "uploads/2025/07/aku_reel.mp4"; ?>
       <video autoplay muted loop playsinline>
         <source src="<?php echo htmlspecialchars($video_src); ?>" type="video/mp4">
         Your browser does not support the video tag.
@@ -383,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $voi_stmt->execute();
             $vois = $voi_stmt->fetchAll();
             foreach ($vois as $voi) {
-                $img_url = $voi['image_path'] ? '../APJ-WEB/wp-content/uploads/' . $voi['image_path'] : 'assets/images/placeholder.jpg';
+                $img_url = $voi['image_path'] ? 'uploads/' . $voi['image_path'] : 'assets/images/placeholder.jpg';
             ?>
                 <div class="author-item voi-card">
                     <!-- Image -->
@@ -547,7 +536,7 @@ jQuery(document).ready(function($) {
             $media_stmt->execute();
             $medias = $media_stmt->fetchAll();
             foreach ($medias as $media) {
-                $img_url = $media['image_path'] ? '../APJ-WEB/wp-content/uploads/' . $media['image_path'] : 'assets/images/placeholder.jpg';
+                $img_url = $media['image_path'] ? 'uploads/' . $media['image_path'] : 'assets/images/placeholder.jpg';
             ?>
                 <div class="grid-item">
                     <a href="media-coverage-aku/<?php echo $media['slug']; ?>/">
@@ -580,7 +569,7 @@ jQuery(document).ready(function($) {
                 if (strpos($blog['image_path'], 'assets/') === 0) {
                     $image_src = $blog['image_path'];
                 } else {
-                    $image_src = $blog['image_path'] ? '../APJ-WEB/wp-content/uploads/' . $blog['image_path'] : 'assets/images/placeholder.jpg';
+                    $image_src = $blog['image_path'] ? 'uploads/' . $blog['image_path'] : 'assets/images/placeholder.jpg';
                 }
             ?>
                 <div class="blog-card">

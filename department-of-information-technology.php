@@ -1,20 +1,30 @@
-<?php include 'header.php'; ?>
+<?php
+$pageTitle = 'Department of Information Technology – Dr APJ University Indore';
+$bodyClass = 'wp-singular page-template page-template-pages page-template-inner-page page-template-pagesinner-page-php page page-id-2675 wp-custom-logo wp-theme-aku no-sidebar wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
+$useLiveReferenceAssets = true;
+$activeDepartmentPage = 'information-technology';
+include 'header.php';
+?>
+
+<section class="page-header" style="background-image: url('assets/images/bg-header.jpg')">
+    <div class="uk-container">
+        <h1>Department of Information Technology</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Department of Information Technology</nav>
+    </div>
+</section>
+
 <main id="primary" class="site-main">
-   
-    
- 
-		 
 <article id="post-2675" class="post-2675 page type-page status-publish hentry">
 	 
 	<div class="uk-container">
 		
 
 	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-spacing-4 vc_tta-tabs-position-left vc_tta-controls-align-left "><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list" role="tablist"><li class="vc_tta-tab vc_active" data-vc-tab role="presentation"><a href="#1750742984600-7b507db3-7e91" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984600-7b507db3-7e91"><span class="vc_tta-title-text">About the Department</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750742984608-e7040b2b-79e7" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984608-e7040b2b-79e7"><span class="vc_tta-title-text">Vision &amp; Mission</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747215725-d96c76a8-3766" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747215725-d96c76a8-3766"><span class="vc_tta-title-text">Dean/Principal Messege</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747217311-04a868cf-eeff" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747217311-04a868cf-eeff"><span class="vc_tta-title-text">Faculty &amp; Staff Profile</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747218570-d2853e54-a5be" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747218570-d2853e54-a5be"><span class="vc_tta-title-text">Infrastructure</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747220286-5955f30b-b898" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747220286-5955f30b-b898"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747295155-d91060b0-a3a2" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747295155-d91060b0-a3a2"><span class="vc_tta-title-text">CO/PO</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747296369-abd8e91b-5aae" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747296369-abd8e91b-5aae"><span class="vc_tta-title-text">Activities</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747297052-e7c45dfd-dbc9"><span class="vc_tta-title-text">Notice Board</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747379267-e9f73c21-6ccf" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747379267-e9f73c21-6ccf"><span class="vc_tta-title-text">Events and News</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747404814-ed6438b8-8042" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747404814-ed6438b8-8042"><span class="vc_tta-title-text">Time Table</span></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1750742984600-7b507db3-7e91" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750742984600-7b507db3-7e91" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">About the Department</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >About The Department</h2><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 60px"><span class="vc_empty_space_inner"></span></div><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-gap-20 vc_tta-tabs-position-left vc_tta-controls-align-left "><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list" role="tablist"><li class="vc_tta-tab vc_active" data-vc-tab role="presentation"><a href="#1750742984600-7b507db3-7e91" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984600-7b507db3-7e91"><span class="vc_tta-title-text">About the Department</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750742984608-e7040b2b-79e7" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750742984608-e7040b2b-79e7"><span class="vc_tta-title-text">Vision &amp; Mission</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747215725-d96c76a8-3766" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747215725-d96c76a8-3766"><span class="vc_tta-title-text">Dean/Principal Messege</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747217311-04a868cf-eeff" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747217311-04a868cf-eeff"><span class="vc_tta-title-text">Faculty &amp; Staff Profile</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747218570-d2853e54-a5be" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747218570-d2853e54-a5be"><span class="vc_tta-title-text">Infrastructure</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747220286-5955f30b-b898" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747220286-5955f30b-b898"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747295155-d91060b0-a3a2" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747295155-d91060b0-a3a2"><span class="vc_tta-title-text">CO/PO</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747296369-abd8e91b-5aae" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747296369-abd8e91b-5aae"><span class="vc_tta-title-text">Activities</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747297052-e7c45dfd-dbc9"><span class="vc_tta-title-text">Notice Board</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747379267-e9f73c21-6ccf" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747379267-e9f73c21-6ccf"><span class="vc_tta-title-text">Events and News</span></a></li><li class="vc_tta-tab" data-vc-tab role="presentation"><a href="#1750747404814-ed6438b8-8042" data-vc-tabs data-vc-container=".vc_tta" role="tab" aria-selected="false" id="tab-1750747404814-ed6438b8-8042"><span class="vc_tta-title-text">Time Table</span></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1750742984600-7b507db3-7e91" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750742984600-7b507db3-7e91" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">About the Department</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >About The Department</h2><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="500" height="333" src="../wp-content/uploads/2026/01/departmentofmech.html" class="vc_single_image-img attachment-full" alt="" title="departmentofmech" srcset="assets/images/departmentofmech.jpg 500w, assets/images/departmentofmech-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></div>
+			<div class="vc_single_image-wrapper vc_box_border  vc_box_border_grey"><img fetchpriority="high" decoding="async" width="500" height="333" src="uploads/2026/01/departmentofmech.jpg" class="vc_single_image-img attachment-full" alt="" title="departmentofmech" srcset="uploads/2026/01/departmentofmech.jpg 500w, uploads/2026/01/departmentofmech-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -43,7 +53,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/vissio11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/vissio11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="vissio11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -60,7 +70,7 @@
 	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="../wp-content/uploads/2025/06/mission11-150x150.html" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
+			<div class="vc_single_image-wrapper vc_box_circle  vc_box_border_grey"><img decoding="async" width="150" height="150" src="uploads/2025/06/mission11-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="" title="mission11" /></div>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner"><div class="wpb_wrapper">
@@ -115,7 +125,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/classroom.jpg" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -126,7 +136,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/library.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/library.jpg" alt="Modern Classrooms">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -137,7 +147,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/1-1.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/1-1.png" alt="Modern Classrooms">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -148,7 +158,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="uploads/2025/06/101888.jpg" alt="Modern Classrooms">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity. High speed internet.</p>
 
@@ -156,9 +166,41 @@
 		</div>
 	</div>
 </div></div></div></div></div></div><div class="vc_tta-panel" id="1750747220286-5955f30b-b898" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747220286-5955f30b-b898" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Syllabus &amp; Scheme</span></a></h4></div><div class="vc_tta-panel-body"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Syllabus</h2><div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-info vc_do_message" ><div class="vc_message_box-icon"><i class="fa fa-solid fa-circle-info"></i></div><p>No Syllabus</p>
-</div></div></div></div></div></div></div><div class="vc_tta-panel" id="1750747295155-d91060b0-a3a2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747295155-d91060b0-a3a2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">CO/PO</span></a></h4></div><div class="vc_tta-panel-body"></div></div><div class="vc_tta-panel" id="1750747296369-abd8e91b-5aae" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747296369-abd8e91b-5aae" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Activities</span></a></h4></div><div class="vc_tta-panel-body"><div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-info vc_do_message" ><div class="vc_message_box-icon"><i class="fa fa-solid fa-circle-info"></i></div><p>No Activities</p>
-</div></div></div><div class="vc_tta-panel" id="1750747297052-e7c45dfd-dbc9" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Notice Board</span></a></h4></div><div class="vc_tta-panel-body"><div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-info vc_do_message" ><div class="vc_message_box-icon"><i class="fa fa-solid fa-circle-info"></i></div><p>Notice Board</p>
-</div></div></div><div class="vc_tta-panel" id="1750747379267-e9f73c21-6ccf" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747379267-e9f73c21-6ccf" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Events and News</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Events &amp; News</h2>
+</div></div></div></div></div></div></div><div class="vc_tta-panel" id="1750747295155-d91060b0-a3a2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747295155-d91060b0-a3a2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">CO/PO</span></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_raw_code wpb_raw_html wpb_content_element file_page2" >
+		<div class="wpb_wrapper">
+			<h2><em>Course Outcomes &amp; Program Outcomes</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-CO-PO-Matrix.pdf' target='_blank'>CO/PO Matrix - Information Technology</a></td>
+                          </tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-Program-Specific-Outcomes.pdf' target='_blank'>Program Specific Outcomes (PSO)</a></td>
+                          </tr></table>
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1750747296369-abd8e91b-5aae" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747296369-abd8e91b-5aae" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Activities</span></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_raw_code wpb_raw_html wpb_content_element file_page2" >
+		<div class="wpb_wrapper">
+			<h2><em>Department Activities &amp; Events</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-Department-Workshops-2025.pdf' target='_blank'>Department Workshops & Seminars</a></td>
+                          </tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-Research-Projects-List.pdf' target='_blank'>Ongoing Research Projects</a></td>
+                          </tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-Industry-Interaction-Program.pdf' target='_blank'>Industry Interaction Program</a></td>
+                          </tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-Student-Internship-Opportunities.pdf' target='_blank'>Student Internship Opportunities</a></td>
+                          </tr></table>
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1750747297052-e7c45dfd-dbc9" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747297052-e7c45dfd-dbc9" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Notice Board</span></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_raw_code wpb_raw_html wpb_content_element file_page2" >
+		<div class="wpb_wrapper">
+			<h2><em>Notice Board</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-Department-Notice-01.pdf' target='_blank'>Department Notices and Announcements</a></td>
+                          </tr><tr>
+                             <td><a href='../wp-content/uploads/2025/12/IT-Important-Dates.pdf' target='_blank'>Important Dates and Schedules</a></td>
+                          </tr></table>
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1750747379267-e9f73c21-6ccf" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1750747379267-e9f73c21-6ccf" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Events and News</span></a></h4></div><div class="vc_tta-panel-body"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Events &amp; News</h2>
 	<div class="wpb_text_column wpb_content_element media-img media-text" >
 		<div class="wpb_wrapper">
 			<div class="grid-media"><div class="grid-item"><a href="../media-coverage-aku/%e0%a4%95%e0%a4%be%e0%a4%a8%e0%a5%82%e0%a4%a8-%e0%a4%95%e0%a5%80-%e0%a4%b8%e0%a4%ae%e0%a4%9d-%e0%a4%95%e0%a5%8d%e0%a4%af%e0%a5%8b%e0%a4%82-%e0%a4%9c%e0%a4%b0%e0%a5%82%e0%a4%b0%e0%a5%80-%e0%a4%b9/index.php"><img decoding="async" src="assets/images/aajtak_news-300x200.png" alt="कानून की समझ क्यों जरूरी है ? AAJ TAK"><p class="text-18">कानून की समझ क्यों जरूरी है ? AAJ TAK</p></a></div><div class="grid-item"><a href="../media-coverage-aku/%e0%a4%a6%e0%a5%87%e0%a4%b5-%e0%a4%95%e0%a5%81%e0%a4%ae%e0%a4%be%e0%a4%b5%e0%a4%a4-%e0%a4%95%e0%a5%8b-%e0%a4%b5%e0%a5%87%e0%a4%b8%e0%a5%8d%e0%a4%9f-%e0%a4%9c%e0%a5%8b%e0%a4%a8-%e0%a4%ac%e0%a5%88/index.php"><img decoding="async" src="assets/images/dev_kumawat-e1765884635936-300x200.jpg" alt="देव कुमावत को वेस्ट जोन बैडमिंटन का एकल खिताब"><p class="text-18">देव कुमावत को वेस्ट जोन बैडमिंटन का एकल खिताब</p></a></div><div class="grid-item"><a href="../media-coverage-aku/%e0%a4%8f%e0%a4%aa%e0%a5%80%e0%a4%9c%e0%a5%87-%e0%a4%85%e0%a4%ac%e0%a5%8d%e0%a4%a6%e0%a5%81%e0%a4%b2-%e0%a4%95%e0%a4%b2%e0%a4%be%e0%a4%ae-%e0%a4%af%e0%a5%82%e0%a4%a8%e0%a4%bf%e0%a4%b5%e0%a4%b0/index.php"><img decoding="async" src="assets/images/apja-couselling-300x200.jpg" alt="एपीजे अब्दुल कलाम यूनिवर्सिटी में आईपीजीए का अंतरराष्ट्रीय सम्मेलन"><p class="text-18">एपीजे अब्दुल कलाम यूनिवर्सिटी में आईपीजीए का अंतरराष्ट्रीय सम्मेलन</p></a></div><div class="grid-item"><a href="../media-coverage-aku/college-level-counselling/index.php"><img decoding="async" src="assets/images/u37.jpg" alt="College Level Counselling"><p class="text-18">College Level Counselling</p></a></div></div>
@@ -263,7 +305,7 @@
     transform: translateX(0);
 }
     </style>
-    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/b-e-information-technology/index.php">B.E. (Information Technology)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/b-e-it-lateral-entry/index.php">B.E. (IT &#8211; Lateral Entry)</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/m-tech-it/index.php">M.Tech. (IT)</a></div></div></div></div></div>
+    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/b-e-information-technology.php">B.E. (Information Technology)</a></div></div><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/b-e-it-lateral-entry.php">B.E. (IT &#8211; Lateral Entry)</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/m-tech-it.php">M.Tech. (IT)</a></div></div></div></div></div>
 
 		</div>
 	</div>

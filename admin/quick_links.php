@@ -75,7 +75,7 @@ require_once 'header.php';
                     if (strpos($link['image_path'], 'assets/') === 0) {
                         $img_src = '../' . $link['image_path'];
                     } else {
-                        $img_src = $link['image_path'] ? '../../APJ-WEB/wp-content/uploads/' . $link['image_path'] : '../assets/images/placeholder.jpg';
+                        $img_src = $link['image_path'] ? '../uploads/' . $link['image_path'] : '../assets/images/placeholder.jpg';
                     }
                 ?>
                 <tr>

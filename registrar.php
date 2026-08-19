@@ -6,7 +6,7 @@
           <!-- Left column with image and details -->
           <div class="col-lg-4 col-md-12">
             <div class="message-photo">
-              <img src="../wp-content/uploads/2025/04/registrar.html" alt="Profile Photo">
+              <img src="uploads/2025/04/registrar.html" alt="Profile Photo">
             </div>
             <div class="message-details">
               <h3>Mr. Sandeep Gupta</h3>

@@ -21,7 +21,6 @@
       <!-- Left column with image and details -->
       <div class="col-lg-4 col-md-12">
         <div class="message-photo">
-          <img decoding="async" src="../../www.aku.ac.in/website/images/09012019_025336_DSC_0321%20(1).html" alt="TPO Anil Mishra">
         </div>
         <div class="message-details">
           <h3>Mr. Anil Mishra</h3>

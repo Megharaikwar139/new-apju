@@ -14,7 +14,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1750128222182 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/classroom.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/classroom.html" alt="Modern Classrooms">
   <h4>Modern classrooms</h4>
   <p>Modern classrooms with smart boards, audio-visual aids, and ergonomic furniture.</p>
 
@@ -25,7 +25,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1754623462415 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/08/sports.html" alt="Sporta Complex">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/08/sports.html" alt="Sporta Complex">
   <h4>Sports Complexes</h4>
   <p>Sports complexes with facilities for indoor and outdoor sports.</p>
 
@@ -36,7 +36,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1757311160995 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/campus.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/campus.html" alt="Modern Classrooms">
   <h4>Well Designed Architect</h4>
   <p>That’s aesthetically pleasing, functional, and sustainable.</p>
 
@@ -47,7 +47,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1767880810892 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/conference-hall.html" alt="auditorium">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2026/01/conference-hall.html" alt="auditorium">
   <h4>Conference Hall</h4>
   <p>Modern, well-equipped venue designed to host academic conferences.</p>
 
@@ -58,7 +58,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1750128562743 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/1-1.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/1-1.html" alt="Modern Classrooms">
   <h4>Advanced laboratories</h4>
   <p>Advanced laboratories for various disciplines—science, engineering, medical, etc.</p>
 
@@ -69,7 +69,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1750129115162 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/101888.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/101888.html" alt="Modern Classrooms">
   <h4>Wi-Fi Smart Campuses</h4>
   <p>Wi-Fi enabled smart campuses with seamless digital connectivity.</p>
 
@@ -80,7 +80,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1767881151863 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/green-campus-scaled.html" alt="">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2026/01/green-campus-scaled.html" alt="">
   <h4>Green buildings</h4>
   <p>Green buildings with energy-efficient designs (LEED certified, etc.).</p>
 
@@ -91,7 +91,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1767881059800 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/01/unversity-fm.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2026/01/unversity-fm.html" alt="Modern Classrooms">
   <h4>University FM</h4>
   <p>University FM that broadcasts educational content, programs, news.</p>
 
@@ -102,7 +102,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1750128633928 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/research.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/research.html" alt="Modern Classrooms">
   <h4>Research Centers</h4>
   <p>High-tech research centers with cutting-edge equipment for innovation and discovery.
 .</p>
@@ -114,7 +114,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1750129296982 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/green.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/green.html" alt="Modern Classrooms">
   <h4>Green spaces</h4>
   <p>Green spaces for recreation and relaxation.</p>
 
@@ -125,7 +125,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1757311631285 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/08/cctv-e1757311302412.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/08/cctv-e1757311302412.html" alt="Modern Classrooms">
   <h4>CCTV Surveillance</h4>
   <p>To ensure a safe and secure environment within the campus.</p>
 
@@ -136,7 +136,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1773290152226 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2026/03/library.html" alt="Libraries">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2026/03/library.html" alt="Libraries">
   <h4>Libraries</h4>
   <p>Libraries with massive collections of physical books, journals, and access to global digital databases.</p>
 
@@ -147,7 +147,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1750129580728 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/06/incubation.html" alt="Modern Classrooms">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/06/incubation.html" alt="Modern Classrooms">
   <h4>Incubation centers</h4>
   <p>Incubation centers to support student entrepreneurship and startups.</p>
 
@@ -158,7 +158,7 @@
 	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1757311607321 infra-card" >
 		<div class="wpb_wrapper">
 			
-  <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/08/atm-e1757311396176.html" alt="ATM">
+  <img decoding="async" src="../../aku.thetask.in/uploads/2025/08/atm-e1757311396176.html" alt="ATM">
   <h4>ATM</h4>
   <p>The university has installed ATM machines within the campus.</p>
 

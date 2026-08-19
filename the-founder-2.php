@@ -19,7 +19,7 @@
     </div>
     
     <div class="founder-image-container">
-        <img decoding="async" src="../../aku.thetask.in/wp-content/uploads/2025/08/rnkapoor1.html" alt="Late Shri R.N. Kapoor" class="founder-image">
+        <img decoding="async" src="../../aku.thetask.in/uploads/2025/08/rnkapoor1.html" alt="Late Shri R.N. Kapoor" class="founder-image">
     </div>
     
     <h2 class="founder-name">Late Shri R.N. Kapoor <span class="title-highlight">Spirit of the Skies</span></h2>

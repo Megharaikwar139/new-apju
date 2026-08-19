@@ -44,21 +44,21 @@
 		<div class="wpb_wrapper">
 			<p>&nbsp;</p>
 <h2><em>NSS Report</em></h2><table class='filr-table'><tr><th>Title</th></tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate_7.html' target='_blank'>NSS Report Formate_7</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate_7.html' target='_blank'>NSS Report Formate_7</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate_6.html' target='_blank'>NSS Report Formate_6</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate_6.html' target='_blank'>NSS Report Formate_6</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate_5.html' target='_blank'>NSS Report Formate_5</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate_5.html' target='_blank'>NSS Report Formate_5</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate_4.html' target='_blank'>NSS Report Formate_4</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate_4.html' target='_blank'>NSS Report Formate_4</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate_3.html' target='_blank'>NSS Report Formate_3</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate_3.html' target='_blank'>NSS Report Formate_3</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate_2.html' target='_blank'>NSS Report Formate_2</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate_2.html' target='_blank'>NSS Report Formate_2</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate_1.html' target='_blank'>NSS Report Formate_1</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate_1.html' target='_blank'>NSS Report Formate_1</a></td>
                           </tr><tr>
-                             <td><a href='../wp-content/uploads/2026/01/NSS-Report-Formate.html' target='_blank'>NSS Report Formate</a></td>
+                             <td><a href='uploads/2026/01/NSS-Report-Formate.html' target='_blank'>NSS Report Formate</a></td>
                           </tr></table>
 
 		</div>

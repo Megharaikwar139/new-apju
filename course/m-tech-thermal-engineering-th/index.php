@@ -1,0 +1,1 @@
+<?php $courseTitle='M.Tech. – Thermal Engineering (TH)'; $courseLevel='Post Graduation'; $courseDescription='The M.Tech Thermal Engineering program provides advanced study in thermal systems, energy technologies and research-led engineering practice.'; require dirname(__DIR__) . '/course-page.php';

@@ -91,7 +91,7 @@ require_once 'header.php';
                     
                     <div class="mb-3">
                         <label class="form-label">Provide Relative or Absolute URL</label>
-                        <input type="text" name="homepage_video_url" class="form-control" value="<?php echo htmlspecialchars($video_setting); ?>" placeholder="../APJ-WEB/wp-content/uploads/2025/07/aku_reel.mp4">
+                        <input type="text" name="homepage_video_url" class="form-control" value="<?php echo htmlspecialchars($video_setting); ?>" placeholder="../uploads/2025/07/aku_reel.mp4">
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ require_once 'header.php';
                         <label class="form-label">Current Welcome Image</label><br>
                         <?php 
                         if ($welcome_image) {
-                            $img_src = (strpos($welcome_image, 'assets/') === 0) ? '../' . $welcome_image : '../../APJ-WEB/wp-content/uploads/' . $welcome_image;
+                            $img_src = (strpos($welcome_image, 'assets/') === 0) ? '../' . $welcome_image : '../uploads/' . $welcome_image;
                             echo '<img src="'.htmlspecialchars($img_src).'" style="max-height: 150px; border-radius: 8px;" alt="Welcome Image"><br><br>';
                         }
                         ?>
