@@ -260,7 +260,7 @@ include 'header.php';
     transform: translateX(0);
 }
     </style>
-    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Under-Graduate Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="../course/bba/index.php">BBA</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post-Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-1"><div class="uk-card special-course-box"><a href="../course/mba/index.php">MBA (HRM / Finance / Marketing / Hospital Administration)</a></div></div></div></div></div>
+    <div class="uk-container uk-margin"><h2 class="vc_custom_heading vc_do_custom_heading" style="text-align: center">Courses</h2><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Diploma Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/bba.php">BBA</a></div></div></div></div><div class="uk-margin"><h3 class="uk-heading-line uk-text-primary courses_heading"><span>Post Graduation Programs</span></h3><div class="uk-flex uk-flex-wrap uk-grid-small" uk-grid><div class="uk-width-1-2@s uk-width-1-3@m"><div class="uk-card special-course-box"><a href="course/mba.php">MBA (HRM / Finance / Marketing / Hospital Administration)</a></div></div></div></div></div>
 
 		</div>
 	</div>

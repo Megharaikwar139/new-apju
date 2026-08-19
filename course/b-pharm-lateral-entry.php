@@ -1,7 +1,7 @@
 <?php
-$pageTitle = 'B.E. (Civil Engineering) - Dr APJ University Indore';
+$pageTitle = 'B.Pharm (Lateral Entry) - Dr APJ University Indore';
 $bodyClass = 'wp-singular page-template-default page page-id-4014 wp-theme-aku wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
-include 'header.php';
+include '../header.php';
 ?>
 <style>
   section.page-header .uk-container { position: relative; }
@@ -27,12 +27,10 @@ include 'header.php';
   }
   section.page-header .breadcrumb a { color: #fff; }
 </style>
-<section class="page-header" style="background-image:url('assets/images/bg-header.jpg')"><div class="uk-container"><h1>B.E. (Civil Engineering)</h1><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; B.E. (Civil Engineering)</nav></div></section>
+<section class="page-header" style="background-image:url('assets/images/bg-header.jpg')"><div class="uk-container"><h1>B.Pharm (Lateral Entry)</h1><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; B.Pharm (Lateral Entry)</nav></div></section>
 <div class="uk-container uk-container-small uk-margin-large-top uk-margin-large-bottom uk-animation-slide-bottom-small">
     <article class="uk-article uk-card uk-card-default uk-card-body uk-box-shadow-medium">
         <h2 class="uk-heading-line uk-text-center"><span>Overview</span></h2>
-        <p>The UG program covers Engineering Mechanics, Surveying, Building Materials, Structural Analysis, RCC and Steel Design, Environmental Engineering,<br>
-        Transportation, Geotechnical Engineering, Construction Planning, and Hydrology. Emphasis is laid on practical work, model making, and project-based assessments.</p>
     </article>
 </div>
 <div class="uk-container uk-margin-large-top uk-margin-large-bottom">
@@ -100,4 +98,4 @@ include 'header.php';
         </div>
     </div>
 </section>
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>
