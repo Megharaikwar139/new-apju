@@ -330,14 +330,16 @@ try {
         <div class="d-none d-sm-flex align-items-center gap-2 flex-shrink-0">
             
             <!-- Search Button (Exact Circle Icon) -->
-            <button class="btn btn-search-circle" title="Search" onclick="let q = prompt('Search AKU website:'); if(q) window.location.href='notice-board.php?search='+encodeURIComponent(q);">
+            <button class="btn btn-search-circle" aria-label="Search" title="Search" onclick="let q = prompt('Search AKU website:'); if(q) window.location.href='notice-board.php?search='+encodeURIComponent(q);">
                 <i class="fa-solid fa-magnifying-glass" style="font-size: 13px;"></i>
             </button>
 
             <!-- Portals Dropdown Button (Includes All Student/Gov/IQAC Portals) -->
             <div class="dropdown">
-                <button class="btn btn-portals-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-user" style="font-size: 12px; color: #706361;"></i> Portals
+                <button class="btn btn-portals-pill d-inline-flex align-items-center gap-1.5" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Portals">
+                    <i class="fa-solid fa-user-gear" style="font-size: 12px; color: var(--gold-color);"></i>
+                    <span>Portals</span>
+                    <i class="fa-solid fa-chevron-down ms-0.5" style="font-size: 9px; color: #706361;"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow border-custom rounded-3 py-2 mt-2" style="min-width: 230px;">
                     <li><a class="dropdown-item py-1.5 small" href="https://www.universitymanagementsystem.in/aku/Home/Dashboard" target="_blank"><i class="fa-solid fa-file-circle-check text-gold me-2"></i> Document Verify (UMS)</a></li>
@@ -355,8 +357,9 @@ try {
             </div>
 
             <!-- Apply Now Pill Button -->
-            <a href="apply-now.php" class="btn btn-apply-pill">
-                <i class="fa-solid fa-graduation-cap text-gold" style="font-size: 13px;"></i> Apply Now
+            <a href="apply-now.php" class="btn btn-apply-pill d-inline-flex align-items-center gap-1.5">
+                <i class="fa-solid fa-graduation-cap" style="font-size: 13px; color: var(--gold-color);"></i>
+                <span>Apply Now</span>
             </a>
             
         </div>
