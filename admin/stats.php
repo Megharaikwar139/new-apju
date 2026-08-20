@@ -34,7 +34,7 @@ require_once 'header.php';
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Manage Statistics Counter</h2>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#statModal" onclick="document.getElementById('stat_id').value=''; document.getElementById('statForm').reset();" style="background-color: #0b2c4d; border-color: #0b2c4d;">+ Add New Stat</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#statModal" onclick="document.getElementById('stat_id').value=''; document.getElementById('statForm').reset();" >+ Add New Stat</button>
 </div>
 
 <div class="card">
@@ -90,7 +90,7 @@ require_once 'header.php';
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="save_stat" class="btn btn-primary" style="background-color: #0b2c4d;">Save Stat</button>
+        <button type="submit" name="save_stat" class="btn btn-primary" >Save Stat</button>
       </div>
       </form>
     </div>

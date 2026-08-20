@@ -149,7 +149,7 @@ function openAddWhyModal() {
     document.getElementById('whyId').value = '';
     document.getElementById('whyTitle').value = '';
     document.getElementById('whyLink').value = '';
-    document.getElementById('whyDesc').value = '';
+    window.setEditorData('whyDesc', '');
     document.getElementById('whyImagePath').value = '';
     document.getElementById('whySort').value = '0';
 }
@@ -159,7 +159,7 @@ function openEditWhyModal(data) {
     document.getElementById('whyId').value = data.id;
     document.getElementById('whyTitle').value = data.title;
     document.getElementById('whyLink').value = data.link_url || '';
-    document.getElementById('whyDesc').value = data.description;
+    window.setEditorData('whyDesc', data.description || '');
     document.getElementById('whyImagePath').value = data.image_path;
     document.getElementById('whySort').value = data.sort_order;
     

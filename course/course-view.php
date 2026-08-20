@@ -30,7 +30,7 @@ $syllabusContent = $course['syllabus_content'] ?? '';
 // Format key features list items
 $keyFeaturesHtml = '';
 if (!empty($keyFeatures)) {
-    if (strpos($keyFeatures, '<li>') !== false) {
+    if (stripos($keyFeatures, '<li') !== false) {
         $keyFeaturesHtml = $keyFeatures;
     } else {
         $lines = preg_split('/\r\n|\r|\n/', trim($keyFeatures));
@@ -46,7 +46,7 @@ if (!empty($keyFeatures)) {
 // Format career opportunities list items
 $careerOpportunitiesHtml = '';
 if (!empty($careerOpportunities)) {
-    if (strpos($careerOpportunities, '<li>') !== false) {
+    if (stripos($careerOpportunities, '<li') !== false) {
         $careerOpportunitiesHtml = $careerOpportunities;
     } else {
         $items = preg_split('/,|\r\n|\r|\n/', trim($careerOpportunities));

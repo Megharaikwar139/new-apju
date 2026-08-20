@@ -261,7 +261,7 @@ require_once 'header.php';
                             <?php if (!empty($f['image_path']) && file_exists('../' . $f['image_path'])): ?>
                                 <img src="../<?php echo htmlspecialchars($f['image_path']); ?>" alt="Profile" class="rounded-circle border" style="width: 44px; height: 44px; object-fit: cover;">
                             <?php else: ?>
-                                <div class="rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center border" style="width: 44px; height: 44px;">
+                                <div class="icon-circle-badge" style="width: 44px; height: 44px;">
                                     <i class="fa-solid fa-user-graduate fs-5"></i>
                                 </div>
                             <?php endif; ?>

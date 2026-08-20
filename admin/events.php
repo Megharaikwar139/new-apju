@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('edit_title').value = this.dataset.title;
             document.getElementById('edit_event_date').value = this.dataset.date;
             document.getElementById('edit_venue').value = this.dataset.venue;
-            document.getElementById('edit_content').value = this.dataset.content;
+            window.setEditorData('edit_content', this.dataset.content);
             editModal.show();
         });
     });

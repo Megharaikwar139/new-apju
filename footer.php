@@ -33,8 +33,8 @@ try {
                 <h3 class="font-serif display-6 fw-medium text-white mb-2" style="max-width: 460px; line-height: 1.2;">
                     Receive our stories, research and admissions news.
                 </h3>
-                <form action="javascript:void(0);" onsubmit="let input = this.querySelector('input[type=email]'); let email = input.value.trim(); if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address (e.g. yourname@domain.com).'); input.focus(); return false; } alert('Thank you for subscribing to Dr. APJ Abdul Kalam University newsletter!'); this.reset();" class="newsletter-capsule mt-4">
-                    <input type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="your@email.com" class="newsletter-input" title="Please enter a valid email address"/>
+                <form action="javascript:void(0);" onsubmit="alert('Thank you for subscribing to Dr. APJ Abdul Kalam University newsletter!');" class="newsletter-capsule mt-4">
+                    <input type="email" required placeholder="your@email.com" class="newsletter-input"/>
                     <button type="submit" class="newsletter-btn">
                         Subscribe
                     </button>
@@ -66,37 +66,46 @@ try {
 
         </div>
 
-        <!-- Middle Footer Row: 5 Column Structured Site Directory -->
-        <div class="row g-4 py-5 border-bottom border-white border-opacity-15 small">
+        <!-- Comprehensive 5-Column Sitemap Linking All Website Pages -->
+        <div class="row g-4 py-5 border-bottom border-white border-opacity-15">
             
-            <!-- Col 1: About University -->
+            <!-- Col 1: Brand & Social Media -->
             <div class="col-lg-3 col-md-6">
-                <div class="footer-column-heading">About University</div>
-                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                    <li><a href="why-aku.php" class="footer-link text-gold fw-medium">Why AKU</a></li>
-                    <li><a href="the-founder-2.php" class="footer-link">The Founder</a></li>
-                    <li><a href="the-chancellor.php" class="footer-link">The Chancellor</a></li>
-                    <li><a href="the-vice-chancellor.php" class="footer-link">The Vice Chancellor</a></li>
-                    <li><a href="governing-body.php" class="footer-link">Governing Body</a></li>
-                    <li><a href="board-of-management.php" class="footer-link">Board of Management</a></li>
-                    <li><a href="finance-committee.php" class="footer-link">Finance Committee</a></li>
-                    <li><a href="awardsand-recognigation.php" class="footer-link">Awards & Recognition</a></li>
-                    <li><a href="aku-in-media.php" class="footer-link">AKU in Media</a></li>
-                </ul>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/lovable/aku-logo.jpeg" alt="AKU Logo" class="bg-white p-1 rounded-3 shadow-xs flex-shrink-0" style="height: 56px; width: auto;"/>
+                    <div class="lh-sm">
+                        <div class="font-serif fw-bold text-white fs-6" style="font-size: 1.05rem !important; line-height: 1.25;">Dr. A. P. J. Abdul Kalam University</div>
+                        <div class="text-gold text-uppercase fw-semibold mt-1" style="font-size: 0.64rem; letter-spacing: 0.12em;">NURTURING TALENT TO SUCCESS</div>
+                    </div>
+                </div>
+                <p class="text-white text-opacity-80 small mb-3" style="font-size: 0.85rem; line-height: 1.65;">
+                    The Society was established in 2004 under the flagship of Central India Institute of Technology ever since its inception, a strong commitment to excellence in teaching and research has made the group a role-model and path-setter for other institution.
+                </p>
+                
+                <!-- Direct Connected Social Media Links -->
+                <div class="d-flex align-items-center gap-2 mt-3">
+                    <a href="<?php echo htmlspecialchars($settings['facebook_url'] ?? 'https://www.facebook.com/DR.APJAK.University'); ?>" target="_blank" class="footer-social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['instagram_url'] ?? 'https://www.instagram.com/drapjaku_universityindore/'); ?>" target="_blank" class="footer-social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['twitter_url'] ?? 'https://x.com/APJ_University'); ?>" target="_blank" class="footer-social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['linkedin_url'] ?? 'https://www.linkedin.com/in/akuniversityindore/'); ?>" target="_blank" class="footer-social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['youtube_url'] ?? 'https://www.youtube.com/channel/UCHuwjAPSYLsThbZldaC75_A'); ?>" target="_blank" class="footer-social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
 
-            <!-- Col 2: Academic Faculties -->
+            <!-- Col 2: Academics & Schools -->
             <div class="col-lg-2 col-md-6 col-6">
                 <div class="footer-column-heading">Academics</div>
                 <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                    <li><a href="department-of-computer-science-engineering.php" class="footer-link">Faculty of Engineering</a></li>
-                    <li><a href="college-of-pharmacy.php" class="footer-link">Faculty of Pharmacy</a></li>
-                    <li><a href="department-of-management-studies.php" class="footer-link">College of Management</a></li>
-                    <li><a href="department-of-commerce.php" class="footer-link">College of Commerce</a></li>
-                    <li><a href="department-of-law.php" class="footer-link">College of Law</a></li>
-                    <li><a href="department-of-agriculture.php" class="footer-link">School of Agriculture</a></li>
-                    <li><a href="department-of-science.php" class="footer-link">Science & Life Science</a></li>
-                    <li><a href="academic-calendar.php" class="footer-link text-gold">Academic Calendar</a></li>
+                    <li><a href="programs.php" class="footer-link text-gold fw-bold"><i class="fa-solid fa-layer-group me-1"></i> All Programs Directory</a></li>
+                    <li><a href="department-of-computer-science-engineering.php" class="footer-link">Engineering & Tech</a></li>
+                    <li><a href="department-of-management-studies.php" class="footer-link">Business & Management</a></li>
+                    <li><a href="department-of-pharmacy.php" class="footer-link">Pharmacy & Health</a></li>
+                    <li><a href="department-of-law.php" class="footer-link">Law & Legal Studies</a></li>
+                    <li><a href="department-of-science.php" class="footer-link">Science & Research</a></li>
+                    <li><a href="department-of-education.php" class="footer-link">Education & Humanities</a></li>
+                    <li><a href="department-of-agriculture.php" class="footer-link">Agricultural Sciences</a></li>
+                    <li><a href="diploma-in-enginering.php" class="footer-link">Polytechnic Diploma</a></li>
+                    <li><a href="academic-calendar.php" class="footer-link text-gold fw-medium">Academic Calendar</a></li>
                 </ul>
             </div>
 
@@ -104,9 +113,11 @@ try {
             <div class="col-lg-2 col-md-4 col-6">
                 <div class="footer-column-heading">Admissions & R&D</div>
                 <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                    <li><a href="admission-procedure.php" class="footer-link text-gold fw-semibold">Admission 2026</a></li>
+                    <li><a href="apply-now.php" class="footer-link text-gold fw-bold"><i class="fa-solid fa-graduation-cap me-1"></i> Apply Online 2026</a></li>
+                    <li><a href="admission-procedure.php" class="footer-link">Admission Procedure</a></li>
                     <li><a href="ph-d-selection-process.php" class="footer-link">Ph.D Admissions</a></li>
                     <li><a href="fee-structure.php" class="footer-link">Fee Structure</a></li>
+                    <li><a href="admission-assistance.php" class="footer-link">Admission Helpdesk</a></li>
                     <li><a href="scholarships.php" class="footer-link">Scholarships</a></li>
                     <li><a href="incubation-center.php" class="footer-link">Kalam Incubation</a></li>
                     <li><a href="research-committee.php" class="footer-link">R&D Committee</a></li>
@@ -155,8 +166,7 @@ try {
             <div><?php echo htmlspecialchars($settings['copyright_text'] ?? ('© ' . date('Y') . ' Dr. A.P.J. Abdul Kalam University, Indore. All rights reserved.')); ?></div>
             <div class="d-flex flex-wrap gap-3">
                 <a href="privacy-policy.php" class="footer-link text-white text-opacity-60">Privacy Policy</a>
-                <a href="terms-of-use.php" class="footer-link text-white text-opacity-60">Terms of Use</a>
-                <a href="payment-terms.php" class="footer-link text-white text-opacity-60">Payment Terms</a>
+                <a href="payment-terms.php" class="footer-link text-white text-opacity-60">Terms of Use</a>
                 <a href="refund-cancellation.php" class="footer-link text-white text-opacity-60">Refund Policy</a>
                 <a href="anti-reggiging-committee.php" class="footer-link text-white text-opacity-60">Anti-Ragging</a>
                 <a href="icc.php" class="footer-link text-white text-opacity-60">ICC</a>

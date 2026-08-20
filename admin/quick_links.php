@@ -55,7 +55,7 @@ require_once 'header.php';
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Manage Page Quick Links Carousel</h2>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#linkModal" onclick="resetModal()" style="background-color: #0b2c4d; border-color: #0b2c4d;">+ Add New Link</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#linkModal" onclick="resetModal()" >+ Add New Link</button>
 </div>
 
 <div class="card">
@@ -128,7 +128,7 @@ require_once 'header.php';
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="save_link" class="btn btn-primary" style="background-color: #0b2c4d;">Save Link</button>
+        <button type="submit" name="save_link" class="btn btn-primary" >Save Link</button>
       </div>
       </form>
     </div>

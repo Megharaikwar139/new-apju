@@ -75,6 +75,20 @@ $events = $pdo->query("SELECT * FROM events ORDER BY event_date ASC, id DESC LIM
 
 // 10. Fetch Dynamic News / Blogs
 $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll();
+
+// 11. Fetch Dynamic Chancellor Leadership Data
+try {
+    $chancellor_stmt = $pdo->prepare("SELECT * FROM about_pages_config WHERE page_slug = 'the-chancellor'");
+    $chancellor_stmt->execute();
+    $chancellor_data = $chancellor_stmt->fetch(PDO::FETCH_ASSOC) ?: [];
+} catch (Exception $e) {
+    $chancellor_data = [];
+}
+$chan_name = !empty($chancellor_data['leader_name']) ? $chancellor_data['leader_name'] : 'Dr. Shruti Kapoor';
+$chan_designation = !empty($chancellor_data['leader_designation']) ? $chancellor_data['leader_designation'] : 'Chancellor, Dr. A.P.J. Abdul Kalam University';
+$chan_quote = !empty($chancellor_data['quote']) ? $chancellor_data['quote'] : 'I have always dreamt of empowering society with enlightened, skillful, and socially relevant citizens, which can be achieved through excellence in quality education.';
+$chan_img = !empty($chancellor_data['image_path']) ? $chancellor_data['image_path'] : 'uploads/2025/08/hruti-Kumari.jpg';
+$chan_badge = !empty($chancellor_data['badge_text']) ? $chancellor_data['badge_text'] : 'CHANCELLOR\'S DESK';
 ?>
 
 <main>
@@ -91,21 +105,22 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
                 
                 <!-- Left Hero Headline & Action Buttons -->
                 <div class="col-lg-7 text-white">
-                          <!-- Badges -->
+                    
+                    <!-- Badges -->
                     <div class="d-flex flex-wrap gap-2 mb-4">
                         <?php if (!empty($hero['badge1'])): ?>
                         <span class="badge-pill-blur">
-                            <i class="fa-solid fa-certificate text-gold me-1"></i> <?php echo htmlspecialchars($hero['badge1']); ?>
+                            <i class="fa-solid fa-certificate text-gold"></i> <?php echo htmlspecialchars($hero['badge1']); ?>
                         </span>
                         <?php endif; ?>
                         <?php if (!empty($hero['badge2'])): ?>
                         <span class="badge-pill-blur">
-                            <i class="fa-solid fa-award text-gold me-1"></i> <?php echo htmlspecialchars(str_replace('', '·', $hero['badge2'])); ?>
+                            <i class="fa-solid fa-award text-gold"></i> <?php echo htmlspecialchars($hero['badge2']); ?>
                         </span>
                         <?php endif; ?>
                         <?php if (!empty($hero['badge3'])): ?>
                         <span class="badge-pill-blur">
-                            <i class="fa-solid fa-star text-gold me-1"></i> <?php echo htmlspecialchars($hero['badge3']); ?>
+                            <i class="fa-solid fa-star text-gold"></i> <?php echo htmlspecialchars($hero['badge3']); ?>
                         </span>
                         <?php endif; ?>
                     </div>
@@ -137,43 +152,27 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
 
                 <!-- Right Hero Floating Glass Counter Card -->
                 <div class="col-lg-5">
-                    <div class="hero-glass-card shadow-2xl">
-                        <div class="p-4 p-md-5">
-                            
-                            <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom border-white border-opacity-10">
-                                <div>
-                                    <div class="text-uppercase text-gold fw-bold small" style="letter-spacing: 0.15em; font-size: 0.72rem;">At a Glance</div>
-                                    <div class="font-serif fs-4 text-white fw-medium">University By Numbers</div>
-                                </div>
-                                <span class="badge bg-gold text-primary fw-bold px-2.5 py-1 rounded-pill" style="font-size: 0.7rem;">2026</span>
+                    <div class="hero-glance-card">
+                        <div class="hero-glance-header">
+                            Campus at a Glance
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat1_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat1_label']); ?></div>
                             </div>
-
-                            <div class="row g-4">
-                                <div class="col-6">
-                                    <div class="font-serif display-6 fw-bold text-white mb-0"><?php echo htmlspecialchars($hero['stat1_value']); ?></div>
-                                    <div class="text-white text-opacity-75 small mt-1" style="font-size: 0.82rem;"><?php echo htmlspecialchars($hero['stat1_label']); ?></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="font-serif display-6 fw-bold text-white mb-0"><?php echo htmlspecialchars($hero['stat2_value']); ?></div>
-                                    <div class="text-white text-opacity-75 small mt-1" style="font-size: 0.82rem;"><?php echo htmlspecialchars($hero['stat2_label']); ?></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="font-serif display-6 fw-bold text-white mb-0"><?php echo htmlspecialchars($hero['stat3_value']); ?></div>
-                                    <div class="text-white text-opacity-75 small mt-1" style="font-size: 0.82rem;"><?php echo htmlspecialchars($hero['stat3_label']); ?></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="font-serif display-6 fw-bold text-white mb-0"><?php echo htmlspecialchars($hero['stat4_value']); ?></div>
-                                    <div class="text-white text-opacity-75 small mt-1" style="font-size: 0.82rem;"><?php echo htmlspecialchars($hero['stat4_label']); ?></div>
-                                </div>
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat2_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat2_label']); ?></div>
                             </div>
-
-                            <div class="mt-4 pt-3 border-top border-white border-opacity-10 d-flex align-items-center justify-content-between">
-                                <span class="text-white text-opacity-70 small" style="font-size: 0.78rem;"><i class="fa-solid fa-location-dot text-gold me-1"></i> Indore, MP</span>
-                                <a href="world-class-infrastructure.php" class="text-gold text-decoration-none small fw-semibold d-inline-flex align-items-center gap-1 hover-underline">
-                                    Tour Campus <i class="fa-solid fa-arrow-right" style="font-size: 0.7rem;"></i>
-                                </a>
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat3_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat3_label']); ?></div>
                             </div>
-
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat4_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat4_label']); ?></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,58 +188,60 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
 
     </section>
 
-    <!-- SECTION 2: ABOUT THE UNIVERSITY (3-PILLARS) -->
-    <section class="py-5 my-md-4">
+    <!-- SECTION 2: ABOUT THE UNIVERSITY -->
+    <section id="about" class="py-5 my-md-4">
         <div class="container-custom">
-            
+            <div class="eyebrow-label mb-3"><?php echo htmlspecialchars($about['eyebrow'] ?? 'About the University'); ?></div>
+            <h2 class="font-serif text-primary fw-medium display-6 mb-5" style="max-width: 850px; line-height: 1.2;">
+                <?php echo $about['title']; ?>
+            </h2>
+
             <div class="row align-items-center g-5">
                 
-                <!-- Left Image Composition -->
+                <!-- Left: Entrance Photo with Floating Est Badge -->
                 <div class="col-lg-6">
                     <div class="position-relative">
-                        <div class="about-image-wrapper shadow-xl rounded-4 overflow-hidden">
-                            <img src="<?php echo htmlspecialchars($about['image_path']); ?>" alt="Dr. APJ Abdul Kalam University Campus" class="w-100 object-fit-cover"/>
-                        </div>
-                        <div class="about-floating-badge">
-                            <div class="font-serif fs-4 fw-bold text-primary"><?php echo htmlspecialchars($about['est_badge']); ?></div>
-                            <div class="text-muted-custom small fw-medium" style="font-size: 0.75rem;"><?php echo htmlspecialchars($about['location_text']); ?></div>
+                        <img src="<?php echo htmlspecialchars($about['image_path']); ?>" alt="AKU Indore Campus" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 420px;"/>
+                        <div class="position-absolute bottom-0 start-0 m-4 bg-white bg-opacity-95 p-3 rounded-3 border border-custom shadow-sm" style="backdrop-filter: blur(8px);">
+                            <div class="font-serif text-primary fw-bold fs-5"><?php echo htmlspecialchars($about['est_badge']); ?></div>
+                            <div class="text-muted-custom small d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-location-dot text-primary" style="font-size: 0.75rem;"></i> <?php echo htmlspecialchars($about['location_text']); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Editorial Text -->
+                <!-- Right: Kalam Ideals & 3 Feature Pillars -->
                 <div class="col-lg-6">
-                    <div class="eyebrow-label mb-2"><?php echo htmlspecialchars($about['eyebrow']); ?></div>
-                    <h2 class="font-serif text-primary fw-medium display-6 mb-4">
-                        <?php echo $about['title']; ?>
-                    </h2>
-                    
-                    <div class="text-muted-custom lh-lg small mb-4">
-                        <p><?php echo $about['paragraph1']; ?></p>
-                        <p class="mb-0"><?php echo $about['paragraph2']; ?></p>
-                    </div>
+                    <p class="text-dark text-opacity-90 leading-relaxed mb-4 fs-6">
+                        <?php echo $about['paragraph1']; ?>
+                    </p>
+                    <div class="my-4 border-top border-custom"></div>
+                    <p class="text-muted-custom leading-relaxed mb-4 small" style="font-size: 0.93rem;">
+                        <?php echo $about['paragraph2']; ?>
+                    </p>
 
-                    <!-- 3 Pillars Grid -->
-                    <div class="row g-3 pt-2">
+                    <!-- 3 Feature Cards Grid -->
+                    <div class="row g-3 mt-2">
                         <div class="col-sm-4">
-                            <div class="pillar-box">
-                                <i class="<?php echo htmlspecialchars($about['pillar1_icon']); ?> text-gold fs-4 mb-2"></i>
-                                <div class="font-serif fw-bold text-primary fs-6 mb-1"><?php echo htmlspecialchars($about['pillar1_title']); ?></div>
-                                <div class="text-muted-custom" style="font-size: 0.76rem;"><?php echo htmlspecialchars($about['pillar1_desc']); ?></div>
+                            <div class="bg-white p-3 rounded-3 border border-custom h-100 shadow-2xs">
+                                <i class="<?php echo htmlspecialchars($about['pillar1_icon']); ?> text-primary fs-5 mb-2"></i>
+                                <div class="font-serif text-primary fw-bold fs-6 mt-1"><?php echo htmlspecialchars($about['pillar1_title']); ?></div>
+                                <div class="text-muted-custom mt-1 lh-sm" style="font-size: 0.75rem;"><?php echo htmlspecialchars($about['pillar1_desc']); ?></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="pillar-box">
-                                <i class="<?php echo htmlspecialchars($about['pillar2_icon']); ?> text-gold fs-4 mb-2"></i>
-                                <div class="font-serif fw-bold text-primary fs-6 mb-1"><?php echo htmlspecialchars($about['pillar2_title']); ?></div>
-                                <div class="text-muted-custom" style="font-size: 0.76rem;"><?php echo htmlspecialchars($about['pillar2_desc']); ?></div>
+                            <div class="bg-white p-3 rounded-3 border border-custom h-100 shadow-2xs">
+                                <i class="<?php echo htmlspecialchars($about['pillar2_icon']); ?> text-primary fs-5 mb-2"></i>
+                                <div class="font-serif text-primary fw-bold fs-6 mt-1"><?php echo htmlspecialchars($about['pillar2_title']); ?></div>
+                                <div class="text-muted-custom mt-1 lh-sm" style="font-size: 0.75rem;"><?php echo htmlspecialchars($about['pillar2_desc']); ?></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="pillar-box">
-                                <i class="<?php echo htmlspecialchars($about['pillar3_icon']); ?> text-gold fs-4 mb-2"></i>
-                                <div class="font-serif fw-bold text-primary fs-6 mb-1"><?php echo htmlspecialchars($about['pillar3_title']); ?></div>
-                                <div class="text-muted-custom" style="font-size: 0.76rem;"><?php echo htmlspecialchars($about['pillar3_desc']); ?></div>
+                            <div class="bg-white p-3 rounded-3 border border-custom h-100 shadow-2xs">
+                                <i class="<?php echo htmlspecialchars($about['pillar3_icon']); ?> text-primary fs-5 mb-2"></i>
+                                <div class="font-serif text-primary fw-bold fs-6 mt-1"><?php echo htmlspecialchars($about['pillar3_title']); ?></div>
+                                <div class="text-muted-custom mt-1 lh-sm" style="font-size: 0.75rem;"><?php echo htmlspecialchars($about['pillar3_desc']); ?></div>
                             </div>
                         </div>
                     </div>
@@ -248,7 +249,97 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
                 </div>
 
             </div>
+        </div>
+    </section>
 
+    <!-- SECTION 2.5: CHANCELLOR'S LEADERSHIP VISION & MESSAGE (Alternating Zigzag Layout) -->
+    <section class="chancellor-section-wrapper py-5 my-md-2 position-relative">
+        <div class="container-custom py-lg-4">
+            <div class="row align-items-center g-5">
+                
+                <!-- Left: Chancellor's Philosophy, Blockquote & Strategic Highlights -->
+                <div class="col-lg-7">
+                    <div class="eyebrow-label gold-eyebrow mb-2">
+                        <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> LEADERSHIP &amp; STEWARDSHIP
+                    </div>
+                    <h2 class="font-serif text-primary fw-medium display-6 mb-3" style="line-height: 1.2;">
+                        Nurturing visionary minds through <em class="fst-italic fw-normal text-gold">purposeful education</em>.
+                    </h2>
+                    
+                    <!-- Highlight Quote -->
+                    <div class="chancellor-quote-container">
+                        <i class="fa-solid fa-quote-left text-gold fs-3 d-block mb-2 opacity-75"></i>
+                        <p class="font-serif text-primary fs-5 fst-italic fw-medium mb-0 lh-base">
+                            "<?php echo htmlspecialchars($chan_quote); ?>"
+                        </p>
+                    </div>
+
+                    <p class="text-muted-custom small mb-4" style="font-size: 0.94rem; line-height: 1.75;">
+                        Dr. A.P.J. Abdul Kalam University has been established with an unwavering commitment to foster academic excellence, cutting-edge technological innovation, and ethical leadership across diverse engineering, health sciences, management, and research disciplines.
+                    </p>
+
+                    <!-- 3 Signature Highlights -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-4">
+                            <div class="chancellor-pillar-card">
+                                <div class="d-flex align-items-center gap-2 mb-1.5">
+                                    <i class="fa-solid fa-graduation-cap text-gold fs-6"></i>
+                                    <strong class="font-serif text-primary fs-6">Global Vision</strong>
+                                </div>
+                                <p class="text-muted-custom small mb-0" style="font-size: 0.76rem; line-height: 1.45;">Empowering students with industry-relevant, future-ready competencies.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="chancellor-pillar-card">
+                                <div class="d-flex align-items-center gap-2 mb-1.5">
+                                    <i class="fa-solid fa-lightbulb text-gold fs-6"></i>
+                                    <strong class="font-serif text-primary fs-6">Innovation Hub</strong>
+                                </div>
+                                <p class="text-muted-custom small mb-0" style="font-size: 0.76rem; line-height: 1.45;">Incubating student entrepreneurship and multidisciplinary research.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="chancellor-pillar-card">
+                                <div class="d-flex align-items-center gap-2 mb-1.5">
+                                    <i class="fa-solid fa-hand-holding-heart text-gold fs-6"></i>
+                                    <strong class="font-serif text-primary fs-6">Values &amp; Ethics</strong>
+                                </div>
+                                <p class="text-muted-custom small mb-0" style="font-size: 0.76rem; line-height: 1.45;">Instilling societal responsibility and nation-building ideals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Link Buttons -->
+                    <div class="d-flex flex-wrap align-items-center gap-3 pt-2">
+                        <a href="the-chancellor.php" class="btn-primary-pill shadow-xs d-inline-flex align-items-center gap-2.5" style="padding: 12px 30px; font-size: 0.9rem;">
+                            <span>Read Full Chancellor's Address</span>
+                            <i class="fa-solid fa-arrow-right text-gold"></i>
+                        </a>
+                        <a href="why-aku.php" class="btn-secondary-luxury-pill shadow-xs">
+                            <i class="fa-solid fa-compass text-gold"></i>
+                            <span>Explore University Governance</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right: Chancellor Portrait with Floating Executive Badge -->
+                <div class="col-lg-5">
+                    <div class="chancellor-portrait-card">
+                        <div class="chancellor-img-frame">
+                            <img src="<?php echo htmlspecialchars($chan_img); ?>" alt="<?php echo htmlspecialchars($chan_name); ?>" loading="lazy" onerror="this.onerror=null;this.src='assets/lovable/APJ.jpg';"/>
+                            <div class="chancellor-badge-overlay shadow-sm">
+                                <span class="badge rounded-pill bg-white text-primary fw-bold text-uppercase px-2.5 py-1 mb-1.5" style="font-size: 0.65rem; letter-spacing: 0.1em;">
+                                    <i class="fa-solid fa-crown text-gold me-1"></i> <?php echo htmlspecialchars($chan_badge); ?>
+                                </span>
+                                <h4 class="font-serif text-white fw-bold fs-5 mb-0"><?php echo htmlspecialchars($chan_name); ?></h4>
+                                <div class="text-gold small fw-medium" style="font-size: 0.8rem;"><?php echo htmlspecialchars($chan_designation); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -274,13 +365,13 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
                 </div>
             </div>
 
-            <!-- 8 Glowing Academic School Cards Grid (Strict Uniform Equal Heights) -->
+            <!-- 8 Glowing Academic School Cards Grid -->
             <div class="row g-4" id="academicSchoolsGrid">
                 <?php foreach ($schools as $s): ?>
-                <div class="col-sm-6 col-lg-3 academic-item-col d-flex" data-categories="<?php echo htmlspecialchars($s['categories']); ?>">
-                    <a href="<?php echo htmlspecialchars($s['url']); ?>" class="school-luxury-card w-100 h-100">
+                <div class="col-sm-6 col-lg-3 academic-item-col" data-categories="<?php echo htmlspecialchars($s['categories']); ?>">
+                    <a href="<?php echo htmlspecialchars($s['url']); ?>" class="school-luxury-card">
                         <i class="<?php echo htmlspecialchars($s['icon']); ?> school-icon"></i>
-                        <div class="my-auto">
+                        <div>
                             <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.1em;"><?php echo htmlspecialchars($s['program_count']); ?></div>
                             <div class="font-serif fs-5 fw-semibold mt-1 lh-sm"><?php echo htmlspecialchars($s['title']); ?></div>
                         </div>
@@ -291,8 +382,9 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
             </div>
 
             <div class="text-center mt-5">
-                <a href="department-of-computer-science-engineering.php" class="btn btn-outline-dark border-primary text-primary rounded-pill px-4 py-2 small fw-medium">
-                    View all 120+ programs <i class="fa-solid fa-arrow-right ms-1 text-primary"></i>
+                <a href="programs.php" class="btn-primary-pill shadow-sm d-inline-flex align-items-center gap-2" style="padding: 12px 36px; font-size: 0.95rem;">
+                    <span>View All 120+ Academic Programs</span>
+                    <i class="fa-solid fa-arrow-right text-gold"></i>
                 </a>
             </div>
 
@@ -319,7 +411,7 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
                             </div>
                             <div class="p-4 pb-2">
                                 <h3 class="font-serif text-primary fw-bold fs-5 mb-2"><?php echo htmlspecialchars($wf['title']); ?></h3>
-                                <p class="text-muted-custom small mb-0 leading-relaxed"><?php echo htmlspecialchars($wf['description']); ?></p>
+                                <p class="text-muted-custom small mb-0 leading-relaxed"><?php echo strip_tags($wf['description']); ?></p>
                             </div>
                         </div>
                         <div class="px-4 pb-4 pt-2">
@@ -334,52 +426,53 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
         </div>
     </section>
 
-    <!-- SECTION 5: RESEARCH & INNOVATION -->
-    <section id="research" class="py-5 bg-primary text-white position-relative overflow-hidden" style="background-color: var(--primary-color) !important;">
-        <div class="hero-radial-glow"></div>
-        <div class="container-custom py-md-4 position-relative" style="z-index: 2;">
-            
+    <!-- SECTION 5: RESEARCH & INNOVATION (KALAM INNOVATION CENTER) -->
+    <section id="research" class="py-5 text-white" style="background-color: var(--primary-color);">
+        <div class="container-custom py-md-4">
             <div class="row g-5 align-items-center">
                 
-                <!-- Left Research Overview & Metrics -->
+                <!-- Left: Kalam Innovation Center Details & Stats -->
                 <div class="col-lg-6">
-                    <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
-                        <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> Research & Innovation
+                    <div class="eyebrow-label gold-eyebrow mb-3">
+                        Research & Innovation
                     </div>
-                    <h2 class="font-serif display-6 fw-medium text-white mb-4">
+                    <h2 class="font-serif display-6 fw-medium text-white mb-3" style="line-height: 1.15;">
                         <?php echo $research['title']; ?>
                     </h2>
-                    <p class="text-white text-opacity-80 small lh-lg mb-5" style="max-width: 520px;">
-                        <?php echo htmlspecialchars($research['description']); ?>
+                    <p class="text-white text-opacity-80 leading-relaxed small mb-4" style="max-width: 520px; font-size: 0.92rem;">
+                        <?php echo strip_tags($research['description']); ?>
                     </p>
 
-                    <!-- 3 Stat Metrics -->
-                    <div class="d-flex flex-wrap gap-4 gap-md-5 mb-5">
-                        <div>
-                            <div class="font-serif display-5 fw-bold text-gold"><?php echo htmlspecialchars($research['stat1_value']); ?></div>
-                            <div class="text-white text-opacity-70 small mt-1" style="font-size: 0.8rem;"><?php echo htmlspecialchars($research['stat1_label']); ?></div>
+                    <div class="rounded-4 overflow-hidden mb-4 shadow-sm" style="border-radius: 1.25rem;">
+                        <img src="<?php echo htmlspecialchars($research['image_path']); ?>" alt="Kalam Center" class="w-100 object-fit-cover" style="height: 220px;"/>
+                    </div>
+
+                    <div class="row g-3 text-start mb-3" style="max-width: 480px;">
+                        <div class="col-4">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1"><?php echo htmlspecialchars($research['stat1_value']); ?></div>
+                            <div class="text-uppercase text-white text-opacity-70 fw-semibold mt-1" style="font-size: 0.65rem; letter-spacing: 0.12em;"><?php echo htmlspecialchars($research['stat1_label']); ?></div>
                         </div>
-                        <div class="border-start border-white border-opacity-15 ps-4 ps-md-5">
-                            <div class="font-serif display-5 fw-bold text-gold"><?php echo htmlspecialchars($research['stat2_value']); ?></div>
-                            <div class="text-white text-opacity-70 small mt-1" style="font-size: 0.8rem;"><?php echo htmlspecialchars($research['stat2_label']); ?></div>
+                        <div class="col-4">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1"><?php echo htmlspecialchars($research['stat2_value']); ?></div>
+                            <div class="text-uppercase text-white text-opacity-70 fw-semibold mt-1" style="font-size: 0.65rem; letter-spacing: 0.12em;"><?php echo htmlspecialchars($research['stat2_label']); ?></div>
                         </div>
-                        <div class="border-start border-white border-opacity-15 ps-4 ps-md-5">
-                            <div class="font-serif display-5 fw-bold text-gold"><?php echo htmlspecialchars($research['stat3_value']); ?></div>
-                            <div class="text-white text-opacity-70 small mt-1" style="font-size: 0.8rem;"><?php echo htmlspecialchars($research['stat3_label']); ?></div>
+                        <div class="col-4">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1"><?php echo htmlspecialchars($research['stat3_value']); ?></div>
+                            <div class="text-uppercase text-white text-opacity-70 fw-semibold mt-1" style="font-size: 0.65rem; letter-spacing: 0.12em;"><?php echo htmlspecialchars($research['stat3_label']); ?></div>
                         </div>
                     </div>
 
-                    <a href="<?php echo htmlspecialchars($research['report_link'] ?? 'faculty-publications.php'); ?>" class="btn btn-outline-light rounded-pill px-4 py-2 small fw-medium text-white border-white border-opacity-30 hover-bg-white-10">
-                        Explore all publications &amp; patents <i class="fa-solid fa-arrow-right ms-1"></i>
+                    <a href="<?php echo htmlspecialchars($research['report_link'] ?? 'faculty-publications.php'); ?>" class="text-gold text-decoration-none d-inline-flex align-items-center gap-2 small fw-medium mt-2 pt-1 hover-underline">
+                        Read the research report <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem;"></i>
                     </a>
                 </div>
 
-                <!-- Right 3 Spotlight Research Papers List -->
+                <!-- Right: Research Papers Showcase -->
                 <div class="col-lg-6">
-                    <div class="rounded-4 border border-white border-opacity-15 bg-black bg-opacity-20 overflow-hidden backdrop-blur">
+                    <div class="rounded-4 overflow-hidden" style="border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 1.25rem;">
                         
                         <!-- Paper 1 -->
-                        <div class="p-4 p-md-4 border-bottom border-white border-opacity-10 d-flex align-items-start gap-4">
+                        <div class="p-4 p-md-4 d-flex align-items-start gap-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
                             <div class="font-serif text-gold fw-normal fs-2 lh-1 flex-shrink-0" style="width: 32px;"><?php echo htmlspecialchars($research['paper1_num']); ?></div>
                             <div>
                                 <div class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.15em;"><?php echo htmlspecialchars($research['paper1_tag']); ?></div>
@@ -389,7 +482,7 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
                         </div>
 
                         <!-- Paper 2 -->
-                        <div class="p-4 p-md-4 border-bottom border-white border-opacity-10 d-flex align-items-start gap-4">
+                        <div class="p-4 p-md-4 d-flex align-items-start gap-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
                             <div class="font-serif text-gold fw-normal fs-2 lh-1 flex-shrink-0" style="width: 32px;"><?php echo htmlspecialchars($research['paper2_num']); ?></div>
                             <div>
                                 <div class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.15em;"><?php echo htmlspecialchars($research['paper2_tag']); ?></div>
@@ -431,7 +524,7 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
             </div>
         </div>
 
-        <!-- Smooth Infinite Recruiter Marquee with Accessibility aria-hidden -->
+        <!-- Smooth Infinite Recruiter Marquee -->
         <div class="mt-4 border-top border-bottom border-custom py-4 bg-secondary-tint">
             <div class="marquee-container">
                 <div class="marquee-track align-items-center text-primary text-opacity-75">
@@ -450,27 +543,24 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
                     <span class="font-serif fs-3 fw-bold text-nowrap">L&T Infotech</span>
                     <span class="font-serif fs-3 fw-bold text-nowrap">Mahindra</span>
 
-                    <!-- Duplicate for infinite seamless loop (hidden from screen-readers) -->
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Microsoft</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">TCS</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Infosys</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Wipro</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Deloitte</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Bosch</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Cognizant</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Accenture</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Sun Pharma</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Cipla</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">HDFC Bank</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">ICICI Bank</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">L&T Infotech</span>
-                    <span class="font-serif fs-3 fw-bold text-nowrap" aria-hidden="true">Mahindra</span>
+                    <!-- Duplicate for infinite seamless loop -->
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Microsoft</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">TCS</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Infosys</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Wipro</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Deloitte</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Bosch</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Cognizant</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Accenture</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Sun Pharma</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Cipla</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">HDFC Bank</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">ICICI Bank</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">L&T Infotech</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Mahindra</span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- SECTION 7: CAMPUS NEWS & STORIES -->
+        </div>    <!-- SECTION 7: CAMPUS NEWS & STORIES -->
     <section class="py-5 bg-secondary-tint">
         <div class="container-custom py-md-4">
             
@@ -766,7 +856,7 @@ $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll()
                     <div class="bg-white p-4 p-md-5 rounded-4 border border-custom h-100 d-flex flex-column shadow-2xs">
                         <i class="fa-solid fa-quote-left text-gold fs-3 mb-3"></i>
                         <p class="font-serif text-primary fs-5 leading-snug fw-medium mb-4 flex-grow-1">
-                            "<?php echo htmlspecialchars($av['quote']); ?>"
+                            "<?php echo strip_tags($av['quote']); ?>"
                         </p>
                         <div class="pt-3 border-top border-custom">
                             <div class="font-serif text-primary fw-bold fs-6"><?php echo htmlspecialchars($av['name']); ?></div>

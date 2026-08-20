@@ -69,7 +69,7 @@ require_once 'header.php';
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Manage Media Coverage</h2>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMediaModal" style="background-color: #0b2c4d; border-color: #0b2c4d;">+ Add Media Item</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMediaModal" >+ Add Media Item</button>
 </div>
 
 <div class="card">
@@ -127,7 +127,7 @@ require_once 'header.php';
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="submit" name="edit_media" class="btn btn-primary" style="background-color: #0b2c4d;">Save Changes</button>
+                        <button type="submit" name="edit_media" class="btn btn-primary" >Save Changes</button>
                       </div>
                       </form>
                     </div>
@@ -164,7 +164,7 @@ require_once 'header.php';
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="add_media" class="btn btn-primary" style="background-color: #0b2c4d;">Save Item</button>
+        <button type="submit" name="add_media" class="btn btn-primary" >Save Item</button>
       </div>
       </form>
     </div>

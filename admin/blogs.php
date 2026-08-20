@@ -43,7 +43,7 @@ require_once 'header.php';
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Manage Blogs</h2>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBlogModal" style="background-color: #0b2c4d; border-color: #0b2c4d;">+ Add New Blog</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBlogModal" >+ Add New Blog</button>
 </div>
 
 <div class="card">
@@ -103,7 +103,7 @@ require_once 'header.php';
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="add_blog" class="btn btn-primary" style="background-color: #0b2c4d;">Save Blog</button>
+        <button type="submit" name="add_blog" class="btn btn-primary" >Save Blog</button>
       </div>
       </form>
     </div>

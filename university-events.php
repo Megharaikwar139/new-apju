@@ -68,7 +68,7 @@ try {
                             $year = $date_raw ? date('Y', strtotime($date_raw)) : '2026';
                             $venue = !empty($event['venue']) ? $event['venue'] : 'Indore Campus';
                             $slug = $event['post_name'];
-                            $eventUrl = "single.php?type=event&slug=" . urlencode($slug);
+                            $eventUrl = "event/{$slug}/";
                             
                             $plain_text = trim(strip_tags($event['content'] ?? ''));
                             if (empty($plain_text)) {

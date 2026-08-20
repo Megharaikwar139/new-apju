@@ -70,7 +70,7 @@ require_once 'header.php';
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Manage Pages (Quick Links)</h2>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPageModal" style="background-color: #0b2c4d; border-color: #0b2c4d;">+ Add Page</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPageModal" >+ Add Page</button>
 </div>
 
 <div class="card">
@@ -127,7 +127,7 @@ require_once 'header.php';
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="submit" name="edit_page" class="btn btn-primary" style="background-color: #0b2c4d;">Save Changes</button>
+                        <button type="submit" name="edit_page" class="btn btn-primary" >Save Changes</button>
                       </div>
                       </form>
                     </div>
@@ -170,7 +170,7 @@ require_once 'header.php';
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="add_page" class="btn btn-primary" style="background-color: #0b2c4d;">Save Page</button>
+        <button type="submit" name="add_page" class="btn btn-primary" >Save Page</button>
       </div>
       </form>
     </div>

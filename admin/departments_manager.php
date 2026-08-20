@@ -190,7 +190,7 @@ require_once 'header.php';
                             <span class="badge bg-light text-muted border"><?php echo $t['sort_order']; ?></span>
                         </td>
                         <td>
-                            <div class="rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                            <div class="icon-circle-badge" style="width: 36px; height: 36px;">
                                 <i class="<?php echo htmlspecialchars($t['tab_icon']); ?>"></i>
                             </div>
                         </td>
@@ -308,7 +308,7 @@ function openAddTabModal() {
     document.getElementById('modal_tab_slug_input').value = '';
     document.getElementById('modal_tab_icon_input').value = 'fa-solid fa-layer-group';
     document.getElementById('modal_sort_order_input').value = '<?php echo count($tabs) + 1; ?>';
-    document.getElementById('modal_tab_content_input').value = '';
+    window.setEditorData('modal_tab_content_input', '');
     document.getElementById('modal_status_input').checked = true;
 }
 
@@ -319,7 +319,7 @@ function openEditTabModal(tab) {
     document.getElementById('modal_tab_slug_input').value = tab.tab_slug;
     document.getElementById('modal_tab_icon_input').value = tab.tab_icon;
     document.getElementById('modal_sort_order_input').value = tab.sort_order;
-    document.getElementById('modal_tab_content_input').value = tab.tab_content || '';
+    window.setEditorData('modal_tab_content_input', tab.tab_content || '');
     document.getElementById('modal_status_input').checked = (tab.status == 1);
     
     const modal = new bootstrap.Modal(document.getElementById('tabModal'));

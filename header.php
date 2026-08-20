@@ -57,15 +57,27 @@ try {
         </a>
 
         <!-- Desktop Navigation Links (Responsive Flex & Zero Clipping) -->
+        <?php
+        $currentScript = basename($_SERVER['PHP_SELF'] ?? '');
+        $isAboutActive = in_array($currentScript, ['why-aku.php', 'the-founder-2.php', 'the-chancellor.php', 'pro-chancellor.php', 'the-vice-chancellor.php', 'registrar.php', 'governing-body.php', 'board-of-management.php', 'finance-committee.php', 'mandatory-disclosers.php', 'awardsand-recognigation.php', 'ugc-recognition.php', 'aku-in-media.php', 'world-class-infrastructure.php']);
+        $isFacultyActive = (strpos($currentScript, 'department-') === 0 || strpos($currentScript, 'faculty') === 0 || strpos($currentScript, 'polytechnic') === 0 || strpos($currentScript, 'diploma-') === 0);
+        $isAdmissionsActive = in_array($currentScript, ['programs.php', 'admission-procedure.php', 'ph-d-selection-process.php', 'fee-structure.php', 'admission-assistance.php', 'admission-committee.php', 'scholarships.php', 'general-rules-and-regulations.php', 'hostel-rules-regulations.php', 'faqs.php', 'download-form.php', 'apply-now.php']);
+        $isExamActive = in_array($currentScript, ['about-the-section.php', 'examination-committee.php', 'examination-calendar.php', 'results.php', 'exam-notice.php', 'exam-policy.php', 'exam-code.php', 'old-question-papers.php', 'convocation.php', 'digi-locker-nad-gov-in.php', 'admit-card-download.php', 'forms.php']);
+        $isCommitteesActive = in_array($currentScript, ['anti-reggiging-committee.php', 'academic-committee.php', 'staff-selection-screening-committee.php', 'employee-grievance-wellfare-cell.php', 'equalization-committee.php', 'infrastructure-campus-beautification-committee.php', 'regulatory-committee.php', 'management-information-system-erp-committee.php', 'library-committee.php', 'purchase-committee.php', 'sports-committee.php', 'transport-committee.php', 'jan-aushadhi-committee.php', 'student-grievance-cell.php', 'scholarship-committee.php', 'research-committee.php', 'iqac.php', 'icc.php', 'womens-grievance-redressal-and-welfare-cell.php', 'sc-st-committee.php', 'sgrc.php', 'ncc-nss-cell.php', 'intellectual-property-rights-cell-ipr-cell.php']);
+        $isPlacementActive = in_array($currentScript, ['placement-cell.php', 'our-recruiters.php', 'tp-industry.php', 'placement-chart.php']);
+        $isResearchActive = in_array($currentScript, ['incubation-center.php', 'faculty-publications.php', 'fees-details.php']);
+        $isStudentZoneActive = in_array($currentScript, ['notice-board.php', 'student-holiday-calender.php', 'download-form-student.php']);
+        $isCampusLifeActive = in_array($currentScript, ['gallery.php', 'university-events.php', 'visiters-testomonials.php', 'visits-events.php', 'students-testomonials.php']);
+        ?>
         <nav class="d-none d-xl-flex align-items-center header-nav-links mx-1 mx-xxl-3">
             
             <!-- 1. About Us Dropdown -->
             <div class="dropdown">
-                <a href="why-aku.php" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="why-aku.php" class="nav-link-item <?php echo $isAboutActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     About
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 240px;">
-                    <li><a class="dropdown-item py-1.5 small fw-medium text-primary" href="why-aku.php"><i class="fa-solid fa-star text-gold me-2"></i> Why AKU</a></li>
+                    <li><a class="dropdown-item py-1.5 small fw-medium" href="why-aku.php"><i class="fa-solid fa-star text-gold me-2"></i> Why AKU</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="the-founder-2.php">The Founder</a></li>
                     <li><hr class="dropdown-divider my-1"></li>
                     <li class="dropdown-header text-uppercase fw-bold text-muted-custom" style="font-size: 0.68rem; letter-spacing: 0.08em;">Leadership</li>
@@ -87,7 +99,7 @@ try {
 
             <!-- 2. Faculty Dropdown (Complete Old Website Structure: 4 Faculties & All 23 Departments) -->
             <div class="dropdown dropdown-mega position-static">
-                <a href="department-of-computer-science-engineering.php" class="nav-link-item" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <a href="department-of-computer-science-engineering.php" class="nav-link-item <?php echo $isFacultyActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                     Faculty
                 </a>
                 <div class="dropdown-menu faculty-mega-menu shadow border-custom">
@@ -181,7 +193,7 @@ try {
                             <div class="mega-column-title mt-4">
                                 <i class="fa-solid fa-calendar-days text-gold me-1.5"></i> Academic Schedule
                             </div>
-                            <a href="academic-calendar.php" class="mega-item-link fw-semibold text-primary">
+                            <a href="academic-calendar.php" class="mega-item-link fw-semibold">
                                 <i class="fa-solid fa-calendar-check text-gold me-1"></i> Academic Calendar 2026
                             </a>
                             <a href="student-holiday-calender.php" class="mega-item-link">
@@ -195,11 +207,13 @@ try {
 
             <!-- 3. Admissions Dropdown -->
             <div class="dropdown">
-                <a href="admission-procedure.php" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="admission-procedure.php" class="nav-link-item <?php echo $isAdmissionsActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     Admissions
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 240px;">
-                    <li><a class="dropdown-item py-1.5 small fw-medium text-primary" href="admission-procedure.php"><i class="fa-solid fa-circle-check text-gold me-2"></i> Admission Procedure</a></li>
+                    <li><a class="dropdown-item py-1.5 small fw-bold" href="programs.php"><i class="fa-solid fa-graduation-cap text-gold me-2"></i> All Academic Programs</a></li>
+                    <li><hr class="dropdown-divider my-1"></li>
+                    <li><a class="dropdown-item py-1.5 small fw-medium" href="admission-procedure.php"><i class="fa-solid fa-circle-check text-gold me-2"></i> Admission Procedure</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="ph-d-selection-process.php">Ph.D Selection Process</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="fee-structure.php">Fee Structure</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="admission-assistance.php">Admission Assistance</a></li>
@@ -214,14 +228,14 @@ try {
 
             <!-- 4. Examination Dropdown -->
             <div class="dropdown">
-                <a href="about-the-section.php" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="about-the-section.php" class="nav-link-item <?php echo $isExamActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     Examinations
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 240px;">
                     <li><a class="dropdown-item py-1.5 small" href="about-the-section.php">Section Overview</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="examination-committee.php">Examination Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="examination-calendar.php">Examination Schedule</a></li>
-                    <li><a class="dropdown-item py-1.5 small fw-medium text-primary" href="results.php"><i class="fa-solid fa-award text-gold me-2"></i> Results Portal</a></li>
+                    <li><a class="dropdown-item py-1.5 small fw-medium" href="results.php"><i class="fa-solid fa-award text-gold me-2"></i> Results Portal</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="exam-notice.php">Exam Notices</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="exam-policy.php">Exam Policies & Rules</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="exam-code.php">Exam Code of Conduct</a></li>
@@ -235,11 +249,11 @@ try {
 
             <!-- 5. Committees Dropdown -->
             <div class="dropdown">
-                <a href="anti-reggiging-committee.php" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="anti-reggiging-committee.php" class="nav-link-item <?php echo $isCommitteesActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     Committees
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 280px; max-height: 80vh; overflow-y: auto;">
-                    <li><a class="dropdown-item py-1.5 small" href="anti-reggiging-committee.php"><i class="fa-solid fa-shield-halved text-primary me-2"></i> Anti Ragging Committee</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="anti-reggiging-committee.php"><i class="fa-solid fa-shield-halved text-gold me-2"></i> Anti Ragging Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="academic-committee.php">Academic Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="staff-selection-screening-committee.php">Cultural Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="employee-grievance-wellfare-cell.php">Employee Grievance & Welfare</a></li>
@@ -260,11 +274,11 @@ try {
 
             <!-- 6. Placements Dropdown -->
             <div class="dropdown">
-                <a href="placement-cell.php" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="placement-cell.php" class="nav-link-item <?php echo $isPlacementActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     Placements
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 240px;">
-                    <li><a class="dropdown-item py-1.5 small fw-medium text-primary" href="our-recruiters.php"><i class="fa-solid fa-handshake text-gold me-2"></i> Our 500+ Recruiters</a></li>
+                    <li><a class="dropdown-item py-1.5 small fw-medium" href="our-recruiters.php"><i class="fa-solid fa-handshake text-gold me-2"></i> Our 500+ Recruiters</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="placement-cell.php">Training & Placement Cell</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="corporate-interaction.php">Corporate Interactions</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="visits-events.php">Visits & Events</a></li>
@@ -275,11 +289,11 @@ try {
 
             <!-- 7. Research Dropdown -->
             <div class="dropdown">
-                <a href="#research" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="#research" class="nav-link-item <?php echo $isResearchActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     Research
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 250px;">
-                    <li><a class="dropdown-item py-1.5 small fw-medium text-primary" href="incubation-center.php"><i class="fa-solid fa-lightbulb text-gold me-2"></i> Kalam Incubation Center</a></li>
+                    <li><a class="dropdown-item py-1.5 small fw-medium" href="incubation-center.php"><i class="fa-solid fa-lightbulb text-gold me-2"></i> Kalam Incubation Center</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="research-committee.php">R&D Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="ugc-recognition.php">UGC Recognition</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="fees-details.php">Ph.D Fee Details</a></li>
@@ -293,11 +307,11 @@ try {
 
             <!-- 8. Student Zone Dropdown -->
             <div class="dropdown">
-                <a href="notice-board.php" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="notice-board.php" class="nav-link-item <?php echo $isStudentZoneActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     Student Zone
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 240px;">
-                    <li><a class="dropdown-item py-1.5 small fw-medium text-primary" href="notice-board.php"><i class="fa-solid fa-bell text-gold me-2"></i> Notice Board</a></li>
+                    <li><a class="dropdown-item py-1.5 small fw-medium" href="notice-board.php"><i class="fa-solid fa-bell text-gold me-2"></i> Notice Board</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="student-grievance-cell.php">Student Grievance Cell</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="sc-st-committee.php">SC/ST Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="scholarship-committee.php">Scholarship Committee</a></li>
@@ -312,7 +326,7 @@ try {
 
             <!-- 9. Campus Life / Events Dropdown -->
             <div class="dropdown">
-                <a href="gallery.php" class="nav-link-item" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="gallery.php" class="nav-link-item <?php echo $isCampusLifeActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" aria-expanded="false">
                     Campus Life
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 220px;">
@@ -330,16 +344,14 @@ try {
         <div class="d-none d-sm-flex align-items-center gap-2 flex-shrink-0">
             
             <!-- Search Button (Exact Circle Icon) -->
-            <button class="btn btn-search-circle" aria-label="Search" title="Search" onclick="let q = prompt('Search AKU website:'); if(q) window.location.href='notice-board.php?search='+encodeURIComponent(q);">
+            <button class="btn btn-search-circle" title="Search" onclick="let q = prompt('Search AKU website:'); if(q) window.location.href='notice-board.php?search='+encodeURIComponent(q);">
                 <i class="fa-solid fa-magnifying-glass" style="font-size: 13px;"></i>
             </button>
 
             <!-- Portals Dropdown Button (Includes All Student/Gov/IQAC Portals) -->
             <div class="dropdown">
-                <button class="btn btn-portals-pill d-inline-flex align-items-center gap-1.5" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Portals">
-                    <i class="fa-solid fa-user-gear" style="font-size: 12px; color: var(--gold-color);"></i>
-                    <span>Portals</span>
-                    <i class="fa-solid fa-chevron-down ms-0.5" style="font-size: 9px; color: #706361;"></i>
+                <button class="btn btn-portals-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-regular fa-user" style="font-size: 12px; color: #706361;"></i> Portals
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow border-custom rounded-3 py-2 mt-2" style="min-width: 230px;">
                     <li><a class="dropdown-item py-1.5 small" href="https://www.universitymanagementsystem.in/aku/Home/Dashboard" target="_blank"><i class="fa-solid fa-file-circle-check text-gold me-2"></i> Document Verify (UMS)</a></li>
@@ -357,9 +369,8 @@ try {
             </div>
 
             <!-- Apply Now Pill Button -->
-            <a href="apply-now.php" class="btn btn-apply-pill d-inline-flex align-items-center gap-1.5">
-                <i class="fa-solid fa-graduation-cap" style="font-size: 13px; color: var(--gold-color);"></i>
-                <span>Apply Now</span>
+            <a href="apply-now.php" class="btn btn-apply-pill">
+                <i class="fa-solid fa-graduation-cap text-gold" style="font-size: 13px;"></i> Apply Now
             </a>
             
         </div>

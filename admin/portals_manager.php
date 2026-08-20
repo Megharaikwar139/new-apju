@@ -54,7 +54,7 @@ require_once 'header.php';
     <div class="col-md-3">
         <div class="card shadow-sm border-0 p-3 h-100 d-flex flex-column justify-content-between">
             <div class="d-flex align-items-center gap-3 mb-3">
-                <div class="p-2 rounded-circle bg-primary text-white d-grid place-items-center flex-shrink-0" style="width: 40px; height: 40px;">
+                <div class="icon-circle-badge flex-shrink-0">
                     <i class="<?php echo htmlspecialchars($p['icon']); ?> fs-6"></i>
                 </div>
                 <div class="min-w-0 flex-grow-1">

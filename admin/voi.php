@@ -43,7 +43,7 @@ require_once 'header.php';
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Manage Voice of Experience</h2>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addVOEModal" style="background-color: #0b2c4d; border-color: #0b2c4d;">+ Add New Profile</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addVOEModal" >+ Add New Profile</button>
 </div>
 
 <div class="card">
@@ -107,7 +107,7 @@ require_once 'header.php';
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="add_voi" class="btn btn-primary" style="background-color: #0b2c4d;">Save Profile</button>
+        <button type="submit" name="add_voi" class="btn btn-primary" >Save Profile</button>
       </div>
       </form>
     </div>

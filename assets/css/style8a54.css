@@ -2329,7 +2329,7 @@ background-position: center;
 }
 
 .message-details ul li a {
-  color: #007bff;
+  color: #580813;
   text-decoration: none;
 }
 
@@ -2345,7 +2345,7 @@ background-position: center;
   font-size: 26px;
   margin-bottom: 20px;
   color: #003366;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid #580813;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -2450,8 +2450,8 @@ background-position: center;
 }
 .recruiter-category h3 {
   font-size: 22px;
-  color: #0073aa;
-  border-left: 4px solid #0073aa;
+  color: #580813;
+  border-left: 4px solid #580813;
   padding-left: 10px;
   margin-bottom: 20px;
 }
@@ -2537,14 +2537,14 @@ span.event_date {
 }
 
 .btn-blue {
-    background-color: #007bff;
+    background-color: #580813;
     color: white;
 }
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #580813;
+    color: #580813;
      /*   border: 2px solid #000000;
     color: #525252;*/
         padding: 12px 28px !important
@@ -3175,7 +3175,7 @@ ul.sub-menu li {
     position: absolute;
     left: 0;
     top: 0;
-    color: #0073aa;
+    color: #580813;
     font-weight: bold;
     font-size: 16px;
 }

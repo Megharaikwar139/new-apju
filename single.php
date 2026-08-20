@@ -120,14 +120,18 @@ require_once 'header.php';
                 <article class="inner-main-card">
                     
                     <?php 
-                    $eventImg = !empty($data['image_path']) ? $data['image_path'] : '2025/03/events.jpg';
-                    $img_src = (strpos($eventImg, 'assets/') === 0) ? $eventImg : 'uploads/' . $eventImg;
-                    if (file_exists($img_src)):
+                    $eventImg = !empty($data['image_path']) ? $data['image_path'] : (($type === 'event') ? '2025/03/events.jpg' : '');
+                    if (!empty($eventImg)) {
+                        $img_src = (strpos($eventImg, 'assets/') === 0) ? $eventImg : 'uploads/' . $eventImg;
+                        if (file_exists($img_src)) {
                     ?>
                     <div class="mb-4 rounded-4 overflow-hidden border border-custom shadow-sm" style="max-height: 440px;">
                         <img src="<?php echo htmlspecialchars($img_src); ?>" alt="<?php echo htmlspecialchars($data['title']); ?>" class="w-100 h-100" style="object-fit: cover;" />
                     </div>
-                    <?php endif; ?>
+                    <?php 
+                        }
+                    }
+                    ?>
 
                     <?php if ($type === 'event' && !empty($data['event_date'])): ?>
                     <div class="p-3.5 rounded-4 border border-custom bg-white d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-xs mb-4">
