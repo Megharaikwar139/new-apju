@@ -1,185 +1,172 @@
-<?php
-$pageTitle = 'Examination Policy - Dr APJ University Indore';
-$bodyClass = 'wp-singular page-template-default page page-id-362 wp-theme-aku wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
-include 'header.php';
+<?php 
+$pageTitle = "Examination Policies & Rules - Dr. APJ Abdul Kalam University, Indore";
+include 'header.php'; 
 ?>
-<style>
-  section.page-header .uk-container { position: relative; }
-  section.page-header h1 {
-    margin: 0 0 14px;
-    color: #fff;
-    font-family: 'AKU Poppins', 'Poppins', sans-serif !important;
-    font-size: 46px !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-    text-align: center;
-  }
-  section.page-header .breadcrumb {
-    display: block !important;
-    width: 100% !important;
-    margin: 0;
-    color: #fff;
-    font-family: 'AKU Poppins', 'Poppins', sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: center !important;
-  }
-  section.page-header .breadcrumb a { color: #fff; }
-</style>
-<section class="page-header" style="background-image:url('assets/images/bg-header.jpg')"><div class="uk-container"><h1>Examination Policy</h1><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Examination Policy</nav></div></section>
-<main id="primary" class="site-main"><article id="post-362" class="post-362 page type-page status-publish hentry"><div class="uk-container"><div class="entry-content"><div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-<h2 style="text-align:center" class="vc_custom_heading vc_do_custom_heading">University Examination Policy</h2>
-<div class="wpb_raw_code wpb_raw_html wpb_content_element"><div class="wpb_wrapper">
-<div class="examination-policy-section">
-    <div class="policy-header"></div>
 
-    <div class="policy-section">
-        <h2>1. Purpose</h2>
-        <p>This policy sets out the rules and procedures for conducting examinations to ensure fairness, academic integrity, and consistency across all departments and programs.</p>
+<!-- Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="about-the-section.php">Examinations</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">Policies &amp; Rules</span>
+        </div>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> EVALUATION STATUTES & ORDINANCES
+        </div>
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 900px; line-height: 1.15;">
+            University Examination Policy
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Dr. A.P.J. Abdul Kalam University · Standards for Academic Integrity &amp; Assessment Fairness
+        </p>
     </div>
+</section>
 
-    <div class="policy-section">
-        <h2>2. Scope</h2>
-        <p>This policy applies to all undergraduate and postgraduate students enrolled in credit-bearing courses at the university.</p>
+<!-- Main Body -->
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
+                    
+                    <!-- Intro Highlight Card -->
+                    <div class="intro-highlight-card mb-5">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-primary fs-4 fw-bold mb-1">Purpose &amp; Scope of Examination Policy</h3>
+                                <p class="mb-0 text-muted-custom" style="font-size: 0.95rem; line-height: 1.7;">
+                                    This policy establishes the statutory rules and procedures for conducting mid-term, end-semester, and practical examinations to ensure absolute fairness, academic integrity, and standard evaluation across all University Faculties.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Policy Sections Grid -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
+                            <span class="section-icon-pill"><i class="fa-solid fa-book-bookmark"></i></span>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Core Examination Regulations</h3>
+                        </div>
+
+                        <div class="row g-3.5">
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-calendar-check"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">1. Exam Scheduling &amp; Notice</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Exam timetables are published at least 4 weeks prior to the examination window. Overlap conflicts must be reported to the COE office within 5 working days.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-id-card"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">2. Hall Entry &amp; Identity Check</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Producing a verified Admit Card along with original University Student ID is mandatory for admission to the examination hall. Candidates must report 20 minutes before time.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; border-color: rgba(220, 53, 69, 0.3);">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">3. Electronic Gadgets Prohibited</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Mobile phones, smartwatches, programmable calculators, Bluetooth devices, and unauthorized study sheets are strictly forbidden inside the exam arena.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-universal-access"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">4. Special Accommodations &amp; Scribes</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Differently-abled candidates requiring extra compensatory time or approved scribes must submit formal documentation to the COE at least 2 weeks in advance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grading & Result Declaration Policy -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
+                            <span class="section-icon-pill"><i class="fa-solid fa-chart-pie"></i></span>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Evaluation &amp; Grading Standards</h3>
+                        </div>
+
+                        <div class="feature-info-card">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-2">10-Point UGC CBCS Grading Scale</h5>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65;">
+                                        The University adopts the standard 10-Point Choice Based Credit System (CBCS) grading scheme (`O`, `A+`, `A`, `B+`, `B`, `C`, `P`, `F`), computing SGPA per semester and cumulative CGPA upon degree completion.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 border-start-md border-custom">
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-2">Revaluation &amp; Challenge Valuation</h5>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65;">
+                                        Students may apply for revaluation of answer scripts within 15 days of result declaration. If variance exceeds 10%, a third independent evaluator is assigned as per university statutes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code of Conduct Cross Link Strip -->
+                    <div class="p-4 rounded-4 border border-custom bg-white d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-xs">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge" style="width: 52px; height: 52px; font-size: 1.25rem;">
+                                <i class="fa-solid fa-gavel"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-primary fs-6 fw-bold mb-0.5">Read Examination Code of Conduct</h4>
+                                <p class="text-muted-custom small mb-0">Detailed penalties for Unfair Means (UFM), student obligations &amp; invigilator duties.</p>
+                            </div>
+                        </div>
+                        <a href="exam-code.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                            <i class="fa-solid fa-shield-cat me-1.5"></i> View Code of Conduct
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-lg-4 col-xl-3">
+                <?php include "exam-sidebar.php"; ?>
+            </div>
+
+        </div>
     </div>
+</main>
 
-    <div class="policy-section">
-        <h2>3. Types of Exams</h2>
-        <ul>
-            <li><strong>Midterm Examinations:</strong> Conducted halfway through the semester.</li>
-            <li><strong>Final Examinations:</strong> Conducted at the end of the academic term.</li>
-            <li><strong>Online Exams:</strong> Administered remotely with proctoring or monitoring tools.</li>
-        </ul>
-    </div>
-
-    <div class="policy-section">
-        <h2>4. Exam Scheduling</h2>
-        <ul>
-            <li>Exam timetables will be published at least 4 weeks before the exam period.</li>
-            <li>No exams may be scheduled during regular class hours unless explicitly approved.</li>
-            <li>Conflicts or overlaps must be reported to the Registrar's Office within 5 working days of the schedule release.</li>
-        </ul>
-    </div>
-
-    <div class="policy-section">
-        <h2>5. Student Responsibilities</h2>
-        <ul>
-            <li>Present valid student ID to enter the exam room.</li>
-            <li>Arrive at least 15 minutes before the scheduled start time.</li>
-            <li>Bring only permitted materials (e.g., calculators, pens, ID).</li>
-            <li>Comply with all academic integrity policies.</li>
-            <li>Notify instructors in advance in case of illness or emergency (with documentation).</li>
-        </ul>
-    </div>
-
-    <div class="policy-section">
-        <h2>6. Academic Integrity</h2>
-        <ul>
-            <li>Cheating, plagiarism, and other forms of misconduct during exams will result in disciplinary action, up to and including suspension or expulsion.</li>
-            <li>Use of unauthorized materials or communication tools (e.g., mobile phones, smartwatches) is strictly prohibited.</li>
-        </ul>
-    </div>
-
-    <div class="policy-section">
-        <h2>7. Special Accommodations</h2>
-        <p>Students requiring special arrangements (e.g., due to disability) must contact the Student Support Office at least 2 weeks prior to exams.</p>
-    </div>
-
-    <div class="policy-section">
-        <h2>8. Exam Environment</h2>
-        <ul>
-            <li>Silence must be maintained during the exam.</li>
-            <li>Personal belongings (bags, phones, notes) must be placed in designated areas.</li>
-            <li>Students must follow the instructions of invigilators at all times.</li>
-        </ul>
-    </div>
-
-    <div class="policy-section">
-        <h2>9. Grading and Feedback</h2>
-        <p>Final exam grades will be posted within 25 working days after the exam.</p>
-    </div>
-</div>
-
-<style>
-.examination-policy-section {
-    max-width: 100%;
-    margin: 0 auto;
-    font-family: 'Gotham', sans-serif;
-}
-
-.policy-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--dark-red);
-}
-
-.policy-section {
-    margin-bottom: 30px;
-    background-color: var(--cream);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    border-left: 4px solid var(--dark-red);
-}
-
-.policy-section h2 {
-    color: var(--dark-red);
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-family: 'Agrandir', sans-serif;
-}
-
-.policy-section p {
-    color: var(--grey);
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
-.policy-section ul {
-    padding-left: 20px;
-    margin: 15px 0 0 0;
-}
-
-.policy-section ul li {
-    margin-bottom: 8px;
-    color: var(--grey);
-    line-height: 1.6;
-}
-
-.policy-section ul li strong {
-    color: var(--dark-red);
-}
-
-.note {
-    background-color: #f8f9fa;
-    border-left: 4px solid var(--dark-red);
-    padding: 15px;
-    margin: 15px 0;
-    font-size: 0.95rem;
-    border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-    .examination-policy-section {
-        padding: 20px 15px;
-    }
-
-    .policy-header h1 {
-        font-size: 1.8rem;
-    }
-
-    .policy-section {
-        padding: 20px;
-    }
-}
-</style>
-</div></div>
-</div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div>
-</div></div>
-</div></article></main>
 <?php include 'footer.php'; ?>

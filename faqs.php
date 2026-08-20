@@ -1,133 +1,151 @@
-<?php include 'header.php'; ?>
-<main id="primary" class="site-main">
-   
-    
- 
-		 
-<article id="post-438" class="post-438 page type-page status-publish hentry">
-	 
-	<div class="uk-container">
-		
+<?php 
+$pageTitle = "Admission FAQs & Answers - Dr. APJ Abdul Kalam University, Indore";
+include 'header.php'; 
+?>
 
-	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			<div class="examination-message-section">
-
-    <div class="message-header">
-        <h1>Frequently Asked Questions</h1>
-        <h3>Dr. A.P.J. Abdul Kalam University, Indore</h3>
+<!-- Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="admission-procedure.php">Admissions</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">FAQs</span>
+        </div>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> FREQUENTLY ASKED QUESTIONS
+        </div>
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 900px; line-height: 1.15;">
+            Admissions &amp; Campus FAQs
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Answers to common questions regarding admissions, recognitions, eligibility &amp; facilities
+        </p>
     </div>
+</section>
 
-    <div class="message-content">
+<!-- Main Body -->
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
+                    
+                    <!-- Accordion Section -->
+                    <div class="accordion custom-faq-accordion d-flex flex-column gap-3" id="admissionsFaq">
+                        
+                        <div class="accordion-item border border-custom rounded-4 overflow-hidden bg-white shadow-xs">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button font-serif fw-bold fs-6 text-primary bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa-solid fa-circle-question text-gold me-2"></i> What is Dr. A.P.J. Abdul Kalam University, Indore?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#admissionsFaq">
+                                <div class="accordion-body text-muted-custom" style="font-size: 0.94rem; line-height: 1.7;">
+                                    Dr. A.P.J. Abdul Kalam University (AKU) is a premier multidisciplinary private university established under the Madhya Pradesh Niji Vishwavidyalaya Adhiniyam. It is recognized by the <strong>University Grants Commission (UGC)</strong> and its professional programs are approved by <strong>AICTE, PCI, BCI, and NCTE</strong>.
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="commitments">
-            <h2>1. What is Dr. A.P.J. Abdul Kalam University, Indore?</h2>
-            <p>
-                Dr. A.P.J. Abdul Kalam University is a **private university** located in Indore, Madhya Pradesh. 
-                It is recognised by the **University Grants Commission (UGC)** and offers a range of undergraduate,
-                postgraduate, and doctoral programs in multiple disciplines. :contentReference[oaicite:1]{index=1}
-            </p>
+                        <div class="accordion-item border border-custom rounded-4 overflow-hidden bg-white shadow-xs">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed font-serif fw-bold fs-6 text-primary bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa-solid fa-circle-question text-gold me-2"></i> Where is the University campus located?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#admissionsFaq">
+                                <div class="accordion-body text-muted-custom" style="font-size: 0.94rem; line-height: 1.7;">
+                                    The lush green 50-acre campus is strategically located along the <strong>Indore–Dewas Bypass Road</strong>, Village Arandia, P.O. Vijay Nagar, Indore – 452010, Madhya Pradesh. The campus is well-connected with regular university transport and city bus services.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border border-custom rounded-4 overflow-hidden bg-white shadow-xs">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed font-serif fw-bold fs-6 text-primary bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fa-solid fa-circle-question text-gold me-2"></i> What academic programmes are offered at AKU Indore?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#admissionsFaq">
+                                <div class="accordion-body text-muted-custom" style="font-size: 0.94rem; line-height: 1.7;">
+                                    The university offers over 100+ academic degrees across <strong>Engineering &amp; Technology (B.Tech/M.Tech/Diploma)</strong>, <strong>Pharmacy (B.Pharm/M.Pharm/D.Pharm)</strong>, <strong>Management (MBA/BBA)</strong>, <strong>Computer Applications (MCA/BCA)</strong>, <strong>Law (B.A. LL.B./LL.B.)</strong>, <strong>Agriculture, Science, Education, and Ph.D.</strong> research disciplines.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border border-custom rounded-4 overflow-hidden bg-white shadow-xs">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed font-serif fw-bold fs-6 text-primary bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fa-solid fa-circle-question text-gold me-2"></i> How can I apply for admission for Session 2026-27?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#admissionsFaq">
+                                <div class="accordion-body text-muted-custom" style="font-size: 0.94rem; line-height: 1.7;">
+                                    You can easily apply online via the University Admission portal or visit the Admission Assistance Cell on campus. Fill out the application form, upload required academic marksheets and passport photos, and participate in counseling for seat allotment.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border border-custom rounded-4 overflow-hidden bg-white shadow-xs">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed font-serif fw-bold fs-6 text-primary bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <i class="fa-solid fa-circle-question text-gold me-2"></i> Are government scholarships applicable for reserved &amp; meritorious students?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#admissionsFaq">
+                                <div class="accordion-body text-muted-custom" style="font-size: 0.94rem; line-height: 1.7;">
+                                    Yes! Eligible candidates belonging to SC/ST/OBC categories receive 100% tuition reimbursement through the <strong>MPTAAS portal</strong>. Additionally, the <strong>Mukhyamantri Medhavi Vidyarthi Yojana (MMVY)</strong> and Central NSP schemes are fully supported.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border border-custom rounded-4 overflow-hidden bg-white shadow-xs">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed font-serif fw-bold fs-6 text-primary bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <i class="fa-solid fa-circle-question text-gold me-2"></i> What hostel and transport facilities are available?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#admissionsFaq">
+                                <div class="accordion-body text-muted-custom" style="font-size: 0.94rem; line-height: 1.7;">
+                                    The university provides secure, separate on-campus hostels for boys and girls with 24/7 security, Wi-Fi, hygienic mess, and recreational rooms. Dedicated fleet of university buses covers all major residential routes across Indore, Dewas, and surrounding areas.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Support Helpdesk Strip -->
+                    <div class="p-4 rounded-4 border border-custom bg-white d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-xs mt-5">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-primary text-gold p-3 d-flex align-items-center justify-content-center shadow-xs" style="width: 50px; height: 50px;">
+                                <i class="fa-solid fa-headset fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-primary fs-6 fw-bold mb-0.5">Still have Questions?</h4>
+                                <p class="text-muted-custom small mb-0">Our admission counselors are here to help you anytime.</p>
+                            </div>
+                        </div>
+                        <a href="admission-assistance.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                            <i class="fa-solid fa-paper-plane me-1.5"></i> Contact Admissions Cell
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-lg-4 col-xl-3">
+                <div class="sidebar-sticky-wrapper">
+                    <?php include "faculty-sidebar.php"; ?>
+                </div>
+            </div>
+
         </div>
-
-        <div class="commitments">
-            <h2>2. Where is the University campus located?</h2>
-            <p>
-                The university is situated on the **Indore–Dewas Bypass Road**, Village Arandia, P.O. Vijay Nagar, 
-                Indore – 452010, Madhya Pradesh, India. It is approximately 10 km from Indore Railway Station. :contentReference[oaicite:2]{index=2}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>3. What programmes does AKU Indore offer?</h2>
-            <p>
-                The university offers a wide variety of programs including **Engineering (B.E/B.Tech)**, 
-                **Pharmacy (B.Pharm/M.Pharm)**, **Science**, **Management (MBA)**, **Commerce**, **Arts**, and **Ph.D** 
-                across multiple fields. There are **over 100 courses** available across UG, PG, diploma, and doctoral levels. :contentReference[oaicite:3]{index=3}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>4. How do I apply for admission?</h2>
-            <p>
-                Admissions are typically processed through the university’s **online admission portal**. Applicants must 
-                meet the programme-specific eligibility criteria and submit applications with supporting documents 
-                by the given deadlines. :contentReference[oaicite:4]{index=4}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>5. What are the eligibility criteria?</h2>
-            <p>
-                Eligibility depends on the programme:
-                <ul class="commitment-list">
-                    <li>B.E/B.Tech: 10+2 pass with required science subjects and valid JEE Main or university criteria.</li>
-                    <li>B.Pharm/M.Pharm: Relevant qualification as specified by the university and PCI approval.</li>
-                    <li>MBA/MCA: Graduation in relevant field and additional entrance score, if applicable.</li>
-                    <li>Ph.D: Master’s degree with minimum percentage as defined by programme norms. </li>
-                </ul>
-                Specific requirements are published in the admission brochure each year. :contentReference[oaicite:5]{index=5}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>6. What is the fee range at the university?</h2>
-            <p>
-                Fees vary by programme. For example, the total fee for B.E/B.Tech is approximately ₹3.56–₹3.58 lakhs,
-                and for pharmacy programs, around ₹1 lakh for the entire course duration. Fees may differ by 
-                discipline and batch year. :contentReference[oaicite:6]{index=6}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>7. Is the university recognised by official bodies?</h2>
-            <p>
-                Yes, AKU Indore is recognised by the **University Grants Commission (UGC)**. Many technical and
-                professional programmes are also approved by bodies such as **AICTE** and **PCI**, ensuring compliance
-                with national academic standards. :contentReference[oaicite:7]{index=7}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>8. Does AKU Indore provide scholarships?</h2>
-            <p>
-                Yes, the university facilitates scholarship opportunities, including government-sponsored schemes for
-                eligible students such as those from reserved categories or economically weaker sections, subject
-                to applicable conditions and documentation. :contentReference[oaicite:8]{index=8}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>9. Does the university offer hostel facilities?</h2>
-            <p>
-                Yes, separate hostel accommodation for male and female students is provided on campus with basic
-                amenities. Fees and availability may vary by room type and facilities. :contentReference[oaicite:9]{index=9}
-            </p>
-        </div>
-
-        <div class="commitments">
-            <h2>10. How can I contact the university?</h2>
-            <p>
-                Dr. A.P.J. Abdul Kalam University, Indore can be reached through:
-                <ul class="commitment-list">
-                    <li>Toll Free: 1800-300-26072</li>
-                    <li>Phone: +91-87188-03404 / +91-87188-03403</li>
-                    <li>Email: office_university@aku.ac.in</li>
-                </ul>  
-                The official website is <a href="../index.php" target="_blank">aku.ac.in</a>. :contentReference[oaicite:10]{index=10}
-            </p>
-        </div>
-
     </div>
+</main>
 
-</div>
-
-		</div>
-	</div>
-</div></div></div></div>
-</div>	</div><!-- .entry-content -->
-	</div>
-	</article><!-- #post-438 -->  
-	</main>
 <?php include 'footer.php'; ?>

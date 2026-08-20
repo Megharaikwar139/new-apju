@@ -1,328 +1,268 @@
-<?php include 'header.php'; ?>
-<main id="primary" class="site-main">
-   
-    
- 
-		 
-<article id="post-424" class="post-424 page type-page status-publish hentry">
-	 
-	<div class="uk-container">
-		
+<?php 
+$pageTitle = "Admission Procedure & Guidelines 2026-27 - Dr. APJ Abdul Kalam University, Indore";
+include 'header.php'; 
+?>
 
-	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			<style>
-    
-    .aku-courses-eligibility table{
-width:100%;
-border-collapse:collapse;
-}
+<!-- Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="admission-procedure.php">Admissions</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">Admission Procedure</span>
+        </div>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> ADMISSIONS SESSION 2026-27
+        </div>
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 900px; line-height: 1.15;">
+            Admission Procedure &amp; Eligibility Criteria
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Dr. A.P.J. Abdul Kalam University · Approved by AICTE, PCI, UGC &amp; Govt. of MP
+        </p>
+    </div>
+</section>
 
-.aku-courses-eligibility th{
-background:#8b1a1a;
-color:#fff;
-padding:10px;
-text-align:left;
-}
+<!-- Main Body -->
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
+                    
+                    <!-- Quick Admission Steps Banner -->
+                    <div class="p-4 rounded-4 border border-custom bg-white shadow-xs mb-5">
+                        <div class="tab-section-header mb-3 pb-2 border-bottom border-custom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-route text-gold fs-5"></i>
+                                <h3 class="font-serif text-primary fs-4 fw-bold m-0">Step-by-Step Admission Process</h3>
+                            </div>
+                            <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Session 2026-27 Open</span>
+                        </div>
 
-.aku-courses-eligibility td{
-border:1px solid #ddd;
-padding:10px;
-}
+                        <div class="row g-3 mt-1">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="p-3 rounded-4 bg-light border border-custom h-100 text-center">
+                                    <div class="rounded-circle bg-white border border-custom text-primary fw-bold d-inline-flex align-items-center justify-content-center mb-2 shadow-xs" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                                        01
+                                    </div>
+                                    <h4 class="font-serif text-primary fs-6 fw-bold mb-1">Choose Program</h4>
+                                    <p class="small text-muted-custom mb-0" style="font-size: 0.78rem; line-height: 1.5;">
+                                        Select desired UG, PG, Diploma or Doctoral course.
+                                    </p>
+                                </div>
+                            </div>
 
-.aku-courses-eligibility tr:nth-child(even){
-background:#f7f7f7;
-}
-</style><div class="aku-courses-eligibility">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="p-3 rounded-4 bg-light border border-custom h-100 text-center">
+                                    <div class="rounded-circle bg-white border border-custom text-primary fw-bold d-inline-flex align-items-center justify-content-center mb-2 shadow-xs" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                                        02
+                                    </div>
+                                    <h4 class="font-serif text-primary fs-6 fw-bold mb-1">Register Online</h4>
+                                    <p class="small text-muted-custom mb-0" style="font-size: 0.78rem; line-height: 1.5;">
+                                        Fill admission application &amp; upload documents.
+                                    </p>
+                                </div>
+                            </div>
 
-<h2 style="text-align:center;">Courses & Eligibility</h2>
-<p style="text-align:center;">Academic Year: 2026-2027</p>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="p-3 rounded-4 bg-light border border-custom h-100 text-center">
+                                    <div class="rounded-circle bg-white border border-custom text-primary fw-bold d-inline-flex align-items-center justify-content-center mb-2 shadow-xs" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                                        03
+                                    </div>
+                                    <h4 class="font-serif text-primary fs-6 fw-bold mb-1">Counselling</h4>
+                                    <p class="small text-muted-custom mb-0" style="font-size: 0.78rem; line-height: 1.5;">
+                                        Verification of certificates &amp; merit evaluation.
+                                    </p>
+                                </div>
+                            </div>
 
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>S. No.</th>
-<th>Course</th>
-<th>Duration</th>
-<th>Eligibility</th>
-</tr>
-</thead>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="p-3 rounded-4 bg-light border border-custom h-100 text-center">
+                                    <div class="rounded-circle bg-white border border-custom text-primary fw-bold d-inline-flex align-items-center justify-content-center mb-2 shadow-xs" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                                        04
+                                    </div>
+                                    <h4 class="font-serif text-primary fs-6 fw-bold mb-1">Seat Allotment</h4>
+                                    <p class="small text-muted-custom mb-0" style="font-size: 0.78rem; line-height: 1.5;">
+                                        Pay tuition fee &amp; confirm campus enrollment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<tbody>
+                    <!-- Courses & Eligibility Matrix Table -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-3 pb-2 border-bottom border-custom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-table-list text-gold fs-5"></i>
+                                <h3 class="font-serif text-primary fs-4 fw-bold m-0">Courses &amp; Eligibility Criteria Matrix</h3>
+                            </div>
+                            <span class="text-muted-custom small"><i class="fa-regular fa-calendar-check text-gold me-1"></i> Academic Year 2026-27</span>
+                        </div>
 
-<tr>
-<td>1</td>
-<td>Diploma Engineering</td>
-<td>3 Years</td>
-<td>10th with Science and Mathematics (Minimum 35% for all categories)</td>
-</tr>
+                        <div class="table-responsive rounded-4 border border-custom overflow-hidden shadow-xs bg-white">
+                            <table class="luxury-table table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 60px;">#</th>
+                                        <th>Course Name</th>
+                                        <th style="width: 120px;">Duration</th>
+                                        <th>Eligibility Criteria</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>1</strong></td>
+                                        <td><span class="fw-bold text-primary">Diploma Engineering</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10th with Science &amp; Mathematics (Minimum 35% for all categories) from a recognized Board.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2</strong></td>
+                                        <td><span class="fw-bold text-primary">Diploma Engineering (Lateral Entry)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>12th with Physics, Chemistry &amp; Mathematics OR ITI (2 Years) in relevant trade.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3</strong></td>
+                                        <td><span class="fw-bold text-primary">B.E. (Bachelor of Engineering)</span></td>
+                                        <td><span class="badge bg-light text-dark border">4 Years</span></td>
+                                        <td>10+2 with Mathematics &amp; Physics along with Chemistry/Biotechnology/Technical Vocational subject. Minimum 45% (40% for reserved category).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>4</strong></td>
+                                        <td><span class="fw-bold text-primary">B.E. (Lateral Entry)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>Diploma in Engineering from an AICTE approved institute OR B.Sc. with Mathematics with at least 45% (40% for SC/ST/OBC).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>5</strong></td>
+                                        <td><span class="fw-bold text-primary">M.Tech (Master of Technology)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>B.E. / B.Tech in relevant engineering discipline with at least 50% (45% for reserved category).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>6</strong></td>
+                                        <td><span class="fw-bold text-primary">D.Pharm (Diploma in Pharmacy)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>10+2 with Physics, Chemistry as compulsory subjects along with Mathematics / Biology.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>7</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Pharm (Bachelor of Pharmacy)</span></td>
+                                        <td><span class="badge bg-light text-dark border">4 Years</span></td>
+                                        <td>10+2 with Physics &amp; Chemistry along with Mathematics / Biology with minimum 45% (40% reserved).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>8</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Pharm (Lateral Entry)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>Passed D.Pharm from a PCI approved institution with at least 45% marks (40% reserved).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>9</strong></td>
+                                        <td><span class="fw-bold text-primary">M.Pharm</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>B.Pharm with at least 55% marks (50% for reserved category) from a PCI recognized institution.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>10</strong></td>
+                                        <td><span class="fw-bold text-primary">MBA (Master of Business Administration)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>Graduation in any discipline with at least 50% marks (45% for SC/ST/OBC).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>11</strong></td>
+                                        <td><span class="fw-bold text-primary">MCA (Master of Computer Applications)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>Passed BCA / Bachelor Degree in Computer Science or equivalent with 50% marks (45% reserved) and Mathematics at 10+2 or Graduation.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>12</strong></td>
+                                        <td><span class="fw-bold text-primary">BBA / BCA / B.Com / B.Sc</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>Passed 10+2 Examination in relevant stream from a recognized Board.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>13</strong></td>
+                                        <td><span class="fw-bold text-primary">B.A. LL.B. / LL.B. (Law)</span></td>
+                                        <td><span class="badge bg-light text-dark border">5 Yrs / 3 Yrs</span></td>
+                                        <td>Passed 10+2 (for 5-year Integrated) or Graduation (for 3-year LL.B.) with minimum 45% marks (40% reserved) as per BCI norms.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>14</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Ed. / M.Ed.</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>Graduation / Post Graduation with at least 50% marks (45% reserved) as per NCTE norms.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-<tr>
-<td>2</td>
-<td>Diploma Engineering (Lateral Entry)</td>
-<td>2 Years</td>
-<td>12th with Physics, Chemistry & Mathematics OR ITI (2 Years)</td>
-</tr>
+                    <!-- Required Documents Checklist -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-3 pb-2 border-bottom border-custom d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-folder-open text-gold fs-5"></i>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Mandatory Documents Checklist for Verification</h3>
+                        </div>
 
-<tr>
-<td>3</td>
-<td>B.E.</td>
-<td>4 Years</td>
-<td>12th with Mathematics & Physics along with Chemistry/Biotechnology/Technical vocational subject. Minimum 45% (40% reserved)</td>
-</tr>
+                        <div class="p-4 rounded-4 border border-custom bg-light shadow-xs">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <ul class="d-flex flex-column gap-2 mb-0 ps-0 list-unstyled" style="font-size: 0.92rem; color: #3d3031;">
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> 10th Standard Marksheet &amp; Passing Certificate</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> 12th Standard / Diploma Final Marksheet</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Graduation Marksheets &amp; Degree (for PG Admissions)</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Transfer Certificate (TC) &amp; Migration Certificate</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="d-flex flex-column gap-2 mb-0 ps-0 list-unstyled" style="font-size: 0.92rem; color: #3d3031;">
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Caste &amp; Domicile Certificate (if claiming reservation)</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Income Certificate (for Scholarship Applicants)</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Aadhar Card Copy of Student &amp; Parents</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Recent Passport Size Photographs (6 Copies)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<tr>
-<td>4</td>
-<td>B.E. (Lateral Entry)</td>
-<td>3 Years</td>
-<td>Diploma in Engineering from AICTE approved institute OR B.Sc with Mathematics</td>
-</tr>
+                    <!-- Admission Helpdesk CTA Strip -->
+                    <div class="p-4 rounded-4 border border-custom bg-white d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-xs">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-primary text-gold p-3 d-flex align-items-center justify-content-center shadow-xs" style="width: 50px; height: 50px;">
+                                <i class="fa-solid fa-headset fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-primary fs-6 fw-bold mb-0.5">Need Guidance on Course Selection?</h4>
+                                <p class="text-muted-custom small mb-0">Our expert academic counselors are available to assist you Monday through Saturday.</p>
+                            </div>
+                        </div>
+                        <a href="admission-assistance.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                            <i class="fa-solid fa-phone me-1.5"></i> Contact Helpdesk
+                        </a>
+                    </div>
 
-<tr>
-<td>5</td>
-<td>M.Tech</td>
-<td>2 Years</td>
-<td>B.E./B.Tech in relevant Engineering discipline (50% General, 45% Reserved)</td>
-</tr>
+                </article>
+            </div>
 
-<tr>
-<td>6</td>
-<td>M.Tech (Structural Engineering)</td>
-<td>2 Years</td>
-<td>B.E./B.Tech Civil Engineering with 50% (45% reserved)</td>
-</tr>
+            <!-- Right Sidebar -->
+            <div class="col-lg-4 col-xl-3">
+                <div class="sidebar-sticky-wrapper">
+                    <?php include "faculty-sidebar.php"; ?>
+                </div>
+            </div>
 
-<tr>
-<td>7</td>
-<td>D.Pharm</td>
-<td>2 Years</td>
-<td>12th with Physics & Chemistry and Mathematics/Biology/Biotechnology</td>
-</tr>
+        </div>
+    </div>
+</main>
 
-<tr>
-<td>8</td>
-<td>B.Pharm</td>
-<td>4 Years</td>
-<td>12th with Physics & Chemistry with Mathematics/Biology/Biotechnology</td>
-</tr>
-
-<tr>
-<td>9</td>
-<td>B.Pharm (Lateral Entry)</td>
-<td>3 Years</td>
-<td>D.Pharm with 45% (40% reserved)</td>
-</tr>
-
-<tr>
-<td>10</td>
-<td>M.Pharm</td>
-<td>2 Years</td>
-<td>B.Pharm with 55% (50% reserved)</td>
-</tr>
-
-<tr>
-<td>11</td>
-<td>MBA</td>
-<td>2 Years</td>
-<td>Graduation with 50% (45% reserved)</td>
-</tr>
-
-<tr>
-<td>12</td>
-<td>MCA</td>
-<td>2 Years</td>
-<td>Graduation (except BBA) with Mathematics at 10+2 or graduation level</td>
-</tr>
-
-<tr>
-<td>13</td>
-<td>B.Sc. (Agriculture)</td>
-<td>4 Years</td>
-<td>12th with PCM / PCB / Agriculture</td>
-</tr>
-
-<tr>
-<td>14</td>
-<td>B.Ed.</td>
-<td>2 Years</td>
-<td>50% in Bachelor/Master Degree OR B.E. with Science & Maths (55%)</td>
-</tr>
-
-<tr>
-<td>15</td>
-<td>LLB</td>
-<td>3 Years</td>
-<td>Graduation with 45% (42% OBC / 40% SC-ST)</td>
-</tr>
-
-<tr>
-<td>16</td>
-<td>BA-LLB</td>
-<td>5 Years</td>
-<td>12th with 45% (42% OBC / 40% SC-ST)</td>
-</tr>
-
-<tr>
-<td>17</td>
-<td>B.Com</td>
-<td>3/4 Years</td>
-<td>12th with Commerce/Maths/Science</td>
-</tr>
-
-<tr>
-<td>18</td>
-<td>B.Sc.</td>
-<td>3/4 Years</td>
-<td>12th with Maths & Science</td>
-</tr>
-
-<tr>
-<td>19</td>
-<td>B.A.</td>
-<td>3/4 Years</td>
-<td>12th any discipline</td>
-</tr>
-
-<tr>
-<td>20</td>
-<td>BBA</td>
-<td>3/4 Years</td>
-<td>12th any discipline</td>
-</tr>
-
-<tr>
-<td>21</td>
-<td>BCA</td>
-<td>3/4 Years</td>
-<td>12th with Maths/Arts/Bio/Commerce</td>
-</tr>
-
-<tr>
-<td>22</td>
-<td>M.Sc.</td>
-<td>1/2 Years</td>
-<td>Graduation in relevant stream (NEP rules apply)</td>
-</tr>
-
-<tr>
-<td>23</td>
-<td>M.A.</td>
-<td>2 Years</td>
-<td>Graduation in relevant stream (NEP rules apply)</td>
-</tr>
-
-<tr>
-<td>24</td>
-<td>M.Com</td>
-<td>2 Years</td>
-<td>Graduation in relevant stream</td>
-</tr>
-
-<tr>
-<td>25</td>
-<td>PGDCA</td>
-<td>1 Year</td>
-<td>Graduation with 45% (40% reserved)</td>
-</tr>
-
-<tr>
-<td>26</td>
-<td>B.Lib & I.Sc.</td>
-<td>1 Year</td>
-<td>50% in Bachelor or Master Degree</td>
-</tr>
-
-<tr>
-<td>27</td>
-<td>M.Lib & I.Sc.</td>
-<td>1 Year</td>
-<td>B.Lib & I.Sc.</td>
-</tr>
-
-<tr>
-<td>28</td>
-<td>BSW</td>
-<td>3/4 Years</td>
-<td>12th any discipline</td>
-</tr>
-
-<tr>
-<td>29</td>
-<td>MSW</td>
-<td>2 Years</td>
-<td>Graduation with 50% (45% reserved)</td>
-</tr>
-
-<tr>
-<td>30</td>
-<td>B.Sc. Fashion Design</td>
-<td>3/4 Years</td>
-<td>12th any discipline</td>
-</tr>
-
-<tr>
-<td>31</td>
-<td>M.Sc. Fashion Design</td>
-<td>2 Years</td>
-<td>Graduation in Fashion Design / Textile / Home Science or related field</td>
-</tr>
-
-<tr>
-<td>32</td>
-<td>LLM</td>
-<td>2 Years</td>
-<td>LLB / BA LLB / BBA LLB / B.Com LLB / B.Sc LLB</td>
-</tr>
-
-<tr>
-<td>33</td>
-<td>MBA (Hospital Administration)</td>
-<td>2 Years</td>
-<td>Graduation with 50% (45% reserved)</td>
-</tr>
-
-<tr>
-<td>34</td>
-<td>DCA</td>
-<td>1 Year</td>
-<td>12th any discipline</td>
-</tr>
-
-<tr>
-<td>35</td>
-<td>Diploma (Fashion Design)</td>
-<td>1 Year</td>
-<td>12th any discipline</td>
-</tr>
-
-</tbody>
-</table>
-
-</div>
-		</div>
-	</div>
-<div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-info vc_do_message" ><div class="vc_message_box-icon"><i class="fa fa-solid fa-circle-info"></i></div><p>Note</p>
-</div>
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			 <ol>
-      <li>Portal fee will be charged as decided by the University.</li>
-      <li>50% of total fees will be paid to the institutes by the candidates for the confirmation of admission of first year.</li>
-      <li>No scholarship basis admission will be done.</li>
-      <li>Bus fee is optional (₹20,000/- per year) for all courses.</li>
-      <li>Boys hostel fee is optional (₹30,000/- excluding meals) for all courses.</li>
-      <li>Group Insurance fees will be charged extra.</li>
-      <li>Exam fees will be charged as per University rules.</li>
-      <li>Enrollment fees ₹500/- will be paid at admission time.</li>
-      <li>In case of short attendance, ₹5,000/- per semester will be charged as fine.</li>
-    </ol>
-		</div>
-	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div></div></div>
-</div>	</div><!-- .entry-content -->
-	</div>
-	</article><!-- #post-424 -->  
-	</main>
 <?php include 'footer.php'; ?>

@@ -1,152 +1,149 @@
-<?php include 'header.php'; ?>
-<main id="primary" class="site-main">
-   
-    
- 
-		 
-<article id="post-434" class="post-434 page type-page status-publish hentry">
-	 
-	<div class="uk-container">
-		
+<?php 
+$pageTitle = "Hostel Rules & Regulations - Dr. APJ Abdul Kalam University, Indore";
+include 'header.php'; 
+?>
 
-	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			<div class="examination-message-section">
-
-
-    <div class="message-content">
-
-        <!-- Introduction -->
-        <div class="vision-statement">
-            <p>
-                These Hostel Rules & Regulations are framed to ensure discipline, safety,
-                hygiene, and a peaceful academic environment for all residents of the
-                University Hostels. Every student residing in the hostel is expected
-                to comply strictly with these rules.
-            </p>
+<!-- Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="admission-procedure.php">Admissions</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">Hostel Rules</span>
         </div>
-
-        <!-- Accommodation Policies -->
-        <div class="commitments">
-            <h2>Accommodation Policies for University Hostels</h2>
-
-            <ul class="commitment-list">
-                <li>
-                    <strong>Room Allocation:</strong> Rooms are allotted based on availability
-                    and student preferences, subject to approval by hostel authorities.
-                </li>
-                <li>
-                    <strong>Room Sharing:</strong> Rooms or dormitories may be shared depending
-                    on occupancy and institutional requirements.
-                </li>
-                <li>
-                    <strong>Check-in:</strong> Students must follow the designated check-in
-                    schedule and complete all required formalities.
-                </li>
-                <li>
-                    <strong>Check-out:</strong> Rooms must be vacated as per hostel instructions
-                    after due inspection and clearance.
-                </li>
-                <li>
-                    <strong>Visitor Policy:</strong> Visitors are permitted only during
-                    designated visiting hours and must register at the hostel reception.
-                </li>
-                <li>
-                    <strong>Quiet Hours:</strong> Designated quiet hours are strictly enforced
-                    to support study and rest.
-                </li>
-                <li>
-                    <strong>Safety & Security:</strong> Hostel premises are monitored 24×7
-                    with controlled access and security personnel.
-                </li>
-                <li>
-                    <strong>Maintenance & Cleanliness:</strong> Regular cleaning of common areas
-                    is ensured, while residents are responsible for cleanliness in their rooms.
-                </li>
-                <li>
-                    <strong>Facilities & Amenities:</strong> Students have access to common areas,
-                    bathrooms, mess facilities, study rooms, and recreational spaces.
-                </li>
-                <li>
-                    <strong>Behaviour & Conduct:</strong> Respectful behaviour towards staff and
-                    fellow residents is mandatory. Misconduct, harassment, or substance abuse
-                    is strictly prohibited.
-                </li>
-                <li>
-                    <strong>Communication & Feedback:</strong> Students may communicate concerns,
-                    suggestions, or feedback through designated channels.
-                </li>
-            </ul>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> RESIDENTIAL LIFE & DISCIPLINE
         </div>
-
-        <!-- Safety Measures -->
-        <div class="commitments">
-            <h2>Safety and Security Measures for University Hostels</h2>
-
-            <ul class="commitment-list">
-                <li>
-                    <strong>Secure Entrances:</strong> Controlled entry with security personnel
-                    and authorized access systems.
-                </li>
-                <li>
-                    <strong>Emergency Contacts:</strong> Emergency contact numbers are clearly
-                    displayed at prominent locations.
-                </li>
-                <li>
-                    <strong>Lighting:</strong> Adequate lighting is maintained in pathways,
-                    staircases, and common areas.
-                </li>
-                <li>
-                    <strong>Fire Safety:</strong> Smoke detectors and fire extinguishers are
-                    installed at appropriate locations and inspected regularly.
-                </li>
-                <li>
-                    <strong>Personal Safety:</strong> Rooms are equipped with secure locks and
-                    safe storage facilities for valuables.
-                </li>
-                <li>
-                    <strong>Health & Hygiene:</strong> Regular cleaning of common areas, bathrooms,
-                    and mess facilities with proper sanitation measures.
-                </li>
-                <li>
-                    <strong>Surveillance & Monitoring:</strong> CCTV cameras and regular security
-                    patrols ensure continuous monitoring.
-                </li>
-                <li>
-                    <strong>Emergency Response:</strong> Hostel staff is available round-the-clock
-                    to respond to emergencies.
-                </li>
-                <li>
-                    <strong>Community Guidelines:</strong> A culture of respect, cooperation, and
-                    discipline is promoted among residents.
-                </li>
-                <li>
-                    <strong>Emergency Preparedness:</strong> Clear communication channels are
-                    maintained for emergency alerts and instructions.
-                </li>
-            </ul>
-        </div>
-
-        <!-- Closing Note -->
-        <div class="goal-statement">
-            <p>
-                Any violation of hostel rules and regulations may result in disciplinary
-                action as per University norms. These policies aim to create a safe,
-                respectful, and academically supportive living environment for all residents.
-            </p>
-        </div>
-
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 900px; line-height: 1.15;">
+            Hostel Rules &amp; Regulations
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Dr. A.P.J. Abdul Kalam University · Campus Residential Standards &amp; Safety Protocols
+        </p>
     </div>
+</section>
 
-</div>
+<!-- Main Body -->
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
+                    
+                    <!-- Intro Highlight Card -->
+                    <div class="intro-highlight-card mb-5">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge">
+                                <i class="fa-solid fa-hotel"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-primary fs-4 fw-bold mb-1">Residential Code of Conduct</h3>
+                                <p class="mb-0 text-muted-custom" style="font-size: 0.95rem; line-height: 1.7;">
+                                    These Hostel Rules &amp; Regulations are framed to ensure discipline, 24/7 student safety, hygiene, and a peaceful academic learning environment for all residents of the University Hostels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-		</div>
-	</div>
-</div></div></div></div></div></div></div></div>
-</div>	</div><!-- .entry-content -->
-	</div>
-	</article><!-- #post-434 -->  
-	</main>
+                    <!-- Accommodation Policies -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
+                            <span class="section-icon-pill"><i class="fa-solid fa-bed"></i></span>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Accommodation &amp; Stay Policies</h3>
+                        </div>
+
+                        <div class="row g-3.5">
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-key"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">Room Allocation &amp; Sharing</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Rooms are allotted based on availability and institutional merit. Room swapping or subletting without Warden approval is strictly prohibited.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-user-shield"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">Curfew &amp; Quiet Hours</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Hostel gates close strictly at 8:00 PM. Designated quiet hours (10:00 PM to 6:00 AM) are strictly enforced for peaceful study and rest.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-utensils"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">Mess &amp; Dining Guidelines</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Nutritious vegetarian meals are served during fixed mess timings. Carrying food items, plates, or utensils to rooms is not permitted.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2.5">
+                                        <div class="feature-icon-badge" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; border-color: rgba(220, 53, 69, 0.3);">
+                                            <i class="fa-solid fa-ban"></i>
+                                        </div>
+                                        <h4 class="font-serif text-primary fw-bold fs-6 mb-0">Zero Tolerance Violations</h4>
+                                    </div>
+                                    <p class="small text-muted-custom mb-0" style="line-height: 1.65; font-size: 0.9rem;">
+                                        Ragging, smoking, alcohol, narcotics, electrical heating appliances, and possession of unauthorized weapons will lead to immediate expulsion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hostel Committee Assistance -->
+                    <div class="p-4 rounded-4 border border-custom bg-white d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-xs">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-primary text-gold p-3 d-flex align-items-center justify-content-center shadow-xs" style="width: 52px; height: 52px;">
+                                <i class="fa-solid fa-building-user fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-primary fs-6 fw-bold mb-0.5">Hostel Admission &amp; Warden Office</h4>
+                                <p class="text-muted-custom small mb-0">For room bookings and residential inquiries, visit Chief Warden Office.</p>
+                            </div>
+                        </div>
+                        <a href="transport-committee.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                            <i class="fa-solid fa-users me-1.5"></i> Hostel Committee Info
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-lg-4 col-xl-3">
+                <div class="sidebar-sticky-wrapper">
+                    <?php include "faculty-sidebar.php"; ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
 <?php include 'footer.php'; ?>

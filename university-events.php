@@ -1,196 +1,127 @@
 <?php 
+$pageTitle = "University Events & Campus Fests - Dr. APJ Abdul Kalam University, Indore";
 require_once 'db.php';
-$pageTitle = "University Events - Dr APJ Abdul Kalam University";
 include 'header.php'; 
+
+try {
+    $events_stmt = $pdo->prepare("SELECT title AS post_title, slug AS post_name, event_date, venue, content, image_path FROM events ORDER BY event_date DESC");
+    $events_stmt->execute();
+    $events = $events_stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {
+    $events = [];
+}
 ?>
-<main id="primary" class="site-main">
-    <!-- Page Header Banner -->
-    <section class="page-header" style="background: linear-gradient(rgba(113,23,28,0.88), rgba(0,0,0,0.85)), url('assets/images/about.jpg') center/cover no-repeat; padding: 60px 0; color: #fff; text-align: center;">
-        <div class="uk-container">
-            <h1 style="color: #ffffff; font-size: 34px; font-weight: 700; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">University Events</h1>
-            <div class="breadcrumb" style="font-size: 14px; color: #e2e8f0;">
-                <a href="index.php" style="color: #ffffff; text-decoration: none;">Home</a> &raquo; <span style="color: #ffd6d9;">Events</span>
-            </div>
+
+<!-- Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="gallery.php">Campus Life</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">University Events</span>
         </div>
-    </section>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> CELEBRATING ACADEMIC &amp; CULTURAL EXCELLENCE
+        </div>
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 950px; line-height: 1.15;">
+            University Events &amp; Celebrations
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Dr. A.P.J. Abdul Kalam University · National Conferences, Hackathons, Fests &amp; Sports Meets
+        </p>
+    </div>
+</section>
 
-    <!-- Events Grid Container -->
-    <div class="uk-container" style="max-width: 1300px; padding: 50px 20px 80px 20px; margin: 0 auto;">
-        <style>
-        .events-listing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .event-grid-card {
-            background: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-            border: 1px solid #eef0f4;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .event-grid-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .event-grid-thumb {
-            position: relative;
-            width: 100%;
-            height: 195px;
-            overflow: hidden;
-            background: #2a3b8f;
-        }
-
-        .event-grid-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.35s ease;
-        }
-
-        .event-grid-card:hover .event-grid-thumb img {
-            transform: scale(1.04);
-        }
-
-        .event-grid-body {
-            padding: 24px 22px 22px 22px;
-            display: flex;
-            flex-direction: column;
-            flex: 1 1 auto;
-        }
-
-        .event-grid-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1e293b;
-            margin: 0 0 10px 0;
-            line-height: 1.35;
-        }
-
-        .event-grid-title a {
-            color: #1e293b;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .event-grid-title a:hover {
-            color: #1e73be;
-        }
-
-        .event-grid-date {
-            color: #888888;
-            font-size: 13px;
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        .event-grid-excerpt {
-            color: #64748b;
-            font-size: 13.5px;
-            line-height: 1.6;
-            margin-bottom: 22px;
-            flex: 1 1 auto;
-        }
-
-        .btn-view-details {
-            display: inline-block;
-            background-color: #1e73be;
-            color: #ffffff !important;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 9px 18px;
-            border-radius: 4px;
-            text-decoration: none !important;
-            letter-spacing: 0.5px;
-            align-self: flex-start;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-        }
-
-        .btn-view-details:hover {
-            background-color: #155b96;
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 991px) {
-            .events-listing-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .events-listing-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            .event-grid-thumb {
-                height: 180px;
-            }
-        }
-        </style>
-
-        <div class="events-listing-grid">
-            <?php
-            $events_stmt = $pdo->prepare("SELECT title AS post_title, slug AS post_name, event_date, content FROM events ORDER BY event_date DESC");
-            $events_stmt->execute();
-            $events = $events_stmt->fetchAll();
-
-            $defaultEventImg = "uploads/2025/03/events.jpg";
-            if (!file_exists($defaultEventImg)) {
-                $defaultEventImg = "assets/images/about.jpg";
-            }
-
-            if ($events) {
-                foreach ($events as $event) {
-                    $date_raw = $event['event_date'];
-                    $formatted_date = $date_raw ? date('m/d/Y', strtotime($date_raw)) : '';
+<!-- Main Body -->
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
                     
-                    // Excerpt text cleanup
-                    $plain_text = trim(strip_tags($event['content']));
-                    if (empty($plain_text)) {
-                        $excerpt = "Join us for this exciting university event. Click below to view complete details, schedule, and participation guidelines.";
-                    } else {
-                        $excerpt = mb_strimwidth($plain_text, 0, 115, "...");
-                    }
-            ?>
-            <div class="event-grid-card">
-                <div class="event-grid-thumb">
-                    <a href="event/<?php echo $event['post_name']; ?>/">
-                        <img src="<?php echo htmlspecialchars($defaultEventImg); ?>" alt="<?php echo htmlspecialchars($event['post_title']); ?>">
-                    </a>
-                </div>
-                <div class="event-grid-body">
-                    <h3 class="event-grid-title">
-                        <a href="event/<?php echo $event['post_name']; ?>/">
-                            <?php echo htmlspecialchars($event['post_title']); ?>
-                        </a>
-                    </h3>
-                    <?php if ($formatted_date): ?>
-                    <div class="event-grid-date"><?php echo htmlspecialchars($formatted_date); ?></div>
-                    <?php endif; ?>
-                    <div class="event-grid-excerpt">
-                        <?php echo htmlspecialchars($excerpt); ?>
+                    <!-- Intro Highlight Card -->
+                    <div class="intro-highlight-card mb-5">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge">
+                                <i class="fa-solid fa-calendar-star"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-primary fs-4 fw-bold mb-1">Dynamic Happenings Across the Campus</h3>
+                                <p class="mb-0 text-muted-custom" style="font-size: 0.95rem; line-height: 1.75;">
+                                    Life at Dr. A.P.J. Abdul Kalam University is bustling with round-the-year academic symposiums, robotics hackathons, pharmaceutical summits, sporting extravaganzas, and celebrity youth fests. Click on any event to view full circular details.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <a href="event/<?php echo $event['post_name']; ?>/" class="btn-view-details">
-                        VIEW DETAILS
-                    </a>
-                </div>
+
+                    <!-- Events Grid -->
+                    <div class="row g-4 mb-5">
+                        <?php foreach ($events as $event): 
+                            $date_raw = $event['event_date'] ?? '';
+                            $month = $date_raw ? date('M', strtotime($date_raw)) : 'AUG';
+                            $day = $date_raw ? date('d', strtotime($date_raw)) : '20';
+                            $year = $date_raw ? date('Y', strtotime($date_raw)) : '2026';
+                            $venue = !empty($event['venue']) ? $event['venue'] : 'Indore Campus';
+                            $slug = $event['post_name'];
+                            $eventUrl = "event/{$slug}/";
+                            
+                            $plain_text = trim(strip_tags($event['content'] ?? ''));
+                            if (empty($plain_text)) {
+                                $excerpt = "Click view details to explore complete schedule, speaker sessions, participation eligibility, and event circulars.";
+                            } else {
+                                $excerpt = mb_strimwidth($plain_text, 0, 130, "...");
+                            }
+                        ?>
+                        <div class="col-md-6">
+                            <div class="feature-info-card p-4 h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-start gap-3 mb-3">
+                                        <!-- Date Badge -->
+                                        <div class="text-center rounded-3 p-2 bg-primary text-white flex-shrink-0" style="min-width: 60px;">
+                                            <span class="font-serif fw-bold fs-4 d-block lh-1 text-gold"><?php echo $day; ?></span>
+                                            <span class="small fw-semibold text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.08em;"><?php echo $month . ' ' . $year; ?></span>
+                                        </div>
+                                        <div>
+                                            <span class="badge bg-light text-primary border mb-1" style="font-size: 0.7rem;">
+                                                <i class="fa-solid fa-location-dot text-gold me-1"></i> <?php echo htmlspecialchars($venue); ?>
+                                            </span>
+                                            <h4 class="font-serif text-primary fs-6 fw-bold mb-0" style="line-height: 1.35;">
+                                                <a href="<?php echo htmlspecialchars($eventUrl); ?>" class="text-primary text-decoration-none hover-gold">
+                                                    <?php echo htmlspecialchars($event['post_title']); ?>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <p class="small text-muted-custom mb-3" style="line-height: 1.6; font-size: 0.88rem;">
+                                        <?php echo htmlspecialchars($excerpt); ?>
+                                    </p>
+                                </div>
+                                <div class="pt-2.5 border-top border-custom d-flex align-items-center justify-content-between">
+                                    <span class="badge bg-gold text-dark fw-bold px-2.5 py-1 rounded-pill" style="font-size: 0.7rem;">Event Circular</span>
+                                    <a href="<?php echo htmlspecialchars($eventUrl); ?>" class="btn btn-sm btn-gold-pill px-3 py-1 fw-bold" style="font-size: 0.78rem;">
+                                        View Details <i class="fa-solid fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                </article>
             </div>
-            <?php 
-                }
-            } else {
-                echo "<p style='grid-column: 1/-1; text-align: center; color: #666; font-size: 16px; padding: 40px 0;'>No university events currently available.</p>";
-            }
-            ?>
+
+            <!-- Right Sidebar -->
+            <div class="col-lg-4 col-xl-3">
+                <?php include "campus-sidebar.php"; ?>
+            </div>
+
         </div>
     </div>
 </main>
+
 <?php include 'footer.php'; ?>

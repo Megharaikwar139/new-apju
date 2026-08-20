@@ -1,33 +1,117 @@
-<?php include 'header.php'; ?>
+<?php 
+require_once 'db.php';
+include 'header.php'; 
 
-<section class="page-header" style="background-image: linear-gradient(rgb(84 81 81 / 50%), rgba(0, 0, 0, 0.5)), url('assets/images/bg-header.jpg'); background-size: cover; background-position: center; text-align: center;">
-    <div class="uk-container" style="text-align: center;">
-        <h1 style="text-align: center;">AKU in Media</h1>
-        <nav class="breadcrumb" aria-label="Breadcrumb" style="text-align: center; display: block;"><a href="index.php">Home</a> &raquo; AKU in Media</nav>
+// Fetch media coverage records from DB
+$media_items = [];
+try {
+    $stmt = $pdo->query("SELECT * FROM media_coverage WHERE title NOT IN ('test', 'tes') ORDER BY id DESC");
+    $media_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {
+    $media_items = [];
+}
+?>
+
+<!-- Inner Page Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="why-aku.php">About</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">AKU in Media</span>
+        </div>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> PRESS & MEDIA COVERAGE
+        </div>
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 900px; line-height: 1.15;">
+            AKU in the News
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Press Releases, Newspaper Clippings & National Media Coverage
+        </p>
     </div>
 </section>
 
-<main id="primary" class="site-main">
-   
-    
- 
-		 
-<article id="post-201" class="post-201 page type-page status-publish has-post-thumbnail hentry">
-	 
-	<div class="uk-container">
-		
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content Area -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
+                    
+                    <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom border-custom">
+                        <div>
+                            <h2 class="font-serif text-primary fs-3 fw-bold mb-1">Recent Media & Press Highlights</h2>
+                            <p class="text-muted-custom small mb-0">National newspapers and electronic media features of Dr. APJ Abdul Kalam University.</p>
+                        </div>
+                        <span class="badge rounded-pill bg-light text-primary border border-custom px-3 py-2 small fw-semibold">
+                            <?php echo count($media_items); ?> Articles
+                        </span>
+                    </div>
 
-	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element media-img media-text" >
-		<div class="wpb_wrapper">
-			<div class="grid-media"><div class="grid-item"><a href="media-coverage-aku/%e0%a4%95%e0%a4%be%e0%a4%a8%e0%a5%82%e0%a4%a8-%e0%a4%95%e0%a5%80-%e0%a4%b8%e0%a4%ae%e0%a4%9d-%e0%a4%95%e0%a5%8d%e0%a4%af%e0%a5%8b%e0%a4%82-%e0%a4%9c%e0%a4%b0%e0%a5%82%e0%a4%b0%e0%a5%80-%e0%a4%b9"><img decoding="async" src="assets/images/aajtak_news-300x200.png" alt="कानून की समझ क्यों जरूरी है ? AAJ TAK"><p class="text-18">कानून की समझ क्यों जरूरी है ? AAJ TAK</p></a></div><div class="grid-item"><a href="media-coverage-aku/%e0%a4%a6%e0%a5%87%e0%a4%b5-%e0%a4%95%e0%a5%81%e0%a4%ae%e0%a4%be%e0%a4%b5%e0%a4%a4-%e0%a4%95%e0%a5%8b-%e0%a4%b5%e0%a5%87%e0%a4%b8%e0%a5%8d%e0%a4%9f-%e0%a4%9c%e0%a5%8b%e0%a4%a8-%e0%a4%ac%e0%a5%88"><img decoding="async" src="assets/images/dev_kumawat-e1765884635936-300x200.jpg" alt="देव कुमावत को वेस्ट जोन बैडमिंटन का एकल खिताब"><p class="text-18">देव कुमावत को वेस्ट जोन बैडमिंटन का एकल खिताब</p></a></div><div class="grid-item"><a href="media-coverage-aku/%e0%a4%8f%e0%a4%aa%e0%a5%80%e0%a4%9c%e0%a5%87-%e0%a4%85%e0%a4%ac%e0%a5%8d%e0%a4%a6%e0%a5%81%e0%a4%b2-%e0%a4%95%e0%a4%b2%e0%a4%be%e0%a4%ae-%e0%a4%af%e0%a5%82%e0%a4%a8%e0%a4%bf%e0%a4%b5%e0%a4%b0"><img decoding="async" src="assets/images/apja-couselling-300x200.jpg" alt="एपीजे अब्दुल कलाम यूनिवर्सिटी में आईपीजीए का अंतरराष्ट्रीय सम्मेलन"><p class="text-18">एपीजे अब्दुल कलाम यूनिवर्सिटी में आईपीजीए का अंतरराष्ट्रीय सम्मेलन</p></a></div><div class="grid-item"><a href="media-coverage-aku/college-level-counselling"><img decoding="async" src="assets/images/u37.jpg" alt="College Level Counselling"><p class="text-18">College Level Counselling</p></a></div><div class="grid-item"><a href="media-coverage-aku/media-coverage-aku"><img decoding="async" src="uploads/2025/09/29-300x200.jpg" alt="Independence Day 2025 Celebration at AKU University"><p class="text-18">Independence Day 2025 Celebration at AKU University</p></a></div></div>
+                    <!-- Media Grid (Balanced 2-Column Layout) -->
+                    <div class="row g-4">
+                        <?php if (!empty($media_items)): ?>
+                            <?php foreach ($media_items as $item): 
+                                $img_src = '';
+                                if (!empty($item['image_path'])) {
+                                    $img_src = (strpos($item['image_path'], 'assets/') === 0) ? $item['image_path'] : 'uploads/' . $item['image_path'];
+                                } else {
+                                    $img_src = 'assets/images/placeholder.jpg';
+                                }
+                            ?>
+                            <div class="col-md-6 d-flex">
+                                <div class="media-grid-card w-100">
+                                    <div class="media-img-wrapper position-relative">
+                                        <img src="<?php echo htmlspecialchars($img_src); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" />
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="badge-pill-blur mb-2 d-inline-block px-2.5 py-0.5 text-primary fw-semibold" style="background: #f0eae1; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;">
+                                                <i class="fa-solid fa-newspaper text-gold me-1"></i> Press Coverage
+                                            </div>
+                                            <h4 class="font-serif text-primary fs-5 fw-bold mb-2 lh-sm">
+                                                <?php echo htmlspecialchars($item['title']); ?>
+                                            </h4>
+                                            <?php if (!empty($item['content'])): ?>
+                                            <p class="small text-muted mb-3 line-clamp-2">
+                                                <?php echo strip_tags(mb_substr($item['content'], 0, 120)) . '...'; ?>
+                                            </p>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="pt-2.5 border-top border-custom d-flex align-items-center justify-content-between">
+                                            <span class="text-muted small" style="font-size: 0.75rem;">
+                                                <i class="fa-regular fa-calendar text-gold me-1"></i> <?php echo date('d M, Y', strtotime($item['created_at'] ?? 'now')); ?>
+                                            </span>
+                                            <a href="single.php?type=media&slug=<?php echo urlencode($item['slug'] ?? $item['id']); ?>" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold" style="border-color: var(--primary-color); color: var(--primary-color); font-size: 0.78rem;">
+                                                Read More <i class="fa-solid fa-arrow-right ms-1" style="font-size: 0.7rem;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <div class="col-12 text-center py-5">
+                                <p class="text-muted">No media coverage articles found.</p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
 
-		</div>
-	</div>
-</div></div></div></div></div></div></div></div>
-</div>	</div><!-- .entry-content -->
-	</div>
-	</article><!-- #post-201 -->  
-	</main>
+                </article>
+            </div>
+
+            <!-- Right Sidebar Area -->
+            <div class="col-lg-4 col-xl-3">
+                <?php include 'about-sidebar.php'; ?>
+            </div>
+
+        </div>
+    </div>
+</main>
+
 <?php include 'footer.php'; ?>

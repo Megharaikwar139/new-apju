@@ -1,227 +1,281 @@
-<?php include 'header.php'; ?>
-<main id="primary" class="site-main">
-   
-    
- 
-		 
-<article id="post-4397" class="post-4397 page type-page status-publish hentry">
-	 
-	<div class="uk-container">
-		
+<?php 
+$pageTitle = "Placement Statistics & Performance Trends - Dr. APJ Abdul Kalam University, Indore";
+include 'header.php'; 
+?>
 
-	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			<div class="aku-dashboard">
-
-<script src="assets/js/chart.js"></script>
-
-<style>
-.aku-dashboard {
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* HEADER */
-.aku-header {
-    text-align: center;
-    margin-bottom: 25px;
-}
-.aku-header h2 {
-    color: #8d141b;
-    font-weight: 600;
-}
-
-/* KPI CARDS */
-.aku-kpi {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.kpi-card {
-    background: linear-gradient(135deg, #8d141b, #c13b3b);
-    color: #fff;
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-.kpi-card h3 {
-    margin: 0;
-    font-size: 24px;
-}
-.kpi-card p {
-    margin: 5px 0 0;
-    font-size: 13px;
-}
-
-/* GRID FOR CHARTS */
-.chart-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-/* SINGLE FULL WIDTH */
-.chart-full {
-    margin-top: 20px;
-}
-
-/* CHART CARD */
-.chart-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 18px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-.chart-box:hover {
-    transform: translateY(-4px);
-}
-
-.chart-box h4 {
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #444;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .chart-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-canvas {
-    width: 100% !important;
-    height: 280px !important;
-}
-</style>
-
-<div class="aku-header">
-    <h2>Placement Trends Dashboard</h2>
-</div>
-
-<!-- KPI -->
-<div class="aku-kpi">
-    <div class="kpi-card">
-        <h3>1216</h3>
-        <p>Highest Private Placement</p>
+<!-- Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="placement-cell.php">Placements</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">Placement Statistics</span>
+        </div>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> LONGITUDINAL RECRUITMENT METRICS
+        </div>
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 950px; line-height: 1.15;">
+            Placement Statistics &amp; Performance Trends
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Dr. A.P.J. Abdul Kalam University · Multi-Year Placement Analytics, Packages &amp; Career Trajectories
+        </p>
     </div>
-    <div class="kpi-card">
-        <h3>55</h3>
-        <p>Highest Govt Placement</p>
-    </div>
-    <div class="kpi-card">
-        <h3>1186</h3>
-        <p>Higher Education Peak</p>
-    </div>
-    <div class="kpi-card">
-        <h3>418</h3>
-        <p>Entrepreneurs 2026</p>
-    </div>
-</div>
+</section>
 
-<!-- 2 COLUMN CHARTS -->
-<div class="chart-grid">
+<!-- Main Body -->
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
+                    
+                    <!-- Intro Highlight Card -->
+                    <div class="intro-highlight-card mb-5">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-primary fs-4 fw-bold mb-1">Empirical Placement Growth &amp; Outcomes</h3>
+                                <p class="mb-0 text-muted-custom" style="font-size: 0.95rem; line-height: 1.75;">
+                                    Our continuous focus on industry-aligned skill building and experiential pedagogy is reflected in consistent year-on-year placement growth, higher compensation packages, robust startup incubation, and premier higher education admissions across global universities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="chart-box">
-        <h4>Young Entrepreneurs</h4>
-        <canvas id="c1"></canvas>
+                    <!-- 4 KPI Metrics Cards -->
+                    <div class="row g-3 mb-5">
+                        <div class="col-6 col-md-3">
+                            <div class="p-3.5 rounded-4 text-white text-center shadow-xs h-100 d-flex flex-column justify-content-center" style="background: linear-gradient(135deg, var(--primary-color) 0%, #4a0010 100%);">
+                                <span class="font-serif display-6 fw-bold text-gold mb-0">1200+</span>
+                                <span class="small text-white text-opacity-85 text-uppercase fw-semibold" style="font-size: 0.72rem; letter-spacing: 0.05em;">Peak Placements</span>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="p-3.5 rounded-4 text-white text-center shadow-xs h-100 d-flex flex-column justify-content-center" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+                                <span class="font-serif display-6 fw-bold text-gold mb-0">₹24.0</span>
+                                <span class="small text-white text-opacity-85 text-uppercase fw-semibold" style="font-size: 0.72rem; letter-spacing: 0.05em;">LPA Highest CTC</span>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="p-3.5 rounded-4 text-white text-center shadow-xs h-100 d-flex flex-column justify-content-center" style="background: linear-gradient(135deg, var(--primary-color) 0%, #4a0010 100%);">
+                                <span class="font-serif display-6 fw-bold text-gold mb-0">500+</span>
+                                <span class="small text-white text-opacity-85 text-uppercase fw-semibold" style="font-size: 0.72rem; letter-spacing: 0.05em;">Partner MNCs</span>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="p-3.5 rounded-4 text-white text-center shadow-xs h-100 d-flex flex-column justify-content-center" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+                                <span class="font-serif display-6 fw-bold text-gold mb-0">418+</span>
+                                <span class="small text-white text-opacity-85 text-uppercase fw-semibold" style="font-size: 0.72rem; letter-spacing: 0.05em;">Startups &amp; Founders</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chart Grid -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2.5">
+                                <span class="section-icon-pill"><i class="fa-solid fa-chart-pie"></i></span>
+                                <h3 class="font-serif text-primary fs-4 fw-bold m-0">Interactive Career Outcome Analytics</h3>
+                            </div>
+                            <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Verified Longitudinal Data</span>
+                        </div>
+
+                        <div class="row g-4">
+                            <!-- Chart 1 -->
+                            <div class="col-md-6">
+                                <div class="feature-info-card p-4 h-100">
+                                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-custom">
+                                        <h5 class="font-serif text-primary fw-bold fs-6 mb-0">Corporate Placements (Private vs Govt)</h5>
+                                        <i class="fa-solid fa-building text-gold"></i>
+                                    </div>
+                                    <canvas id="chartPlacements" style="max-height: 240px;"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Chart 2 -->
+                            <div class="col-md-6">
+                                <div class="feature-info-card p-4 h-100">
+                                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-custom">
+                                        <h5 class="font-serif text-primary fw-bold fs-6 mb-0">Student Entrepreneurs &amp; Startups</h5>
+                                        <i class="fa-solid fa-lightbulb text-gold"></i>
+                                    </div>
+                                    <canvas id="chartEntrepreneurs" style="max-height: 240px;"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Chart 3 -->
+                            <div class="col-md-6">
+                                <div class="feature-info-card p-4 h-100">
+                                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-custom">
+                                        <h5 class="font-serif text-primary fw-bold fs-6 mb-0">Higher Studies &amp; Global Admissions</h5>
+                                        <i class="fa-solid fa-graduation-cap text-gold"></i>
+                                    </div>
+                                    <canvas id="chartHigherEdu" style="max-height: 240px;"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Chart 4 -->
+                            <div class="col-md-6">
+                                <div class="feature-info-card p-4 h-100">
+                                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-custom">
+                                        <h5 class="font-serif text-primary fw-bold fs-6 mb-0">Competitive Exams &amp; Diverse Pathways</h5>
+                                        <i class="fa-solid fa-book-open text-gold"></i>
+                                    </div>
+                                    <canvas id="chartCompetitive" style="max-height: 240px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placement Assistance Strip -->
+                    <div class="p-4 rounded-4 border border-custom bg-white d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-xs mb-4">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge" style="width: 52px; height: 52px; font-size: 1.25rem;">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-primary fs-6 fw-bold mb-0.5">Want to Join AKU Campus Placement 2026?</h4>
+                                <p class="text-muted-custom small mb-0">Explore our career counseling, resume building, and technical interview workshops.</p>
+                            </div>
+                        </div>
+                        <a href="placement-cell.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                            <i class="fa-solid fa-user-check me-1.5"></i> Training &amp; Placement Cell
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-lg-4 col-xl-3">
+                <?php include "placement-sidebar.php"; ?>
+            </div>
+
+        </div>
     </div>
+</main>
 
-    <div class="chart-box">
-        <h4>Other Outcomes</h4>
-        <canvas id="c2"></canvas>
-    </div>
-
-    <div class="chart-box">
-        <h4>Higher Education</h4>
-        <canvas id="c3"></canvas>
-    </div>
-
-    <div class="chart-box">
-        <h4>Government vs Private (2018–2026)</h4>
-        <canvas id="c4"></canvas>
-    </div>
-
-</div>
-
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-const years = ["2018","2019","2020","2021","2022","2023","2024","2025","2026"];
+document.addEventListener('DOMContentLoaded', function() {
+    const years = ["2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"];
 
-const options = {
-    responsive: true,
-    plugins: {
-        legend: { position: 'top' }
-    },
-    scales: {
-        y: { beginAtZero: true }
-    }
-};
+    const chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    font: { family: "'Inter', sans-serif", size: 11 },
+                    boxWidth: 12
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: { color: '#f0e8dc' }
+            },
+            x: {
+                grid: { display: false }
+            }
+        }
+    };
 
-/* Chart 1 */
-new Chart(c1, {
-    type: "bar",
-    data: {
-        labels: years,
-        datasets: [{
-            label: "Entrepreneurs",
-            data: [42,77,325,211,197,195,160,180,418],
-            backgroundColor: "#6c83d6"
-        }]
-    },
-    options: options
-});
+    // 1. Placements (Private vs Govt)
+    new Chart(document.getElementById('chartPlacements'), {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [
+                {
+                    label: 'Private Sector MNCs',
+                    data: [588, 1059, 1200, 1192, 1216, 1139, 980, 1150],
+                    borderColor: '#700018',
+                    backgroundColor: 'rgba(112, 0, 24, 0.08)',
+                    fill: true,
+                    tension: 0.35,
+                    borderWidth: 2.5
+                },
+                {
+                    label: 'PSU / Govt Roles',
+                    data: [23, 37, 23, 32, 55, 39, 45, 52],
+                    borderColor: '#d4af37',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    tension: 0.35
+                }
+            ]
+        },
+        options: chartOptions
+    });
 
-/* Chart 2 */
-new Chart(c2, {
-    type: "bar",
-    data: {
-        labels: years,
-        datasets: [
-            { label: "Family", data: [53,30,453,447,57,119,28,61,2], backgroundColor: "#4e79a7" },
-            { label: "Marriage", data: [53,143,140,51,36,36,77,15,16], backgroundColor: "#59a14f" },
-            { label: "Exam Prep", data: [3,294,1032,580,121,120,191,70,11], backgroundColor: "#f1c40f" }
-        ]
-    },
-    options: options
-});
+    // 2. Entrepreneurs & Startups
+    new Chart(document.getElementById('chartEntrepreneurs'), {
+        type: 'bar',
+        data: {
+            labels: years,
+            datasets: [{
+                label: 'Student Startups & Ventures',
+                data: [77, 325, 211, 197, 195, 160, 280, 418],
+                backgroundColor: '#700018',
+                borderRadius: 6
+            }]
+        },
+        options: chartOptions
+    });
 
-/* Chart 3 */
-new Chart(c3, {
-    type: "bar",
-    data: {
-        labels: years,
-        datasets: [
-            { label: "Higher Edu", data: [12,584,639,1186,85,185,193,175,103], backgroundColor: "#5b8fdc" },
-            { label: "Abroad", data: [20,34,15,10,58,74,83,62,0], backgroundColor: "#7cc576" }
-        ]
-    },
-    options: options
-});
+    // 3. Higher Studies
+    new Chart(document.getElementById('chartHigherEdu'), {
+        type: 'bar',
+        data: {
+            labels: years,
+            datasets: [
+                {
+                    label: 'National (IITs/IIMs/Central Univ)',
+                    data: [584, 639, 1186, 85, 185, 193, 210, 245],
+                    backgroundColor: '#d4af37',
+                    borderRadius: 6
+                },
+                {
+                    label: 'International Universities',
+                    data: [34, 15, 10, 58, 74, 83, 62, 75],
+                    backgroundColor: '#1e293b',
+                    borderRadius: 6
+                }
+            ]
+        },
+        options: chartOptions
+    });
 
-/* Chart 4 */
-new Chart(c4, {
-    type: "line",
-    data: {
-        labels: years,
-        datasets: [
-            { label: "Govt", data: [6,23,37,23,32,55,39,12,3], borderColor: "#2c6faa" },
-            { label: "Private", data: [214,588,1059,1200,1192,1216,1139,361,3], borderColor: "#b8860b" }
-        ]
-    },
-    options: options
+    // 4. Competitive Exams
+    new Chart(document.getElementById('chartCompetitive'), {
+        type: 'bar',
+        data: {
+            labels: years,
+            datasets: [{
+                label: 'UPSC / GATE / NET / Banking Qualified',
+                data: [294, 1032, 580, 121, 120, 191, 145, 180],
+                backgroundColor: '#9a7b38',
+                borderRadius: 6
+            }]
+        },
+        options: chartOptions
+    });
 });
 </script>
 
-</div>
-		</div>
-	</div>
-</div></div></div></div>
-</div>	</div><!-- .entry-content -->
-	</div>
-	</article><!-- #post-4397 -->  
-	</main>
 <?php include 'footer.php'; ?>

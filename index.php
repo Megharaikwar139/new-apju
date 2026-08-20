@@ -1,978 +1,876 @@
-<?php include 'header.php'; ?>
-<div id="content" class="site-content">
-<main id="primary" class="site-main">
-    
- 
-		 
-<article id="post-7" class="post-7 page type-page status-publish has-post-thumbnail hentry">
-	 
-	<div class="uk-container">
-		
-
-	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="n2_clear"><ss3-force-full-width data-overflow-x="body" data-horizontal-selector="body"><div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="2"><div id="n2-ss-2-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-2" data-creator="Smart Slider 3" data-responsive="fullwidth" class="n2-ss-slider n2-ow n2-has-hover n2notransition  "><div class="n2-ss-slider-wrapper-inside">
-        <div class="n2-ss-slider-1 n2_ss__touch_element n2-ow">
-            <div class="n2-ss-slider-2 n2-ow">
-                                                    <div class="n2-ss-background-animation n2-ow"></div>
-                                <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-      <?php
-      $banners_stmt = $pdo->query("SELECT * FROM banners ORDER BY sort_order ASC, id DESC");
-      $banners = $banners_stmt->fetchAll();
-      $isFirstBanner = true;
-      foreach ($banners as $banner) {
-          $b_img = (strpos($banner['image_path'], 'assets/') === 0) ? $banner['image_path'] : 'uploads/' . $banner['image_path'];
-      ?>
-    <div class="carousel-item <?php echo $isFirstBanner ? 'active' : ''; ?>">
-      <img src="<?php echo htmlspecialchars($b_img); ?>" class="d-block w-100" alt="<?php echo htmlspecialchars($banner['title'] ?? 'Campus View'); ?>">
-    </div>
-      <?php $isFirstBanner = false; } ?>
-  </div>
-</div></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			
-    <div class="announcement-bar">
-        <span class="announcement-label">ANNOUNCEMENTS</span>
-        <div class="marquee-container">
-            <div class="marquee-content">
-            <?php
-            $ann_stmt = $pdo->prepare("
-                SELECT title AS post_title, slug AS post_name 
-                FROM announcements 
-                ORDER BY created_at DESC LIMIT 5
-            ");
-            $ann_stmt->execute();
-            $announcements = $ann_stmt->fetchAll();
-            foreach ($announcements as $announcement) {
-            ?>
-                <img decoding="async" src="assets/images/Layer-19.png" alt="Announcement Icon">
-                <span class="announcement-item"><a href="announcements/<?php echo $announcement['post_name']; ?>/"><?php echo htmlspecialchars($announcement['post_title']); ?></a></span>
-            <?php } ?>
-            </div>
-        </div>
-    </div>
-
-
-    
-
-		</div>
-	</div>
-</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid section vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			<style>
-/* ===== Force Remove Any Top Spacing ===== */
-.kalam-hero,
-.kalam-hero * {
-    box-sizing: border-box;
-}
-
-/* Main wrapper */
-.kalam-hero {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* Grid */
-.kalam-grid {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-/* Image fix */
-.kalam-image {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.kalam-image img {
-    display: block; /* VERY IMPORTANT */
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 16px;
-    box-shadow: 0 22px 45px rgba(0,0,0,0.18);
-}
-
-/* Content */
-.kalam-content {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Remove heading default margins */
-.kalam-content h1 {
-    margin: 0 0 12px 0 !important;
-    padding: 0 !important;
-    line-height: 1.25;
-    font-weight: 700;
-    color: #0b2c4d;
-}
-
-.kalam-content h1 span {
-    color: #c7912a;
-}
-
-/* Divider */
-.kalam-divider {
-    margin: 16px 0 24px !important;
-    width: 90px;
-    height: 4px;
-    background: #c7912a;
-    border-radius: 2px;
-}
-
-/* Paragraphs */
-.kalam-content p {
-    margin: 0 0 14px 0 !important;
-    font-size: 16px;
-    line-height: 1.85;
-    color: #444;
-    text-align: justify;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .kalam-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .kalam-content h1 {
-        font-size: 30px;
-    }
-}
-</style>
-
-
 <?php
-$welcome_title = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_title'")->fetchColumn();
-$welcome_content = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_content'")->fetchColumn();
-$welcome_image = $pdo->query("SELECT setting_value FROM settings WHERE setting_key = 'welcome_image'")->fetchColumn();
-$w_img = ($welcome_image && strpos($welcome_image, 'assets/') === 0) ? $welcome_image : (($welcome_image) ? 'uploads/' . $welcome_image : 'assets/images/New-Dron-Campus-Pic01-1.jpg');
+require_once 'header.php';
+
+// 1. Fetch Hero Section Data
+$hero = $pdo->query("SELECT * FROM homepage_hero LIMIT 1")->fetch() ?: [
+    'headline' => 'Where <em class="text-gold fst-italic fw-medium">extraordinary</em> minds are shaped.',
+    'subheadline' => 'For over a decade, Dr. A.P.J. Abdul Kalam University has stood at the intersection of research, character and craft — nurturing India\'s next generation of engineers, scientists, entrepreneurs and citizens.',
+    'video_url' => 'assets/lovable/campus-hero.mp4',
+    'poster_image' => 'assets/lovable/APJ1.jpg',
+    'badge1' => 'UGC Recognized',
+    'badge2' => 'AICTE · PCI · BCI',
+    'badge3' => 'NAAC Accredited',
+    'stat1_value' => '18k+', 'stat1_label' => 'Students on Campus',
+    'stat2_value' => '12', 'stat2_label' => 'Schools & Faculties',
+    'stat3_value' => '120+', 'stat3_label' => 'Programs Offered',
+    'stat4_value' => '500+', 'stat4_label' => 'Recruiting Partners',
+    'btn1_text' => 'Begin your application', 'btn1_url' => 'admission-procedure.php',
+    'btn2_text' => 'Explore programs', 'btn2_url' => '#academics'
+];
+
+// 2. Fetch About Section Data
+$about = $pdo->query("SELECT * FROM homepage_about LIMIT 1")->fetch() ?: [
+    'eyebrow' => 'About the University',
+    'title' => 'A university built on Dr. Kalam\'s conviction that character is the true curriculum.',
+    'image_path' => 'assets/lovable/apj4.webp',
+    'est_badge' => 'Est. 2016',
+    'location_text' => 'Indore, Madhya Pradesh',
+    'paragraph1' => 'Named after the People\'s President and India\'s Missile Man, our university is dedicated to the ideals Dr. Kalam championed — <em class="text-primary fw-medium">rigorous inquiry, humane values, and the pursuit of national purpose.</em>',
+    'paragraph2' => 'Set on a 40-acre residential campus in Indore, AKU brings together twelve schools under a single multidisciplinary vision. From cutting-edge engineering labs to a nationally recognized law school, from a pharmacy program shaping the next generation of researchers to design studios where craft meets code — we build the graduates industry seeks and society needs.',
+    'pillar1_title' => 'Research-Led', 'pillar1_desc' => 'Undergraduates published in Q1 journals', 'pillar1_icon' => 'fa-solid fa-bullseye',
+    'pillar2_title' => 'Values-First', 'pillar2_desc' => 'Ethics woven into every curriculum', 'pillar2_icon' => 'fa-solid fa-heart',
+    'pillar3_title' => 'Industry-Ready', 'pillar3_desc' => 'Co-designed with 500+ recruiters', 'pillar3_icon' => 'fa-solid fa-lightbulb'
+];
+
+// 3. Fetch Academic Schools Data
+$schools = $pdo->query("SELECT * FROM homepage_schools ORDER BY sort_order ASC, id ASC")->fetchAll();
+
+// 4. Fetch Why AKU Features Data
+$why_features = $pdo->query("SELECT * FROM why_aku_features ORDER BY sort_order ASC, id ASC LIMIT 6")->fetchAll();
+
+// 5. Fetch Research Data
+$research = $pdo->query("SELECT * FROM homepage_research LIMIT 1")->fetch() ?: [
+    'title' => 'The <em class="text-gold fst-italic">Kalam Innovation Center</em> — where curiosity becomes patent.',
+    'description' => 'Fourteen research centers. Over 300 publications in the last three years. A student incubator that has funded 42 startups. Research at AKU isn\'t reserved for the corner office — it starts on day one.',
+    'image_path' => 'assets/lovable/apj8.jpeg',
+    'stat1_value' => '14', 'stat1_label' => 'Research Centers',
+    'stat2_value' => '342', 'stat2_label' => 'Publications',
+    'stat3_value' => '42', 'stat3_label' => 'Startups Incubated',
+    'paper1_num' => '01', 'paper1_tag' => 'Materials Science', 'paper1_title' => 'Low-energy polymer catalysis for medical devices', 'paper1_author' => 'Dr. R. Sharma & team',
+    'paper2_num' => '02', 'paper2_tag' => 'AI · Health', 'paper2_title' => 'Explainable deep-learning models for cardiac imaging', 'paper2_author' => 'Prof. A. Verma',
+    'paper3_num' => '03', 'paper3_tag' => 'Pharmacy', 'paper3_title' => 'Plant-derived antivirals: three new lead compounds', 'paper3_author' => 'Dr. S. Iyer',
+    'report_link' => 'faculty-publications.php'
+];
+
+// 6. Fetch Alumni Voices Data
+$alumni_voices = $pdo->query("SELECT * FROM homepage_alumni ORDER BY sort_order ASC, id ASC LIMIT 3")->fetchAll();
+
+// 7. Fetch Portals Data
+$portals = $pdo->query("SELECT * FROM homepage_portals ORDER BY sort_order ASC, id ASC")->fetchAll();
+
+// 8. Fetch Admissions CTA Data
+$admissions_cta = $pdo->query("SELECT * FROM homepage_admissions_cta LIMIT 1")->fetch() ?: [
+    'eyebrow' => 'Admissions 2026',
+    'headline' => 'Your seat at <em class="text-gold fst-italic">AKU</em> begins with a single form.',
+    'description' => 'Applications for the 2026 intake are now open across all undergraduate, postgraduate and doctoral programs. Merit-based scholarships available for eligible candidates.',
+    'btn1_text' => 'Start your application', 'btn1_url' => 'admission-procedure.php',
+    'btn2_text' => 'Download brochure', 'btn2_url' => 'download-form-student.php',
+    'date1_label' => 'Application Deadline', 'date1_value' => '31 May 2026',
+    'date2_label' => 'Entrance Test Window', 'date2_value' => 'Jun 08–15, 2026',
+    'date3_label' => 'Session Begins', 'date3_value' => 'Jul 22, 2026'
+];
+
+// 9. Fetch Dynamic Events
+$events = $pdo->query("SELECT * FROM events ORDER BY event_date ASC, id DESC LIMIT 4")->fetchAll();
+
+// 10. Fetch Dynamic News / Blogs
+$blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll();
 ?>
-<div class="kalam-hero">
-    <div class="kalam-grid">
 
-        <!-- Image Column -->
-        <div class="kalam-image">
-            <img decoding="async" src="<?php echo htmlspecialchars($w_img); ?>"
-                 alt="Welcome to Dr. A. P. J. Abdul Kalam University">
-        </div>
+<main>
 
-        <!-- Content Column -->
-        <div class="kalam-content">
-            <h1><?php echo $welcome_title ?: 'Welcome to <br><span>Dr. A. P. J. Abdul Kalam University</span>'; ?></h1>
+    <!-- SECTION 1: HERO SECTION WITH FULL BLEED VIDEO & LUXURY OVERLAY -->
+    <section class="hero-wrapper">
+        <!-- Video Background -->
+        <video src="<?php echo htmlspecialchars($hero['video_url'] ?? 'assets/lovable/campus-hero.mp4'); ?>" autoplay muted loop playsinline poster="<?php echo htmlspecialchars($hero['poster_image'] ?? 'assets/lovable/APJ1.jpg'); ?>" class="hero-video-bg"></video>
+        <div class="hero-overlay"></div>
+        <div class="hero-radial-glow"></div>
 
-            <div class="kalam-divider"></div>
-
-            <?php echo $welcome_content; ?>
-        </div>
-
-    </div>
-</div>
-
-		</div>
-	</div>
-
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
-		<div class="wpb_wrapper">
-			<div class="stats-wrapper">
-<?php
-$stats_stmt = $pdo->query("SELECT * FROM stats_counter ORDER BY sort_order ASC, id ASC");
-$stats = $stats_stmt->fetchAll();
-foreach ($stats as $stat) {
-?>
-  <div class="stat-card">
-    <h2 class="stat-value"><?php echo htmlspecialchars($stat['value']); ?></h2>
-    <p class="stat-title"><?php echo htmlspecialchars($stat['title']); ?></p>
-  </div>
-<?php } ?>
-</div>
-
-		</div>
-	</div>
-<style>
-/* ==========================================================================
-   Home 3-Card Section: Upcoming Events, 360 Tour, Notice Board (Live Match)
-   ========================================================================== */
-.home-widgets-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    align-items: stretch;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.home-widgets-col {
-    flex: 1 1 calc(33.333% - 17px);
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* 1. UPCOMING EVENTS */
-.event-widget {
-    background: #ffffff;
-    border: 1px solid #71171C;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    overflow: hidden;
-    height: 100%;
-    min-height: 520px;
-    display: flex;
-    flex-direction: column;
-}
-
-.event-header {
-    background: linear-gradient(275deg, #D72C35 -4.64%, #71171C 100%);
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 16px 22px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.event-widget ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.event-widget ul li {
-    padding: 12px 20px;
-    border-bottom: 1px solid #eeeeee;
-    margin: 0;
-    transition: background-color 0.2s ease;
-}
-
-.event-widget ul li:hover {
-    background-color: #faf6f6;
-}
-
-.event-widget ul li:last-child {
-    border-bottom: none;
-}
-
-.event-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-}
-
-.event-title {
-    font-size: 13.5px;
-    font-weight: 600;
-    line-height: 1.35;
-}
-
-.event-title a {
-    color: #1a1a1a !important;
-    text-decoration: none !important;
-    transition: color 0.2s ease;
-    display: block;
-}
-
-.event-title a:hover {
-    color: #84161C !important;
-}
-
-.event-date {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: #555555;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.event-cal-icon {
-    width: 14px;
-    height: 14px;
-    display: inline-block;
-    object-fit: contain;
-    filter: invert(15%) sepia(55%) saturate(3500%) hue-rotate(345deg) brightness(85%) contrast(90%);
-}
-
-/* 2. 360 VIRTUAL TOUR */
-.card-main {
-    background: linear-gradient(135deg, #c7912a, #d4af37);
-    padding: 8px;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    min-height: 520px;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.card-main .card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: #111111;
-    border: none;
-    box-shadow: none;
-}
-
-.card-main .image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px 12px 0 0;
-    flex: 1 1 auto;
-    min-height: 380px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000000;
-}
-
-.card-main .image-container video {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 380px;
-}
-
-.card-main .overlay-360 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    cursor: pointer;
-    transition: transform 0.25s ease;
-}
-
-.card-main .overlay-360:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-.card-main .overlay-360 img {
-    width: 60px;
-    height: 60px;
-    display: block;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
-}
-
-.card-main .card-bottom {
-    background: linear-gradient(275deg, #D72C35 -4.64%, #71171C 100%);
-    padding: 16px 20px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 0 0 12px 12px;
-    margin-top: 0;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.card-main .card-bottom:hover {
-    background: linear-gradient(275deg, #e0323c -4.64%, #84161C 100%);
-}
-
-/* 3. NOTICE BOARD */
-.notice-widget {
-    background: #71171C;
-    border: 1px solid #71171C;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    height: 100%;
-    min-height: 520px;
-    display: flex;
-    flex-direction: column;
-}
-
-.notice-header {
-    background: linear-gradient(275deg, #D72C35 -4.64%, #71171C 100%);
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 16px 22px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.notice-widget ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.notice-widget ul li {
-    padding: 13px 22px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    margin: 0;
-    transition: background-color 0.2s ease;
-}
-
-.notice-widget ul li:hover {
-    background-color: rgba(255, 255, 255, 0.07);
-}
-
-.notice-widget ul li:last-child {
-    border-bottom: none;
-}
-
-.notice-widget ul li a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    display: block;
-    font-size: 13.5px;
-    font-weight: 500;
-    line-height: 1.35;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.notice-widget ul li a:hover {
-    color: #ffd6d9 !important;
-    transform: translateX(3px);
-}
-
-/* Video Popup */
-.video-popup {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
-
-.video-popup-content {
-    position: relative;
-    width: min(90vw, 900px);
-    background: #000000;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.video-popup-close {
-    position: absolute;
-    top: 10px;
-    right: 14px;
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 700;
-    cursor: pointer;
-    z-index: 10000;
-}
-
-.video-popup iframe {
-    width: 100%;
-    height: 56.25vw;
-    max-height: 65vh;
-    display: block;
-}
-
-@media (max-width: 991px) {
-    .home-widgets-row {
-        flex-direction: column;
-    }
-    .home-widgets-col {
-        width: 100%;
-        min-height: auto;
-    }
-    .event-widget, .card-main, .notice-widget {
-        min-height: auto;
-    }
-    .card-main .image-container {
-        min-height: 300px;
-    }
-    .card-main .image-container video {
-        min-height: 300px;
-    }
-}
-</style>
-
-<div class="home-widgets-row">
-    <!-- 1. UPCOMING EVENTS -->
-    <div class="home-widgets-col">
-        <div class="event-widget">
-            <div class="event-header">Upcoming Events</div>
-            <ul>
-                <?php
-                $events_stmt = $pdo->prepare("
-                    SELECT title AS post_title, slug AS post_name, event_date 
-                    FROM events 
-                    ORDER BY event_date DESC LIMIT 5
-                ");
-                $events_stmt->execute();
-                $events = $events_stmt->fetchAll();
-                foreach ($events as $event) {
-                    $date_raw = $event['event_date'];
-                    if ($date_raw) {
-                        $formatted_date = date('d/m/Y', strtotime($date_raw));
-                    } else {
-                        $formatted_date = '';
-                    }
-                ?>
-                <li>
-                    <div class="event-content">
-                        <span class="event-title"><a href="event/<?php echo $event['post_name']; ?>/"><?php echo htmlspecialchars($event['post_title']); ?></a></span>
-                        <span class="event-date">
-                            <img decoding="async" src="assets/images/calendar-icon.png" alt="Calendar" class="event-cal-icon">
-                            <span class="date"><?php echo htmlspecialchars($formatted_date); ?></span>
+        <div class="hero-content-container container-custom">
+            <div class="row align-items-center g-5">
+                
+                <!-- Left Hero Headline & Action Buttons -->
+                <div class="col-lg-7 text-white">
+                    
+                    <!-- Badges -->
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <?php if (!empty($hero['badge1'])): ?>
+                        <span class="badge-pill-blur">
+                            <i class="fa-solid fa-certificate text-gold"></i> <?php echo htmlspecialchars($hero['badge1']); ?>
                         </span>
+                        <?php endif; ?>
+                        <?php if (!empty($hero['badge2'])): ?>
+                        <span class="badge-pill-blur">
+                            <i class="fa-solid fa-award text-gold"></i> <?php echo htmlspecialchars($hero['badge2']); ?>
+                        </span>
+                        <?php endif; ?>
+                        <?php if (!empty($hero['badge3'])): ?>
+                        <span class="badge-pill-blur">
+                            <i class="fa-solid fa-star text-gold"></i> <?php echo htmlspecialchars($hero['badge3']); ?>
+                        </span>
+                        <?php endif; ?>
                     </div>
-                </li>
-                <?php } ?>
-            </ul>
-        </div>
-    </div>
 
-    <!-- 2. 360 VIRTUAL TOUR -->
-    <div class="home-widgets-col">
-        <div class="card-main">
-            <div class="card">
-                <div class="image-container">
-                    <?php $video_src = "uploads/2025/07/aku_reel.mp4"; ?>
-                    <video autoplay muted loop playsinline>
-                        <source src="<?php echo htmlspecialchars($video_src); ?>" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="overlay-360" role="button" aria-label="Open 360° tour" tabindex="0">
-                        <img decoding="async" src="assets/images/360-degrees.png" alt="360 Overlay Icon">
+                    <!-- Headline Title -->
+                    <h1 class="hero-title mb-4 font-serif">
+                        <?php echo $hero['headline']; ?>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-white text-opacity-85 mb-4 pb-2" style="max-width: 520px; font-size: 0.95rem; line-height: 1.65; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">
+                        <?php echo htmlspecialchars($hero['subheadline']); ?>
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="d-flex flex-wrap align-items-center gap-2 pt-3">
+                        <a href="<?php echo htmlspecialchars($hero['btn1_url']); ?>" class="btn-primary-pill">
+                            <?php echo htmlspecialchars($hero['btn1_text']); ?> <i class="fa-solid fa-arrow-right text-gold fs-6 ms-1"></i>
+                        </a>
+                        <a href="<?php echo htmlspecialchars($hero['btn2_url']); ?>" class="btn-outline-pill">
+                            <span class="play-icon-circle me-1">
+                                <span class="play-triangle"></span>
+                            </span>
+                            <?php echo htmlspecialchars($hero['btn2_text']); ?>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right Hero Floating Glass Counter Card -->
+                <div class="col-lg-5">
+                    <div class="hero-glance-card">
+                        <div class="hero-glance-header">
+                            Campus at a Glance
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat1_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat1_label']); ?></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat2_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat2_label']); ?></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat3_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat3_label']); ?></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="hero-glance-value"><?php echo htmlspecialchars($hero['stat4_value']); ?></div>
+                                <div class="hero-glance-label"><?php echo htmlspecialchars($hero['stat4_label']); ?></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-bottom" id="openTour">360° Virtual Tour</div>
+
             </div>
         </div>
-    </div>
 
-    <!-- 3. NOTICE BOARD -->
-    <div class="home-widgets-col">
-        <div class="notice-widget">
-            <div class="notice-header">Notice Board</div>
-            <ul>
-                <?php
-                $notices_stmt = $pdo->prepare("
-                    SELECT title AS post_title, slug AS post_name 
-                    FROM notices 
-                    ORDER BY notice_date DESC LIMIT 6
-                ");
-                $notices_stmt->execute();
-                $notices = $notices_stmt->fetchAll();
-                foreach ($notices as $notice) {
-                ?>
-                <li><a href="notice-board/<?php echo $notice['post_name']; ?>/"><?php echo htmlspecialchars($notice['post_title']); ?></a></li>
-                <?php } ?>
-            </ul>
+        <!-- Bottom Animated Scroll Indicator (Exact Lovable Parity) -->
+        <a href="#about" class="hero-scroll-indicator" title="Scroll down">
+            <span class="hero-scroll-text">Scroll</span>
+            <span class="hero-scroll-line"></span>
+        </a>
+
+    </section>
+
+    <!-- SECTION 2: ABOUT THE UNIVERSITY -->
+    <section id="about" class="py-5 my-md-4">
+        <div class="container-custom">
+            <div class="eyebrow-label mb-3"><?php echo htmlspecialchars($about['eyebrow'] ?? 'About the University'); ?></div>
+            <h2 class="font-serif text-primary fw-medium display-6 mb-5" style="max-width: 850px; line-height: 1.2;">
+                <?php echo $about['title']; ?>
+            </h2>
+
+            <div class="row align-items-center g-5">
+                
+                <!-- Left: Entrance Photo with Floating Est Badge -->
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="<?php echo htmlspecialchars($about['image_path']); ?>" alt="AKU Indore Campus" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 420px;"/>
+                        <div class="position-absolute bottom-0 start-0 m-4 bg-white bg-opacity-95 p-3 rounded-3 border border-custom shadow-sm" style="backdrop-filter: blur(8px);">
+                            <div class="font-serif text-primary fw-bold fs-5"><?php echo htmlspecialchars($about['est_badge']); ?></div>
+                            <div class="text-muted-custom small d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-location-dot text-primary" style="font-size: 0.75rem;"></i> <?php echo htmlspecialchars($about['location_text']); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Kalam Ideals & 3 Feature Pillars -->
+                <div class="col-lg-6">
+                    <p class="text-dark text-opacity-90 leading-relaxed mb-4 fs-6">
+                        <?php echo $about['paragraph1']; ?>
+                    </p>
+                    <div class="my-4 border-top border-custom"></div>
+                    <p class="text-muted-custom leading-relaxed mb-4 small" style="font-size: 0.93rem;">
+                        <?php echo $about['paragraph2']; ?>
+                    </p>
+
+                    <!-- 3 Feature Cards Grid -->
+                    <div class="row g-3 mt-2">
+                        <div class="col-sm-4">
+                            <div class="bg-white p-3 rounded-3 border border-custom h-100 shadow-2xs">
+                                <i class="<?php echo htmlspecialchars($about['pillar1_icon']); ?> text-primary fs-5 mb-2"></i>
+                                <div class="font-serif text-primary fw-bold fs-6 mt-1"><?php echo htmlspecialchars($about['pillar1_title']); ?></div>
+                                <div class="text-muted-custom mt-1 lh-sm" style="font-size: 0.75rem;"><?php echo htmlspecialchars($about['pillar1_desc']); ?></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="bg-white p-3 rounded-3 border border-custom h-100 shadow-2xs">
+                                <i class="<?php echo htmlspecialchars($about['pillar2_icon']); ?> text-primary fs-5 mb-2"></i>
+                                <div class="font-serif text-primary fw-bold fs-6 mt-1"><?php echo htmlspecialchars($about['pillar2_title']); ?></div>
+                                <div class="text-muted-custom mt-1 lh-sm" style="font-size: 0.75rem;"><?php echo htmlspecialchars($about['pillar2_desc']); ?></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="bg-white p-3 rounded-3 border border-custom h-100 shadow-2xs">
+                                <i class="<?php echo htmlspecialchars($about['pillar3_icon']); ?> text-primary fs-5 mb-2"></i>
+                                <div class="font-serif text-primary fw-bold fs-6 mt-1"><?php echo htmlspecialchars($about['pillar3_title']); ?></div>
+                                <div class="text-muted-custom mt-1 lh-sm" style="font-size: 0.75rem;"><?php echo htmlspecialchars($about['pillar3_desc']); ?></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- Video Popup -->
-<div class="video-popup" id="videoPopup" aria-hidden="true">
-    <div class="video-popup-content">
-        <span class="video-popup-close" id="closePopup" aria-label="Close">&times;</span>
-        <iframe id="youtubeVideo" src="" frameborder="0"
-            allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</div>
+    <!-- SECTION 3: ACADEMICS & SCHOOLS (INTERACTIVE TABS) -->
+    <section id="academics" class="py-5 bg-secondary-tint">
+        <div class="container-custom py-md-4">
+            
+            <div class="d-flex flex-column flex-xl-row align-items-xl-end justify-content-between gap-4 mb-5">
+                <div>
+                    <div class="eyebrow-label mb-2">Academics</div>
+                    <h2 class="font-serif text-primary fw-medium display-6 mb-0" style="max-width: 650px;">
+                        Twelve schools. One <em class="fst-italic fw-normal">multidisciplinary</em> conversation.
+                    </h2>
+                </div>
+                
+                <!-- Category Filter Buttons strictly in ONE ROW -->
+                <div class="d-flex flex-nowrap align-items-center gap-2 flex-shrink-0 overflow-x-auto pb-1" id="academicTabsContainer">
+                    <button class="academic-filter-btn active-tab" data-filter="all">All</button>
+                    <button class="academic-filter-btn" data-filter="ug">Undergraduate</button>
+                    <button class="academic-filter-btn" data-filter="pg">Postgraduate</button>
+                    <button class="academic-filter-btn" data-filter="diploma">Diploma</button>
+                    <button class="academic-filter-btn" data-filter="phd">Doctoral</button>
+                </div>
+            </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const popup = document.getElementById('videoPopup');
-    const iframe = document.getElementById('youtubeVideo');
-    const openers = [document.getElementById('openTour'), ...document.querySelectorAll('.overlay-360')];
-    const YT_ID = 's0s6ePt2K-U';
+            <!-- 8 Glowing Academic School Cards Grid -->
+            <div class="row g-4" id="academicSchoolsGrid">
+                <?php foreach ($schools as $s): ?>
+                <div class="col-sm-6 col-lg-3 academic-item-col" data-categories="<?php echo htmlspecialchars($s['categories']); ?>">
+                    <a href="<?php echo htmlspecialchars($s['url']); ?>" class="school-luxury-card">
+                        <i class="<?php echo htmlspecialchars($s['icon']); ?> school-icon"></i>
+                        <div>
+                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.1em;"><?php echo htmlspecialchars($s['program_count']); ?></div>
+                            <div class="font-serif fs-5 fw-semibold mt-1 lh-sm"><?php echo htmlspecialchars($s['title']); ?></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right school-arrow"></i>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
 
-    function openVideo() {
-        iframe.src = `https://www.youtube.com/embed/${YT_ID}?autoplay=1&rel=0&modestbranding=1`;
-        popup.style.display = 'flex';
-        popup.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeVideo() {
-        iframe.src = 'about:blank';
-        popup.style.display = 'none';
-        popup.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    }
+            <div class="text-center mt-5">
+                <a href="department-of-computer-science-engineering.php" class="btn btn-outline-dark border-primary text-primary rounded-pill px-4 py-2 small fw-medium">
+                    View all 120+ programs <i class="fa-solid fa-arrow-right ms-1 text-primary"></i>
+                </a>
+            </div>
 
-    openers.forEach(el => {
-        if (!el) return;
-        el.style.cursor = 'pointer';
-        el.addEventListener('click', openVideo);
-        el.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(); }
-        });
-    });
+        </div>
+    </section>
 
-    const closeBtn = document.getElementById('closePopup');
-    if (closeBtn) closeBtn.addEventListener('click', closeVideo);
-    if (popup) {
-        popup.addEventListener('click', (e) => { if (e.target === popup) closeVideo(); });
-    }
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideo(); });
-});
-</script></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid section vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading university-heading wpb_animate_when_almost_visible wpb_fadeIn fadeIn" >Voice of Experience</h2><div class="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-			        <div class="owl-carousel author-list voi-carousel">
-            <?php
-            $voi_stmt = $pdo->prepare("SELECT title, slug, designation, image_path FROM voice_of_experience ORDER BY created_at DESC");
-            $voi_stmt->execute();
-            $vois = $voi_stmt->fetchAll();
-            foreach ($vois as $voi) {
-                $img_url = $voi['image_path'] ? 'uploads/' . $voi['image_path'] : 'assets/images/placeholder.jpg';
-            ?>
-                <div class="author-item voi-card">
-                    <!-- Image -->
-                    <a href="voi/<?php echo $voi['slug']; ?>/" class="author-item-inner">
-                        <img loading="lazy" decoding="async" width="240" height="300" src="<?php echo htmlspecialchars($img_url); ?>" class="attachment-medium size-medium wp-post-image" alt="<?php echo htmlspecialchars($voi['title']); ?>" style="object-fit:cover;" />
+    <!-- SECTION 4: WHY AKU (6 EDITORIAL CARDS) -->
+    <section class="py-5 my-md-4">
+        <div class="container-custom">
+            <div class="eyebrow-label mb-2">Why AKU</div>
+            <h2 class="font-serif text-primary fw-medium display-6 mb-5" style="max-width: 680px;">
+                Six reasons students choose to <em class="fst-italic fw-normal">build here</em>.
+            </h2>
+
+            <div class="row g-4">
+                <?php foreach ($why_features as $wf): 
+                    $card_link = !empty($wf['link_url']) ? $wf['link_url'] : '#';
+                ?>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="editorial-card w-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="editorial-img-box position-relative">
+                                <img src="<?php echo htmlspecialchars($wf['image_path']); ?>" alt="<?php echo htmlspecialchars($wf['title']); ?>" loading="lazy"/>
+                            </div>
+                            <div class="p-4 pb-2">
+                                <h3 class="font-serif text-primary fw-bold fs-5 mb-2"><?php echo htmlspecialchars($wf['title']); ?></h3>
+                                <p class="text-muted-custom small mb-0 leading-relaxed"><?php echo htmlspecialchars($wf['description']); ?></p>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4 pt-2">
+                            <a href="<?php echo htmlspecialchars($card_link); ?>" class="text-primary text-decoration-none small fw-semibold d-inline-flex align-items-center gap-1 hover-gold">
+                                Read More <i class="fa-solid fa-arrow-right fs-6 ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: RESEARCH & INNOVATION (KALAM INNOVATION CENTER) -->
+    <section id="research" class="py-5 text-white" style="background-color: var(--primary-color);">
+        <div class="container-custom py-md-4">
+            <div class="row g-5 align-items-center">
+                
+                <!-- Left: Kalam Innovation Center Details & Stats -->
+                <div class="col-lg-6">
+                    <div class="eyebrow-label gold-eyebrow mb-3">
+                        Research & Innovation
+                    </div>
+                    <h2 class="font-serif display-6 fw-medium text-white mb-3" style="line-height: 1.15;">
+                        <?php echo $research['title']; ?>
+                    </h2>
+                    <p class="text-white text-opacity-80 leading-relaxed small mb-4" style="max-width: 520px; font-size: 0.92rem;">
+                        <?php echo htmlspecialchars($research['description']); ?>
+                    </p>
+
+                    <div class="rounded-4 overflow-hidden mb-4 shadow-sm" style="border-radius: 1.25rem;">
+                        <img src="<?php echo htmlspecialchars($research['image_path']); ?>" alt="Kalam Center" class="w-100 object-fit-cover" style="height: 220px;"/>
+                    </div>
+
+                    <div class="row g-3 text-start mb-3" style="max-width: 480px;">
+                        <div class="col-4">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1"><?php echo htmlspecialchars($research['stat1_value']); ?></div>
+                            <div class="text-uppercase text-white text-opacity-70 fw-semibold mt-1" style="font-size: 0.65rem; letter-spacing: 0.12em;"><?php echo htmlspecialchars($research['stat1_label']); ?></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1"><?php echo htmlspecialchars($research['stat2_value']); ?></div>
+                            <div class="text-uppercase text-white text-opacity-70 fw-semibold mt-1" style="font-size: 0.65rem; letter-spacing: 0.12em;"><?php echo htmlspecialchars($research['stat2_label']); ?></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1"><?php echo htmlspecialchars($research['stat3_value']); ?></div>
+                            <div class="text-uppercase text-white text-opacity-70 fw-semibold mt-1" style="font-size: 0.65rem; letter-spacing: 0.12em;"><?php echo htmlspecialchars($research['stat3_label']); ?></div>
+                        </div>
+                    </div>
+
+                    <a href="<?php echo htmlspecialchars($research['report_link'] ?? 'faculty-publications.php'); ?>" class="text-gold text-decoration-none d-inline-flex align-items-center gap-2 small fw-medium mt-2 pt-1 hover-underline">
+                        Read the research report <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem;"></i>
+                    </a>
+                </div>
+
+                <!-- Right: Research Papers Showcase -->
+                <div class="col-lg-6">
+                    <div class="rounded-4 overflow-hidden" style="border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 1.25rem;">
+                        
+                        <!-- Paper 1 -->
+                        <div class="p-4 p-md-4 d-flex align-items-start gap-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
+                            <div class="font-serif text-gold fw-normal fs-2 lh-1 flex-shrink-0" style="width: 32px;"><?php echo htmlspecialchars($research['paper1_num']); ?></div>
+                            <div>
+                                <div class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.15em;"><?php echo htmlspecialchars($research['paper1_tag']); ?></div>
+                                <h3 class="font-serif fs-5 fw-normal text-white mt-1 mb-1 lh-snug"><?php echo htmlspecialchars($research['paper1_title']); ?></h3>
+                                <div class="text-white text-opacity-60 small" style="font-size: 0.8rem;"><?php echo htmlspecialchars($research['paper1_author']); ?></div>
+                            </div>
+                        </div>
+
+                        <!-- Paper 2 -->
+                        <div class="p-4 p-md-4 d-flex align-items-start gap-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
+                            <div class="font-serif text-gold fw-normal fs-2 lh-1 flex-shrink-0" style="width: 32px;"><?php echo htmlspecialchars($research['paper2_num']); ?></div>
+                            <div>
+                                <div class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.15em;"><?php echo htmlspecialchars($research['paper2_tag']); ?></div>
+                                <h3 class="font-serif fs-5 fw-normal text-white mt-1 mb-1 lh-snug"><?php echo htmlspecialchars($research['paper2_title']); ?></h3>
+                                <div class="text-white text-opacity-60 small" style="font-size: 0.8rem;"><?php echo htmlspecialchars($research['paper2_author']); ?></div>
+                            </div>
+                        </div>
+
+                        <!-- Paper 3 -->
+                        <div class="p-4 p-md-4 d-flex align-items-start gap-4">
+                            <div class="font-serif text-gold fw-normal fs-2 lh-1 flex-shrink-0" style="width: 32px;"><?php echo htmlspecialchars($research['paper3_num']); ?></div>
+                            <div>
+                                <div class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.15em;"><?php echo htmlspecialchars($research['paper3_tag']); ?></div>
+                                <h3 class="font-serif fs-5 fw-normal text-white mt-1 mb-1 lh-snug"><?php echo htmlspecialchars($research['paper3_title']); ?></h3>
+                                <div class="text-white text-opacity-60 small" style="font-size: 0.8rem;"><?php echo htmlspecialchars($research['paper3_author']); ?></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: PLACEMENTS & RECRUITER TICKER -->
+    <section id="placements" class="py-5 my-md-4">
+        <div class="container-custom">
+            <div class="row align-items-end g-4 mb-4">
+                <div class="col-lg-7">
+                    <div class="eyebrow-label mb-2">Placements</div>
+                    <h2 class="font-serif text-primary fw-medium display-6 mb-0">
+                        A <em class="fst-italic fw-normal">96%</em> offer rate. 500+ companies. One outcome.
+                    </h2>
+                </div>
+                <div class="col-lg-5 text-muted-custom small leading-relaxed">
+                    Our placement cell partners with the country's most respected employers — and prepares you for interviews from year one.
+                </div>
+            </div>
+        </div>
+
+        <!-- Smooth Infinite Recruiter Marquee -->
+        <div class="mt-4 border-top border-bottom border-custom py-4 bg-secondary-tint">
+            <div class="marquee-container">
+                <div class="marquee-track align-items-center text-primary text-opacity-75">
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Microsoft</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">TCS</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Infosys</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Wipro</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Deloitte</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Bosch</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Cognizant</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Accenture</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Sun Pharma</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Cipla</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">HDFC Bank</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">ICICI Bank</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">L&T Infotech</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Mahindra</span>
+
+                    <!-- Duplicate for infinite seamless loop -->
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Microsoft</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">TCS</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Infosys</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Wipro</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Deloitte</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Bosch</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Cognizant</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Accenture</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Sun Pharma</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Cipla</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">HDFC Bank</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">ICICI Bank</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">L&T Infotech</span>
+                    <span class="font-serif fs-3 fw-bold text-nowrap">Mahindra</span>
+                </div>
+            </div>
+        </div>    <!-- SECTION 7: CAMPUS NEWS & STORIES -->
+    <section class="py-5 bg-secondary-tint">
+        <div class="container-custom py-md-4">
+            
+            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4 mb-md-5">
+                <div>
+                    <div class="eyebrow-label mb-2">Latest</div>
+                    <h2 class="font-serif text-primary fw-medium display-6 mb-0">
+                        News & <em class="fst-italic fw-normal">stories</em> from campus.
+                    </h2>
+                </div>
+                <a href="aku-in-media.php" class="text-primary text-decoration-none fw-semibold small d-inline-flex align-items-center gap-2">
+                    View all news <i class="fa-solid fa-arrow-right text-primary" style="font-size: 0.75rem;"></i>
+                </a>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                
+                <!-- Main Featured News Card (Left) -->
+                <div class="col-lg-6">
+                    <a href="aku-in-media.php" class="news-featured-card">
+                        <img src="assets/lovable/APJ.jpg" alt="Campus News"/>
+                        <div class="news-featured-overlay"></div>
+                        <div class="news-featured-content">
+                            <span class="badge-featured-gold">
+                                Featured · Research
+                            </span>
+                            <h3 class="news-featured-title">
+                                AKU researchers publish breakthrough on sustainable polymer catalysis
+                            </h3>
+                            <p class="news-featured-desc">
+                                A team from the School of Sciences has developed a low-energy catalytic process featured in a Q1 journal.
+                            </p>
+                            <div class="news-featured-date">
+                                Mar 12, <?php echo date('Y'); ?>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Side News Cards (Right) -->
+                <div class="col-lg-6 d-flex flex-column justify-content-between gap-4">
+                    
+                    <a href="placement-cell.php" class="news-side-card">
+                        <div>
+                            <div class="news-meta-header">
+                                <span>Placements</span>
+                                <span class="news-meta-divider"></span>
+                                <span class="news-meta-date">Feb 28, <?php echo date('Y'); ?></span>
+                            </div>
+                            <h3 class="news-side-title">
+                                Record placement season: 96% offer rate across engineering & management
+                            </h3>
+                            <p class="news-side-desc">
+                                Over 500 companies visited campus this year including TCS, Infosys, Wipro, Cognizant, Deloitte and Bosch.
+                            </p>
+                        </div>
+                        <div class="news-read-more">
+                            Read more <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem;"></i>
+                        </div>
                     </a>
 
-                    <!-- Content BELOW image -->
-                    <div class="voi-content">
-                        <h4 class="voi-name">
-                            <a href="voi/<?php echo $voi['slug']; ?>/"><?php echo htmlspecialchars($voi['title']); ?></a>
-                        </h4>
-                        <p class="voi-designation"><?php echo htmlspecialchars($voi['designation']); ?></p>
-                        <a href="voi/<?php echo $voi['slug']; ?>/" class="voi-readmore">View Profile →</a>
+                    <a href="incubation-center.php" class="news-side-card">
+                        <div>
+                            <div class="news-meta-header">
+                                <span>Campus</span>
+                                <span class="news-meta-divider"></span>
+                                <span class="news-meta-date">Feb 14, <?php echo date('Y'); ?></span>
+                            </div>
+                            <h3 class="news-side-title">
+                                Kalam Innovation Center opens with prototyping labs and startup studio
+                            </h3>
+                            <p class="news-side-desc">
+                                The new facility offers PCB fabrication, 3D printing, and mentoring for student-led ventures.
+                            </p>
+                        </div>
+                        <div class="news-read-more">
+                            Read more <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem;"></i>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: UPCOMING EVENTS -->
+    <section class="py-5 my-md-4">
+        <div class="container-custom">
+            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4">
+                <div>
+                    <div class="eyebrow-label mb-2">Upcoming</div>
+                    <h2 class="font-serif text-primary fw-medium display-6 mb-0">
+                        Events, talks & <em class="fst-italic fw-normal">gatherings</em>.
+                    </h2>
+                </div>
+                <a href="university-events.php" class="btn btn-sm btn-outline-dark border-custom rounded-pill px-4 py-2 small fw-medium">
+                    <i class="fa-regular fa-calendar me-1"></i> Full calendar
+                </a>
+            </div>
+
+            <!-- Events List Rows -->
+            <div class="rounded-4 border border-custom overflow-hidden shadow-2xs">
+                
+                <?php 
+                if (!empty($events)) {
+                    foreach ($events as $ev) {
+                        $evDate = strtotime($ev['event_date'] ?? 'now');
+                        $day = date('d', $evDate);
+                        $mon = strtoupper(date('M', $evDate));
+                        $title = htmlspecialchars_decode($ev['title']);
+                        $slug = $ev['slug'] ?? '';
+                ?>
+                <a href="single.php?type=event&slug=<?php echo urlencode($slug); ?>" class="event-list-row">
+                    <div class="text-center flex-shrink-0" style="width: 55px;">
+                        <div class="font-serif fs-2 fw-bold text-primary lh-1"><?php echo $day; ?></div>
+                        <div class="text-uppercase text-muted-custom fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.1em;"><?php echo $mon; ?></div>
+                    </div>
+                    <div class="flex-grow-1 min-w-0">
+                        <div class="font-serif fs-5 fw-bold text-primary text-truncate mb-1"><?php echo $title; ?></div>
+                        <div class="text-muted-custom small d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-primary" style="font-size: 0.75rem;"></i> Kalam Auditorium · Main Campus
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-muted-custom fs-6"></i>
+                </a>
+                <?php 
+                    }
+                } else { 
+                ?>
+                <!-- Fallback Events -->
+                <a href="university-events.php" class="event-list-row">
+                    <div class="text-center flex-shrink-0" style="width: 55px;">
+                        <div class="font-serif fs-2 fw-bold text-primary lh-1">18</div>
+                        <div class="text-uppercase text-muted-custom fw-semibold" style="font-size: 0.65rem;">APR</div>
+                    </div>
+                    <div class="flex-grow-1 min-w-0">
+                        <div class="font-serif fs-5 fw-bold text-primary text-truncate mb-1">TEDx AKU: Voices That Shape Tomorrow</div>
+                        <div class="text-muted-custom small d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-primary" style="font-size: 0.75rem;"></i> Kalam Auditorium · 6:00 PM
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-muted-custom fs-6"></i>
+                </a>
+
+                <a href="university-events.php" class="event-list-row">
+                    <div class="text-center flex-shrink-0" style="width: 55px;">
+                        <div class="font-serif fs-2 fw-bold text-primary lh-1">24</div>
+                        <div class="text-uppercase text-muted-custom fw-semibold" style="font-size: 0.65rem;">APR</div>
+                    </div>
+                    <div class="flex-grow-1 min-w-0">
+                        <div class="font-serif fs-5 fw-bold text-primary text-truncate mb-1">National Symposium on AI & Ethics</div>
+                        <div class="text-muted-custom small d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-primary" style="font-size: 0.75rem;"></i> School of Engineering · 10:00 AM
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-muted-custom fs-6"></i>
+                </a>
+
+                <a href="university-events.php" class="event-list-row">
+                    <div class="text-center flex-shrink-0" style="width: 55px;">
+                        <div class="font-serif fs-2 fw-bold text-primary lh-1">02</div>
+                        <div class="text-uppercase text-muted-custom fw-semibold" style="font-size: 0.65rem;">MAY</div>
+                    </div>
+                    <div class="flex-grow-1 min-w-0">
+                        <div class="font-serif fs-5 fw-bold text-primary text-truncate mb-1">Cultural Fest — Utsav 2026</div>
+                        <div class="text-muted-custom small d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-primary" style="font-size: 0.75rem;"></i> Central Lawns · All Day
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-muted-custom fs-6"></i>
+                </a>
+
+                <a href="convocation.php" class="event-list-row">
+                    <div class="text-center flex-shrink-0" style="width: 55px;">
+                        <div class="font-serif fs-2 fw-bold text-primary lh-1">15</div>
+                        <div class="text-uppercase text-muted-custom fw-semibold" style="font-size: 0.65rem;">MAY</div>
+                    </div>
+                    <div class="flex-grow-1 min-w-0">
+                        <div class="font-serif fs-5 fw-bold text-primary text-truncate mb-1">Convocation Ceremony 2026</div>
+                        <div class="text-muted-custom small d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-primary" style="font-size: 0.75rem;"></i> Kalam Auditorium · 11:00 AM
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-muted-custom fs-6"></i>
+                </a>
+                <?php } ?>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: CAMPUS LIFE GALLERY (8 PHOTOS) -->
+    <section id="gallery" class="py-5 bg-secondary-tint">
+        <div class="container-custom py-md-4">
+            <div class="eyebrow-label mb-2">Life at AKU</div>
+            <h2 class="font-serif text-primary fw-medium display-6 mb-3">
+                Campus <em class="fst-italic fw-normal">gallery</em>.
+            </h2>
+            <p class="text-muted-custom mb-5 small leading-relaxed" style="max-width: 600px;">
+                A glimpse into everyday life at Dr. A.P.J. Abdul Kalam University — from our sunlit gardens to the classrooms, corridors and grounds where our students learn, play and grow.
+            </p>
+
+            <div class="row g-3 g-md-4">
+                
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/APJ1.jpg" alt="Aerial view of campus" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">Aerial view of campus</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/APJ2.jpg" alt="University main gate" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">University main gate</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/apj5.jpg" alt="Faculty & students" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">Faculty & students</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/apj8.jpeg" alt="Academic block" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">Academic block</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/apj6.webp" alt="Cricket ground & sports" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">Cricket ground & sports</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/apj4.webp" alt="Block A entrance" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">Block A entrance</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/APJ.jpg" alt="Campus & transport" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">Campus & transport</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <figure class="gallery-figure shadow-2xs">
+                        <img src="assets/lovable/apj3.jpg" alt="Signage & branding" loading="lazy"/>
+                        <div class="gallery-overlay">
+                            <figcaption class="gallery-caption">Signage & branding</figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: ALUMNI VOICES -->
+    <section class="py-5 my-md-4">
+        <div class="container-custom">
+            <div class="eyebrow-label mb-2">Voices</div>
+            <h2 class="font-serif text-primary fw-medium display-6 mb-5">
+                What our <em class="fst-italic fw-normal">alumni</em> say.
+            </h2>
+
+            <div class="row g-4">
+                <?php foreach ($alumni_voices as $av): ?>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 p-md-5 rounded-4 border border-custom h-100 d-flex flex-column shadow-2xs">
+                        <i class="fa-solid fa-quote-left text-gold fs-3 mb-3"></i>
+                        <p class="font-serif text-primary fs-5 leading-snug fw-medium mb-4 flex-grow-1">
+                            "<?php echo htmlspecialchars($av['quote']); ?>"
+                        </p>
+                        <div class="pt-3 border-top border-custom">
+                            <div class="font-serif text-primary fw-bold fs-6"><?php echo htmlspecialchars($av['name']); ?></div>
+                            <div class="text-muted-custom small" style="font-size: 0.8rem;"><?php echo htmlspecialchars($av['degree_batch']); ?></div>
+                            <div class="text-uppercase text-primary fw-semibold mt-2" style="font-size: 0.68rem; letter-spacing: 0.08em;"><?php echo htmlspecialchars($av['company']); ?></div>
+                        </div>
                     </div>
                 </div>
-            <?php } ?>
+                <?php endforeach; ?>
+            </div>
         </div>
+    </section>
 
-        <style>
-        /* VOI Owl Carousel Navigation Arrows */
-        .voi-carousel {
-            position: relative;
-        }
+    <!-- SECTION 11: PORTALS & QUICK SERVICES -->
+    <section id="portals" class="py-5 bg-secondary-tint">
+        <div class="container-custom py-md-4">
+            <div class="eyebrow-label mb-2">Portals & Services</div>
+            <h2 class="font-serif text-primary fw-medium display-6 mb-5" style="max-width: 650px;">
+                Everything you need, <em class="fst-italic fw-normal">one click away</em>.
+            </h2>
 
-        .voi-carousel .owl-nav {
-            display: block !important;
-        }
+            <div class="row g-3 g-md-4">
+                <?php foreach ($portals as $pt): ?>
+                <div class="col-sm-6 col-lg-3">
+                    <a href="<?php echo htmlspecialchars($pt['url']); ?>" class="portal-card">
+                        <div class="portal-icon-box">
+                            <i class="<?php echo htmlspecialchars($pt['icon']); ?>"></i>
+                        </div>
+                        <div class="flex-grow-1 min-w-0">
+                            <div class="font-serif text-primary fw-bold fs-6 text-truncate lh-sm"><?php echo htmlspecialchars($pt['title']); ?></div>
+                            <div class="text-muted-custom small mt-0.5" style="font-size: 0.75rem;"><?php echo htmlspecialchars($pt['subtitle']); ?></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right text-muted-custom small"></i>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
 
-        .voi-carousel .owl-nav button.owl-prev,
-        .voi-carousel .owl-nav button.owl-next {
-            position: absolute !important;
-            top: 40% !important;
-            transform: translateY(-50%) !important;
-            width: 42px !important;
-            height: 42px !important;
-            background: #ffffff !important;
-            border-radius: 50% !important;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.18) !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            color: #71171C !important;
-            font-size: 15px !important;
-            cursor: pointer !important;
-            transition: all 0.25s ease !important;
-            z-index: 10 !important;
-            border: 1px solid rgba(0,0,0,0.06) !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            opacity: 1 !important;
-        }
+    <!-- SECTION 12: ADMISSIONS 2026 CTA BANNER -->
+    <section id="admissions" class="py-5 my-md-4">
+        <div class="container-custom">
+            <div class="admissions-cta-box">
+                <div class="row g-5 align-items-center position-relative" style="z-index: 2;">
+                    
+                    <!-- Left Headline & Description -->
+                    <div class="col-lg-7">
+                        <div class="eyebrow-label gold-eyebrow mb-3" style="color: var(--gold-color) !important;">
+                            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> <?php echo htmlspecialchars($admissions_cta['eyebrow'] ?? 'Admissions 2026'); ?>
+                        </div>
+                        <h2 class="font-serif display-6 fw-medium text-white mb-3">
+                            <?php echo $admissions_cta['headline']; ?>
+                        </h2>
+                        <p class="text-white text-opacity-85 small leading-relaxed mb-4" style="max-width: 520px; font-size: 0.95rem;">
+                            <?php echo htmlspecialchars($admissions_cta['description']); ?>
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 pt-2">
+                            <a href="<?php echo htmlspecialchars($admissions_cta['btn1_url']); ?>" class="btn-gold-pill">
+                                <?php echo htmlspecialchars($admissions_cta['btn1_text']); ?> <i class="fa-solid fa-arrow-right fs-6 ms-1"></i>
+                            </a>
+                            <a href="<?php echo htmlspecialchars($admissions_cta['btn2_url']); ?>" class="btn-outline-pill">
+                                <?php echo htmlspecialchars($admissions_cta['btn2_text']); ?>
+                            </a>
+                        </div>
+                    </div>
 
-        .voi-carousel .owl-nav button.owl-prev {
-            left: -18px !important;
-        }
+                    <!-- Right Key Dates Box -->
+                    <div class="col-lg-5">
+                        <div class="rounded-4 border border-white border-opacity-15 overflow-hidden p-1 p-sm-2" style="background: rgba(0, 0, 0, 0.12); backdrop-filter: blur(12px);">
+                            <div class="px-3 py-3 d-flex align-items-center justify-content-between border-bottom border-white border-opacity-15">
+                                <span class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.14em;"><?php echo htmlspecialchars($admissions_cta['date1_label']); ?></span>
+                                <span class="font-serif text-gold fs-5 fw-medium"><?php echo htmlspecialchars($admissions_cta['date1_value']); ?></span>
+                            </div>
+                            <div class="px-3 py-3 d-flex align-items-center justify-content-between border-bottom border-white border-opacity-15">
+                                <span class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.14em;"><?php echo htmlspecialchars($admissions_cta['date2_label']); ?></span>
+                                <span class="font-serif text-gold fs-5 fw-medium"><?php echo htmlspecialchars($admissions_cta['date2_value']); ?></span>
+                            </div>
+                            <div class="px-3 py-3 d-flex align-items-center justify-content-between">
+                                <span class="text-uppercase text-white text-opacity-70 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.14em;"><?php echo htmlspecialchars($admissions_cta['date3_label']); ?></span>
+                                <span class="font-serif text-gold fs-5 fw-medium"><?php echo htmlspecialchars($admissions_cta['date3_value']); ?></span>
+                            </div>
+                        </div>
+                    </div>
 
-        .voi-carousel .owl-nav button.owl-next {
-            right: -18px !important;
-        }
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .voi-carousel .owl-nav button.owl-prev:hover,
-        .voi-carousel .owl-nav button.owl-next:hover {
-            background: #71171C !important;
-            color: #ffffff !important;
-            box-shadow: 0 6px 20px rgba(113,23,28,0.35) !important;
-            transform: translateY(-50%) scale(1.08) !important;
-        }
+</main>
 
-        .voi-carousel .owl-nav button.owl-prev i,
-        .voi-carousel .owl-nav button.owl-next i {
-            line-height: 1;
-            font-size: 15px;
-        }
-        </style>
+<!-- Interactive Tab Filtering Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.academic-filter-btn');
+        const items = document.querySelectorAll('.academic-item-col');
 
-        <script>
-        jQuery(document).ready(function($){
-            $('.voi-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: true,
-                dots: true,
-                autoplay: true,
-                autoplayHoverPause: true,
-                navText: [
-                    "<i class='fa-solid fa-chevron-left'></i>",
-                    "<i class='fa-solid fa-chevron-right'></i>"
-                ],
-                responsive: {
-                    0: { items: 1 },
-                    560: { items: 2 },
-                    768: { items: 3 },
-                    1024: { items: 4 }
-                }
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active tab state
+                filterBtns.forEach(b => b.classList.remove('active-tab'));
+                this.classList.add('active-tab');
+
+                const filter = this.getAttribute('data-filter');
+                items.forEach(item => {
+                    if (filter === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const categories = item.getAttribute('data-categories') || '';
+                        if (categories.includes(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
             });
         });
-        </script>
-        
-
-		</div>
-	</div>
-</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid page-slider-section section"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-                    <div class="owl-carousel page-slider page-carosel">
-                <div class="page-slide">
-                    <div class="slide-content">
-                        <a href="why-aku.php" class="slide-img-link">
-                            <img decoding="async" src="assets/images/about.jpg" alt="Why AKU">
-                        </a>
-                        <div class="text-content">
-                            <h3><a href="why-aku.php" style="color: inherit; text-decoration: none;">Why AKU</a></h3>
-                            <p>Our Faculty-to-Student Ratio allows faculties to focus on the individual learning styles and needs of each student in our University.</p>
-                            <a href="why-aku.php" class="read-more btn btn-white" style="text-decoration: none;">
-                                <span class="btn-text">Read More</span> 
-                                <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page-slide">
-                    <div class="slide-content">
-                        <a href="faculty-welfare.php" class="slide-img-link">
-                            <img decoding="async" src="assets/images/facultywa.jpg" alt="Faculty Welfare">
-                        </a>
-                        <div class="text-content">
-                            <h3><a href="faculty-welfare.php" style="color: inherit; text-decoration: none;">Faculty Welfare</a></h3>
-                            <p>We believe in providing the best environment and support for our faculties to help them excel in their academic endeavors.</p>
-                            <a href="faculty-welfare.php" class="read-more btn btn-white" style="text-decoration: none;">
-                                <span class="btn-text">Read More</span> 
-                                <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page-slide">
-                    <div class="slide-content">
-                        <a href="awardsand-recognigation.php" class="slide-img-link">
-                            <img decoding="async" src="assets/images/award1.jpg" alt="Awards & Recognition">
-                        </a>
-                        <div class="text-content">
-                            <h3><a href="awardsand-recognigation.php" style="color: inherit; text-decoration: none;">Awards & Recognition</a></h3>
-                            <p>Explore the various accolades and milestones achieved by our university, recognizing excellence across multiple disciplines.</p>
-                            <a href="awardsand-recognigation.php" class="read-more btn btn-white" style="text-decoration: none;">
-                                <span class="btn-text">Read More</span> 
-                                <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page-slide">
-                    <div class="slide-content">
-                        <a href="our-recruiters.php" class="slide-img-link">
-                            <img decoding="async" src="assets/images/placement.jpg" alt="Our Recruiters">
-                        </a>
-                        <div class="text-content">
-                            <h3><a href="our-recruiters.php" style="color: inherit; text-decoration: none;">Our Recruiters</a></h3>
-                            <p>Our strong industry ties ensure that top recruiters visit our campus, providing excellent career opportunities for our students.</p>
-                            <a href="our-recruiters.php" class="read-more btn btn-white" style="text-decoration: none;">
-                                <span class="btn-text">Read More</span> 
-                                <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page-slide">
-                    <div class="slide-content">
-                        <a href="gallery.php" class="slide-img-link">
-                            <img decoding="async" src="assets/images/gallery.jpg" alt="Gallery">
-                        </a>
-                        <div class="text-content">
-                            <h3><a href="gallery.php" style="color: inherit; text-decoration: none;">Gallery</a></h3>
-                            <p>Take a visual tour of our vibrant campus life, academic events, cultural fests, and state-of-the-art facilities.</p>
-                            <a href="gallery.php" class="read-more btn btn-white" style="text-decoration: none;">
-                                <span class="btn-text">Read More</span> 
-                                <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                    </div>
- 
-
-<script>
-jQuery(document).ready(function($) {
-    $(".page-slider").owlCarousel({
-        loop: false,
-        margin:30,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplaySpeed: 1000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: { items: 1 },
-            768: { items: 3 },
-            1024: { items: 4 }
-        }
     });
-});
 </script>
-    
 
-		</div>
-	</div>
-</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div><h2 style="text-align: center" class="vc_custom_heading vc_do_custom_heading" >Media Coverage</h2>
-	<div class="wpb_text_column wpb_content_element media-img media-text" >
-		<div class="wpb_wrapper">
-			<div class="grid-media">
-            <?php
-            $media_stmt = $pdo->prepare("SELECT title, slug, image_path FROM media_coverage ORDER BY created_at DESC LIMIT 4");
-            $media_stmt->execute();
-            $medias = $media_stmt->fetchAll();
-            foreach ($medias as $media) {
-                $img_url = $media['image_path'] ? 'uploads/' . $media['image_path'] : 'assets/images/placeholder.jpg';
-            ?>
-                <div class="grid-item">
-                    <a href="media-coverage-aku/<?php echo $media['slug']; ?>/">
-                        <img decoding="async" src="<?php echo htmlspecialchars($img_url); ?>" alt="<?php echo htmlspecialchars($media['title']); ?>">
-                        <p class="text-18"><?php echo htmlspecialchars($media['title']); ?></p>
-                    </a>
-                </div>
-            <?php } ?>
-            </div>
-
-		</div>
-	</div>
-</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1743410564552 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-			         
-        <div class="blog-section">
-            <h2 class="blog-title">Latest Blogs</h2>
-            <div class="blog-container">
-            <?php
-            $blog_stmt = $pdo->prepare("SELECT title, slug, image_path, content FROM blogs ORDER BY created_at DESC LIMIT 3");
-            $blog_stmt->execute();
-            $blogs = $blog_stmt->fetchAll();
-            foreach($blogs as $blog) {
-                $excerpt = strip_tags($blog['content']);
-                if (strlen($excerpt) > 100) {
-                    $excerpt = substr($excerpt, 0, 100) . '&hellip;';
-                }
-                
-                if (strpos($blog['image_path'], 'assets/') === 0) {
-                    $image_src = $blog['image_path'];
-                } else {
-                    $image_src = $blog['image_path'] ? 'uploads/' . $blog['image_path'] : 'assets/images/placeholder.jpg';
-                }
-            ?>
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img loading="lazy" decoding="async" width="300" height="200" src="<?php echo htmlspecialchars($image_src); ?>" class="attachment-medium size-medium wp-post-image" alt="" style="object-fit:cover; aspect-ratio:3/2; width:100%; height:auto;" />
-                    </div>
-                    <div class="blog-content">
-                        <h3><?php echo htmlspecialchars($blog['title']); ?></h3>
-                        <p><?php echo $excerpt; ?></p>
-                        <a href="blog/<?php echo $blog['slug']; ?>/" class="read-more btn btn-white">
-                            <span class="btn-text">Read More</span> 
-                            <span class="btn-arrow">
-                                 <i class="fa-solid fa-arrow-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            <?php } ?>
-            </div>
-<!--             <div class="view-all">
-                <a href="blogs" class="view-all-btn">View All Blogs</a>
-                
-            </div> -->
-        </div>
-         
-    
-    
-
-		</div>
-	</div>
-</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element" >
-		<div class="wpb_wrapper">
-			    <div class="owl-carousel logo-slider">
-        <div><img decoding="async" src="assets/images/mp.png" alt="Logo 1"></div>
-        <div><img decoding="async" src="assets/images/aicte.png" alt="Logo 2"></div>
-        <!-- <div><img decoding="async" src="assets/images/28082019_035747_COA.png" alt="Logo 3"></div> -->
-        <div><img decoding="async" src="assets/images/ugc.png" alt="Logo 4"></div>
-        <div><img decoding="async" src="assets/images/pci.png" alt="Logo 5"></div>
-        <div><img decoding="async" src="assets/images/ncte1.png" alt="Logo 6"></div>
-        <div><img decoding="async" src="assets/images/28082019_035733_BOI.png" alt="Logo 7"></div>
-    </div>
-<script>
-jQuery(document).ready(function($) {
-    $(".logo-slider").owlCarousel({
-        loop: true,
-        margin: 20,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplaySpeed: 1000,
-        autoplayHoverPause: false,
-        dots: false,
-        nav: false,
-        responsive: {
-            0: { items: 3 },
-            600: { items: 5 },
-            1000: { items: 7 }
-        }
-    });
-});
-</script>
-    
-
-		</div>
-	</div>
-</div></div></div></div>
-</div>	</div><!-- .entry-content -->
-	</div>
-	</article><!-- #post-7 -->  
-	</main><!-- #main -->
-</div>
-<?php include 'footer.php'; ?>
+<?php require_once 'footer.php'; ?>

@@ -1,322 +1,184 @@
-<footer id="colophon" class="site-footer ">
-	
-   <div class="uk-container">
-      <div class="footer-grid">
-         
-            <div class="about">
-				     <div class="uk-grid">
-            <div class="uk-width-1-1@m">
-               <a href="index.php" class="custom-logo-link" rel="home">
-               <img src="assets/images/footer-logo.png" class="custom-logo" alt="Dr A P J University" decoding="async">
-               </a> 
+<?php
+// Fetch site settings
+try {
+    $settings = $pdo->query("SELECT * FROM site_settings_custom LIMIT 1")->fetch() ?: [
+        'university_tagline' => '…Nurturing Talents to Success',
+        'address' => 'Indore-Dewas Bypass Road, Village Arandia, Post Jhalaria, Dewas Naka, Indore – 452016, Madhya Pradesh, India',
+        'phone' => '+91 731 2530 500 / +91 91111 09999',
+        'email' => 'info@aku.ac.in',
+        'admissions_email' => 'admissions@aku.ac.in',
+        'facebook_url' => 'https://www.facebook.com/DR.APJAK.University',
+        'instagram_url' => 'https://www.instagram.com/drapjaku_universityindore/',
+        'twitter_url' => 'https://x.com/APJ_University',
+        'linkedin_url' => 'https://www.linkedin.com/in/akuniversityindore/',
+        'youtube_url' => 'https://www.youtube.com/channel/UCHuwjAPSYLsThbZldaC75_A',
+        'copyright_text' => '© ' . date('Y') . ' Dr. A.P.J. Abdul Kalam University, Indore. All rights reserved.'
+    ];
+} catch (Exception $e) {
+    $settings = [];
+}
+?>
+
+<footer class="pt-5 pb-4 mt-5 text-white" style="background-color: var(--primary-color);">
+    <div class="container-custom">
+        
+        <!-- Top Footer Row: Newsletter & Contact Details -->
+        <div class="row g-4 justify-content-between align-items-start pb-5 border-bottom border-white border-opacity-15">
+            
+            <!-- Left: Newsletter -->
+            <div class="col-lg-6">
+                <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+                    <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> Stay Connected
+                </div>
+                <h3 class="font-serif display-6 fw-medium text-white mb-2" style="max-width: 460px; line-height: 1.2;">
+                    Receive our stories, research and admissions news.
+                </h3>
+                <form action="javascript:void(0);" onsubmit="alert('Thank you for subscribing to Dr. APJ Abdul Kalam University newsletter!');" class="newsletter-capsule mt-4">
+                    <input type="email" required placeholder="your@email.com" class="newsletter-input"/>
+                    <button type="submit" class="newsletter-btn">
+                        Subscribe
+                    </button>
+                </form>
             </div>
-     
-         </div>
-               <p class="paragraph-footer">The Society was established in 2004 under the flagship of Central India Institute of Technology ever since its inception, a strong commitment to excellence in teaching and research has made the group a role-model and path-setter for other institution.</p>
-   
+
+            <!-- Right: Contact Details -->
+            <div class="col-lg-5 small text-white text-opacity-85 lh-base pt-2">
+                <div class="d-flex align-items-start gap-3 mb-3">
+                    <i class="fa-solid fa-location-dot text-gold fs-5 mt-1 flex-shrink-0"></i>
+                    <div>
+                        <strong class="font-serif fs-6 text-white d-block mb-1">Dr. A.P.J. Abdul Kalam University</strong>
+                        <span class="text-white text-opacity-75"><?php echo nl2br(htmlspecialchars($settings['address'] ?? '')); ?></span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <i class="fa-solid fa-phone text-gold flex-shrink-0"></i>
+                    <a href="tel:<?php echo htmlspecialchars(explode('/', $settings['phone'] ?? '')[0]); ?>" class="footer-link text-white text-opacity-85">
+                        <?php echo htmlspecialchars($settings['phone'] ?? '+91 731 2530 500'); ?>
+                    </a>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-envelope text-gold flex-shrink-0"></i>
+                    <a href="mailto:<?php echo htmlspecialchars($settings['email'] ?? 'info@aku.ac.in'); ?>" class="footer-link text-white text-opacity-85">
+                        <?php echo htmlspecialchars($settings['email'] ?? 'info@aku.ac.in'); ?>
+                    </a>
+                </div>
             </div>
-            <div class="footer-menu">
-               <div class="footer-menu-center">
-                  <div class="widget-title">
-                     <h5>Useful Links</h5>
-                  </div>
-                  <div class="widget-content">
-                     <div class="menu-usefull-links-container"><ul id="menu-usefull-links" class="uk-list"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="university-events.php">University Events</a></li>
-<li id="menu-item-4322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4322"><a href="students-testomonials.php">Students Testimonials</a></li>
-<li id="menu-item-4323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4323"><a href="incubation-center.php">Incubation Center</a></li>
-<li id="menu-item-4325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4325"><a href="download-form-student.php">Download Form</a></li>
-<li id="menu-item-4476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4476"><a href="career.php">Careers</a></li>
-</ul></div>
 
+        </div>
 
-                  </div>
-                  
-               </div>
-               <div class="">
-                  <div class="widget-title">
-                     <h5>Quick Links</h5>
-                  </div>
-                  <div class="widget-content">
-                     <div class="menu-quick-links-container"><ul id="menu-quick-links" class="uk-list"><li id="menu-item-4320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4320"><a href="https://aiira.iastate.edu/" target="_blank" rel="noopener noreferrer">ARIIA</a></li>
-<li id="menu-item-4321" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4321"><a href="https://www.nirfindia.org/Rankings/2024/Ranking.html" target="_blank" rel="noopener noreferrer">NIRF</a></li>
-<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="rti-act.php">RTI Act</a></li>
-<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="mandatory-disclosers.php">Mandatory Disclosers</a></li>
-</ul></div>	 
-                  </div>
-               </div>
-				
-				            <div class="support">
-               <div class="widget-title">
-                  <h5>Contact Us</h5>
-               </div>
-               <div class="widget-content">
-                  <ul class="uk-list contact-list">
-					   <li>
-                        <a href="https://maps.app.goo.gl/qgKjXLEJsbTuZGwf6" target="_blank" rel="noopener noreferrer">
-                        <span class="ls-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
-                        <span class="title text-16">Indore- Dewas Bypass Road,<br> 
-						Village- Arandia, P.O. Vijay Nagar,<br>
-                       Indore (M.P.) – 452010 INDIA </span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="tel:180030026072">
-                        <span class="ls-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
-                        <span class="title text-24 bold"><strong>180030026072</strong></span>
-                        </a>
-                     </li>
-                    
-                     <li>
-                        <a class="" href="mailto:office_university@aku.ac.in">
-                        <span class="ls-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
-                        <span class="title">office_university@aku.ac.in</span>
-                        </a>
-                     </li>
-                     <li>
-                           <!-- Social Media Icons -->
-             <div class="social-icons-wrap">
-                <a href="https://www.facebook.com/DR.APJAK.University" target="_blank" class="social-icon facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/drapjaku_universityindore/" target="_blank" class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://x.com/APJ_University" target="_blank" class="social-icon twitter">
-                    <i class="fab fa-x"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UCHuwjAPSYLsThbZldaC75_A" target="_blank" class="social-icon youtube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/akuniversityindore/" target="_blank" class="social-icon linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+        <!-- Comprehensive 5-Column Sitemap Linking All Website Pages -->
+        <div class="row g-4 py-5 border-bottom border-white border-opacity-15">
+            
+            <!-- Col 1: Brand & Social Media -->
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/lovable/aku-logo.jpeg" alt="AKU Logo" class="bg-white p-1 rounded-3 shadow-xs flex-shrink-0" style="height: 56px; width: auto;"/>
+                    <div class="lh-sm">
+                        <div class="font-serif fw-bold text-white fs-6" style="font-size: 1.05rem !important; line-height: 1.25;">Dr. A. P. J. Abdul Kalam University</div>
+                        <div class="text-gold text-uppercase fw-semibold mt-1" style="font-size: 0.64rem; letter-spacing: 0.12em;">NURTURING TALENT TO SUCCESS</div>
+                    </div>
+                </div>
+                <p class="text-white text-opacity-80 small mb-3" style="font-size: 0.85rem; line-height: 1.65;">
+                    The Society was established in 2004 under the flagship of Central India Institute of Technology ever since its inception, a strong commitment to excellence in teaching and research has made the group a role-model and path-setter for other institution.
+                </p>
+                
+                <!-- Direct Connected Social Media Links -->
+                <div class="d-flex align-items-center gap-2 mt-3">
+                    <a href="<?php echo htmlspecialchars($settings['facebook_url'] ?? 'https://www.facebook.com/DR.APJAK.University'); ?>" target="_blank" class="footer-social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['instagram_url'] ?? 'https://www.instagram.com/drapjaku_universityindore/'); ?>" target="_blank" class="footer-social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['twitter_url'] ?? 'https://x.com/APJ_University'); ?>" target="_blank" class="footer-social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['linkedin_url'] ?? 'https://www.linkedin.com/in/akuniversityindore/'); ?>" target="_blank" class="footer-social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['youtube_url'] ?? 'https://www.youtube.com/channel/UCHuwjAPSYLsThbZldaC75_A'); ?>" target="_blank" class="footer-social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
-                     </li>
 
-                  </ul>
-                  
-               </div>
+            <!-- Col 2: Academics & Schools -->
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-column-heading">Academics</div>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                    <li><a href="department-of-computer-science-engineering.php" class="footer-link">Engineering & Tech</a></li>
+                    <li><a href="department-of-management-studies.php" class="footer-link">Business & Management</a></li>
+                    <li><a href="department-of-pharmacy.php" class="footer-link">Pharmacy & Health</a></li>
+                    <li><a href="department-of-law.php" class="footer-link">Law & Legal Studies</a></li>
+                    <li><a href="department-of-science.php" class="footer-link">Science & Research</a></li>
+                    <li><a href="department-of-education.php" class="footer-link">Education & Humanities</a></li>
+                    <li><a href="department-of-agriculture.php" class="footer-link">Agricultural Sciences</a></li>
+                    <li><a href="diploma-in-enginering.php" class="footer-link">Polytechnic Diploma</a></li>
+                    <li><a href="academic-calendar.php" class="footer-link text-gold fw-medium">Academic Calendar</a></li>
+                </ul>
             </div>
-            </div> 
 
-         <br>
-              
-      </div>
-	   
-   
-   <hr class="mt-4">
-   <div class="footer-bottom">
-      <div uk-grid>
-         <div class="uk-width-1-2">
-            2026 © Dr. A.P.J. Abdul Kalam University, Indore   All rights reserved. 
+            <!-- Col 3: Admissions & Research -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="footer-column-heading">Admissions & R&D</div>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                    <li><a href="apply-now.php" class="footer-link text-gold fw-bold"><i class="fa-solid fa-graduation-cap me-1"></i> Apply Online 2026</a></li>
+                    <li><a href="admission-procedure.php" class="footer-link">Admission Procedure</a></li>
+                    <li><a href="ph-d-selection-process.php" class="footer-link">Ph.D Admissions</a></li>
+                    <li><a href="fee-structure.php" class="footer-link">Fee Structure</a></li>
+                    <li><a href="admission-assistance.php" class="footer-link">Admission Helpdesk</a></li>
+                    <li><a href="scholarships.php" class="footer-link">Scholarships</a></li>
+                    <li><a href="incubation-center.php" class="footer-link">Kalam Incubation</a></li>
+                    <li><a href="research-committee.php" class="footer-link">R&D Committee</a></li>
+                    <li><a href="faculty-publications.php" class="footer-link">Faculty Publications</a></li>
+                    <li><a href="download-form.php" class="footer-link">Download Forms</a></li>
+                </ul>
+            </div>
 
-         </div>
-         <div class="uk-width-1-2">
-            <ul class="uk-list-inline">
-               <li><a href="refund-cancellation.php" style="color: inherit; text-decoration: none;">Refund &amp; Cancellation</a></li>
-               <li><a href="privacy-policy.php" style="color: inherit; text-decoration: none;">Privacy Policy</a></li>
-               <li><a href="payment-terms.php" style="color: inherit; text-decoration: none;">Payment Terms</a></li>
-            </ul>
-         </div>
-      </div>
-   </div>
-   </div>
+            <!-- Col 4: Examinations & Campus -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="footer-column-heading">Examinations & Life</div>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                    <li><a href="results.php" class="footer-link text-gold fw-medium">Exam Results Portal</a></li>
+                    <li><a href="examination-calendar.php" class="footer-link">Exam Schedule</a></li>
+                    <li><a href="exam-notice.php" class="footer-link">Exam Notices</a></li>
+                    <li><a href="old-question-papers.php" class="footer-link">Old Question Papers</a></li>
+                    <li><a href="convocation.php" class="footer-link">Convocation</a></li>
+                    <li><a href="world-class-infrastructure.php" class="footer-link">Infrastructure</a></li>
+                    <li><a href="hostel-rules-regulations.php" class="footer-link">Hostel & Living</a></li>
+                    <li><a href="gallery.php" class="footer-link">Photo Gallery</a></li>
+                    <li><a href="university-events.php" class="footer-link">Campus Events &amp; Fests</a></li>
+                </ul>
+            </div>
 
- 
+            <!-- Col 5: Statutory & Portals -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="footer-column-heading">Statutory & Portals</div>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                    <li><a href="https://www.universitymanagementsystem.in/aku/Home/Dashboard" target="_blank" class="footer-link"><i class="fa-solid fa-file-circle-check text-gold me-1"></i> Document Verify</a></li>
+                    <li><a href="https://login.rssrcampusconnect.com/" target="_blank" class="footer-link"><i class="fa-solid fa-right-to-bracket text-gold me-1"></i> Student ERP Login</a></li>
+                    <li><a href="career.php" class="footer-link text-gold fw-medium"><i class="fa-solid fa-briefcase me-1"></i> Careers @ AKU</a></li>
+                    <li><a href="notice-board.php" class="footer-link">Official Notice Board</a></li>
+                    <li><a href="placement-cell.php" class="footer-link">Training & Placement</a></li>
+                    <li><a href="our-recruiters.php" class="footer-link">Our 500+ Recruiters</a></li>
+                    <li><a href="iqac.php" class="footer-link">IQAC (NAAC / NIRF)</a></li>
+                    <li><a href="mandatory-disclosers.php" class="footer-link">Mandatory Disclosures</a></li>
+                    <li><a href="ugc-recognition.php" class="footer-link">UGC Recognition</a></li>
+                    <li><a href="admin/login.php" class="footer-link text-gold fw-semibold"><i class="fa-solid fa-lock me-1"></i> CMS Admin Portal</a></li>
+                </ul>
+            </div>
 
+        </div>
+
+        <!-- Copyright & Legal Bar -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 pt-4 small text-white text-opacity-60" style="font-size: 0.78rem;">
+            <div><?php echo htmlspecialchars($settings['copyright_text'] ?? ('© ' . date('Y') . ' Dr. A.P.J. Abdul Kalam University, Indore. All rights reserved.')); ?></div>
+            <div class="d-flex flex-wrap gap-3">
+                <a href="privacy-policy.php" class="footer-link text-white text-opacity-60">Privacy Policy</a>
+                <a href="payment-terms.php" class="footer-link text-white text-opacity-60">Terms of Use</a>
+                <a href="refund-cancellation.php" class="footer-link text-white text-opacity-60">Refund Policy</a>
+                <a href="anti-reggiging-committee.php" class="footer-link text-white text-opacity-60">Anti-Ragging</a>
+                <a href="icc.php" class="footer-link text-white text-opacity-60">ICC</a>
+                <a href="sgrc.php" class="footer-link text-white text-opacity-60">Grievance Redressal</a>
+                <a href="rti-act.php" class="footer-link text-white text-opacity-60">RTI Act</a>
+            </div>
+        </div>
+
+    </div>
 </footer>
-<!-- #colophon -->
-</div><!-- #page -->
-<script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/aku/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
-<div 
-	id="pum-620" 
-	role="dialog" 
-	aria-modal="false"
-	aria-labelledby="pum_popup_title_620"
-	class="pum pum-overlay pum-theme-43 pum-theme-default-theme popmake-overlay click_open" 
-	data-popmake="{&quot;id&quot;:620,&quot;slug&quot;:&quot;school-of-engineering-aicte-approval-letter-2024-25&quot;,&quot;theme_id&quot;:43,&quot;cookies&quot;:[{&quot;event&quot;:&quot;on_popup_close&quot;,&quot;settings&quot;:{&quot;name&quot;:&quot;pum-620&quot;,&quot;key&quot;:&quot;&quot;,&quot;session&quot;:null,&quot;path&quot;:true,&quot;time&quot;:&quot;1 minutes&quot;}}],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:[&quot;pum-620&quot;],&quot;extra_selectors&quot;:&quot;.approvals-pdf&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
 
-	<div id="popmake-620" class="pum-container popmake theme-43 pum-responsive pum-responsive-medium responsive size-medium">
+<!-- Bootstrap 5.3.3 JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-				
-							<div id="pum_popup_title_620" class="pum-title popmake-title">
-				School of Engineering AICTE Approval Letter 2024-25			</div>
-		
-		
-				<div class="pum-content popmake-content" tabindex="0">
-			<p><iframe 
-  src="assets/images/SOE13112024_103217_SOE-EOA-REPORT-2024-2025.pdf" 
-  style="width: 100%; height: 100vh;position: absolute;" 
-  frameborder="0"><br />
-</iframe></p>
-		</div>
-
-				
-							<button type="button" class="pum-close popmake-close" aria-label="Close">
-			CLOSE			</button>
-		
-	</div>
-
-</div>
-<div 
-	id="pum-587" 
-	role="dialog" 
-	aria-modal="false"
-	aria-labelledby="pum_popup_title_587"
-	class="pum pum-overlay pum-theme-44 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" 
-	data-popmake="{&quot;id&quot;:587,&quot;slug&quot;:&quot;college-of-engineering-aicte-approval-letter-2024-25&quot;,&quot;theme_id&quot;:44,&quot;cookies&quot;:[{&quot;event&quot;:&quot;on_popup_close&quot;,&quot;settings&quot;:{&quot;name&quot;:&quot;pum-587&quot;,&quot;key&quot;:&quot;&quot;,&quot;session&quot;:null,&quot;path&quot;:true,&quot;time&quot;:&quot;1 seconds&quot;}}],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:[&quot;pum-587&quot;],&quot;extra_selectors&quot;:&quot;.approvals-pdf&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
-
-	<div id="popmake-587" class="pum-container popmake theme-44 pum-responsive pum-responsive-medium responsive size-medium">
-
-				
-							<div id="pum_popup_title_587" class="pum-title popmake-title">
-				College of Engineering AICTE Approval Letter 2024-25			</div>
-		
-		
-				<div class="pum-content popmake-content" tabindex="0">
-			<p><iframe 
-  src="#" 
-  style="width: 100%; height: 100vh;position: absolute;" 
-  frameborder="0"><br />
-</iframe></p>
-		</div>
-
-				
-							<button type="button" class="pum-close popmake-close" aria-label="Close">
-			&times;			</button>
-		
-	</div>
-
-</div>
-<div 
-	id="pum-337" 
-	role="dialog" 
-	aria-modal="false"
-	class="pum pum-overlay pum-theme-43 pum-theme-default-theme popmake-overlay click_open" 
-	data-popmake="{&quot;id&quot;:337,&quot;slug&quot;:&quot;360-map&quot;,&quot;theme_id&quot;:43,&quot;cookies&quot;:[{&quot;event&quot;:&quot;on_popup_close&quot;,&quot;settings&quot;:{&quot;name&quot;:&quot;pum-337&quot;,&quot;time&quot;:&quot;1 month&quot;,&quot;session&quot;:false,&quot;path&quot;:&quot;1&quot;,&quot;key&quot;:&quot;&quot;}}],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;.360-map&quot;,&quot;cookie_name&quot;:[&quot;pum-337&quot;]}}],&quot;mobile_disabled&quot;:true,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
-
-	<div id="popmake-337" class="pum-container popmake theme-43 pum-responsive pum-responsive-medium responsive size-medium">
-
-				
-				
-		
-				<div class="pum-content popmake-content" tabindex="0">
-			<p><iframe src="https://www.google.com/maps/embed?pb=!4v1743404173098!6m8!1m7!1sBYls13Y14GT5nK4kTvK4uQ!2m2!1d22.79576753548605!2d75.93196864088152!3f7.149106246836553!4f-5.850230388249827!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-		</div>
-
-				
-							<button type="button" class="pum-close popmake-close" aria-label="Close">
-			CLOSE			</button>
-		
-	</div>
-
-</div>
-<script src="assets/js/udm-frontend5152.js" id="udm-frontend-js-js"></script>
-<script src="assets/js/owl.carousel.min.js" id="owl-carousel-js-js"></script>
-<script src="assets/js/core.minb37e.js" id="jquery-ui-core-js"></script>
-<script src="assets/js/hooks.minaf5f.js" id="wp-hooks-js"></script>
-<script id="popup-maker-site-js-extra">
-var pum_vars = {"version":"1.21.5","pm_dir_url":"wp-content.phpplugins/popup-maker/","ajaxurl":"wp-admin.phpadmin-ajax.php","restapi":"wp-json.phppum/v1","rest_nonce":null,"default_theme":"43","debug_mode":"","disable_tracking":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","analytics_enabled":"1","analytics_route":"analytics","analytics_api":"wp-json.phppum/v1"};
-var pum_sub_vars = {"ajaxurl":"wp-admin.phpadmin-ajax.php","message_position":"top"};
-var pum_popups = {"pum-620":{"triggers":[{"type":"click_open","settings":{"cookie_name":["pum-620"],"extra_selectors":".approvals-pdf"}}],"cookies":[{"event":"on_popup_close","settings":{"name":"pum-620","key":"","session":null,"path":true,"time":"1 minutes"}}],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"43","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","id":620,"slug":"school-of-engineering-aicte-approval-letter-2024-25"},"pum-587":{"triggers":[{"type":"click_open","settings":{"cookie_name":["pum-587"],"extra_selectors":".approvals-pdf"}}],"cookies":[{"event":"on_popup_close","settings":{"name":"pum-587","key":"","session":null,"path":true,"time":"1 seconds"}}],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"44","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":587,"slug":"college-of-engineering-aicte-approval-letter-2024-25"},"pum-337":{"triggers":[{"type":"click_open","settings":{"extra_selectors":".360-map","cookie_name":["pum-337"]}}],"cookies":[{"event":"on_popup_close","settings":{"name":"pum-337","time":"1 month","session":false,"path":"1","key":""}}],"disable_on_mobile":true,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"43","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","id":337,"slug":"360-map"}};
-//# sourceURL=popup-maker-site-js-extra
-</script>
-<script src="assets/js/pum-site-scripts8b8b.js" id="popup-maker-site-js"></script>
-<script src="assets/js/mobile-detect.min3ba1.js" id="mobile-detect-js"></script>
-<script src="assets/js/js_composer_front.mine097.js" id="wpb_composer_front_js-js"></script>
-<?php if (!empty($useLiveReferenceAssets)): ?>
-<script src="assets/live_assets/vc-accordion.min.js" id="vc_accordion_script-js"></script>
-<script src="assets/live_assets/vc-tta-autoplay.min.js" id="vc_tta_autoplay_script-js"></script>
-<script src="assets/live_assets/vc-tabs.min.js" id="vc_tabs_script-js"></script>
-<?php else: ?>
-<script src="assets/js/vc/vc-accordion.min.js" id="vc_accordion_script-js"></script>
-<script src="assets/js/vc/vc-tta-autoplay.min.js" id="vc_tta_autoplay_script-js"></script>
-<script src="assets/js/vc/vc-tabs.min.js" id="vc_tabs_script-js"></script>
-<?php endif; ?>
-<script src="assets/js/vc-waypoints.mine097.js" id="vc_waypoints-js"></script>
-
-
-<script></script><script src="assets/js/aos.js"></script>
-
-<script src="assets/js/main.js"></script>
-<script>
-jQuery(document).ready(function ($) {
-    $(".navbar-nav > .mega-menu > .sub-menu").hover(
-        function () {
-            $(this).find("#primary-menu>li.mega-menu>ul.sub-menu").stop(true, true).slideDown(300);
-        },
-        function () {
-            $(this).find("#primary-menu>li.mega-menu>ul.sub-menu").stop(true, true).slideUp(300);
-        } 
-    );
-});
- 
- 
-
-
-
- 
- 
-</script> 
-
-
-<script>
-   
-
-
-   jQuery(document).ready(function($) {
-        function applySmoothAnimation(selector) {
-            $(selector).css({
-                "opacity": "0",
-                "transform": "translateY(40px) scale(0.95)",
-                "filter": "blur(10px)",
-                "transition": "all 0.7s ease-out"
-            });
-
-            function animateItems() {
-                $(selector).each(function(index) {
-                    var item = $(this);
-                    if (item.attr("data-animated") === "true") return; 
-
-                    var offset = item.offset().top;
-                    var scrollTop = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-
-                    if (scrollTop + windowHeight > offset + 50) {
-                        setTimeout(() => {
-                            item.css({
-                                "opacity": "1",
-                                "transform": "translateY(0px) scale(1)",
-                                "filter": "blur(0px)"
-                            }).attr("data-animated", "true");
-                        }, index * 100); 
-                    }
-                });
-            }
-
-            $(window).on("scroll", animateItems);
-            animateItems();
-        }
-
-        applySmoothAnimation(".category-item");
-         
-    });
-
-</script>
-
-
-
-
-
-
-
-
-<?php if (empty($useLiveReferenceAssets)): ?>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<?php endif; ?>
 </body>
-
-<!-- Mirrored from aku.ac.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2026 09:19:41 GMT -->
 </html>

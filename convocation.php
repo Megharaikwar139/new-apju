@@ -1,193 +1,190 @@
-<?php
-$pageTitle = 'Convocation - Dr APJ University Indore';
-$bodyClass = 'wp-singular page-template-default page page-id-380 wp-theme-aku wpb-js-composer js-comp-ver-8.7.2 vc_responsive';
-include 'header.php';
+<?php 
+$pageTitle = "University Convocation - Dr. APJ Abdul Kalam University, Indore";
+include 'header.php'; 
 ?>
-<style>
-  section.page-header .uk-container { position: relative; }
-  section.page-header h1 {
-    margin: 0 0 14px;
-    color: #fff;
-    font-family: 'AKU Poppins', 'Poppins', sans-serif !important;
-    font-size: 46px !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-    text-align: center;
-  }
-  section.page-header .breadcrumb {
-    display: block !important;
-    width: 100% !important;
-    margin: 0;
-    color: #fff;
-    font-family: 'AKU Poppins', 'Poppins', sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: center !important;
-  }
-  section.page-header .breadcrumb a { color: #fff; }
-</style>
-<section class="page-header" style="background-image:url('assets/images/bg-header.jpg')"><div class="uk-container"><h1>Convocation</h1><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a> &raquo; Convocation</nav></div></section>
-<main id="primary" class="site-main"><article id="post-380" class="post-380 page type-page status-publish hentry"><div class="uk-container"><div class="entry-content"><div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-<div class="wpb_raw_code wpb_raw_html wpb_content_element"><div class="wpb_wrapper">
 
-<style>
-.aku-page {
-    max-width: 1200px;
-    margin: 30px auto;
-    background: #fffbea;
-    border: 3px solid #7a0019;
-    padding: 30px;
-}
-.aku-header {
-    text-align: center;
-    border-bottom: 2px solid #7a0019;
-    padding-bottom: 20px;
-}
-.aku-header h1 {
-    color: #7a0019;
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-.aku-header h2 {
-    color: #003366;
-    font-size: 22px;
-}
-.aku-section {
-    margin: 30px 0;
-    text-align: center;
-}
-.aku-section p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-.aku-box { text-align:center;
-    border: 2px dashed #7a0019;
-    background: #ffffff;
-    padding: 18px;
-    max-width: 700px;
-    margin: 20px auto;
-}
-.aku-box h3 {
-    color: #003366;
-    margin-bottom: 8px;
-}
-.aku-guests {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-.aku-guest {
-    background: #ffffff;
-    border: 1px solid #ccc;
-    padding: 15px;
-}
-.aku-guest strong {
-    color: #7a0019;
-}
-.aku-gallery {
-    margin-top: 40px;
-}
-.aku-gallery h2 {
-    text-align: center;
-    color: #7a0019;
-    margin-bottom: 20px;
-}
-.aku-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-.aku-gallery-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-.aku-gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.aku-footer {
-    margin-top: 40px;
-    text-align: center;
-    font-weight: 600;
-    border-top: 2px solid #7a0019;
-    padding-top: 15px;
-}
-</style>
-
-<div class="aku-page">
-
-    <div class="aku-header">
-        <h1>डॉ. ए. पी. जे. अब्दुल कलाम विश्वविद्यालय, इंदौर</h1>
-        <h2>दीक्षांत समारोह &ndash; 2021</h2>
+<!-- Hero Banner -->
+<section class="inner-page-hero">
+    <div class="container-custom position-relative" style="z-index: 2;">
+        <div class="inner-breadcrumb-pill">
+            <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <span>&raquo;</span>
+            <a href="about-the-section.php">Examinations</a>
+            <span>&raquo;</span>
+            <span class="text-gold fw-medium">Convocation</span>
+        </div>
+        
+        <div class="eyebrow-label gold-eyebrow mb-2" style="color: var(--gold-color) !important;">
+            <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> ANNUAL DEGREE AWARD CEREMONY
+        </div>
+        <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 900px; line-height: 1.15;">
+            University Convocation Ceremony (दीक्षांत समारोह)
+        </h1>
+        <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
+            Dr. A.P.J. Abdul Kalam University · Celebrating Academic Excellence, Degrees &amp; Gold Medals
+        </p>
     </div>
+</section>
 
-    <div class="aku-section aku-box">
-        <p><strong>कार्यक्रम के मुख्य अतिथि</strong></p>
-        <h3>माननीय डॉ. मोहन यादव जी</h3>
-        <p>मंत्री उच्च शिक्षा, मध्यप्रदेश शासन</p>
-    </div>
+<!-- Main Body -->
+<main class="py-5" style="background-color: var(--bg-ivory);">
+    <div class="container-custom">
+        <div class="row g-4 g-xl-5">
+            
+            <!-- Left Main Content -->
+            <div class="col-lg-8 col-xl-9">
+                <article class="inner-main-card">
+                    
+                    <!-- Intro Highlight Card -->
+                    <div class="intro-highlight-card mb-5">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-primary fs-4 fw-bold mb-1">A Celebrated Milestone for Scholars</h3>
+                                <p class="mb-0 text-muted-custom" style="font-size: 0.95rem; line-height: 1.7;">
+                                    The Annual Convocation of Dr. A.P.J. Abdul Kalam University commemorates the hard work, perseverance, and intellectual accomplishments of our graduating scholars across Ph.D, Postgraduate, Undergraduate, and Diploma faculties.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="aku-section">
-        <h3 style="color:#003366;">विशिष्ट अतिथि</h3>
+                    <!-- Chief Guest & Key Dignitaries -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
+                            <span class="section-icon-pill"><i class="fa-solid fa-crown"></i></span>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Eminent Dignitaries &amp; Honored Guests</h3>
+                        </div>
 
-        <div class="aku-guests">
-            <div class="aku-guest">
-                <strong>श्री तुलसी सिलावट जी</strong><br>
-                मंत्री जल संसाधन, म.प्र. शासन
+                        <!-- Chief Guest Card -->
+                        <div class="p-4 rounded-4 border border-custom shadow-xs mb-4 text-center" style="background: linear-gradient(135deg, rgba(112,0,24,0.04) 0%, rgba(212,175,55,0.08) 100%);">
+                            <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill mb-2" style="font-size: 0.78rem;">CHIEF GUEST OF HONOR</span>
+                            <h4 class="font-serif text-primary fs-4 fw-bold mb-1">माननीय डॉ. मोहन यादव जी</h4>
+                            <p class="text-muted-custom small mb-0 fw-semibold">Minister of Higher Education (Madhya Pradesh) · Hon'ble Chief Minister</p>
+                        </div>
+
+                        <!-- Distinguished Guests Grid -->
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-user-tie"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-0.5">श्री तुलसी सिलावट जी</h5>
+                                            <span class="small text-muted-custom">मंत्री जल संसाधन, म.प्र. शासन</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-landmark"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-0.5">श्री शंकर लालवानी जी</h5>
+                                            <span class="small text-muted-custom">माननीय सांसद, इंदौर (म.प्र.)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-0.5">डॉ. भरत शरण सिंह जी</h5>
+                                            <span class="small text-muted-custom">अध्यक्ष, म.प्र. निजी विश्वविद्यालय आयोग</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="feature-info-card">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="feature-icon-badge">
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-0.5">श्री हरिनारायण चारी मिश्र जी</h5>
+                                            <span class="small text-muted-custom">पुलिस महानिरीक्षक (IG), इंदौर</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Convocation Gallery -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
+                            <span class="section-icon-pill"><i class="fa-solid fa-images"></i></span>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Convocation Glimpses &amp; Award Ceremonies</h3>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="rounded-4 overflow-hidden border border-custom shadow-xs h-100 bg-white">
+                                    <img src="uploads/2025/06/gallery.jpg" alt="Convocation Ceremony" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
+                                    <div class="p-3 text-center">
+                                        <span class="small fw-semibold text-primary font-serif">Graduation Awardees Ceremony</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rounded-4 overflow-hidden border border-custom shadow-xs h-100 bg-white">
+                                    <img src="uploads/2026/01/convocation1-2-1.jpg" alt="Degree Distribution" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
+                                    <div class="p-3 text-center">
+                                        <span class="small fw-semibold text-primary font-serif">Honoring University Gold Medalists</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rounded-4 overflow-hidden border border-custom shadow-xs h-100 bg-white">
+                                    <img src="uploads/2026/01/convocation2-1.jpg" alt="Academic Robes" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
+                                    <div class="p-3 text-center">
+                                        <span class="small fw-semibold text-primary font-serif">Faculty Deans &amp; Doctoral Scholars</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Degree Certificate Application Strip -->
+                    <div class="p-4 rounded-4 border border-custom bg-white d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-xs">
+                        <div class="d-flex align-items-center gap-3.5">
+                            <div class="intro-highlight-badge" style="width: 52px; height: 52px; font-size: 1.25rem;">
+                                <i class="fa-solid fa-scroll"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-primary fs-6 fw-bold mb-0.5">Need Degree Certificate In Absentia?</h4>
+                                <p class="text-muted-custom small mb-0">Download Form #02 to receive your Original Degree Certificate by Registered Post.</p>
+                            </div>
+                        </div>
+                        <a href="download-form.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                            <i class="fa-solid fa-download me-1.5"></i> Download Degree Form
+                        </a>
+                    </div>
+
+                </article>
             </div>
 
-            <div class="aku-guest">
-                <strong>श्री शंकर लालवानी जी</strong><br>
-                सांसद, इंदौर (म.प्र.)
+            <!-- Right Sidebar -->
+            <div class="col-lg-4 col-xl-3">
+                <?php include "exam-sidebar.php"; ?>
             </div>
 
-            <div class="aku-guest">
-                <strong>डॉ. भरत शरण सिंह जी</strong><br>
-                अध्यक्ष, म.प्र. निजी विश्वविद्यालय आयोग
-            </div>
-
-            <div class="aku-guest">
-                <strong>श्री हरिनारायण चारी मिश्र जी</strong><br>
-                पुलिस महानिरीक्षक, इंदौर
-            </div>
-
-            <div class="aku-guest">
-                <strong>श्री महेशचंद्र जैन जी</strong><br>
-                पुलिस अधीक्षक, इंदौर
-            </div>
         </div>
     </div>
+</main>
 
-    <div class="aku-section aku-box">
-        <p><strong>दिनांक एवं समय</strong></p>
-        <h3>मंगलवार, 20 जुलाई 2021 | दोपहर 12:00 बजे</h3>
-    </div>
-
-    <div class="aku-gallery">
-        <h2>कार्यक्रम की झलकियाँ</h2>
-
-        <div class="aku-gallery-grid">
-            <div class="aku-gallery-item">
-                <img decoding="async" src="uploads/2025/06/gallery.jpg" alt="Convocation School of Pharmacy">
-            </div>
-
-            <div class="aku-gallery-item">
-                <img decoding="async" src="uploads/2026/01/convocation1-2-1.jpg" alt="IPGA State Convention">
-            </div>
-
-            <div class="aku-gallery-item">
-                <img decoding="async" src="uploads/2026/01/convocation2-1.jpg" alt="International Conference AKU">
-            </div>
-        </div>
-    </div>
-
-</div>
-
-</div></div>
-</div></div></div></div>
-</div></article></main>
 <?php include 'footer.php'; ?>
