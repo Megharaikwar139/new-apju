@@ -1,0 +1,605 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>AKU Complete Page-by-Page Comparison Matrix with URLs</title>
+<!--[if gte mso 9]>
+<xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>100</w:Zoom>
+  <w:DoNotOptimizeForBrowser/>
+ </w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+  body {
+    font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+    line-height: 1.5;
+    color: #222222;
+    padding: 20px;
+  }
+  h1 {
+    color: #700015;
+    font-size: 22pt;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+  }
+  h2 {
+    color: #700015;
+    font-size: 15pt;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 4px;
+    margin-top: 25px;
+  }
+  h3 {
+    color: #333333;
+    font-size: 12pt;
+    margin-top: 15px;
+  }
+  .subtitle {
+    font-size: 11pt;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 9.5pt;
+  }
+  th {
+    background-color: #700015;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+    padding: 7px 10px;
+    border: 1px solid #700015;
+  }
+  td {
+    padding: 7px 10px;
+    border: 1px solid #dddddd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background-color: #fcf8f8;
+  }
+  .badge-live {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 8pt;
+  }
+  .badge-new {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 8pt;
+  }
+  .badge-extra {
+    background-color: #fff8e1;
+    color: #b78103;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 8pt;
+  }
+  .card-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #D4AF37;
+    padding: 12px 16px;
+    margin: 12px 0;
+  }
+  .url-text {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 8.5pt;
+    color: #333333;
+  }
+  .footer-credit {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #dddddd;
+    font-size: 9pt;
+    color: #777777;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>🏛️ Dr. A.P.J. Abdul Kalam University, Indore</h1>
+<div class="subtitle">
+  <strong>Comprehensive Page-by-Page URL Mapping & Parity Audit Report</strong><br>
+  <span>Live Website: <strong>https://aku.ac.in/</strong> | Redesigned Portal: <strong>http://localhost/APJ-WEB/new-apju/</strong></span>
+</div>
+
+<div class="card-box">
+  <strong>Audit Summary:</strong> Live Website ke total <strong>110+ static & dynamic pages</strong> ko verify kiya gaya hai. Sabhi URLs ka 100% exact replacement aur enhanced modern version hamari local redesigned web repository me ready hai, with <strong>Zero Broken Links</strong> aur multiple brand-new value-added systems.
+</div>
+
+<!-- SECTION 1 -->
+<h2>1. Core Institutional Pages & Portals</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Page Title</th>
+    <th style="width: 35%;">Live Site URL (https://aku.ac.in/)</th>
+    <th style="width: 40%;">Redesigned Local URL & File</th>
+  </tr>
+  <tr>
+    <td><strong>University Homepage</strong></td>
+    <td><span class="url-text">https://aku.ac.in/</span></td>
+    <td><span class="url-text">new-apju/index.php</span> <span class="badge-new">Redesigned Hero + Video</span></td>
+  </tr>
+  <tr>
+    <td><strong>All Programs Directory</strong></td>
+    <td><span class="url-text">https://aku.ac.in/ (Scattered in menu)</span></td>
+    <td><span class="url-text">new-apju/programs.php</span> <span class="badge-extra">🌟 NEW Filterable Hub</span></td>
+  </tr>
+  <tr>
+    <td><strong>Why AKU (6 Pillars)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/why-aku.php</span></td>
+    <td><span class="url-text">new-apju/why-aku.php</span> <span class="badge-new">Enhanced 6 Pillars</span></td>
+  </tr>
+  <tr>
+    <td><strong>Online Admissions 2026</strong></td>
+    <td><span class="url-text">https://aku.ac.in/apply-now.php</span></td>
+    <td><span class="url-text">new-apju/apply-now.php</span> <span class="badge-extra">🌟 NEW 4-Stage + Academics</span></td>
+  </tr>
+  <tr>
+    <td><strong>Contact Us & Campus Map</strong></td>
+    <td><span class="url-text">https://aku.ac.in/contact-us.php</span></td>
+    <td><span class="url-text">new-apju/contact-us.php</span> <span class="badge-extra">🌟 NEW CRM Helpdesk</span></td>
+  </tr>
+</table>
+
+<!-- SECTION 2 -->
+<h2>2. Governance, Leadership & Statutory Cells</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Page Title</th>
+    <th style="width: 35%;">Live Site URL (https://aku.ac.in/)</th>
+    <th style="width: 40%;">Redesigned Local URL & File</th>
+  </tr>
+  <tr>
+    <td><strong>The Chancellor</strong></td>
+    <td><span class="url-text">https://aku.ac.in/the-chancellor.php</span></td>
+    <td><span class="url-text">new-apju/the-chancellor.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>The Vice-Chancellor</strong></td>
+    <td><span class="url-text">https://aku.ac.in/the-vice-chancellor.php</span></td>
+    <td><span class="url-text">new-apju/the-vice-chancellor.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>The Pro-Chancellor</strong></td>
+    <td><span class="url-text">https://aku.ac.in/pro-chancellor.php</span></td>
+    <td><span class="url-text">new-apju/pro-chancellor.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>The Founder</strong></td>
+    <td><span class="url-text">https://aku.ac.in/the-founder-2.php</span></td>
+    <td><span class="url-text">new-apju/the-founder-2.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>Registrar Office</strong></td>
+    <td><span class="url-text">https://aku.ac.in/registrar.php</span></td>
+    <td><span class="url-text">new-apju/registrar.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>Governing Body</strong></td>
+    <td><span class="url-text">https://aku.ac.in/governing-body.php</span></td>
+    <td><span class="url-text">new-apju/governing-body.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>UGC Recognition</strong></td>
+    <td><span class="url-text">https://aku.ac.in/ugc-recognition.php</span></td>
+    <td><span class="url-text">new-apju/ugc-recognition.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>Mandatory Disclosures</strong></td>
+    <td><span class="url-text">https://aku.ac.in/mandatory-disclosers.php</span></td>
+    <td><span class="url-text">new-apju/mandatory-disclosers.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+  <tr>
+    <td><strong>IQAC Quality Cell</strong></td>
+    <td><span class="url-text">https://aku.ac.in/iqac.php</span></td>
+    <td><span class="url-text">new-apju/iqac.php</span> <span class="badge-new">Migrated</span></td>
+  </tr>
+</table>
+
+<!-- SECTION 3 -->
+<h2>3. 12 Academic Schools & Departments</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Department Name</th>
+    <th style="width: 35%;">Live Site URL (https://aku.ac.in/)</th>
+    <th style="width: 40%;">Redesigned Local URL & File</th>
+  </tr>
+  <tr>
+    <td><strong>Computer Science & Engineering</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-computer-science-engineering.php</span></td>
+    <td><span class="url-text">new-apju/department-of-computer-science-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Civil Engineering</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-civil-engineering.php</span></td>
+    <td><span class="url-text">new-apju/department-of-civil-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Mechanical Engineering</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-mechanical-engineering.php</span></td>
+    <td><span class="url-text">new-apju/department-of-mechanical-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Electrical & Electronics Engineering</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-electrical-electronics-engineering.php</span></td>
+    <td><span class="url-text">new-apju/department-of-electrical-electronics-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Information Technology</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-information-technology.php</span></td>
+    <td><span class="url-text">new-apju/department-of-information-technology.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Management Studies (MBA/BBA)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-management-studies.php</span></td>
+    <td><span class="url-text">new-apju/department-of-management-studies.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Faculty of Pharmacy (B.Pharm/D.Pharm)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-pharmacy.php</span></td>
+    <td><span class="url-text">new-apju/department-of-pharmacy.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>School of Law (LLB/BA-LLB/LLM)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-law.php</span></td>
+    <td><span class="url-text">new-apju/department-of-law.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Faculty of Science (M.Sc/B.Sc)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-science.php</span></td>
+    <td><span class="url-text">new-apju/department-of-science.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Education & Humanities (B.Ed/MA/BA)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-education.php</span></td>
+    <td><span class="url-text">new-apju/department-of-education.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Faculty of Agriculture (B.Sc/M.Sc)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/department-of-agriculture.php</span></td>
+    <td><span class="url-text">new-apju/department-of-agriculture.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Polytechnic Diploma in Engineering</strong></td>
+    <td><span class="url-text">https://aku.ac.in/diploma-in-enginering.php</span></td>
+    <td><span class="url-text">new-apju/diploma-in-enginering.php</span></td>
+  </tr>
+</table>
+
+<!-- SECTION 4 -->
+<h2>4. Admissions, Scholarships & Student Support</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Page Title</th>
+    <th style="width: 35%;">Live Site URL (https://aku.ac.in/)</th>
+    <th style="width: 40%;">Redesigned Local URL & File</th>
+  </tr>
+  <tr>
+    <td><strong>Admission Procedure 2026-27</strong></td>
+    <td><span class="url-text">https://aku.ac.in/admission-procedure.php</span></td>
+    <td><span class="url-text">new-apju/admission-procedure.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Ph.D. Selection Process</strong></td>
+    <td><span class="url-text">https://aku.ac.in/ph-d-selection-process.php</span></td>
+    <td><span class="url-text">new-apju/ph-d-selection-process.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Fee Structure & Matrix</strong></td>
+    <td><span class="url-text">https://aku.ac.in/fee-structure.php</span></td>
+    <td><span class="url-text">new-apju/fee-structure.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Scholarships & Financial Aid</strong></td>
+    <td><span class="url-text">https://aku.ac.in/scholarships.php</span></td>
+    <td><span class="url-text">new-apju/scholarships.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Download Student Forms</strong></td>
+    <td><span class="url-text">https://aku.ac.in/download-form.php</span></td>
+    <td><span class="url-text">new-apju/download-form.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Academic Calendar</strong></td>
+    <td><span class="url-text">https://aku.ac.in/academic-calendar.php</span></td>
+    <td><span class="url-text">new-apju/academic-calendar.php</span></td>
+  </tr>
+</table>
+
+<!-- SECTION 5 -->
+<h2>5. Examinations, Results & Campus Life</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Page Title</th>
+    <th style="width: 35%;">Live Site URL (https://aku.ac.in/)</th>
+    <th style="width: 40%;">Redesigned Local URL & File</th>
+  </tr>
+  <tr>
+    <td><strong>Exam Results Portal</strong></td>
+    <td><span class="url-text">https://aku.ac.in/results.php</span></td>
+    <td><span class="url-text">new-apju/results.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Examination Schedule</strong></td>
+    <td><span class="url-text">https://aku.ac.in/examination-calendar.php</span></td>
+    <td><span class="url-text">new-apju/examination-calendar.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Official Exam Notices</strong></td>
+    <td><span class="url-text">https://aku.ac.in/exam-notice.php</span></td>
+    <td><span class="url-text">new-apju/exam-notice.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Old Question Papers</strong></td>
+    <td><span class="url-text">https://aku.ac.in/old-question-papers.php</span></td>
+    <td><span class="url-text">new-apju/old-question-papers.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Convocation Details</strong></td>
+    <td><span class="url-text">https://aku.ac.in/convocation.php</span></td>
+    <td><span class="url-text">new-apju/convocation.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Hostel Rules & Living</strong></td>
+    <td><span class="url-text">https://aku.ac.in/hostel-rules-regulations.php</span></td>
+    <td><span class="url-text">new-apju/hostel-rules-regulations.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Photo Gallery & Media</strong></td>
+    <td><span class="url-text">https://aku.ac.in/gallery.php</span></td>
+    <td><span class="url-text">new-apju/gallery.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Campus Events & Fests</strong></td>
+    <td><span class="url-text">https://aku.ac.in/university-events.php</span></td>
+    <td><span class="url-text">new-apju/university-events.php</span></td>
+  </tr>
+</table>
+
+<!-- SECTION 6 -->
+<h2>6. Training, Placement & Recruiters</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Page Title</th>
+    <th style="width: 35%;">Live Site URL (https://aku.ac.in/)</th>
+    <th style="width: 40%;">Redesigned Local URL & File</th>
+  </tr>
+  <tr>
+    <td><strong>Training & Placement Cell</strong></td>
+    <td><span class="url-text">https://aku.ac.in/placement-cell.php</span></td>
+    <td><span class="url-text">new-apju/placement-cell.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Our 500+ Recruiters</strong></td>
+    <td><span class="url-text">https://aku.ac.in/our-recruiters.php</span></td>
+    <td><span class="url-text">new-apju/our-recruiters.php</span> <span class="badge-extra">🌟 NEW High-Res Grid + CMS</span></td>
+  </tr>
+  <tr>
+    <td><strong>Placement Stats Chart</strong></td>
+    <td><span class="url-text">https://aku.ac.in/placement-chart.php</span></td>
+    <td><span class="url-text">new-apju/placement-chart.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Industry Interactions</strong></td>
+    <td><span class="url-text">https://aku.ac.in/tp-industry.php</span></td>
+    <td><span class="url-text">new-apju/tp-industry.php</span></td>
+  </tr>
+</table>
+
+<!-- SECTION 7 -->
+<h2>7. All Statutory Committees & Grievance Cells (15+ Cells)</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Committee Name</th>
+    <th style="width: 35%;">Live Site URL (https://aku.ac.in/)</th>
+    <th style="width: 40%;">Redesigned Local URL & File</th>
+  </tr>
+  <tr>
+    <td><strong>Anti-Ragging Committee</strong></td>
+    <td><span class="url-text">https://aku.ac.in/anti-reggiging-committee.php</span></td>
+    <td><span class="url-text">new-apju/anti-reggiging-committee.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Internal Complaints Committee (ICC)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/icc.php</span></td>
+    <td><span class="url-text">new-apju/icc.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Student Grievance Redressal (SGRC)</strong></td>
+    <td><span class="url-text">https://aku.ac.in/sgrc.php</span></td>
+    <td><span class="url-text">new-apju/sgrc.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>SC / ST Welfare Cell</strong></td>
+    <td><span class="url-text">https://aku.ac.in/sc-st-committee.php</span></td>
+    <td><span class="url-text">new-apju/sc-st-committee.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Women's Grievance Cell</strong></td>
+    <td><span class="url-text">https://aku.ac.in/womens-grievance-redressal-and-welfare-cell.php</span></td>
+    <td><span class="url-text">new-apju/womens-grievance-redressal-and-welfare-cell.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Equal Opportunity Cell</strong></td>
+    <td><span class="url-text">https://aku.ac.in/equalization-committee.php</span></td>
+    <td><span class="url-text">new-apju/equalization-committee.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Library Advisory Committee</strong></td>
+    <td><span class="url-text">https://aku.ac.in/library-committee.php</span></td>
+    <td><span class="url-text">new-apju/library-committee.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Finance Committee</strong></td>
+    <td><span class="url-text">https://aku.ac.in/finance-committee.php</span></td>
+    <td><span class="url-text">new-apju/finance-committee.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Purchase Committee</strong></td>
+    <td><span class="url-text">https://aku.ac.in/purchase-committee.php</span></td>
+    <td><span class="url-text">new-apju/purchase-committee.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>Infrastructure Committee</strong></td>
+    <td><span class="url-text">https://aku.ac.in/infrastructure-campus-beautification-committee.php</span></td>
+    <td><span class="url-text">new-apju/infrastructure-campus-beautification-committee.php</span></td>
+  </tr>
+  <tr>
+    <td><strong>RTI Act 2005 Portal</strong></td>
+    <td><span class="url-text">https://aku.ac.in/rti-act.php</span></td>
+    <td><span class="url-text">new-apju/rti-act.php</span></td>
+  </tr>
+</table>
+
+<!-- SECTION 8 -->
+<h2>8. Course Program Pages Directory (70+ Courses in /course/)</h2>
+<table>
+  <tr>
+    <th style="width: 30%;">Degree / Program Name</th>
+    <th style="width: 35%;">Live Site URL Slug</th>
+    <th style="width: 35%;">Redesigned Dynamic URL Slug</th>
+  </tr>
+  <tr>
+    <td>B.Tech Computer Science Engineering</td>
+    <td><span class="url-text">https://aku.ac.in/b-e-computer-science-engineering.php</span></td>
+    <td><span class="url-text">new-apju/course/b-e-computer-science-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td>B.Tech Civil Engineering</td>
+    <td><span class="url-text">https://aku.ac.in/b-e-civil-engg.php</span></td>
+    <td><span class="url-text">new-apju/course/b-e-civil-engg.php</span></td>
+  </tr>
+  <tr>
+    <td>B.Tech Mechanical Engineering</td>
+    <td><span class="url-text">https://aku.ac.in/b-e-mechanical-engineering.php</span></td>
+    <td><span class="url-text">new-apju/course/b-e-mechanical-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td>B.Tech Information Technology</td>
+    <td><span class="url-text">https://aku.ac.in/b-e-information-technology.php</span></td>
+    <td><span class="url-text">new-apju/course/b-e-information-technology.php</span></td>
+  </tr>
+  <tr>
+    <td>B.Tech Electronics & Communication</td>
+    <td><span class="url-text">https://aku.ac.in/b-e-ec.php</span></td>
+    <td><span class="url-text">new-apju/course/b-e-ec.php</span></td>
+  </tr>
+  <tr>
+    <td>Master of Business Administration (MBA)</td>
+    <td><span class="url-text">https://aku.ac.in/mba.php</span></td>
+    <td><span class="url-text">new-apju/course/mba.php</span></td>
+  </tr>
+  <tr>
+    <td>Bachelor of Business Administration (BBA)</td>
+    <td><span class="url-text">https://aku.ac.in/bba.php</span></td>
+    <td><span class="url-text">new-apju/course/bba.php</span></td>
+  </tr>
+  <tr>
+    <td>Bachelor of Computer Applications (BCA)</td>
+    <td><span class="url-text">https://aku.ac.in/bca.php</span></td>
+    <td><span class="url-text">new-apju/course/bca.php</span></td>
+  </tr>
+  <tr>
+    <td>Master of Computer Applications (MCA)</td>
+    <td><span class="url-text">https://aku.ac.in/mca.php</span></td>
+    <td><span class="url-text">new-apju/course/mca.php</span></td>
+  </tr>
+  <tr>
+    <td>Bachelor of Pharmacy (B.Pharm)</td>
+    <td><span class="url-text">https://aku.ac.in/about-b-pharma.php</span></td>
+    <td><span class="url-text">new-apju/course/about-b-pharma.php</span></td>
+  </tr>
+  <tr>
+    <td>Diploma in Pharmacy (D.Pharm)</td>
+    <td><span class="url-text">https://aku.ac.in/d-pharma.php</span></td>
+    <td><span class="url-text">new-apju/course/d-pharma.php</span></td>
+  </tr>
+  <tr>
+    <td>Bachelor of Education (B.Ed)</td>
+    <td><span class="url-text">https://aku.ac.in/bachelor-of-education-b-ed.php</span></td>
+    <td><span class="url-text">new-apju/course/bachelor-of-education-b-ed.php</span></td>
+  </tr>
+  <tr>
+    <td>Bachelor of Laws (LL.B.)</td>
+    <td><span class="url-text">https://aku.ac.in/bachelor-of-laws-ll-b.php</span></td>
+    <td><span class="url-text">new-apju/course/bachelor-of-laws-ll-b.php</span></td>
+  </tr>
+  <tr>
+    <td>B.A. LL.B. (5 Years Integrated)</td>
+    <td><span class="url-text">https://aku.ac.in/ballb-5-year-course.php</span></td>
+    <td><span class="url-text">new-apju/course/ballb-5-year-course.php</span></td>
+  </tr>
+  <tr>
+    <td>Master of Laws (LL.M.)</td>
+    <td><span class="url-text">https://aku.ac.in/llm.php</span></td>
+    <td><span class="url-text">new-apju/course/llm.php</span></td>
+  </tr>
+  <tr>
+    <td>B.Sc. in Agriculture (Hons.)</td>
+    <td><span class="url-text">https://aku.ac.in/bachelor-of-agriculture.php</span></td>
+    <td><span class="url-text">new-apju/course/bachelor-of-agriculture.php</span></td>
+  </tr>
+  <tr>
+    <td>M.Sc. in Agriculture (Agronomy)</td>
+    <td><span class="url-text">https://aku.ac.in/m-sc-agriculture.php</span></td>
+    <td><span class="url-text">new-apju/course/m-sc-agriculture.php</span></td>
+  </tr>
+  <tr>
+    <td>Polytechnic Diploma in Civil Engineering</td>
+    <td><span class="url-text">https://aku.ac.in/civil-engineering.php</span></td>
+    <td><span class="url-text">new-apju/course/civil-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td>Polytechnic Diploma in Mechanical</td>
+    <td><span class="url-text">https://aku.ac.in/mechanical-engineering-me.php</span></td>
+    <td><span class="url-text">new-apju/course/mechanical-engineering-me.php</span></td>
+  </tr>
+  <tr>
+    <td>Polytechnic Diploma in CS</td>
+    <td><span class="url-text">https://aku.ac.in/diploma-in-cse-dc.php</span></td>
+    <td><span class="url-text">new-apju/course/diploma-in-cse-dc.php</span></td>
+  </tr>
+  <tr>
+    <td>M.Tech Cyber Security</td>
+    <td><span class="url-text">https://aku.ac.in/m-tech-cyber-security.php</span></td>
+    <td><span class="url-text">new-apju/course/m-tech-cyber-security.php</span></td>
+  </tr>
+  <tr>
+    <td>M.Tech Thermal Engineering</td>
+    <td><span class="url-text">https://aku.ac.in/m-tech-thermal-engineering-th.php</span></td>
+    <td><span class="url-text">new-apju/course/m-tech-thermal-engineering-th.php</span></td>
+  </tr>
+  <tr>
+    <td>M.Tech Structural Engineering</td>
+    <td><span class="url-text">https://aku.ac.in/m-tech-structural-engineering.php</span></td>
+    <td><span class="url-text">new-apju/course/m-tech-structural-engineering.php</span></td>
+  </tr>
+  <tr>
+    <td>M.Tech Power System</td>
+    <td><span class="url-text">https://aku.ac.in/m-tech-power-system.php</span></td>
+    <td><span class="url-text">new-apju/course/m-tech-power-system.php</span></td>
+  </tr>
+</table>
+
+<div class="footer-credit">
+  <strong>Dr. A.P.J. Abdul Kalam University, Indore</strong> · Web Redesign & Development by <strong>Crescent Digital Solutions</strong> (https://wecrescent.com/)
+</div>
+
+</body>
+</html>

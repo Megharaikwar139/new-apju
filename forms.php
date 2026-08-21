@@ -3,18 +3,19 @@ $pageTitle = "Examination Forms & Application Proformas - Dr. APJ Abdul Kalam Un
 include 'header.php'; 
 
 $examForms = [
-    ['no' => '01', 'title' => 'Examination Enrollment / Registration Form', 'fee' => 'As per Schedule', 'pdf' => 'uploads/2026/08/17-Examination-Form.pdf', 'category' => 'Exam Registration'],
-    ['no' => '02', 'title' => 'Application for Degree / Diploma Certificate In Absentia', 'fee' => '₹1,500', 'pdf' => 'uploads/2026/08/02-Degree-Certificate.pdf', 'category' => 'Degree & Awards'],
-    ['no' => '03', 'title' => 'Application for Revaluation / Retotalling of Answer Books', 'fee' => '₹500 / Paper', 'pdf' => 'uploads/2026/08/12-Application-for-Revaluation.pdf', 'category' => 'Revaluation'],
-    ['no' => '04', 'title' => 'Application for Issue of Duplicate Marksheet', 'fee' => '₹500', 'pdf' => 'uploads/2026/08/03-Duplicate-Mark-Sheet.pdf', 'category' => 'Duplicate Documents'],
-    ['no' => '05', 'title' => 'Application for Migration Certificate', 'fee' => '₹500', 'pdf' => 'uploads/2026/08/01-Migration-Certificate.pdf', 'category' => 'Certificates'],
-    ['no' => '06', 'title' => 'Application for Official Academic Transcript & Grade Conversion', 'fee' => '₹1,000', 'pdf' => 'uploads/2026/08/05-Transcript.pdf', 'category' => 'Transcripts'],
-    ['no' => '07', 'title' => 'Application for Document / Marksheet Correction', 'fee' => '₹300', 'pdf' => 'uploads/2026/08/08-Correction-Form.pdf', 'category' => 'Corrections'],
-    ['no' => '08', 'title' => 'Application for Provisional Degree Certificate', 'fee' => '₹500', 'pdf' => 'uploads/2026/08/04-Provisional-Degree.pdf', 'category' => 'Provisional'],
-    ['no' => '09', 'title' => 'Application for Name / Surname Change in Academic Records', 'fee' => '₹500', 'pdf' => 'uploads/2026/08/09-Change-in-Name.pdf', 'category' => 'Corrections'],
-    ['no' => '10', 'title' => 'Application for Third Party Marksheet Verification', 'fee' => '₹1,000', 'pdf' => 'uploads/2026/08/13-Verification.pdf', 'category' => 'Verification'],
-    ['no' => '11', 'title' => 'Examination Centre Change Application Proforma', 'fee' => '₹1,000', 'pdf' => 'uploads/2026/08/14-Exam-Centre-Change.pdf', 'category' => 'Examination Center'],
-    ['no' => '12', 'title' => 'Special Permission / Scribe Amanuensis Approval Proforma', 'fee' => 'Nil', 'pdf' => 'uploads/2026/08/16-Ph.D-Course-Work-Exam-Form.pdf', 'category' => 'PwD Accommodations']
+    ['no' => '01', 'title' => 'Application Form for Issue of Duplicate Degree Certificate', 'fee' => '₹1,500', 'pdf' => 'uploads/2026/03/01_Application-Form-for-Issue-of-Duplicate-Degree-Certificate.pdf', 'category' => 'Degree Section'],
+    ['no' => '02', 'title' => 'Application Form for Issue of Original Degree Certificate', 'fee' => '₹1,000', 'pdf' => 'uploads/2026/03/02_Application-Form-For-Issue-of-Degree-Certificate.pdf', 'category' => 'Degree Section'],
+    ['no' => '03', 'title' => 'Application Form for Issue of Migration / Provisional / Transcript Certificate', 'fee' => '₹500', 'pdf' => 'uploads/2026/03/03_Application-Form-For-Issue-of-Migration_Provisional_Transcript-Certificate.pdf', 'category' => 'Certificates'],
+    ['no' => '04', 'title' => 'Application Form For Issue of Duplicate Migration / Provisional Certificate', 'fee' => '₹500', 'pdf' => 'uploads/2026/03/04_Application-Form-For-Issue-of-Duplicate-Migration_Provisional-Certificate.pdf', 'category' => 'Duplicate Documents'],
+    ['no' => '05', 'title' => 'Official University Examination Answer Book Sample', 'fee' => 'Reference', 'pdf' => 'uploads/2026/03/05_Answer-Book-Sample.pdf', 'category' => 'Examination Sample'],
+    ['no' => '06', 'title' => 'Student RFID Smart Identity Card (I-Card) Application Form', 'fee' => '₹150', 'pdf' => 'uploads/2026/03/06_Student-I-Card-Form.pdf', 'category' => 'Student ID'],
+    ['no' => '07', 'title' => 'Exam Help Desk Form / Student Information Form', 'fee' => 'Free', 'pdf' => 'uploads/2026/03/07_Exam-Help-desk-form_Student-Information-Form.pdf', 'category' => 'Student Helpdesk'],
+    ['no' => '08', 'title' => 'Application Form for Issue of Diploma / PG Diploma Certificate', 'fee' => '₹1,000', 'pdf' => 'uploads/2026/03/09_Application-Form-for-Issue-of-Diploma_PG-Diploma-Certificate.pdf', 'category' => 'Diploma Section'],
+    ['no' => '09', 'title' => 'Admission Cancellation & Fee Refund Application Form', 'fee' => 'Statutory', 'pdf' => 'uploads/2026/03/10_Admission-Cancelleation-Form.pdf', 'category' => 'Admissions'],
+    ['no' => '10', 'title' => 'Application Form for Issue of Duplicate Diploma / PG Diploma Certificate', 'fee' => '₹1,000', 'pdf' => 'uploads/2026/03/11_Application-Form-for-Issue-of-Duplicate-Diploma_PG-Diploma-Certificate.pdf', 'category' => 'Duplicate Documents'],
+    ['no' => '11', 'title' => 'Application Form for Issue of Duplicate / Corrected Marksheet', 'fee' => '₹500', 'pdf' => 'uploads/2026/03/12_Application-Form-for-Issue-of-Duplicate_Corrected-Marksheet.pdf', 'category' => 'Marksheet Corrections'],
+    ['no' => '12', 'title' => 'University Student Final No Dues Clearance Form', 'fee' => 'Free', 'pdf' => 'uploads/2026/03/13_No-Dues-Form.pdf', 'category' => 'Clearance'],
+    ['no' => '13', 'title' => 'Tuition Fee / Security Deposit Refund Application Form', 'fee' => 'Refund Cell', 'pdf' => 'uploads/2026/03/14_Fee-Rrefund-Form.pdf', 'category' => 'Finance & Accounts']
 ];
 ?>
 
@@ -59,7 +60,7 @@ $examForms = [
                             <div>
                                 <h3 class="font-serif text-primary fs-4 fw-bold mb-1">Controller of Examination Forms Repository</h3>
                                 <p class="mb-0 text-muted-custom" style="font-size: 0.95rem; line-height: 1.7;">
-                                    Download official printable application proformas for Revaluation, Degree In Absentia, Duplicate Marksheets, Official Transcripts, and Examination Registration. Submit completed forms at the University Student Section or submit online.
+                                    Download official printable application proformas for Degree Certificates, Migration, Duplicate Marksheets, Official Transcripts, and No-Dues Clearance. Submit completed forms at the University Student Section or submit online.
                                 </p>
                             </div>
                         </div>
@@ -71,13 +72,13 @@ $examForms = [
                             <div class="col-md-8">
                                 <div class="input-group">
                                     <span class="input-group-text bg-light border-custom"><i class="fa-solid fa-search text-muted-custom"></i></span>
-                                    <input type="text" class="form-control border-custom" id="formSearchInput" placeholder="Quick search forms (e.g. Revaluation, Degree, Transcript, Duplicate)...">
+                                    <input type="text" class="form-control border-custom" id="formSearchInput" placeholder="Quick search forms (e.g. Migration, Degree, Marksheet, Duplicate)...">
                                 </div>
                             </div>
                             <div class="col-md-4 text-md-end">
-                                <a href="download-form.php" class="btn btn-sm btn-gold-pill px-3.5 py-2 fw-bold" style="font-size: 0.82rem;">
-                                    <i class="fa-solid fa-list-check me-1"></i> View All 18 Forms
-                                </a>
+                                <span class="custom-badge-pill">
+                                    <i class="fa-solid fa-file-pdf text-danger me-1.5"></i> <?php echo count($examForms); ?> Verified Forms
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -89,7 +90,7 @@ $examForms = [
                                 <tr>
                                     <th style="width: 70px;">Form #</th>
                                     <th>Application Title &amp; Purpose</th>
-                                    <th style="width: 140px;">Category</th>
+                                    <th style="width: 150px;">Category</th>
                                     <th style="width: 120px;">Prescribed Fee</th>
                                     <th style="width: 110px;" class="text-end">Download</th>
                                 </tr>
@@ -154,6 +155,21 @@ $examForms = [
         </div>
     </div>
 </main>
+
+<style>
+.custom-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #fbf3f5;
+    color: #700015;
+    border: 1px solid rgba(112, 0, 21, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

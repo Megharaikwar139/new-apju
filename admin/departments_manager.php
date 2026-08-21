@@ -94,6 +94,12 @@ $facultyCountStmt = $pdo->prepare("SELECT COUNT(*) FROM department_faculty WHERE
 $facultyCountStmt->execute([$selected_slug]);
 $deptFacultyCount = $facultyCountStmt->fetchColumn();
 
+// Courses belonging to this department
+$deptCoursesStmt = $pdo->prepare("SELECT * FROM courses WHERE department_slug = ? ORDER BY degree_type ASC, title ASC");
+$deptCoursesStmt->execute([$selected_slug]);
+$deptCourses = $deptCoursesStmt->fetchAll();
+$deptCoursesCount = count($deptCourses);
+
 require_once 'header.php';
 ?>
 
@@ -105,6 +111,9 @@ require_once 'header.php';
     <div class="d-flex gap-2">
         <a href="../<?php echo htmlspecialchars($selected_slug); ?>.php" target="_blank" class="btn btn-outline-dark rounded-pill btn-sm px-3 shadow-xs">
             <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> View Live Page
+        </a>
+        <a href="courses_manager.php?action=new&dept=<?php echo urlencode($selected_slug); ?>" class="btn btn-outline-primary rounded-pill btn-sm px-3 shadow-xs">
+            <i class="fa-solid fa-graduation-cap text-gold me-1"></i> Add Course
         </a>
         <button class="btn btn-primary rounded-pill btn-sm px-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#tabModal" onclick="openAddTabModal()">
             <i class="fa-solid fa-plus me-1.5"></i> Add New Tab
@@ -119,7 +128,7 @@ require_once 'header.php';
 </div>
 <?php endif; ?>
 
-<!-- Department Selector & Edit Info Card -->
+<!-- Department Selector & Quick Stats Card -->
 <div class="card shadow-sm border-0 mb-4">
     <div class="card-body p-4">
         <form method="GET" class="row g-3 align-items-end">
@@ -135,26 +144,27 @@ require_once 'header.php';
                     <?php endforeach; ?>
                 </select>
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-md-end gap-3 pt-2">
-                <div class="text-end">
-                    <span class="badge bg-light text-primary border px-3 py-2 fs-6">
-                        <i class="fa-solid fa-layer-group text-gold me-1"></i> <?php echo count($tabs); ?> Active Tabs
-                    </span>
-                    <a href="faculty_manager.php?dept=<?php echo urlencode($selected_slug); ?>" class="badge bg-light text-dark border px-3 py-2 fs-6 text-decoration-none ms-1">
-                        <i class="fa-solid fa-user-graduate text-primary me-1"></i> <?php echo $deptFacultyCount; ?> Faculty Members
-                    </a>
-                </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-md-end gap-2 pt-2 flex-wrap">
+                <span class="badge bg-light text-primary border px-3 py-2 fs-6">
+                    <i class="fa-solid fa-layer-group text-gold me-1"></i> <?php echo count($tabs); ?> Active Tabs
+                </span>
+                <a href="courses_manager.php?dept=<?php echo urlencode($selected_slug); ?>" class="badge bg-light text-primary border px-3 py-2 fs-6 text-decoration-none" title="Manage Courses for this Department">
+                    <i class="fa-solid fa-graduation-cap text-gold me-1"></i> <?php echo $deptCoursesCount; ?> Courses Offered
+                </a>
+                <a href="faculty_manager.php?dept=<?php echo urlencode($selected_slug); ?>" class="badge bg-light text-dark border px-3 py-2 fs-6 text-decoration-none" title="Manage Faculty for this Department">
+                    <i class="fa-solid fa-user-graduate text-primary me-1"></i> <?php echo $deptFacultyCount; ?> Faculty Members
+                </a>
             </div>
         </form>
     </div>
 </div>
 
-<!-- Department Tabs Table -->
-<div class="card shadow-sm border-0">
+<!-- 1. Department Tabs Table -->
+<div class="card shadow-sm border-0 mb-4">
     <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
         <div class="d-flex align-items-center gap-2">
             <i class="fa-solid fa-folder-tree text-gold fs-5"></i>
-            <span class="fw-bold fs-6 font-serif text-primary"><?php echo htmlspecialchars($currentDept['name'] ?? ''); ?></span>
+            <span class="fw-bold fs-6 font-serif text-primary"><?php echo htmlspecialchars($currentDept['name'] ?? ''); ?> — Page Tabs &amp; Sections</span>
         </div>
         <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-2.5 py-1.5 small">
             <?php echo htmlspecialchars($currentDept['faculty_group'] ?? ''); ?>
@@ -233,6 +243,104 @@ require_once 'header.php';
                                     <i class="fa-solid fa-trash text-xs"></i>
                                 </button>
                             </form>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Department Courses & Academic Programs Section -->
+<div class="card shadow-sm border-0 mb-4">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center py-3 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-gold fs-5"></i>
+            <div>
+                <span class="fw-bold fs-6 font-serif text-primary">Offered Academic Courses &amp; Programs</span>
+                <span class="badge rounded-pill bg-light text-primary border ms-2 small"><?php echo $deptCoursesCount; ?> Programs Connected</span>
+            </div>
+        </div>
+        <a href="courses_manager.php?action=new&dept=<?php echo urlencode($selected_slug); ?>" class="btn btn-sm btn-primary rounded-pill px-3 shadow-xs">
+            <i class="fa-solid fa-plus me-1 text-gold"></i> Add Course to this Department
+        </a>
+    </div>
+    
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light small text-uppercase">
+                    <tr>
+                        <th class="ps-4" style="width: 90px;">Level</th>
+                        <th>Program / Course Name</th>
+                        <th>Duration</th>
+                        <th>Eligibility Criteria</th>
+                        <th style="width: 90px;" class="text-center">Status</th>
+                        <th class="text-end pe-4" style="width: 140px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="small">
+                    <?php if (empty($deptCourses)): ?>
+                    <tr>
+                        <td colspan="6" class="text-center py-5 text-muted">
+                            <div class="icon-circle-badge mx-auto mb-2" style="width: 45px; height: 45px; font-size: 1.1rem;">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <strong class="d-block font-serif text-primary fs-6 mb-1">No Academic Courses Linked to this Department</strong>
+                            <p class="small text-muted mb-3" style="max-width: 420px; margin: 0 auto;">Click below to add a new degree or diploma program under <strong><?php echo htmlspecialchars($currentDept['name'] ?? ''); ?></strong>.</p>
+                            <a href="courses_manager.php?action=new&dept=<?php echo urlencode($selected_slug); ?>" class="btn btn-sm btn-outline-primary rounded-pill px-3.5">
+                                <i class="fa-solid fa-plus me-1 text-gold"></i> Add First Course
+                            </a>
+                        </td>
+                    </tr>
+                    <?php else: ?>
+                    <?php foreach ($deptCourses as $dc): 
+                        $dt = strtoupper($dc['degree_type'] ?? 'UG');
+                        $badgeStyle = 'background: rgba(88,8,19,0.08); color: #580813; border: 1px solid rgba(88,8,19,0.25);';
+                        if (strpos($dt, 'PG') !== false) {
+                            $badgeStyle = 'background: rgba(212,175,55,0.15); color: #8a6d00; border: 1px solid rgba(212,175,55,0.4);';
+                        } elseif (strpos($dt, 'DIPLOMA') !== false) {
+                            $badgeStyle = 'background: rgba(30,30,30,0.08); color: #333333; border: 1px solid rgba(30,30,30,0.2);';
+                        }
+                    ?>
+                    <tr>
+                        <td class="ps-4">
+                            <span class="badge rounded-pill px-2.5 py-1 fw-bold" style="<?php echo $badgeStyle; ?> font-size: 0.72rem;">
+                                <?php echo htmlspecialchars($dc['degree_type']); ?>
+                            </span>
+                        </td>
+                        <td>
+                            <a href="../course/<?php echo htmlspecialchars($dc['slug']); ?>.php" target="_blank" class="font-serif fw-bold text-primary fs-6 text-decoration-none hover-gold d-block">
+                                <?php echo htmlspecialchars($dc['title']); ?>
+                            </a>
+                            <code class="small text-muted" style="font-size: 0.7rem;">course/<?php echo htmlspecialchars($dc['slug']); ?>.php</code>
+                        </td>
+                        <td>
+                            <span class="badge bg-light text-dark border rounded-pill px-2.5 py-1 small">
+                                <i class="fa-regular fa-clock text-gold me-1"></i> <?php echo htmlspecialchars($dc['duration']); ?>
+                            </span>
+                        </td>
+                        <td>
+                            <div class="text-muted small" style="max-width: 280px; line-height: 1.45; font-size: 0.78rem;">
+                                <?php echo htmlspecialchars(mb_strimwidth(strip_tags($dc['eligibility']), 0, 75, '...')); ?>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <?php if ($dc['status'] == 1): ?>
+                            <span class="badge bg-success text-white rounded-pill px-2.5 py-1" style="font-size: 0.7rem;">Active</span>
+                            <?php else: ?>
+                            <span class="badge bg-secondary text-white rounded-pill px-2.5 py-1" style="font-size: 0.7rem;">Draft</span>
+                            <?php endif; ?>
+                        </td>
+                        <td class="text-end pe-4">
+                            <a href="../course/<?php echo htmlspecialchars($dc['slug']); ?>.php" target="_blank" class="btn btn-xs btn-outline-secondary rounded-circle p-0" style="width: 30px; height: 30px; line-height: 30px; text-align: center; display: inline-block;" title="View Live Page">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <a href="courses_manager.php?dept=<?php echo urlencode($selected_slug); ?>&q=<?php echo urlencode($dc['title']); ?>" class="btn btn-xs btn-outline-primary rounded-circle p-0 ms-1" style="width: 30px; height: 30px; line-height: 30px; text-align: center; display: inline-block;" title="Edit in Courses Manager">
+                                <i class="fa-solid fa-pen text-xs"></i>
+                            </a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

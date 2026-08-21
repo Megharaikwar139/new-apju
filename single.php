@@ -162,9 +162,12 @@ require_once 'header.php';
                     <div class="inner-page-body-text" style="line-height: 1.8; font-size: 0.95rem; color: #3e3233;">
                         <?php 
                         if (!empty($data['content'])) {
-                            echo $data['content'];
+                            $clean_html = preg_replace('/<\/(article|main|section)>\s*<!--.*?-->/is', '', $data['content']);
+                            $clean_html = str_replace('<table', '<div class="table-responsive my-4"><table class="table table-hover table-striped border rounded-3"', $clean_html);
+                            $clean_html = str_replace('</table>', '</table></div>', $clean_html);
+                            echo $clean_html;
                         } else {
-                            echo "<p class='text-muted-custom'><em>For further details regarding this event circular, please contact the Event Organizing Secretary at the University Registrar Office.</em></p>";
+                            echo "<p class='text-muted-custom'><em>For further details regarding this notice circular, please contact the University Registrar Office.</em></p>";
                         }
                         ?>
                     </div>
@@ -175,12 +178,42 @@ require_once 'header.php';
                             <i class="fa-solid fa-arrow-left me-1.5"></i> Back to <?php echo ($type === 'event') ? 'Events' : 'Overview'; ?>
                         </a>
                         <div class="d-flex align-items-center gap-2">
-                            <span class="small text-muted-custom fw-medium">Share:</span>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '')); ?>" target="_blank" class="footer-social-btn" style="width: 32px; height: 32px; color: var(--primary-color); border-color: var(--border-color);"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '')); ?>" target="_blank" class="footer-social-btn" style="width: 32px; height: 32px; color: var(--primary-color); border-color: var(--border-color);"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode('http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '')); ?>" target="_blank" class="footer-social-btn" style="width: 32px; height: 32px; color: var(--primary-color); border-color: var(--border-color);"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <span class="small text-muted-custom fw-semibold me-1">Share:</span>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '')); ?>" target="_blank" class="share-social-btn facebook" title="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '')); ?>" target="_blank" class="share-social-btn twitter" title="Share on X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode('http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '')); ?>" target="_blank" class="share-social-btn linkedin" title="Share on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                     </div>
+
+                    <style>
+                    .share-social-btn {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #f5edf0;
+                        color: #700015 !important;
+                        border: 1px solid rgba(112, 0, 21, 0.15);
+                        font-size: 0.92rem;
+                        transition: all 0.25s ease;
+                        text-decoration: none !important;
+                    }
+                    .share-social-btn i {
+                        color: #700015;
+                        transition: color 0.25s ease;
+                    }
+                    .share-social-btn:hover {
+                        background: #700015;
+                        color: #ffd700 !important;
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 10px rgba(112, 0, 21, 0.25);
+                    }
+                    .share-social-btn:hover i {
+                        color: #ffd700;
+                    }
+                    </style>
 
                 </article>
             </div>

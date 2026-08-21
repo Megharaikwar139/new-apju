@@ -335,19 +335,21 @@ try {
                     <li><a class="dropdown-item py-1.5 small" href="students-testomonials.php">Student Testimonials</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="visiters-testomonials.php">Visitor Testimonials</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="university-events.php">University Events &amp; Fests</a></li>
+                    <li><hr class="dropdown-divider my-1"></li>
+                    <li><a class="dropdown-item py-1.5 small fw-semibold text-primary" href="contact-us.php"><i class="fa-solid fa-location-dot text-gold me-2"></i> Contact &amp; Campus Map</a></li>
                 </ul>
             </div>
+
+            <!-- 10. Direct Contact Us Link -->
+            <a href="contact-us.php" class="nav-link-item <?php echo (basename($_SERVER['PHP_SELF']) == 'contact-us.php') ? 'active' : ''; ?>">
+                Contact Us
+            </a>
 
         </nav>
 
         <!-- Right Quick Action Buttons (Exact Lovable Parity) -->
-        <div class="d-none d-sm-flex align-items-center gap-2 flex-shrink-0">
+        <div class="d-none d-sm-flex align-items-center gap-2.5 flex-shrink-0">
             
-            <!-- Search Button (Exact Circle Icon) -->
-            <button class="btn btn-search-circle" title="Search" onclick="let q = prompt('Search AKU website:'); if(q) window.location.href='notice-board.php?search='+encodeURIComponent(q);">
-                <i class="fa-solid fa-magnifying-glass" style="font-size: 13px;"></i>
-            </button>
-
             <!-- Portals Dropdown Button (Includes All Student/Gov/IQAC Portals) -->
             <div class="dropdown">
                 <button class="btn btn-portals-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -359,6 +361,7 @@ try {
                     <li><a class="dropdown-item py-1.5 small" href="results.php"><i class="fa-solid fa-award text-gold me-2"></i> Results Portal</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="academic-calendar.php"><i class="fa-solid fa-calendar me-2"></i> Academic Calendar</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="notice-board.php"><i class="fa-solid fa-bell me-2"></i> Notice Board</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="contact-us.php"><i class="fa-solid fa-envelope-open-text text-gold me-2"></i> Contact &amp; Helpdesk</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="iqac.php"><i class="fa-solid fa-certificate text-primary me-2"></i> IQAC (NAAC / NIRF)</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="career.php"><i class="fa-solid fa-briefcase text-gold me-2"></i> Careers @ AKU</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="https://samadhaan.ugc.ac.in/" target="_blank"><i class="fa-solid fa-building-columns me-2"></i> UGC e-Samadhan</a></li>
@@ -404,6 +407,7 @@ try {
             <a href="placement-cell.php" class="nav-link py-2 px-3 rounded-2 text-dark">Placements</a>
             <a href="incubation-center.php" class="nav-link py-2 px-3 rounded-2 text-dark">Research & Innovation</a>
             <a href="gallery.php" class="nav-link py-2 px-3 rounded-2 text-dark">Campus Gallery</a>
+            <a href="contact-us.php" class="nav-link py-2 px-3 rounded-2 text-primary fw-semibold"><i class="fa-solid fa-location-dot text-gold me-1"></i> Contact & Campus Map</a>
             <a href="notice-board.php" class="nav-link py-2 px-3 rounded-2 text-dark">Notice Board</a>
             <a href="results.php" class="nav-link py-2 px-3 rounded-2 text-dark">Results Portal</a>
         </nav>

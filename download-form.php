@@ -10,17 +10,13 @@ $formsList = [
     ['num' => '05', 'title' => 'University Official Answer Book Sample Format', 'file' => 'uploads/2026/03/05_Answer-Book-Sample.pdf', 'cat' => 'Examination'],
     ['num' => '06', 'title' => 'Student Identity Card (I-Card) Application Form', 'file' => 'uploads/2026/03/06_Student-I-Card-Form.pdf', 'cat' => 'Student Services'],
     ['num' => '07', 'title' => 'Exam Help Desk Form / Student Information Verification Form', 'file' => 'uploads/2026/03/07_Exam-Help-desk-form_Student-Information-Form.pdf', 'cat' => 'Examination'],
-    ['num' => '08', 'title' => 'Application Form for Issue of Diploma / PG Diploma Certificate', 'file' => 'uploads/2026/03/09_Application-Form-for-Issue-of-Diploma_PG-Diploma-Certificate.pdf', 'cat' => 'Degree & Certificates'],
-    ['num' => '09', 'title' => 'Admission Cancellation & Fee Refund Application Form', 'file' => 'uploads/2026/03/10_Admission-Cancelleation-Form.pdf', 'cat' => 'Admissions'],
-    ['num' => '10', 'title' => 'Application Form for Issue of Duplicate / Corrected Marksheet', 'file' => 'uploads/2026/03/12_Application-Form-for-Issue-of-Duplicate_Corrected-Marksheet.pdf', 'cat' => 'Examination'],
-    ['num' => '11', 'title' => 'Student University No-Dues Clearance Form', 'file' => 'uploads/2026/03/13_No-Dues-Form.pdf', 'cat' => 'Student Services'],
-    ['num' => '12', 'title' => 'Revaluation / Retotalling / Copy Inspection Application Form', 'file' => 'uploads/2026/03/14_Revaluation_Retotalling_Copy-Inspection-Application-Form.pdf', 'cat' => 'Examination'],
-    ['num' => '13', 'title' => 'Application Form for Issue of Transfer Certificate (TC) & Character Certificate', 'file' => 'uploads/2026/03/15_Application-Form-for-Issue-of-TC-Character-Certificate.pdf', 'cat' => 'Transcripts & Migration'],
-    ['num' => '14', 'title' => 'Enrolment Form / Student Registration Proforma', 'file' => 'uploads/2026/03/16_Enrolment-Form.pdf', 'cat' => 'Admissions'],
-    ['num' => '15', 'title' => 'Challenge Valuation Application Form', 'file' => 'uploads/2026/03/17_Challenge-Valuation-Form.pdf', 'cat' => 'Examination'],
-    ['num' => '16', 'title' => 'Bus / University Transport Facility Application Form', 'file' => 'uploads/2026/03/18_Transport-Bus-Facility-Form.pdf', 'cat' => 'Campus Life'],
-    ['num' => '17', 'title' => 'Hostel Accommodation Allotment Form', 'file' => 'uploads/2026/03/19_Hostel-Accommodation-Form.pdf', 'cat' => 'Campus Life'],
-    ['num' => '18', 'title' => 'Library Membership & Book Bank Application Form', 'file' => 'uploads/2026/03/20_Library-Membership-Form.pdf', 'cat' => 'Student Services']
+    ['num' => '08', 'title' => 'Application Form for Issue of Migration / Provisional / Transcript Certificate (Proforma)', 'file' => 'uploads/2026/03/08_Application-Form-For-Issue-of-Migration_Provisional_Transcript-Certificate.pdf', 'cat' => 'Transcripts & Migration'],
+    ['num' => '09', 'title' => 'Application Form for Issue of Diploma / PG Diploma Certificate', 'file' => 'uploads/2026/03/09_Application-Form-for-Issue-of-Diploma_PG-Diploma-Certificate.pdf', 'cat' => 'Degree & Certificates'],
+    ['num' => '10', 'title' => 'Admission Cancellation & Fee Refund Application Form', 'file' => 'uploads/2026/03/10_Admission-Cancelleation-Form.pdf', 'cat' => 'Admissions'],
+    ['num' => '11', 'title' => 'Application Form for Issue of Duplicate Diploma / PG Diploma Certificate', 'file' => 'uploads/2026/03/11_Application-Form-for-Issue-of-Duplicate-Diploma_PG-Diploma-Certificate.pdf', 'cat' => 'Degree & Certificates'],
+    ['num' => '12', 'title' => 'Application Form for Issue of Duplicate / Corrected Marksheet', 'file' => 'uploads/2026/03/12_Application-Form-for-Issue-of-Duplicate_Corrected-Marksheet.pdf', 'cat' => 'Examination'],
+    ['num' => '13', 'title' => 'Student University No-Dues Clearance Form', 'file' => 'uploads/2026/03/13_No-Dues-Form.pdf', 'cat' => 'Student Services'],
+    ['num' => '14', 'title' => 'Tuition Fee / Caution Money Refund Application Form', 'file' => 'uploads/2026/03/14_Fee-Rrefund-Form.pdf', 'cat' => 'Accounts & Finance']
 ];
 ?>
 
@@ -62,7 +58,7 @@ $formsList = [
                             <div class="col-md-7">
                                 <div class="input-group">
                                     <span class="input-group-text bg-light border-custom"><i class="fa-solid fa-search text-muted-custom"></i></span>
-                                    <input type="text" class="form-control border-custom" id="formSearchInput" placeholder="Quick search form title (e.g. Migration, Degree, Revaluation)...">
+                                    <input type="text" class="form-control border-custom" id="formSearchInput" placeholder="Quick search form title (e.g. Migration, Degree, Marksheet)...">
                                 </div>
                             </div>
                             <div class="col-md-5 text-md-end">

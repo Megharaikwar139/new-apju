@@ -103,8 +103,8 @@ $sgrcMembers = [
                                 <p class="text-muted-custom small mb-0">Official University Order on SGRC constitution and Ombudsperson appointment.</p>
                             </div>
                         </div>
-                        <a href="uploads/2026/03/SGRC-Order.pdf" target="_blank" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
-                            <i class="fa-solid fa-file-pdf me-1.5"></i> Download SGRC Order
+                        <a href="uploads/2026/03/SGRS.jpeg" target="_blank" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                            <i class="fa-solid fa-file-image me-1.5"></i> View SGRC Order Document
                         </a>
                     </div>
 

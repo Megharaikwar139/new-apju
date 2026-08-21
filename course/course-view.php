@@ -1,5 +1,5 @@
 <?php
-require_once "../db.php";
+require_once __DIR__ . "/../db.php";
 
 $slug = basename($_SERVER['PHP_SELF'], '.php');
 if (isset($_GET['slug'])) {
@@ -60,7 +60,7 @@ if (!empty($careerOpportunities)) {
 }
 
 $pageTitle = htmlspecialchars($courseTitle) . " - Dr. APJ Abdul Kalam University, Indore";
-include "../header.php";
+include __DIR__ . "/../header.php";
 ?>
 
 <!-- Inner Page Hero Banner -->
@@ -69,7 +69,7 @@ include "../header.php";
         <div class="inner-breadcrumb-pill">
             <a href="../index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
             <span>&raquo;</span>
-            <a href="../index.php#programs">Courses</a>
+            <a href="../programs.php">Courses</a>
             <span>&raquo;</span>
             <span class="text-gold fw-medium"><?php echo htmlspecialchars($courseTitle); ?></span>
         </div>
@@ -118,94 +118,82 @@ include "../header.php";
                         </div>
                     </div>
 
-                    <!-- Program Overview -->
+                    <!-- Course Overview Section -->
                     <div class="mb-5">
-                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
-                            <span class="section-icon-pill"><i class="fa-solid fa-book-open-reader"></i></span>
-                            <h2 class="font-serif text-primary fs-4 fw-bold m-0">Program Overview</h2>
+                        <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-custom">
+                            <i class="fa-solid fa-book-open-reader text-gold fs-4"></i>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Program Overview</h3>
                         </div>
-                        <div class="inner-page-body-text" style="line-height: 1.85; color: #3d3233; font-size: 0.96rem;">
-                            <?php echo (strpos($overview, '<p>') !== false) ? $overview : '<p>' . nl2br(htmlspecialchars($overview)) . '</p>'; ?>
+                        <div class="inner-page-body-text" style="line-height: 1.8; color: #3d3233; font-size: 0.95rem;">
+                            <?php echo $overview; ?>
                         </div>
                     </div>
 
                     <!-- Key Features & Highlights -->
                     <?php if (!empty($keyFeaturesHtml)): ?>
                     <div class="mb-5">
-                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
-                            <span class="section-icon-pill"><i class="fa-solid fa-star"></i></span>
-                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Key Highlights of the Program</h3>
+                        <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-custom">
+                            <i class="fa-solid fa-star text-gold fs-4"></i>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Program Highlights &amp; Pillars</h3>
                         </div>
-                        <div class="feature-info-card">
-                            <ul class="d-flex flex-column gap-2.5 mb-0 ps-0 list-unstyled" style="color: #3e3233; line-height: 1.75;">
-                                <?php echo $keyFeaturesHtml; ?>
-                            </ul>
-                        </div>
+                        <ul class="list-unstyled d-flex flex-column gap-2.5 mb-0" style="color: #4a3c3d; font-size: 0.92rem;">
+                            <?php echo $keyFeaturesHtml; ?>
+                        </ul>
                     </div>
                     <?php endif; ?>
 
-                    <!-- Career Opportunities & Industry Scope -->
+                    <!-- Career Scope & Industry Opportunities -->
                     <?php if (!empty($careerOpportunitiesHtml)): ?>
-                    <div class="mb-5">
-                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
-                            <span class="section-icon-pill"><i class="fa-solid fa-briefcase"></i></span>
-                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Career Opportunities &amp; Job Roles</h3>
+                    <div class="mb-5 p-4 rounded-4" style="background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%); border: 1px solid var(--border-color);">
+                        <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-custom">
+                            <i class="fa-solid fa-briefcase text-gold fs-4"></i>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Career Horizons &amp; Industry Roles</h3>
                         </div>
-                        <div class="feature-info-card">
-                            <ul class="d-flex flex-column gap-2.5 mb-0 ps-0 list-unstyled" style="color: #3e3233; line-height: 1.75;">
-                                <?php echo $careerOpportunitiesHtml; ?>
-                            </ul>
+                        <ul class="list-unstyled d-flex flex-column gap-2.5 mb-0" style="color: #4a3c3d; font-size: 0.92rem;">
+                            <?php echo $careerOpportunitiesHtml; ?>
+                        </ul>
+                    </div>
+                    <?php endif; ?>
+
+                    <!-- Syllabus / Scheme Table -->
+                    <?php if (!empty($syllabusContent)): ?>
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-custom">
+                            <i class="fa-solid fa-table-list text-gold fs-4"></i>
+                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Curriculum &amp; Semester Scheme</h3>
+                        </div>
+                        <div class="inner-page-body-text table-responsive">
+                            <?php echo $syllabusContent; ?>
                         </div>
                     </div>
                     <?php endif; ?>
 
-                    <!-- Eligibility & Admission Criteria -->
-                    <div class="mb-5">
-                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
-                            <span class="section-icon-pill"><i class="fa-solid fa-id-card-clip"></i></span>
-                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Eligibility &amp; Admission Guidelines</h3>
-                        </div>
-                        <div class="feature-info-card">
-                            <div class="d-flex align-items-center gap-3.5">
-                                <div class="feature-icon-badge" style="width: 48px; height: 48px; font-size: 1.25rem;">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h4 class="font-serif text-primary fs-6 fw-bold mb-1">Academic Qualification Requirement</h4>
-                                    <p class="mb-0 text-muted-custom" style="font-size: 0.94rem; line-height: 1.65;">
-                                        <?php echo htmlspecialchars($eligibility); ?>
-                                    </p>
-                                </div>
+                    <!-- Eligibility Criteria Card -->
+                    <div class="p-4 rounded-4 mb-4" style="background: #ffffff; border-left: 4px solid var(--primary-color); border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 14px rgba(0,0,0,0.03);">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="icon-circle-badge flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.15rem;">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-primary fs-5 fw-bold mb-1.5">Eligibility Criteria &amp; Admission Norms</h4>
+                                <p class="text-muted-custom mb-0 small" style="line-height: 1.6; font-size: 0.88rem;">
+                                    <?php echo htmlspecialchars($eligibility); ?>
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Syllabus Section if available -->
-                    <?php if (!empty($syllabusContent) && trim($syllabusContent) !== '<table class="filr-table uk-table uk-table-divider uk-table-small uk-table-hover uk-margin-top"></table>'): ?>
-                    <div class="mb-5">
-                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center gap-2.5">
-                            <span class="section-icon-pill"><i class="fa-solid fa-book-bookmark"></i></span>
-                            <h3 class="font-serif text-primary fs-4 fw-bold m-0">Curriculum &amp; Scheme</h3>
-                        </div>
-                        <div class="table-responsive rounded-4 border border-custom overflow-hidden shadow-sm">
-                            <table class="luxury-table table table-hover mb-0">
-                                <?php echo $syllabusContent; ?>
-                            </table>
-                        </div>
-                    </div>
-                    <?php endif; ?>
-
-                    <!-- Bottom Apply Strip -->
+                    <!-- Bottom Statutory Approvals Strip -->
                     <div class="p-4 rounded-4 mt-5 border border-custom d-flex align-items-center justify-content-between flex-wrap gap-3" style="background: #ffffff; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
                         <div class="d-flex align-items-center gap-3">
                             <i class="fa-solid fa-graduation-cap text-gold fs-3"></i>
                             <div>
-                                <div class="font-serif text-primary fw-bold fs-6">Admissions Open for Session 2026-27</div>
-                                <div class="text-muted-custom small" style="font-size: 0.78rem;">Take the first step towards a distinguished career at AKU Indore.</div>
+                                <div class="font-serif text-primary fw-bold fs-6">Official UGC Recognized Degree</div>
+                                <div class="text-muted-custom small" style="font-size: 0.78rem;">Approved by apex statutory councils: AICTE, PCI, UGC &amp; MP Govt.</div>
                             </div>
                         </div>
-                        <a href="../admission-procedure.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
-                            <i class="fa-solid fa-paper-plane me-1.5"></i> Apply for Admission
+                        <a href="../apply-now.php?course=<?php echo urlencode($slug); ?>" class="btn btn-sm btn-gold-pill px-3.5 py-2 fw-bold">
+                            <i class="fa-solid fa-paper-plane me-1"></i> Apply for 2026-27
                         </a>
                     </div>
 
@@ -216,23 +204,23 @@ include "../header.php";
             <div class="col-lg-4 col-xl-3">
                 <div class="sidebar-sticky-wrapper">
                     
-                    <!-- Fast Action Card -->
+                    <!-- Quick Apply Card -->
                     <div class="about-sidebar-card text-center p-4 mb-4">
                         <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" style="width: 72px; height: 72px; background: linear-gradient(135deg, #700018 0%, #4a0010 100%); border: 2px solid var(--gold-color);">
                             <i class="fa-solid fa-paper-plane text-gold fs-3"></i>
                         </div>
                         <h4 class="font-serif text-primary fs-5 fw-bold mb-2">Apply Online</h4>
                         <p class="text-muted-custom small mb-3">Begin your application for <?php echo htmlspecialchars($degreeType); ?> degree admissions.</p>
-                        <a href="apply-now.php?course=<?php echo urlencode($course['slug']); ?>" class="btn-gold-pill w-100 text-center py-2 text-decoration-none d-block mb-2 font-weight-bold" style="font-size: 0.85rem;">
+                        <a href="../apply-now.php?course=<?php echo urlencode($course['slug'] ?? $slug); ?>" class="btn-gold-pill w-100 text-center py-2 text-decoration-none d-block mb-2 font-weight-bold" style="font-size: 0.85rem;">
                             <i class="fa-solid fa-arrow-right me-1"></i> Apply Now
                         </a>
-                        <a href="admission-assistance.php" class="btn btn-sm btn-outline-dark rounded-pill w-100 py-1.5 small">
+                        <a href="../admission-assistance.php" class="btn btn-sm btn-outline-dark rounded-pill w-100 py-1.5 small">
                             <i class="fa-solid fa-headset me-1"></i> Admission Helpline
                         </a>
                     </div>
 
                     <!-- Department Sidebar Navigation -->
-                    <?php include "../faculty-sidebar.php"; ?>
+                    <?php include __DIR__ . "/../faculty-sidebar.php"; ?>
 
                 </div>
             </div>
@@ -241,4 +229,4 @@ include "../header.php";
     </div>
 </main>
 
-<?php include "../footer.php"; ?>
+<?php include __DIR__ . "/../footer.php"; ?>

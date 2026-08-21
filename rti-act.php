@@ -85,7 +85,14 @@ $rtiOfficers = [
                                 <span class="section-icon-pill"><i class="fa-solid fa-users-gear"></i></span>
                                 <h3 class="font-serif text-primary fs-4 fw-bold m-0">Public Information Officers Roster</h3>
                             </div>
-                            <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Designated Officers</span>
+                            <div class="d-flex align-items-center gap-2">
+                                <a href="uploads/filr/694/rti-gazette_RTI ACT.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small fw-semibold" download>
+                                    <i class="fa-solid fa-file-pdf text-danger me-1"></i> RTI Act Gazette
+                                </a>
+                                <a href="uploads/filr/692/cpio-list_Revise circular RTI.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small fw-semibold" download>
+                                    <i class="fa-solid fa-file-pdf text-danger me-1"></i> CPIO Circular
+                                </a>
+                            </div>
                         </div>
 
                         <div class="table-responsive rounded-4 border border-custom overflow-hidden shadow-xs bg-white">

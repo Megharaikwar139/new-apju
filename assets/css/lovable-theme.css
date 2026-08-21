@@ -798,25 +798,48 @@ h6,
 }
 
 /* Buttons */
-.btn-gold-pill {
-  background-color: var(--gold-color);
+.btn-gold-pill,
+a.btn-gold-pill,
+button.btn-gold-pill {
+  background-color: var(--gold-color) !important;
   color: var(--primary-color) !important;
-  font-weight: 600;
-  border-radius: 50rem;
+  font-weight: 700 !important;
+  border-radius: 50rem !important;
   padding: 0.65rem 1.5rem;
   font-size: 0.9rem;
-  border: none;
-  transition: all 0.25s ease;
+  border: 1px solid var(--gold-color) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  text-decoration: none;
+  text-decoration: none !important;
+  line-height: 1.4;
 }
 
-.btn-gold-pill:hover {
-  opacity: 0.92;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+.btn-gold-pill:hover,
+.btn-gold-pill:focus,
+.btn-gold-pill:active,
+a.btn-gold-pill:hover,
+a.btn-gold-pill:focus,
+a.btn-gold-pill:active,
+button.btn-gold-pill:hover,
+button.btn-gold-pill:focus,
+button.btn-gold-pill:active {
+  background-color: #ffffff !important;
+  color: var(--primary-color) !important;
+  border-color: #ffffff !important;
+  opacity: 1 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25) !important;
+  text-decoration: none !important;
+}
+
+.btn-gold-pill:hover *,
+.btn-gold-pill:focus *,
+a.btn-gold-pill:hover *,
+button.btn-gold-pill:hover * {
+  color: var(--primary-color) !important;
 }
 
 .btn-primary-pill {
@@ -1014,6 +1037,35 @@ h6,
   font-size: 0.75rem;
   flex-shrink: 0;
   transition: all 0.25s ease;
+}
+
+/* Universal Luxury Icon Circle Badges */
+.icon-circle-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.icon-circle-badge i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1.15rem;
+}
+
+.icon-circle-badge:hover {
+  transform: scale(1.06);
 }
 
 .offered-course-card:hover .course-arrow-icon {

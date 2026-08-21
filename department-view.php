@@ -355,7 +355,69 @@ include "header.php";
                     </div>
 
                     <!-- Dynamic Offered Courses & Programs Section -->
-                    <?php if (!empty($dept['courses_html'])): ?>
+                    <?php 
+                    $dynamicCoursesStmt = $pdo->prepare("SELECT * FROM courses WHERE department_slug = ? AND status = 1 ORDER BY degree_type ASC, title ASC");
+                    $dynamicCoursesStmt->execute([$currentDeptSlug]);
+                    $dynamicDeptCourses = $dynamicCoursesStmt->fetchAll();
+
+                    $dynamicGrouped = [];
+                    foreach ($dynamicDeptCourses as $dc) {
+                        $lvl = strtoupper(trim($dc['degree_type'] ?? 'UG'));
+                        if (strpos($lvl, 'DIPLOMA') !== false) {
+                            $cat = 'DIPLOMA PROGRAMS';
+                        } elseif (strpos($lvl, 'PG') !== false || strpos($lvl, 'POST') !== false || strpos($lvl, 'MASTER') !== false) {
+                            $cat = 'POST GRADUATION PROGRAMS';
+                        } elseif (strpos($lvl, 'DOCTOR') !== false || strpos($lvl, 'PH.D') !== false || strpos($lvl, 'PHD') !== false) {
+                            $cat = 'DOCTORAL RESEARCH (PH.D.) PROGRAMS';
+                        } else {
+                            $cat = 'UNDER GRADUATE PROGRAMS';
+                        }
+                        $dynamicGrouped[$cat][] = $dc;
+                    }
+                    ?>
+
+                    <?php if (!empty($dynamicGrouped)): ?>
+                    <div class="courses-section" id="offered-courses">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                            <div>
+                                <div class="eyebrow-label gold-eyebrow mb-1" style="color: var(--gold-color) !important;">
+                                    <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> ACADEMIC CURRICULUM
+                                </div>
+                                <h3 class="font-serif text-primary fs-3 fw-bold m-0">Offered Programs &amp; Degree Courses</h3>
+                            </div>
+                            <span class="badge bg-gold text-dark fw-bold rounded-pill px-3 py-2" style="font-size: 0.75rem;">ADMISSIONS OPEN 2026-27</span>
+                        </div>
+
+                        <?php 
+                        $order = ['DIPLOMA PROGRAMS', 'UNDER GRADUATE PROGRAMS', 'POST GRADUATION PROGRAMS', 'DOCTORAL RESEARCH (PH.D.) PROGRAMS'];
+                        foreach ($order as $catTitle): 
+                            if (empty($dynamicGrouped[$catTitle])) continue;
+                        ?>
+                        <div class="course-category-group">
+                            <div class="course-category-title">
+                                <i class="fa-solid fa-circle-check text-gold"></i> <?php echo $catTitle; ?>
+                            </div>
+                            <div class="row g-3">
+                                <?php foreach ($dynamicGrouped[$catTitle] as $dc): 
+                                    $cUrl = "course/" . htmlspecialchars($dc['slug']) . ".php";
+                                ?>
+                                <div class="col-md-6">
+                                    <a href="<?php echo $cUrl; ?>" class="offered-course-card">
+                                        <div class="course-icon-badge">
+                                            <i class="fa-solid fa-book-bookmark"></i>
+                                        </div>
+                                        <span class="course-title-text"><?php echo htmlspecialchars($dc['title']); ?></span>
+                                        <div class="course-arrow-badge">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <?php elseif (!empty($dept['courses_html'])): ?>
                         <?php 
                         $cHtml = $dept['courses_html'];
                         libxml_use_internal_errors(true);

@@ -1,3 +1,6 @@
+            <div class="py-3 px-4 text-center text-muted border-top bg-white small mt-4" style="font-size: 0.75rem;">
+                <span>Dr. A.P.J. Abdul Kalam University CMS · Developed &amp; Created by <a href="https://wecrescent.com/" target="_blank" rel="noopener noreferrer" class="fw-bold text-primary text-decoration-none">Crescent Digital Solutions <i class="fa-solid fa-arrow-up-right-from-square text-xs ms-0.5"></i></a></span>
+            </div>
         </main> <!-- End Admin Content Body -->
     </div> <!-- End Admin Main Wrapper -->
 

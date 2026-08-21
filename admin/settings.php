@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $site_title = $_POST['site_title'] ?? 'Dr. A.P.J. Abdul Kalam University, Indore';
     $university_tagline = $_POST['university_tagline'] ?? '…Nurturing Talents to Success';
     $address = $_POST['address'] ?? '';
+    $map_embed_code = $_POST['map_embed_code'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
     $admissions_email = $_POST['admissions_email'] ?? '';
@@ -17,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $copyright_text = $_POST['copyright_text'] ?? '';
 
     $stmt = $pdo->prepare("UPDATE site_settings_custom SET 
-        site_title = ?, university_tagline = ?, address = ?, phone = ?,
+        site_title = ?, university_tagline = ?, address = ?, map_embed_code = ?, phone = ?,
         email = ?, admissions_email = ?,
         facebook_url = ?, instagram_url = ?, twitter_url = ?, linkedin_url = ?, youtube_url = ?,
         copyright_text = ?
         WHERE id = 1");
     $stmt->execute([
-        $site_title, $university_tagline, $address, $phone,
+        $site_title, $university_tagline, $address, $map_embed_code, $phone,
         $email, $admissions_email,
         $facebook_url, $instagram_url, $twitter_url, $linkedin_url, $youtube_url,
         $copyright_text
@@ -38,7 +39,7 @@ require_once 'header.php';
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
         <h3 class="font-serif fw-bold text-primary mb-1">Global Site Settings</h3>
-        <p class="text-muted small mb-0">Manage global contact information, campus address, social media links, and footer configuration.</p>
+        <p class="text-muted small mb-0">Manage global contact information, campus address, Google map embed, social media links, and footer configuration.</p>
     </div>
 </div>
 
@@ -64,11 +65,16 @@ require_once 'header.php';
             </div>
         </div>
 
-        <h5 class="font-serif text-primary fw-bold mb-3 border-bottom pb-2">2. Contact Information</h5>
+        <h5 class="font-serif text-primary fw-bold mb-3 border-bottom pb-2">2. Contact Information &amp; Campus Map</h5>
         <div class="row g-3 mb-4">
             <div class="col-md-12">
                 <label class="form-label fw-semibold small">Official Campus Address</label>
                 <textarea name="address" class="form-control" rows="2"><?php echo htmlspecialchars($settings['address'] ?? ''); ?></textarea>
+            </div>
+            <div class="col-md-12">
+                <label class="form-label fw-semibold small">Google Maps Embed Code (&lt;iframe ...&gt;&lt;/iframe&gt;)</label>
+                <textarea name="map_embed_code" class="form-control font-monospace small" rows="3" placeholder='<iframe src="https://www.google.com/maps/embed?..." width="100%" height="450" ...></iframe>'><?php echo htmlspecialchars($settings['map_embed_code'] ?? ''); ?></textarea>
+                <div class="form-text small">Paste the iframe embed code from Google Maps to update the interactive map on the Contact Us page.</div>
             </div>
             <div class="col-md-4">
                 <label class="form-label fw-semibold small">Phone Helpline</label>

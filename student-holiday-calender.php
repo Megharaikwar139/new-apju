@@ -57,7 +57,12 @@ include 'header.php';
                                 <i class="fa-solid fa-calendar-days text-gold fs-5"></i>
                                 <h3 class="font-serif text-primary fs-4 fw-bold m-0">University Official Holiday Schedule (2026)</h3>
                             </div>
-                            <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Academic Year 2026</span>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Academic Year 2026</span>
+                                <a href="uploads/2026/03/Student-Holiday-List-2026.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small fw-semibold" download>
+                                    <i class="fa-solid fa-file-pdf text-danger me-1"></i> Download Holiday List PDF
+                                </a>
+                            </div>
                         </div>
 
                         <div class="table-responsive rounded-4 border border-custom overflow-hidden shadow-xs bg-white">

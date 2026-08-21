@@ -57,7 +57,12 @@ include 'header.php';
                                 <span class="section-icon-pill"><i class="fa-solid fa-users"></i></span>
                                 <h3 class="font-serif text-primary fs-4 fw-bold m-0">Academic Committee Roster</h3>
                             </div>
-                            <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Official Statutory Roster</span>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Official Statutory Roster</span>
+                                <a href="uploads/filr/707/ACADEMIC COUNCIL_2024-25.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small fw-semibold" download>
+                                    <i class="fa-solid fa-file-pdf text-danger me-1"></i> Download Council Order PDF
+                                </a>
+                            </div>
                         </div>
 
                         <div class="table-responsive rounded-4 border border-custom overflow-hidden shadow-xs bg-white">

@@ -41,14 +41,20 @@ $activeTabs = array_values(array_filter($tabOrder, fn($c) => isset($grouped[$c])
     flex-shrink: 0;
 }
 .gallery-tab-btn:hover {
-    background: rgba(112, 0, 24, 0.05);
+    background: rgba(112, 0, 24, 0.08);
     color: var(--primary-color);
+    border-color: rgba(112, 0, 24, 0.15);
 }
 .gallery-tab-btn.active {
     background: var(--primary-color) !important;
     color: #ffffff !important;
     border-color: var(--primary-color) !important;
     box-shadow: 0 4px 14px rgba(112, 0, 24, 0.28);
+}
+.gallery-tab-btn.active:hover {
+    background: #560012 !important;
+    color: #ffffff !important;
+    border-color: #560012 !important;
 }
 .gallery-tab-btn.active i {
     color: var(--gold-color) !important;

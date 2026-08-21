@@ -5,6 +5,8 @@ require_once 'header.php';
 // Quick Counts
 $leads_count = $pdo->query("SELECT COUNT(*) FROM admission_applications")->fetchColumn();
 $new_leads_count = $pdo->query("SELECT COUNT(*) FROM admission_applications WHERE status = 'new'")->fetchColumn();
+$inquiries_count = $pdo->query("SELECT COUNT(*) FROM contact_inquiries")->fetchColumn();
+$unread_inquiries_count = $pdo->query("SELECT COUNT(*) FROM contact_inquiries WHERE status = 'unread'")->fetchColumn();
 $schools_count = $pdo->query("SELECT COUNT(*) FROM homepage_schools")->fetchColumn();
 $courses_count = $pdo->query("SELECT COUNT(*) FROM courses")->fetchColumn();
 $events_count = $pdo->query("SELECT COUNT(*) FROM events")->fetchColumn();
@@ -15,6 +17,12 @@ $recruiters_count = $pdo->query("SELECT COUNT(*) FROM recruiters")->fetchColumn(
 $recent_leads = [];
 try {
     $recent_leads = $pdo->query("SELECT * FROM admission_applications ORDER BY created_at DESC LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {}
+
+// Recent 5 Contact Inquiries
+$recent_inquiries = [];
+try {
+    $recent_inquiries = $pdo->query("SELECT * FROM contact_inquiries ORDER BY created_at DESC LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
 } catch (Exception $e) {}
 
 // Recent 5 Notices

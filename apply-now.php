@@ -29,7 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_application'])
     $courseName = trim($_POST['course_name'] ?? '');
     $programType = trim($_POST['program_type'] ?? '');
     $qualification = trim($_POST['highest_qualification'] ?? '');
+    $instituteName = trim($_POST['institute_name'] ?? '');
+    $boardUniversity = trim($_POST['board_university'] ?? '');
+    $passingYear = trim($_POST['passing_year'] ?? '');
     $percentage = trim($_POST['percentage'] ?? '');
+    $streamSubject = trim($_POST['stream_subject'] ?? '');
+    $entranceExam = trim($_POST['entrance_exam'] ?? '');
+    $entranceScore = trim($_POST['entrance_score'] ?? '');
     $message = trim($_POST['message'] ?? '');
 
     if (empty($fullName) || empty($email) || empty($mobileNo) || empty($courseName)) {
@@ -43,12 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_application'])
             $generatedAppNo = 'AKU-' . date('Y') . '-' . mt_rand(10000, 99999);
             
             $ins = $pdo->prepare("INSERT INTO admission_applications 
-                (application_no, full_name, email, mobile_no, gender, dob, state, city, program_type, course_name, highest_qualification, percentage, message, status) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'new')");
+                (application_no, full_name, email, mobile_no, gender, dob, state, city, program_type, course_name, highest_qualification, percentage, institute_name, board_university, passing_year, stream_subject, entrance_exam, entrance_score, message, status) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'new')");
             
             $ins->execute([
                 $generatedAppNo, $fullName, $email, $mobileNo, $gender, $dob, 
-                $state, $city, $programType, $courseName, $qualification, $percentage, $message
+                $state, $city, $programType, $courseName, $qualification, $percentage,
+                $instituteName, $boardUniversity, $passingYear, $streamSubject,
+                $entranceExam, $entranceScore, $message
             ]);
 
             $successMessage = "Congratulations! Your admission application has been registered successfully with Reference ID <strong>{$generatedAppNo}</strong>. Our Admissions Counseling Cell will contact you shortly.";
@@ -220,8 +228,8 @@ include 'header.php';
                                                 <option value="">-- Choose Desired Course --</option>
                                                 <?php foreach ($allCourses as $c): ?>
                                                     <?php 
-                                                    $optVal = $c['title'];
-                                                    $isSelected = ($preselectedCourse === $c['slug'] || $preselectedCourse === $c['title'] || ($_POST['course_name'] ?? '') === $c['title']);
+                                                     $optVal = $c['title'];
+                                                     $isSelected = ($preselectedCourse === $c['slug'] || $preselectedCourse === $c['title'] || ($_POST['course_name'] ?? '') === $c['title']);
                                                     ?>
                                                     <option value="<?php echo htmlspecialchars($optVal); ?>" <?php echo $isSelected ? 'selected' : ''; ?>>
                                                         <?php echo htmlspecialchars($c['title']); ?> (<?php echo htmlspecialchars($c['degree_type'] ?? 'Degree'); ?> - <?php echo htmlspecialchars($c['duration'] ?? ''); ?>)
@@ -242,27 +250,96 @@ include 'header.php';
                                             <option value="Doctorate (Ph.D.)" <?php echo (($_POST['program_type'] ?? '') === 'Doctorate (Ph.D.)') ? 'selected' : ''; ?>>Doctorate (Ph.D.)</option>
                                         </select>
                                     </div>
+                                </div>
+                            </div>
 
+                            <!-- 3. Academic Background & Qualification Details (Comprehensive) -->
+                            <div class="mb-4 pt-3 border-top border-custom">
+                                <div class="d-flex align-items-center gap-2 mb-3 text-primary font-serif fw-bold fs-5">
+                                    <span class="rounded-circle bg-primary text-gold d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px; font-size: 0.8rem;">3</span>
+                                    <span>Academic Background &amp; Prior Qualifications</span>
+                                </div>
+
+                                <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label for="highest_qualification" class="form-label small fw-semibold text-dark">Highest Qualification Completed</label>
+                                        <label for="highest_qualification" class="form-label small fw-semibold text-dark">Qualifying / Highest Examination Passed</label>
                                         <select class="form-select border-custom" id="highest_qualification" name="highest_qualification">
-                                            <option value="">Select Qualification</option>
-                                            <option value="10th Standard / High School">10th Standard / High School</option>
-                                            <option value="12th Standard / Higher Secondary">12th Standard (PCM / PCB / Commerce / Arts)</option>
-                                            <option value="Polytechnic Diploma">Polytechnic Diploma</option>
-                                            <option value="Graduation (B.E. / B.Sc / B.Pharm / B.Com / BCA / BBA)">Graduation Degree</option>
-                                            <option value="Post Graduation (M.Tech / M.Pharm / MBA / MCA)">Post Graduation Degree</option>
+                                            <option value="">Select Qualifying Exam</option>
+                                            <option value="12th Standard / Intermediate" <?php echo (($_POST['highest_qualification'] ?? '') === '12th Standard / Intermediate') ? 'selected' : ''; ?>>12th Standard / Intermediate (10+2)</option>
+                                            <option value="10th Standard / Matriculation" <?php echo (($_POST['highest_qualification'] ?? '') === '10th Standard / Matriculation') ? 'selected' : ''; ?>>10th Standard / Matriculation</option>
+                                            <option value="Polytechnic Diploma (Engineering / Pharmacy)" <?php echo (($_POST['highest_qualification'] ?? '') === 'Polytechnic Diploma (Engineering / Pharmacy)') ? 'selected' : ''; ?>>Polytechnic Diploma</option>
+                                            <option value="Graduation (B.E. / B.Tech / B.Sc / B.Com / BCA / BBA / BA)" <?php echo (($_POST['highest_qualification'] ?? '') === 'Graduation (B.E. / B.Tech / B.Sc / B.Com / BCA / BBA / BA)') ? 'selected' : ''; ?>>Graduation Degree (UG)</option>
+                                            <option value="Post Graduation (M.Tech / MBA / MCA / M.Sc / M.Pharm)" <?php echo (($_POST['highest_qualification'] ?? '') === 'Post Graduation (M.Tech / MBA / MCA / M.Sc / M.Pharm)') ? 'selected' : ''; ?>>Post Graduation Degree (PG)</option>
+                                            <option value="Other Recognized Qualification" <?php echo (($_POST['highest_qualification'] ?? '') === 'Other Recognized Qualification') ? 'selected' : ''; ?>>Other Recognized Qualification</option>
                                         </select>
                                     </div>
 
                                     <div class="col-md-6">
-                                        <label for="percentage" class="form-label small fw-semibold text-dark">Percentage / CGPA Obtained</label>
+                                        <label for="institute_name" class="form-label small fw-semibold text-dark">Last School / College / Institute Name</label>
+                                        <input type="text" class="form-control border-custom" id="institute_name" name="institute_name" placeholder="e.g. St. Paul School / Govt Polytechnic" value="<?php echo htmlspecialchars($_POST['institute_name'] ?? ''); ?>">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="board_university" class="form-label small fw-semibold text-dark">Board / University</label>
+                                        <input type="text" class="form-control border-custom" id="board_university" name="board_university" placeholder="e.g. CBSE / MP Board / RGPV / DAVV" value="<?php echo htmlspecialchars($_POST['board_university'] ?? ''); ?>">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="passing_year" class="form-label small fw-semibold text-dark">Passing / Result Year</label>
+                                        <select class="form-select border-custom" id="passing_year" name="passing_year">
+                                            <option value="2026 (Appearing / Awaited)" <?php echo (($_POST['passing_year'] ?? '') === '2026 (Appearing / Awaited)') ? 'selected' : ''; ?>>2026 (Appearing / Awaited)</option>
+                                            <option value="2025" <?php echo (($_POST['passing_year'] ?? '') === '2025') ? 'selected' : ''; ?>>2025</option>
+                                            <option value="2024" <?php echo (($_POST['passing_year'] ?? '') === '2024') ? 'selected' : ''; ?>>2024</option>
+                                            <option value="2023" <?php echo (($_POST['passing_year'] ?? '') === '2023') ? 'selected' : ''; ?>>2023</option>
+                                            <option value="2022" <?php echo (($_POST['passing_year'] ?? '') === '2022') ? 'selected' : ''; ?>>2022</option>
+                                            <option value="2021 or Earlier" <?php echo (($_POST['passing_year'] ?? '') === '2021 or Earlier') ? 'selected' : ''; ?>>2021 or Earlier</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="percentage" class="form-label small fw-semibold text-dark">Percentage (%) / CGPA Obtained</label>
                                         <input type="text" class="form-control border-custom" id="percentage" name="percentage" placeholder="e.g. 78.5% or 8.2 CGPA" value="<?php echo htmlspecialchars($_POST['percentage'] ?? ''); ?>">
                                     </div>
 
+                                    <div class="col-md-6">
+                                        <label for="stream_subject" class="form-label small fw-semibold text-dark">Stream / Major Subjects</label>
+                                        <input type="text" class="form-control border-custom" id="stream_subject" name="stream_subject" placeholder="e.g. PCM / PCB / Commerce with Maths / CS" value="<?php echo htmlspecialchars($_POST['stream_subject'] ?? ''); ?>">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="entrance_exam" class="form-label small fw-semibold text-dark">Competitive Entrance Exam (If Appeared)</label>
+                                        <div class="row g-2">
+                                            <div class="col-7">
+                                                <select class="form-select border-custom" id="entrance_exam" name="entrance_exam">
+                                                    <option value="None / Direct Admission" <?php echo (($_POST['entrance_exam'] ?? '') === 'None / Direct Admission') ? 'selected' : ''; ?>>None (Direct Merit)</option>
+                                                    <option value="JEE Main" <?php echo (($_POST['entrance_exam'] ?? '') === 'JEE Main') ? 'selected' : ''; ?>>JEE Main</option>
+                                                    <option value="NEET" <?php echo (($_POST['entrance_exam'] ?? '') === 'NEET') ? 'selected' : ''; ?>>NEET</option>
+                                                    <option value="CUET" <?php echo (($_POST['entrance_exam'] ?? '') === 'CUET') ? 'selected' : ''; ?>>CUET</option>
+                                                    <option value="GATE" <?php echo (($_POST['entrance_exam'] ?? '') === 'GATE') ? 'selected' : ''; ?>>GATE</option>
+                                                    <option value="GPAT" <?php echo (($_POST['entrance_exam'] ?? '') === 'GPAT') ? 'selected' : ''; ?>>GPAT</option>
+                                                    <option value="CAT / CMAT / MAT" <?php echo (($_POST['entrance_exam'] ?? '') === 'CAT / CMAT / MAT') ? 'selected' : ''; ?>>CAT / CMAT / MAT</option>
+                                                    <option value="Other Entrance Exam" <?php echo (($_POST['entrance_exam'] ?? '') === 'Other Entrance Exam') ? 'selected' : ''; ?>>Other Entrance</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-5">
+                                                <input type="text" class="form-control border-custom" id="entrance_score" name="entrance_score" placeholder="Score / Rank" value="<?php echo htmlspecialchars($_POST['entrance_score'] ?? ''); ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4. Additional Queries & Facilities -->
+                            <div class="mb-4 pt-3 border-top border-custom">
+                                <div class="d-flex align-items-center gap-2 mb-3 text-primary font-serif fw-bold fs-5">
+                                    <span class="rounded-circle bg-primary text-gold d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px; font-size: 0.8rem;">4</span>
+                                    <span>Queries &amp; Special Requirements (Optional)</span>
+                                </div>
+
+                                <div class="row g-3">
                                     <div class="col-12">
-                                        <label for="message" class="form-label small fw-semibold text-dark">Any Specific Question / Message (Optional)</label>
-                                        <textarea class="form-control border-custom" id="message" name="message" rows="3" placeholder="Tell us if you need hostel accommodation, transport facility, or scholarship information..."><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
+                                        <label for="message" class="form-label small fw-semibold text-dark">Tell us if you need hostel accommodation, bus transport, or scholarship assistance:</label>
+                                        <textarea class="form-control border-custom" id="message" name="message" rows="2" placeholder="e.g. Interested in campus AC hostel, bus route from Vijay Nagar, and merit scholarship details..."><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +347,7 @@ include 'header.php';
                             <!-- Submit Button Section -->
                             <div class="pt-3 border-top border-custom d-flex align-items-center justify-content-between flex-wrap gap-3">
                                 <div class="text-muted-custom small">
-                                    <i class="fa-solid fa-lock text-gold me-1"></i> Your personal information is secure &amp; encrypted.
+                                    <i class="fa-solid fa-lock text-gold me-1"></i> Your personal &amp; academic information is secure.
                                 </div>
                                 <button type="submit" name="submit_application" class="btn btn-gold-pill px-5 py-2.5 font-weight-bold fs-6 shadow-sm">
                                     <i class="fa-solid fa-paper-plane me-2"></i> Submit Application Now

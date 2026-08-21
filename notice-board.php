@@ -3,12 +3,12 @@ $pageTitle = "Official Notice Board - Dr. APJ Abdul Kalam University, Indore";
 include "header.php"; 
 
 $notices = [
-    ["title" => "Centre for Sanskrit Learning – Now Open at Campus", "category" => "Academic Notice", "date" => "20 Aug 2026", "pdf" => "uploads/2025/08/Centre-for-Sanskrit-Learning.pdf"],
-    ["title" => "Notice for Submission of Mandatory Eligibility Documents for Session 2026-27", "category" => "Admissions", "date" => "18 Aug 2026", "pdf" => "uploads/2025/08/Notice-for-Submission-Documents.pdf"],
-    ["title" => "Registration for Inter-College Khel Mahotsav & Annual Sports Meet 2026", "category" => "Sports & Events", "date" => "15 Aug 2026", "pdf" => "uploads/2025/08/Sports-Meet-Notice.pdf"],
-    ["title" => "National Scholarship Portal (NSP) & Post-Matric Application Deadline", "category" => "Scholarship", "date" => "10 Aug 2026", "pdf" => "uploads/2025/08/Scholarship-Deadline.pdf"],
-    ["title" => "Semester Revaluation & Retotaling Application Windows Announced", "category" => "Examinations", "date" => "05 Aug 2026", "pdf" => "uploads/2025/08/Revaluation-Notice.pdf"],
-    ["title" => "Bus Route Schedule & Transport Pass Renewal for Odd Semester 2026", "category" => "Transport", "date" => "01 Aug 2026", "pdf" => "uploads/2025/08/Transport-Schedule.pdf"]
+    ["title" => "Attendance Guidelines & Regulations Notice for All Students", "category" => "Academic Notice", "date" => "20 Aug 2026", "pdf" => "uploads/2026/01/Attendance-Notice-STUDENTS.pdf"],
+    ["title" => "MPTAASC Post-Matric & State Scholarship Registration Notice", "category" => "Scholarship", "date" => "18 Aug 2026", "pdf" => "uploads/2025/12/Notice-MPTAASC-05.08.25.pdf"],
+    ["title" => "Mandatory Academic Bank of Credits (ABC ID) & DigiLocker Creation", "category" => "Admissions", "date" => "15 Aug 2026", "pdf" => "uploads/2025/12/Notice-27-10-2025-ABC-id-1.pdf"],
+    ["title" => "Institutional Academic & Curriculum Circular for Faculty of Sciences", "category" => "Academic Notice", "date" => "10 Aug 2026", "pdf" => "uploads/2026/01/Notices-Science-1.pdf"],
+    ["title" => "Urgent Notice regarding Examination Enrollment & Registration Deadlines", "category" => "Examinations", "date" => "05 Aug 2026", "pdf" => "uploads/2025/12/Urgent-Notice-01.09.2025.pdf"],
+    ["title" => "Official University Student Holiday & Session Recess Schedule", "category" => "Holiday Notice", "date" => "01 Aug 2026", "pdf" => "uploads/2026/03/Student-Holiday-List-2026.pdf"]
 ];
 ?>
 

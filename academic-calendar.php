@@ -212,11 +212,11 @@ include 'header.php';
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="uploads/2025/06/23092024_125423_AcademicCalenderEng-scaled.pdf" target="_blank" class="fw-bold text-primary text-decoration-none">
+                                                <a href="uploads/2025/11/Academic-Calendar-JULY-TO-DEC-2024.pdf" target="_blank" class="fw-bold text-primary text-decoration-none">
                                                     Academic Calendar Engineering (July – Dec 2024)
                                                 </a>
                                             </td>
-                                            <td class="text-end"><a href="uploads/2025/06/23092024_125423_AcademicCalenderEng-scaled.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small">PDF</a></td>
+                                            <td class="text-end"><a href="uploads/2025/11/Academic-Calendar-JULY-TO-DEC-2024.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small">PDF</a></td>
                                         </tr>
                                     </tbody>
                                 </table>

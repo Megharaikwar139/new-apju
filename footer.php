@@ -67,7 +67,7 @@ try {
         </div>
 
         <!-- Comprehensive 5-Column Sitemap Linking All Website Pages -->
-        <div class="row g-4 py-5 border-bottom border-white border-opacity-15">
+        <div class="row g-4 py-5">
             
             <!-- Col 1: Brand & Social Media -->
             <div class="col-lg-3 col-md-6">
@@ -139,6 +139,7 @@ try {
                     <li><a href="hostel-rules-regulations.php" class="footer-link">Hostel & Living</a></li>
                     <li><a href="gallery.php" class="footer-link">Photo Gallery</a></li>
                     <li><a href="university-events.php" class="footer-link">Campus Events &amp; Fests</a></li>
+                    <li><a href="contact-us.php" class="footer-link text-gold fw-semibold"><i class="fa-solid fa-location-dot me-1"></i> Contact &amp; Campus Map</a></li>
                 </ul>
             </div>
 
@@ -150,6 +151,7 @@ try {
                     <li><a href="https://login.rssrcampusconnect.com/" target="_blank" class="footer-link"><i class="fa-solid fa-right-to-bracket text-gold me-1"></i> Student ERP Login</a></li>
                     <li><a href="career.php" class="footer-link text-gold fw-medium"><i class="fa-solid fa-briefcase me-1"></i> Careers @ AKU</a></li>
                     <li><a href="notice-board.php" class="footer-link">Official Notice Board</a></li>
+                    <li><a href="contact-us.php" class="footer-link text-gold fw-medium"><i class="fa-solid fa-envelope-open-text me-1"></i> Contact &amp; Inquiries</a></li>
                     <li><a href="placement-cell.php" class="footer-link">Training & Placement</a></li>
                     <li><a href="our-recruiters.php" class="footer-link">Our 500+ Recruiters</a></li>
                     <li><a href="iqac.php" class="footer-link">IQAC (NAAC / NIRF)</a></li>
@@ -161,22 +163,255 @@ try {
 
         </div>
 
-        <!-- Copyright & Legal Bar -->
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 pt-4 small text-white text-opacity-60" style="font-size: 0.78rem;">
-            <div><?php echo htmlspecialchars($settings['copyright_text'] ?? ('© ' . date('Y') . ' Dr. A.P.J. Abdul Kalam University, Indore. All rights reserved.')); ?></div>
-            <div class="d-flex flex-wrap gap-3">
-                <a href="privacy-policy.php" class="footer-link text-white text-opacity-60">Privacy Policy</a>
-                <a href="payment-terms.php" class="footer-link text-white text-opacity-60">Terms of Use</a>
-                <a href="refund-cancellation.php" class="footer-link text-white text-opacity-60">Refund Policy</a>
-                <a href="anti-reggiging-committee.php" class="footer-link text-white text-opacity-60">Anti-Ragging</a>
-                <a href="icc.php" class="footer-link text-white text-opacity-60">ICC</a>
-                <a href="sgrc.php" class="footer-link text-white text-opacity-60">Grievance Redressal</a>
-                <a href="rti-act.php" class="footer-link text-white text-opacity-60">RTI Act</a>
+        <!-- Divider 1 (Identical Width & Subtle Opacity) -->
+        <div style="border-top: 1px solid rgba(255, 255, 255, 0.12) !important;"></div>
+
+        <!-- Policy & Statutory Links Strip (Balanced Vertical & Horizontal Alignment) -->
+        <div class="py-2.5 d-flex align-items-center justify-content-center text-center">
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3 small text-white text-opacity-70" style="font-size: 0.76rem;">
+                <a href="contact-us.php" class="footer-link text-gold fw-medium">Contact Us</a>
+                <span class="text-white text-opacity-25 d-none d-sm-inline">·</span>
+                <a href="privacy-policy.php" class="footer-link text-white text-opacity-70">Privacy Policy</a>
+                <span class="text-white text-opacity-25 d-none d-sm-inline">·</span>
+                <a href="payment-terms.php" class="footer-link text-white text-opacity-70">Terms of Use</a>
+                <span class="text-white text-opacity-25 d-none d-sm-inline">·</span>
+                <a href="refund-cancellation.php" class="footer-link text-white text-opacity-70">Refund Policy</a>
+                <span class="text-white text-opacity-25 d-none d-sm-inline">·</span>
+                <a href="anti-reggiging-committee.php" class="footer-link text-white text-opacity-70">Anti-Ragging</a>
+                <span class="text-white text-opacity-25 d-none d-sm-inline">·</span>
+                <a href="icc.php" class="footer-link text-white text-opacity-70">ICC</a>
+                <span class="text-white text-opacity-25 d-none d-sm-inline">·</span>
+                <a href="sgrc.php" class="footer-link text-white text-opacity-70">Grievance Redressal</a>
+                <span class="text-white text-opacity-25 d-none d-sm-inline">·</span>
+                <a href="rti-act.php" class="footer-link text-white text-opacity-70">RTI Act</a>
+            </div>
+        </div>
+
+        <!-- Divider 2 (Exact Same Width & Opacity) -->
+        <div style="border-top: 1px solid rgba(255, 255, 255, 0.12) !important;"></div>
+
+        <!-- Bottom Copyright & Developer Credit Bar (Clean Top Padding & Alignment) -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 pt-3 small text-white text-opacity-75" style="font-size: 0.78rem;">
+            <div class="text-center text-md-start">
+                <?php echo htmlspecialchars($settings['copyright_text'] ?? ('© ' . date('Y') . ' Dr. A.P.J. Abdul Kalam University, Indore. All rights reserved.')); ?>
+            </div>
+            
+            <!-- Permanent Designer & Developer Credit -->
+            <div class="d-flex align-items-center gap-1.5 text-white text-opacity-85 text-nowrap">
+                <span>Developed &amp; Created by </span>
+                <a href="https://wecrescent.com/" target="_blank" rel="noopener noreferrer" class="footer-link fw-bold text-gold text-decoration-none d-inline-flex align-items-center gap-1 ms-1" title="Crescent Digital Solutions">
+                    <span>Crescent Digital Solutions</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i>
+                </a>
             </div>
         </div>
 
     </div>
 </footer>
+
+<!-- Floating Sticky WhatsApp Helpdesk Widget -->
+<?php
+// Extract numbers from settings phone or fallback to +91 91111 09999
+$raw_phone = $settings['phone'] ?? '+91 91111 09999';
+$wa_phone = preg_replace('/[^0-9]/', '', explode('/', $raw_phone)[0]);
+if (empty($wa_phone) || strlen($wa_phone) < 10) {
+    $wa_phone = '919111109999';
+} elseif (strlen($wa_phone) == 10) {
+    $wa_phone = '91' . $wa_phone;
+}
+$wa_message = urlencode("Hello Dr. APJ Abdul Kalam University, I would like to inquire about Admissions & Courses 2026-27.");
+?>
+<!-- Floating Sticky WhatsApp Button (Bottom-Right) -->
+<a href="https://api.whatsapp.com/send?phone=<?php echo $wa_phone; ?>&text=<?php echo $wa_message; ?>" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="whatsapp-floating-btn floating-quick-action" 
+   title="Chat with AKU Admission Counselor on WhatsApp"
+   aria-label="Chat on WhatsApp">
+    <div class="whatsapp-btn-pulse"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- Floating Sticky Apply Now Button (Bottom-Left) -->
+<a href="apply-now.php" 
+   class="apply-floating-btn floating-quick-action" 
+   title="Apply Online for Admissions 2026-27"
+   aria-label="Apply Online 2026">
+    <div class="apply-btn-pulse"></div>
+    <i class="fa-solid fa-graduation-cap apply-icon"></i>
+</a>
+
+<style>
+/* Base Floating Trigger State (Hidden on Hero / Top of Page) */
+.floating-quick-action {
+    position: fixed;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(24px) scale(0.85);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.35s ease, box-shadow 0.3s ease;
+}
+
+/* Active Visible State on Scroll */
+.floating-quick-action.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* 1. Floating Apply Now Button (Pure Circular Icon on Left) */
+.apply-floating-btn {
+    bottom: 24px;
+    left: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #700015 0%, #43000c 100%);
+    border: 2px solid #D4AF37;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 24px rgba(112, 0, 21, 0.5), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.apply-floating-btn .apply-icon {
+    color: #ffd700;
+    font-size: 1.65rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.apply-floating-btn:hover {
+    transform: translateY(-4px) scale(1.08) !important;
+    background: linear-gradient(135deg, #8a001a 0%, #52000f 100%);
+    border-color: #ffd700;
+    box-shadow: 0 12px 30px rgba(112, 0, 21, 0.65), 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff !important;
+}
+
+.apply-floating-btn:hover .apply-icon {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.apply-floating-btn .apply-btn-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    animation: applyPulse 2.2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    pointer-events: none;
+}
+
+@keyframes applyPulse {
+    0% { transform: scale(0.95); opacity: 0.85; }
+    70% { transform: scale(1.22); opacity: 0; }
+    100% { transform: scale(1.22); opacity: 0; }
+}
+
+/* 2. Floating WhatsApp Button (Pure Circular Icon on Right) */
+.whatsapp-floating-btn {
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 24px rgba(18, 140, 126, 0.45), 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.whatsapp-floating-btn i {
+    font-size: 1.95rem;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.whatsapp-floating-btn:hover {
+    transform: translateY(-4px) scale(1.08) !important;
+    box-shadow: 0 12px 30px rgba(18, 140, 126, 0.6), 0 4px 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff !important;
+}
+
+.whatsapp-floating-btn .whatsapp-btn-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 2px solid #25D366;
+    animation: waPulse 2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    pointer-events: none;
+}
+
+@keyframes waPulse {
+    0% { transform: scale(0.95); opacity: 0.85; }
+    70% { transform: scale(1.22); opacity: 0; }
+    100% { transform: scale(1.22); opacity: 0; }
+}
+
+/* Mobile Responsive Optimization */
+@media (max-width: 767.98px) {
+    .apply-floating-btn {
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .apply-floating-btn .apply-icon {
+        font-size: 1.45rem;
+    }
+    .whatsapp-floating-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-floating-btn i {
+        font-size: 1.75rem;
+    }
+}
+</style>
+
+<!-- Scroll Trigger JS for Floating Quick Action Buttons -->
+<script>
+(function() {
+    function initFloatingQuickActions() {
+        const floatingBtns = document.querySelectorAll('.floating-quick-action');
+        if (!floatingBtns.length) return;
+
+        function checkScroll() {
+            // Show after scrolling past top hero section (> 220px)
+            if (window.scrollY > 220) {
+                floatingBtns.forEach(btn => btn.classList.add('is-visible'));
+            } else {
+                floatingBtns.forEach(btn => btn.classList.remove('is-visible'));
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll, { passive: true });
+        // Initial check on load
+        checkScroll();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFloatingQuickActions);
+    } else {
+        initFloatingQuickActions();
+    }
+})();
+</script>
 
 <!-- Bootstrap 5.3.3 JavaScript Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -4,12 +4,20 @@ require_once 'auth.php';
 $message = '';
 $error = '';
 
+// Fetch all departments for selection & mapping
+$departments = $pdo->query("SELECT slug, name, faculty_group FROM departments ORDER BY name ASC")->fetchAll();
+$deptMap = [];
+foreach ($departments as $d) {
+    $deptMap[$d['slug']] = $d['name'];
+}
+
 // Handle Actions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
     $id = $_POST['id'] ?? null;
     $title = trim($_POST['title'] ?? '');
     $slug = trim($_POST['slug'] ?? '');
+    $department_slug = trim($_POST['department_slug'] ?? '');
     $degree_type = trim($_POST['degree_type'] ?? 'UG');
     $duration = trim($_POST['duration'] ?? '4 Years');
     $approvals = trim($_POST['approvals'] ?? 'Recognized by UGC | AICTE Approved');
@@ -29,18 +37,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($id) {
             $stmt = $pdo->prepare("
                 UPDATE courses 
-                SET title = ?, slug = ?, degree_type = ?, duration = ?, approvals = ?, eligibility = ?, key_features = ?, career_opportunities = ?, syllabus_content = ?, content = ?, status = ?
+                SET title = ?, slug = ?, department_slug = ?, degree_type = ?, duration = ?, approvals = ?, eligibility = ?, key_features = ?, career_opportunities = ?, syllabus_content = ?, content = ?, status = ?
                 WHERE id = ?
             ");
-            $stmt->execute([$title, $slug, $degree_type, $duration, $approvals, $eligibility, $key_features, $career_opportunities, $syllabus_content, $content, $status, $id]);
+            $stmt->execute([$title, $slug, $department_slug, $degree_type, $duration, $approvals, $eligibility, $key_features, $career_opportunities, $syllabus_content, $content, $status, $id]);
             $message = 'Academic course program updated successfully!';
         } else {
             $stmt = $pdo->prepare("
-                INSERT INTO courses (title, slug, degree_type, duration, approvals, eligibility, key_features, career_opportunities, syllabus_content, content, status)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO courses (title, slug, department_slug, degree_type, duration, approvals, eligibility, key_features, career_opportunities, syllabus_content, content, status)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ");
-            $stmt->execute([$title, $slug, $degree_type, $duration, $approvals, $eligibility, $key_features, $career_opportunities, $syllabus_content, $content, $status]);
+            $stmt->execute([$title, $slug, $department_slug, $degree_type, $duration, $approvals, $eligibility, $key_features, $career_opportunities, $syllabus_content, $content, $status]);
             $message = 'New academic course program created successfully!';
+        }
+        
+        // Auto-generate dynamic course page wrapper in course/ directory
+        if (!empty($slug)) {
+            $courseDir = __DIR__ . '/../course';
+            if (!is_dir($courseDir)) mkdir($courseDir, 0777, true);
+            $courseFile = $courseDir . '/' . $slug . '.php';
+            $phpCode = "<?php\n\$_GET['slug'] = '" . addslashes($slug) . "';\nrequire_once __DIR__ . '/course-view.php';\n";
+            file_put_contents($courseFile, $phpCode);
         }
     } elseif ($action === 'delete' && $id) {
         $stmt = $pdo->prepare("DELETE FROM courses WHERE id = ?");
@@ -55,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Filters
 $filter_level = $_GET['level'] ?? '';
+$filter_dept = $_GET['dept'] ?? '';
 $search_q = trim($_GET['q'] ?? '');
 
 $sql = "SELECT * FROM courses WHERE 1=1";
@@ -63,6 +81,11 @@ $params = [];
 if (!empty($filter_level)) {
     $sql .= " AND degree_type = ?";
     $params[] = $filter_level;
+}
+
+if (!empty($filter_dept)) {
+    $sql .= " AND department_slug = ?";
+    $params[] = $filter_dept;
 }
 
 if (!empty($search_q)) {
@@ -208,17 +231,27 @@ require_once 'header.php';
                     <option value="Doctorate" <?php echo ($filter_level === 'Doctorate') ? 'selected' : ''; ?>>Doctorate / Ph.D.</option>
                 </select>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
+                <select name="dept" class="form-select form-select-sm rounded-pill px-3 py-2 border-custom" onchange="this.form.submit()">
+                    <option value="">-- All Departments --</option>
+                    <?php foreach ($departments as $d): ?>
+                    <option value="<?php echo htmlspecialchars($d['slug']); ?>" <?php echo ($filter_dept === $d['slug']) ? 'selected' : ''; ?>>
+                        <?php echo htmlspecialchars($d['name']); ?>
+                    </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="col-md-4">
                 <div class="position-relative">
                     <i class="fa-solid fa-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
-                    <input type="text" name="q" class="form-control form-control-sm rounded-pill ps-5 py-2 border-custom" placeholder="Search by course title, slug, keywords..." value="<?php echo htmlspecialchars($search_q); ?>">
+                    <input type="text" name="q" class="form-control form-control-sm rounded-pill ps-5 py-2 border-custom" placeholder="Search course title, keywords..." value="<?php echo htmlspecialchars($search_q); ?>">
                 </div>
             </div>
-            <div class="col-md-3 d-flex gap-2">
-                <button type="submit" class="btn btn-sm btn-primary rounded-pill px-4 py-2 w-100 fw-semibold">
+            <div class="col-md-2 d-flex gap-1.5">
+                <button type="submit" class="btn btn-sm btn-primary rounded-pill px-3 py-2 w-100 fw-semibold">
                     <i class="fa-solid fa-filter me-1 text-gold"></i> Filter
                 </button>
-                <?php if ($filter_level || $search_q): ?>
+                <?php if ($filter_level || $filter_dept || $search_q): ?>
                 <a href="courses_manager.php" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-2 flex-shrink-0" title="Reset Filters">
                     <i class="fa-solid fa-rotate-left"></i>
                 </a>
@@ -246,13 +279,13 @@ require_once 'header.php';
             <table class="table table-hover align-middle mb-0">
                 <thead class="bg-light small text-uppercase" style="border-bottom: 2px solid #580813; font-size: 0.74rem; letter-spacing: 0.06em; color: #580813;">
                     <tr>
-                        <th class="ps-4 py-3" style="width: 100px;">Level</th>
-                        <th class="py-3">Program / Course Name</th>
+                        <th class="ps-4 py-3" style="width: 95px;">Level</th>
+                        <th class="py-3">Program / Course Name &amp; Department</th>
                         <th class="py-3">URL Slug &amp; Approvals</th>
-                        <th class="py-3" style="width: 110px;">Duration</th>
+                        <th class="py-3" style="width: 100px;">Duration</th>
                         <th class="py-3">Eligibility Summary</th>
-                        <th class="py-3 text-center" style="width: 90px;">Status</th>
-                        <th class="text-end pe-4 py-3" style="width: 170px;">Actions</th>
+                        <th class="py-3 text-center" style="width: 85px;">Status</th>
+                        <th class="text-end pe-4 py-3" style="width: 160px;">Actions</th>
                     </tr>
                 </thead>
                 <tbody class="small">
@@ -286,7 +319,18 @@ require_once 'header.php';
                             <a href="../course/<?php echo htmlspecialchars($c['slug']); ?>.php" target="_blank" class="font-serif fw-bold text-primary fs-6 text-decoration-none hover-gold d-block">
                                 <?php echo htmlspecialchars($c['title']); ?>
                             </a>
-                            <span class="small text-muted" style="font-size: 0.72rem;">ID: #<?php echo $c['id']; ?></span>
+                            <div class="d-flex align-items-center gap-2 mt-1">
+                                <span class="small text-muted" style="font-size: 0.72rem;">ID: #<?php echo $c['id']; ?></span>
+                                <?php if (!empty($c['department_slug']) && isset($deptMap[$c['department_slug']])): ?>
+                                <span class="badge rounded-pill bg-light text-primary border" style="font-size: 0.68rem; font-weight: 500;">
+                                    <i class="fa-solid fa-building-columns text-gold me-1"></i> <?php echo htmlspecialchars($deptMap[$c['department_slug']]); ?>
+                                </span>
+                                <?php else: ?>
+                                <span class="badge rounded-pill bg-light text-muted border" style="font-size: 0.68rem;">
+                                    <i class="fa-solid fa-graduation-cap opacity-50 me-1"></i> General / Unassigned
+                                </span>
+                                <?php endif; ?>
+                            </div>
                         </td>
                         <td>
                             <code class="d-block mb-1 text-primary" style="font-size: 0.75rem; background: rgba(88,8,19,0.04); padding: 2px 6px; border-radius: 4px; display: inline-block;">course/<?php echo htmlspecialchars($c['slug']); ?>.php</code>
@@ -300,7 +344,7 @@ require_once 'header.php';
                             </span>
                         </td>
                         <td>
-                            <div class="text-muted small" style="max-width: 280px; line-height: 1.45; font-size: 0.78rem;">
+                            <div class="text-muted small" style="max-width: 260px; line-height: 1.45; font-size: 0.78rem;">
                                 <?php echo htmlspecialchars(mb_strimwidth(strip_tags($c['eligibility']), 0, 75, '...')); ?>
                             </div>
                         </td>
@@ -366,6 +410,20 @@ require_once 'header.php';
                             <label class="form-label small fw-bold">Course Program Title <span class="text-danger">*</span></label>
                             <input type="text" name="title" id="modal_title" class="form-control rounded-3" placeholder="e.g. B.E. (Computer Science Engineering)" required>
                         </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">Department / Academic School <span class="text-muted fw-normal">(Connects to Department Page)</span></label>
+                            <select name="department_slug" id="modal_department_slug" class="form-select rounded-3">
+                                <option value="">-- General / Unassigned Department --</option>
+                                <?php foreach ($departments as $d): ?>
+                                <option value="<?php echo htmlspecialchars($d['slug']); ?>">
+                                    <?php echo htmlspecialchars($d['name']); ?> (<?php echo htmlspecialchars($d['faculty_group']); ?>)
+                                </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
                         <div class="col-md-3">
                             <label class="form-label small fw-bold">Degree Level <span class="text-danger">*</span></label>
                             <select name="degree_type" id="modal_degree_type" class="form-select rounded-3" required>
@@ -380,13 +438,13 @@ require_once 'header.php';
                             <label class="form-label small fw-bold">Duration</label>
                             <input type="text" name="duration" id="modal_duration" class="form-control rounded-3" placeholder="e.g. 4 Years / 2 Years / 3 Years">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label class="form-label small fw-bold">URL Slug (Auto-generated if empty)</label>
                             <input type="text" name="slug" id="modal_slug" class="form-control rounded-3" placeholder="e.g. b-e-computer-science-engineering">
                         </div>
-                        <div class="col-md-6">
-                            <label class="form-label small fw-bold">Statutory Approvals &amp; Recognition</label>
-                            <input type="text" name="approvals" id="modal_approvals" class="form-control rounded-3" placeholder="e.g. Recognized by UGC | AICTE Approved">
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Statutory Approvals</label>
+                            <input type="text" name="approvals" id="modal_approvals" class="form-control rounded-3" placeholder="e.g. UGC | AICTE Approved">
                         </div>
                     </div>
                     
@@ -434,11 +492,12 @@ require_once 'header.php';
 </div>
 
 <script>
-function openAddModal() {
+function openAddModal(preselectedDept) {
     document.getElementById('modalTitle').innerHTML = '<i class="fa-solid fa-graduation-cap text-gold me-2"></i> Add New Academic Course';
     document.getElementById('modal_id').value = '';
     document.getElementById('modal_title').value = '';
     document.getElementById('modal_slug').value = '';
+    document.getElementById('modal_department_slug').value = preselectedDept || '<?php echo htmlspecialchars($filter_dept); ?>' || '';
     document.getElementById('modal_degree_type').value = 'UG';
     document.getElementById('modal_duration').value = '4 Years';
     document.getElementById('modal_approvals').value = 'Recognized by UGC | AICTE Approved';
@@ -455,6 +514,7 @@ function openEditModal(c) {
     document.getElementById('modal_id').value = c.id;
     document.getElementById('modal_title').value = c.title;
     document.getElementById('modal_slug').value = c.slug;
+    document.getElementById('modal_department_slug').value = c.department_slug || '';
     document.getElementById('modal_degree_type').value = c.degree_type;
     document.getElementById('modal_duration').value = c.duration;
     document.getElementById('modal_approvals').value = c.approvals || 'Recognized by UGC | AICTE Approved';
@@ -468,6 +528,16 @@ function openEditModal(c) {
     const modal = new bootstrap.Modal(document.getElementById('courseModal'));
     modal.show();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('action') === 'new') {
+        const preDept = urlParams.get('dept') || '';
+        openAddModal(preDept);
+        const modal = new bootstrap.Modal(document.getElementById('courseModal'));
+        modal.show();
+    }
+});
 </script>
 
 <?php require_once 'footer.php'; ?>

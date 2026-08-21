@@ -98,15 +98,60 @@ function cleanRecruiterTitle($title, $id) {
 }
 .recruiter-logo-card {
     background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 1rem;
-    transition: all 0.25s ease;
+    border: 1px solid rgba(112, 0, 21, 0.12);
+    border-radius: 1.25rem;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
     height: 100%;
+    padding: 1.5rem 1.25rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .recruiter-logo-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
-    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(112, 0, 21, 0.09);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+.recruiter-logo-card .logo-img-box {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    margin-bottom: 0.85rem;
+}
+.recruiter-logo-card .logo-img-box img {
+    max-height: 52px;
+    max-width: 82%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.04));
+    transition: transform 0.25s ease;
+}
+.recruiter-logo-card:hover .logo-img-box img {
+    transform: scale(1.08);
+}
+.recruiter-logo-card .recruiter-name-bar {
+    width: 100%;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(112, 0, 21, 0.08);
+    margin-top: auto;
+}
+.custom-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #fbf3f5;
+    color: #700015;
+    border: 1px solid rgba(112, 0, 21, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
 }
 </style>
 
@@ -202,8 +247,8 @@ function cleanRecruiterTitle($title, $id) {
                             <span class="section-icon-pill"><i class="fa-solid fa-building-circle-check"></i></span>
                             <h3 class="font-serif text-primary fs-4 fw-bold m-0" id="currentSectionTitle">All Partner Recruiter Logos</h3>
                         </div>
-                        <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">
-                            <span id="visibleCount"><?php echo count($dbRecruiters); ?></span> Companies Displayed
+                        <span class="custom-badge-pill">
+                            <i class="fa-solid fa-building me-1.5 text-gold"></i> <span id="visibleCount"><?php echo count($dbRecruiters); ?></span> Companies Displayed
                         </span>
                     </div>
 
@@ -215,15 +260,13 @@ function cleanRecruiterTitle($title, $id) {
                             $imgSrc = "uploads/" . $r['image_path'];
                         ?>
                         <div class="col-6 col-sm-4 col-md-3 recruiter-item" data-category="<?php echo $cat; ?>" data-title="<?php echo strtolower($cleanTitle); ?>">
-                            <div class="recruiter-logo-card text-center p-3 d-flex flex-column align-items-center justify-content-between" style="min-height: 145px;">
-                                <div class="d-flex align-items-center justify-content-center w-100 flex-grow-1 py-2">
+                            <div class="recruiter-logo-card text-center d-flex flex-column align-items-center justify-content-between" style="min-height: 155px;">
+                                <div class="logo-img-box flex-grow-1">
                                     <img src="<?php echo htmlspecialchars($imgSrc); ?>" 
                                          alt="<?php echo htmlspecialchars($cleanTitle); ?>" 
-                                         class="img-fluid" 
-                                         style="max-height: 52px; max-width: 100%; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));"
                                          loading="lazy">
                                 </div>
-                                <div class="w-100 pt-2 border-top border-custom mt-auto">
+                                <div class="recruiter-name-bar">
                                     <h6 class="font-serif text-primary fw-bold mb-0 text-truncate" style="font-size: 0.82rem;" title="<?php echo htmlspecialchars($cleanTitle); ?>">
                                         <?php echo htmlspecialchars($cleanTitle); ?>
                                     </h6>

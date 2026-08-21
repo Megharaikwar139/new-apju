@@ -410,53 +410,96 @@
             margin: 0;
         }
 
-        /* Buttons */
-        .btn-primary {
-            background: linear-gradient(135deg, var(--admin-maroon) 0%, var(--admin-maroon-dark) 100%);
-            border-color: var(--admin-maroon-dark);
-            color: #ffffff;
+        /* Buttons - Perfect Contrast & Luxury Hover */
+        .btn-primary, 
+        a.btn-primary, 
+        button.btn-primary {
+            background: linear-gradient(135deg, var(--admin-maroon) 0%, var(--admin-maroon-dark) 100%) !important;
+            border-color: var(--admin-maroon-dark) !important;
+            color: #ffffff !important;
             font-weight: 600;
             padding: 8px 18px;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(88, 8, 19, 0.2);
-            transition: all 0.2s;
+            transition: all 0.2s ease;
+            text-decoration: none !important;
         }
 
-        .btn-primary:hover {
-            background: linear-gradient(135deg, var(--admin-maroon-light) 0%, var(--admin-maroon) 100%);
-            border-color: var(--admin-maroon);
-            color: #ffffff;
+        .btn-primary:hover, 
+        a.btn-primary:hover, 
+        button.btn-primary:hover,
+        .btn-primary:focus, 
+        a.btn-primary:focus, 
+        button.btn-primary:focus,
+        .btn-primary:active, 
+        a.btn-primary:active, 
+        button.btn-primary:active {
+            background: linear-gradient(135deg, #700018 0%, #4a0010 100%) !important;
+            border-color: #4a0010 !important;
+            color: #ffffff !important;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(88, 8, 19, 0.3);
+            box-shadow: 0 4px 14px rgba(88, 8, 19, 0.35) !important;
+            text-decoration: none !important;
+        }
+
+        .btn-primary i,
+        a.btn-primary i,
+        button.btn-primary i {
+            color: var(--admin-gold) !important;
+        }
+
+        .btn-primary:hover i,
+        a.btn-primary:hover i,
+        button.btn-primary:hover i {
+            color: #ffd700 !important;
         }
 
         .btn-gold {
-            background: linear-gradient(135deg, var(--admin-gold) 0%, #c49f2e 100%);
-            border: none;
-            color: var(--admin-maroon-dark);
+            background: linear-gradient(135deg, var(--admin-gold) 0%, #c49f2e 100%) !important;
+            border: none !important;
+            color: var(--admin-maroon-dark) !important;
             font-weight: 700;
             padding: 8px 18px;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(212, 175, 55, 0.25);
             transition: all 0.2s;
+            text-decoration: none !important;
         }
 
         .btn-gold:hover {
-            background: linear-gradient(135deg, #e0bc43 0%, var(--admin-gold) 100%);
-            color: var(--admin-maroon-dark);
+            background: linear-gradient(135deg, #e0bc43 0%, var(--admin-gold) 100%) !important;
+            color: var(--admin-maroon-dark) !important;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35) !important;
+            text-decoration: none !important;
         }
 
-        .btn-outline-primary {
-            border-color: var(--admin-maroon);
-            color: var(--admin-maroon);
+        .btn-outline-primary,
+        a.btn-outline-primary,
+        button.btn-outline-primary {
+            border-color: var(--admin-maroon) !important;
+            color: var(--admin-maroon) !important;
+            background-color: transparent !important;
             font-weight: 600;
+            transition: all 0.2s ease;
+            text-decoration: none !important;
         }
-        .btn-outline-primary:hover {
-            background-color: var(--admin-maroon);
-            border-color: var(--admin-maroon);
-            color: #ffffff;
+        
+        .btn-outline-primary:hover,
+        a.btn-outline-primary:hover,
+        button.btn-outline-primary:hover {
+            background-color: var(--admin-maroon) !important;
+            border-color: var(--admin-maroon) !important;
+            color: #ffffff !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(88, 8, 19, 0.25) !important;
+            text-decoration: none !important;
+        }
+        
+        .btn-outline-primary:hover i,
+        a.btn-outline-primary:hover i,
+        button.btn-outline-primary:hover i {
+            color: var(--admin-gold) !important;
         }
 
         /* Tables */
@@ -551,9 +594,11 @@
             <?php
             $currentPage = basename($_SERVER['PHP_SELF']);
             $newAppBadge = 0;
+            $newInquiriesBadge = 0;
             if (isset($pdo)) {
                 try {
                     $newAppBadge = $pdo->query("SELECT COUNT(*) FROM admission_applications WHERE status = 'new'")->fetchColumn();
+                    $newInquiriesBadge = $pdo->query("SELECT COUNT(*) FROM contact_inquiries WHERE status = 'unread'")->fetchColumn();
                 } catch (Exception $e) {}
             }
             ?>
@@ -562,12 +607,18 @@
                 <i class="fa-solid fa-gauge-high"></i> Dashboard
             </a>
 
-            <!-- 1. Student Admissions -->
-            <div class="sidebar-nav-section">Student Admissions</div>
+            <!-- 1. Student Admissions & Inquiries -->
+            <div class="sidebar-nav-section">Admissions &amp; Helpdesk</div>
             <a href="admissions_manager.php" class="sidebar-link <?php echo ($currentPage == 'admissions_manager.php') ? 'active' : ''; ?> justify-content-between">
                 <span><i class="fa-solid fa-user-graduate"></i> Admission Leads</span>
                 <?php if ($newAppBadge > 0): ?>
                     <span class="badge bg-gold text-dark rounded-pill px-2" style="font-size: 0.7rem; font-weight: 700;"><?php echo $newAppBadge; ?> New</span>
+                <?php endif; ?>
+            </a>
+            <a href="contact_manager.php" class="sidebar-link <?php echo ($currentPage == 'contact_manager.php') ? 'active' : ''; ?> justify-content-between">
+                <span><i class="fa-solid fa-envelope-open-text"></i> Contact Inquiries</span>
+                <?php if ($newInquiriesBadge > 0): ?>
+                    <span class="badge bg-danger text-white rounded-pill px-2" style="font-size: 0.7rem; font-weight: 700;"><?php echo $newInquiriesBadge; ?> New</span>
                 <?php endif; ?>
             </a>
 

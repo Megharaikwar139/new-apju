@@ -14,8 +14,8 @@ $hero = $pdo->query("SELECT * FROM homepage_hero LIMIT 1")->fetch() ?: [
     'stat2_value' => '12', 'stat2_label' => 'Schools & Faculties',
     'stat3_value' => '120+', 'stat3_label' => 'Programs Offered',
     'stat4_value' => '500+', 'stat4_label' => 'Recruiting Partners',
-    'btn1_text' => 'Begin your application', 'btn1_url' => 'admission-procedure.php',
-    'btn2_text' => 'Explore programs', 'btn2_url' => '#academics'
+    'btn1_text' => 'Begin your application', 'btn1_url' => 'apply-now.php',
+    'btn2_text' => 'Explore programs', 'btn2_url' => 'programs.php'
 ];
 
 // 2. Fetch About Section Data

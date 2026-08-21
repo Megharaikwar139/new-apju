@@ -188,9 +188,14 @@ include 'header.php';
                                 <p class="text-muted-custom small mb-0">Submit your doctoral application online or consult our R&amp;D desk.</p>
                             </div>
                         </div>
-                        <a href="apply-now.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
-                            <i class="fa-solid fa-paper-plane me-1.5"></i> Apply for Ph.D
-                        </a>
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="uploads/2025/10/PhD-Application-Form-session-2025-2026.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3.5 py-2 fw-bold" download>
+                                <i class="fa-solid fa-file-pdf text-danger me-1.5"></i> Download Ph.D Form
+                            </a>
+                            <a href="apply-now.php" class="btn btn-sm btn-gold-pill px-4 py-2 fw-bold">
+                                <i class="fa-solid fa-paper-plane me-1.5"></i> Apply Online
+                            </a>
+                        </div>
                     </div>
 
                 </article>

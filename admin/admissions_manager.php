@@ -34,14 +34,16 @@ if (isset($_GET['export']) && $_GET['export'] === 'csv') {
     header('Content-Type: text/csv; charset=utf-8');
     header('Content-Disposition: attachment; filename=AKU_Admission_Applications_' . date('Y-m-d_H-i') . '.csv');
     $output = fopen('php://output', 'w');
-    fputcsv($output, ['ID', 'Application No', 'Full Name', 'Email', 'Mobile No', 'Gender', 'DOB', 'State', 'City', 'Course Name', 'Program Level', 'Qualification', 'Percentage', 'Message', 'Status', 'Admin Notes', 'Applied Date']);
+    fputcsv($output, ['ID', 'Application No', 'Full Name', 'Email', 'Mobile No', 'Gender', 'DOB', 'State', 'City', 'Course Name', 'Program Level', 'Qualification', 'Institute Name', 'Board / University', 'Passing Year', 'Percentage', 'Stream / Subjects', 'Entrance Exam', 'Entrance Score', 'Message', 'Status', 'Admin Notes', 'Applied Date']);
 
     $exportRows = $pdo->query("SELECT * FROM admission_applications ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
     foreach ($exportRows as $row) {
         fputcsv($output, [
             $row['id'], $row['application_no'], $row['full_name'], $row['email'], $row['mobile_no'],
             $row['gender'], $row['dob'], $row['state'], $row['city'], $row['course_name'],
-            $row['program_type'], $row['highest_qualification'], $row['percentage'],
+            $row['program_type'], $row['highest_qualification'], $row['institute_name'] ?? '',
+            $row['board_university'] ?? '', $row['passing_year'] ?? '', $row['percentage'],
+            $row['stream_subject'] ?? '', $row['entrance_exam'] ?? '', $row['entrance_score'] ?? '',
             $row['message'], $row['status'], $row['admin_notes'], $row['created_at']
         ]);
     }
@@ -340,14 +342,26 @@ include 'header.php';
                             <div class="text-muted" style="font-size: 0.75rem;"><?php echo htmlspecialchars($app['state'] ?: 'Madhya Pradesh'); ?></div>
                         </td>
 
-                        <!-- Qualification -->
+                        <!-- Qualification & Academic Snapshot -->
                         <td>
-                            <div class="text-dark"><?php echo htmlspecialchars($app['highest_qualification'] ?: '12th Standard'); ?></div>
-                            <?php if (!empty($app['percentage'])): ?>
-                            <span class="badge rounded-pill border px-2 py-0.5 mt-0.5" style="background: rgba(212,175,55,0.1); color: #8a680a; font-size: 0.72rem; font-weight: 600;">
-                                <?php echo htmlspecialchars($app['percentage']); ?>
-                            </span>
-                            <?php endif; ?>
+                            <div class="text-dark fw-semibold" style="font-size: 0.84rem;"><?php echo htmlspecialchars($app['highest_qualification'] ?: '12th Standard'); ?></div>
+                            <div class="d-flex flex-wrap gap-1 mt-1">
+                                <?php if (!empty($app['percentage'])): ?>
+                                <span class="badge rounded-pill border px-2 py-0.5" style="background: rgba(212,175,55,0.12); color: #8a680a; font-size: 0.72rem; font-weight: 600;">
+                                    <?php echo htmlspecialchars($app['percentage']); ?>
+                                </span>
+                                <?php endif; ?>
+                                <?php if (!empty($app['passing_year'])): ?>
+                                <span class="badge bg-light text-muted border rounded-pill px-1.5 py-0.5" style="font-size: 0.68rem;">
+                                    <?php echo htmlspecialchars($app['passing_year']); ?>
+                                </span>
+                                <?php endif; ?>
+                                <?php if (!empty($app['entrance_exam']) && $app['entrance_exam'] !== 'None / Direct Admission'): ?>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border rounded-pill px-1.5 py-0.5" style="font-size: 0.68rem;">
+                                    <?php echo htmlspecialchars($app['entrance_exam']); ?>
+                                </span>
+                                <?php endif; ?>
+                            </div>
                         </td>
 
                         <!-- Status Badge -->
@@ -407,7 +421,7 @@ include 'header.php';
 
                                     <div class="modal-body p-4">
                                         <!-- Candidate Info Grid -->
-                                        <div class="row g-3 mb-4">
+                                        <div class="row g-3 mb-3">
                                             <div class="col-md-6">
                                                 <div class="p-3 bg-light rounded-3 border">
                                                     <div class="text-muted small text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 0.05em;">Candidate Name</div>
@@ -446,7 +460,7 @@ include 'header.php';
                                                     <div class="text-muted small" style="font-size: 0.72rem;">Email Address</div>
                                                     <div class="fw-bold text-dark small text-truncate mt-0.5" title="<?php echo htmlspecialchars($app['email']); ?>"><?php echo htmlspecialchars($app['email']); ?></div>
                                                     <div class="text-muted small mt-2" style="font-size: 0.75rem;">
-                                                        DOB: <strong><?php echo htmlspecialchars($app['dob'] ?: 'Not Specified'); ?></strong>
+                                                        DOB: <strong><?php echo htmlspecialchars($app['dob'] ?: 'Not Specified'); ?></strong> | Gender: <strong><?php echo htmlspecialchars($app['gender'] ?: 'N/A'); ?></strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -458,35 +472,81 @@ include 'header.php';
                                                     <div class="text-muted small" style="font-size: 0.75rem;"><?php echo htmlspecialchars($app['state'] ?: 'Madhya Pradesh'); ?></div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-12">
-                                                <div class="p-3 bg-light rounded-3 border">
-                                                    <div class="row g-2 align-items-center">
-                                                        <div class="col-md-6">
-                                                            <div class="text-muted small" style="font-size: 0.72rem;">Prior Qualification</div>
-                                                            <div class="fw-bold text-dark"><?php echo htmlspecialchars($app['highest_qualification'] ?: '12th Standard / Higher Secondary'); ?></div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="text-muted small" style="font-size: 0.72rem;">Qualifying Percentage / Grade</div>
-                                                            <div class="fw-bold text-primary"><?php echo htmlspecialchars($app['percentage'] ?: 'N/A'); ?></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <?php if (!empty($app['message'])): ?>
-                                            <div class="col-12">
-                                                <div class="p-3 rounded-3 border" style="background: rgba(212,175,55,0.06); border-color: rgba(212,175,55,0.3) !important;">
-                                                    <div class="text-gold small text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 0.05em;">
-                                                        <i class="fa-regular fa-comment-dots me-1"></i> Student Query / Message
-                                                    </div>
-                                                    <div class="small text-dark mt-1" style="line-height: 1.6;"><?php echo nl2br(htmlspecialchars($app['message'])); ?></div>
-                                                </div>
-                                            </div>
-                                            <?php endif; ?>
                                         </div>
 
-                                        <hr class="my-3.5">
+                                        <!-- Candidate Academic Background & Scores (Full Dossier) -->
+                                        <div class="card border rounded-3 p-3.5 bg-white mb-3 shadow-xs" style="border-color: #ebdcd4 !important;">
+                                            <div class="d-flex align-items-center justify-content-between mb-2.5 pb-2 border-bottom">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-graduation-cap text-primary"></i>
+                                                    <span class="fw-bold text-dark small text-uppercase" style="letter-spacing: 0.05em; font-size: 0.75rem;">Academic Background &amp; Eligibility</span>
+                                                </div>
+                                                <span class="badge bg-gold text-dark fw-bold rounded-pill px-2.5 py-1" style="font-size: 0.7rem;">
+                                                    Passing: <?php echo htmlspecialchars($app['passing_year'] ?: 'N/A'); ?>
+                                                </span>
+                                            </div>
+
+                                            <div class="row g-2.5">
+                                                <div class="col-md-6">
+                                                    <div class="p-2.5 bg-light rounded-2 border">
+                                                        <div class="text-muted" style="font-size: 0.7rem;">Qualifying Exam Passed</div>
+                                                        <div class="fw-bold text-dark small mt-0.5"><?php echo htmlspecialchars($app['highest_qualification'] ?: '12th Standard'); ?></div>
+                                                        <?php if (!empty($app['stream_subject'])): ?>
+                                                        <div class="text-muted small" style="font-size: 0.72rem;">Stream: <strong><?php echo htmlspecialchars($app['stream_subject']); ?></strong></div>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="p-2.5 bg-light rounded-2 border">
+                                                        <div class="text-muted" style="font-size: 0.7rem;">Aggregate Marks / CGPA</div>
+                                                        <div class="fw-bold text-primary fs-6 mt-0.5"><?php echo htmlspecialchars($app['percentage'] ?: 'Awaited / Not Provided'); ?></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="p-2.5 bg-light rounded-2 border">
+                                                        <div class="text-muted" style="font-size: 0.7rem;">School / College Attended</div>
+                                                        <div class="fw-semibold text-dark small mt-0.5"><?php echo htmlspecialchars($app['institute_name'] ?: 'Not Provided'); ?></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="p-2.5 bg-light rounded-2 border">
+                                                        <div class="text-muted" style="font-size: 0.7rem;">Board / University</div>
+                                                        <div class="fw-semibold text-dark small mt-0.5"><?php echo htmlspecialchars($app['board_university'] ?: 'Not Provided'); ?></div>
+                                                    </div>
+                                                </div>
+
+                                                <?php if (!empty($app['entrance_exam']) && $app['entrance_exam'] !== 'None / Direct Admission'): ?>
+                                                <div class="col-12">
+                                                    <div class="p-2.5 rounded-2 border d-flex align-items-center justify-content-between" style="background: rgba(112, 0, 24, 0.04); border-color: rgba(112, 0, 24, 0.15) !important;">
+                                                        <div>
+                                                            <span class="text-muted small" style="font-size: 0.72rem;">Competitive Entrance Exam:</span>
+                                                            <strong class="text-primary small ms-1"><?php echo htmlspecialchars($app['entrance_exam']); ?></strong>
+                                                        </div>
+                                                        <?php if (!empty($app['entrance_score'])): ?>
+                                                        <div>
+                                                            <span class="text-muted small" style="font-size: 0.72rem;">Score / Rank:</span>
+                                                            <strong class="text-dark small ms-1"><?php echo htmlspecialchars($app['entrance_score']); ?></strong>
+                                                        </div>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+
+                                        <?php if (!empty($app['message'])): ?>
+                                        <div class="p-3 rounded-3 border mb-3" style="background: rgba(212,175,55,0.06); border-color: rgba(212,175,55,0.3) !important;">
+                                            <div class="text-gold small text-uppercase fw-bold" style="font-size: 0.7rem; letter-spacing: 0.05em;">
+                                                <i class="fa-regular fa-comment-dots me-1"></i> Student Query / Facilities Requested
+                                            </div>
+                                            <div class="small text-dark mt-1" style="line-height: 1.6;"><?php echo nl2br(htmlspecialchars($app['message'])); ?></div>
+                                        </div>
+                                        <?php endif; ?>
+
+                                        <hr class="my-3">
 
                                         <!-- Counselor Status & Admin Notes -->
                                         <div class="row g-3">
