@@ -263,7 +263,7 @@ $wa_message = urlencode("Hello Dr. APJ Abdul Kalam University, I would like to i
 
 /* 1. Floating Apply Now Button (Pure Circular Icon on Left) */
 .apply-floating-btn {
-    bottom: 24px;
+    bottom: 85px;
     left: 24px;
     width: 56px;
     height: 56px;
@@ -317,7 +317,7 @@ $wa_message = urlencode("Hello Dr. APJ Abdul Kalam University, I would like to i
 
 /* 2. Floating WhatsApp Button (Pure Circular Icon on Right) */
 .whatsapp-floating-btn {
-    bottom: 24px;
+    bottom: 85px;
     right: 24px;
     width: 56px;
     height: 56px;
@@ -364,8 +364,8 @@ $wa_message = urlencode("Hello Dr. APJ Abdul Kalam University, I would like to i
 /* Mobile Responsive Optimization */
 @media (max-width: 767.98px) {
     .apply-floating-btn {
-        bottom: 20px;
-        left: 20px;
+        bottom: 75px;
+        left: 18px;
         width: 50px;
         height: 50px;
     }
@@ -373,8 +373,8 @@ $wa_message = urlencode("Hello Dr. APJ Abdul Kalam University, I would like to i
         font-size: 1.45rem;
     }
     .whatsapp-floating-btn {
-        bottom: 20px;
-        right: 20px;
+        bottom: 75px;
+        right: 18px;
         width: 50px;
         height: 50px;
     }
