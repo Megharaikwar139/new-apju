@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'apju_custom_db';
+$dbname = 'u361425140_aku_seo_db';
 $user = 'root';
 $pass = '';
 

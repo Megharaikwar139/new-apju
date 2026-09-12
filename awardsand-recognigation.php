@@ -9,7 +9,7 @@ require_once 'header.php';
         <div class="inner-breadcrumb-pill">
             <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
             <span>&raquo;</span>
-            <a href="about_pages_manager.php">About University</a>
+            <a href="why-aku.php">About University</a>
             <span>&raquo;</span>
             <span class="text-gold fw-medium">Awards &amp; Recognition</span>
         </div>

@@ -37,7 +37,7 @@ $rtiOfficers = [
         <div class="inner-breadcrumb-pill">
             <a href="index.php"><i class="fa-solid fa-house me-1"></i> Home</a>
             <span>&raquo;</span>
-            <a href="about-university.php">About</a>
+            <a href="why-aku.php">About</a>
             <span>&raquo;</span>
             <span class="text-gold fw-medium">RTI Act</span>
         </div>
