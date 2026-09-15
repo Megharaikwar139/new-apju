@@ -18,7 +18,7 @@ include 'header.php';
             <span style="background: var(--gold-color); width: 1.5rem; height: 1px; display: inline-block;"></span> CONTROLLER OF EXAMINATIONS
         </div>
         <h1 class="font-serif display-5 fw-medium text-white mb-2" style="max-width: 900px; line-height: 1.15;">
-            About Examination Section
+            About Examination
         </h1>
         <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
             Dr. A.P.J. Abdul Kalam University · Transparent, Confidential &amp; Technology-Driven Assessment

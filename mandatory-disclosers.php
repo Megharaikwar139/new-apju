@@ -125,7 +125,7 @@ $main_content = !empty($page_data['main_content']) ? $page_data['main_content'] 
                                     <tr>
                                         <td class="fw-bold text-center">1</td>
                                         <td>
-                                            <div class="fw-bold text-primary">Dr. APJ Abdul Kalam University Statutes</div>
+                                            <div class="fw-bold text-primary">Statutes</div>
                                             <div class="small text-muted">Official academic and administrative statute compendium</div>
                                         </td>
                                         <td class="text-center">
@@ -137,6 +137,18 @@ $main_content = !empty($page_data['main_content']) ? $page_data['main_content'] 
                                     <tr>
                                         <td class="fw-bold text-center">2</td>
                                         <td>
+                                            <div class="fw-bold text-primary">Published Ordinances (01 to 78)</div>
+                                            <div class="small text-muted">General university regulations and student charter</div>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="uploads/2026/04/AKU-Ordinance.pdf" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold" style="border-color: var(--primary-color); color: var(--primary-color);">
+                                                <i class="fa-solid fa-file-pdf me-1"></i> View PDF
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-center">3</td>
+                                        <td>
                                             <div class="fw-bold text-primary">Published Subsequent Ordinances (79 to 85)</div>
                                             <div class="small text-muted">Academic rules and degree regulations</div>
                                         </td>
@@ -147,7 +159,7 @@ $main_content = !empty($page_data['main_content']) ? $page_data['main_content'] 
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-bold text-center">3</td>
+                                        <td class="fw-bold text-center">4</td>
                                         <td>
                                             <div class="fw-bold text-primary">Subsequent Ordinance 78-A</div>
                                             <div class="small text-muted">Curriculum and examination framework</div>
@@ -158,18 +170,7 @@ $main_content = !empty($page_data['main_content']) ? $page_data['main_content'] 
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="fw-bold text-center">4</td>
-                                        <td>
-                                            <div class="fw-bold text-primary">AKU Main Ordinance Compendium</div>
-                                            <div class="small text-muted">General university regulations and student charter</div>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="uploads/2026/04/AKU-Ordinance.pdf" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold" style="border-color: var(--primary-color); color: var(--primary-color);">
-                                                <i class="fa-solid fa-file-pdf me-1"></i> View PDF
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
