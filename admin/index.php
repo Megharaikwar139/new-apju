@@ -40,20 +40,85 @@ try {
             <span class="text-muted small"><i class="fa-regular fa-calendar me-1"></i> <?php echo date('l, d F Y'); ?></span>
         </div>
         <h2 class="font-serif fw-bold text-primary display-6 mb-0" style="color: var(--admin-maroon-dark) !important;">
-            Welcome back, <?php echo htmlspecialchars($_SESSION['admin_username'] ?? 'Administrator'); ?>
+            Welcome back, <?php echo htmlspecialchars($_SESSION['admin_name'] ?? $_SESSION['admin_username'] ?? 'Administrator'); ?>
         </h2>
     </div>
     
     <div class="d-flex align-items-center gap-2">
+        <?php if (has_permission('admissions_manager.php')): ?>
         <a href="admissions_manager.php" class="btn btn-gold">
             <i class="fa-solid fa-user-graduate me-1.5"></i> View Admissions (<?php echo $new_leads_count; ?> New)
         </a>
-        <a href="../index.php" target="_blank" class="btn btn-outline-primary">
+        <?php endif; ?>
+        <?php if (is_superadmin()): ?>
+        <a href="users_manager.php" class="btn btn-outline-primary">
+            <i class="fa-solid fa-users-gear me-1"></i> Manage Users
+        </a>
+        <?php endif; ?>
+        <a href="../index.php" target="_blank" class="btn btn-outline-secondary">
             <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Website
         </a>
     </div>
 </div>
 
+<?php if (!is_superadmin()): ?>
+    <!-- Sub-Admin Assigned Modules Workspace -->
+    <?php
+    $cmsModules = get_available_cms_modules();
+    $assignedTotal = 0;
+    ?>
+    <div class="card border-0 shadow-xs rounded-4 bg-white p-4 mb-4" style="border: 1px solid var(--admin-border) !important;">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3 pb-2 border-bottom border-custom">
+            <div>
+                <h5 class="font-serif fw-bold text-primary mb-1 fs-5">
+                    <i class="fa-solid fa-list-check text-gold me-2"></i> Your Assigned Workspaces
+                </h5>
+                <p class="text-muted small mb-0">Select any module below to manage and update website content.</p>
+            </div>
+            <span class="badge bg-gold text-dark px-3 py-1.5 rounded-pill fw-semibold">
+                Authorized Sub-Admin
+            </span>
+        </div>
+        <div class="row g-3">
+            <?php 
+            foreach ($cmsModules as $catTitle => $group):
+                foreach ($group as $mFile => $mMeta):
+                    if (has_permission($mFile)):
+                        $assignedTotal++;
+            ?>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="p-3 border rounded-3 bg-light h-100 d-flex flex-column justify-content-between hover-shadow transition-all" style="border: 1px solid var(--admin-border) !important;">
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="icon-circle-badge" style="width: 38px; height: 38px;">
+                                <i class="fa-solid <?php echo $mMeta['icon']; ?>"></i>
+                            </div>
+                            <strong class="font-serif fs-6 text-primary"><?php echo htmlspecialchars($mMeta['title']); ?></strong>
+                        </div>
+                        <p class="text-muted small mb-0" style="font-size: 0.8rem; line-height: 1.45;"><?php echo htmlspecialchars($mMeta['desc']); ?></p>
+                    </div>
+                    <a href="<?php echo htmlspecialchars($mFile); ?>" class="btn btn-sm btn-gold rounded-pill w-100 fw-semibold shadow-xs">
+                        <i class="fa-solid fa-pen-to-square me-1"></i> Open &amp; Edit
+                    </a>
+                </div>
+            </div>
+            <?php 
+                    endif;
+                endforeach;
+            endforeach;
+            if ($assignedTotal === 0):
+            ?>
+            <div class="col-12 text-center py-5">
+                <div class="icon-circle-badge mx-auto mb-3" style="width: 50px; height: 50px;"><i class="fa-solid fa-lock fs-4"></i></div>
+                <h6 class="font-serif text-primary fs-5 mb-1">No Edit Permissions Assigned</h6>
+                <p class="text-muted small mb-0">Your account does not currently have any page edit permissions. Please contact your Super Administrator.</p>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php endif; ?>
+
+<?php if (is_superadmin()): ?>
 <!-- 4 Luxury Stat Metric Cards -->
 <div class="row g-4 mb-4">
     
@@ -130,12 +195,21 @@ try {
     </div>
 
 </div>
+<?php endif; ?>
 
+<?php 
+$showLeads = has_permission('admissions_manager.php');
+$showNotices = has_permission('notices.php');
+if ($showLeads || $showNotices):
+    $leadsCol = ($showLeads && $showNotices) ? 'col-lg-8' : 'col-12';
+    $noticesCol = ($showLeads && $showNotices) ? 'col-lg-4' : 'col-12';
+?>
 <!-- Recent Leads & Latest Circulars Split -->
 <div class="row g-4 mb-4">
     
+    <?php if ($showLeads): ?>
     <!-- Left: Recent Admission Leads Table -->
-    <div class="col-lg-8">
+    <div class="<?php echo $leadsCol; ?>">
         <div class="admin-card h-100">
             <div class="admin-card-header">
                 <div class="d-flex align-items-center gap-2">
@@ -194,9 +268,11 @@ try {
             </div>
         </div>
     </div>
+    <?php endif; ?>
 
+    <?php if ($showNotices): ?>
     <!-- Right: Latest Circulars Feed -->
-    <div class="col-lg-4">
+    <div class="<?php echo $noticesCol; ?>">
         <div class="admin-card h-100">
             <div class="admin-card-header">
                 <div class="d-flex align-items-center gap-2">
@@ -228,9 +304,12 @@ try {
             </div>
         </div>
     </div>
+    <?php endif; ?>
 
 </div>
+<?php endif; ?>
 
+<?php if (is_superadmin()): ?>
 <!-- Homepage Sections Quick Launcher Grid -->
 <div class="admin-card">
     <div class="admin-card-header">
@@ -350,5 +429,6 @@ try {
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 <?php require_once 'footer.php'; ?>

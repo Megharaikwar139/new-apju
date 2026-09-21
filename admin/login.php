@@ -13,18 +13,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
 
+    if (isset($_GET['error']) && $_GET['error'] === 'inactive') {
+        $error = 'Your session expired or account has been deactivated. Please contact the Super Administrator.';
+    }
+
     if (empty($username) || empty($password)) {
         $error = 'Please enter both username and password.';
     } else {
-        $stmt = $pdo->prepare("SELECT id, username, password_hash FROM admins WHERE username = ?");
+        $stmt = $pdo->prepare("SELECT id, name, username, password_hash, role, status FROM admins WHERE username = ? LIMIT 1");
         $stmt->execute([$username]);
         $admin = $stmt->fetch();
 
         if ($admin && password_verify($password, $admin['password_hash'])) {
-            $_SESSION['admin_logged_in'] = true;
-            $_SESSION['admin_username'] = $admin['username'];
-            header("Location: index.php");
-            exit;
+            if ((int)$admin['status'] !== 1) {
+                $error = 'Your account has been deactivated. Please contact the Super Administrator.';
+            } else {
+                $_SESSION['admin_logged_in'] = true;
+                $_SESSION['admin_id'] = (int)$admin['id'];
+                $_SESSION['admin_username'] = $admin['username'];
+                $_SESSION['admin_name'] = !empty($admin['name']) ? $admin['name'] : $admin['username'];
+                $_SESSION['admin_role'] = $admin['role'] ?? 'editor';
+
+                if ($_SESSION['admin_role'] === 'superadmin') {
+                    $_SESSION['admin_permissions'] = ['*'];
+                } else {
+                    $pStmt = $pdo->prepare("SELECT module_key FROM admin_permissions WHERE admin_id = ?");
+                    $pStmt->execute([$admin['id']]);
+                    $_SESSION['admin_permissions'] = $pStmt->fetchAll(PDO::FETCH_COLUMN) ?: [];
+                }
+
+                header("Location: index.php");
+                exit;
+            }
         } else {
             $error = 'Invalid username or password.';
         }

@@ -608,97 +608,161 @@
             </a>
 
             <!-- 1. Student Admissions & Inquiries -->
+            <?php if (has_permission('admissions_manager.php') || has_permission('contact_manager.php')): ?>
             <div class="sidebar-nav-section">Admissions &amp; Helpdesk</div>
+            <?php if (has_permission('admissions_manager.php')): ?>
             <a href="admissions_manager.php" class="sidebar-link <?php echo ($currentPage == 'admissions_manager.php') ? 'active' : ''; ?> justify-content-between">
                 <span><i class="fa-solid fa-user-graduate"></i> Admission Leads</span>
                 <?php if ($newAppBadge > 0): ?>
                     <span class="badge bg-gold text-dark rounded-pill px-2" style="font-size: 0.7rem; font-weight: 700;"><?php echo $newAppBadge; ?> New</span>
                 <?php endif; ?>
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('contact_manager.php')): ?>
             <a href="contact_manager.php" class="sidebar-link <?php echo ($currentPage == 'contact_manager.php') ? 'active' : ''; ?> justify-content-between">
                 <span><i class="fa-solid fa-envelope-open-text"></i> Contact Inquiries</span>
                 <?php if ($newInquiriesBadge > 0): ?>
                     <span class="badge bg-danger text-white rounded-pill px-2" style="font-size: 0.7rem; font-weight: 700;"><?php echo $newInquiriesBadge; ?> New</span>
                 <?php endif; ?>
             </a>
+            <?php endif; ?>
+            <?php endif; ?>
 
             <!-- 2. Homepage CMS -->
+            <?php if (has_permission('hero_manager.php') || has_permission('about_manager.php') || has_permission('schools_manager.php') || has_permission('why_aku_manager.php') || has_permission('research_manager.php') || has_permission('alumni_manager.php') || has_permission('portals_manager.php') || has_permission('admissions_cta_manager.php')): ?>
             <div class="sidebar-nav-section">Homepage CMS</div>
+            <?php if (has_permission('hero_manager.php')): ?>
             <a href="hero_manager.php" class="sidebar-link <?php echo ($currentPage == 'hero_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-film"></i> Hero &amp; Video
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('about_manager.php')): ?>
             <a href="about_manager.php" class="sidebar-link <?php echo ($currentPage == 'about_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-landmark"></i> About &amp; 3 Pillars
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('schools_manager.php')): ?>
             <a href="schools_manager.php" class="sidebar-link <?php echo ($currentPage == 'schools_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-graduation-cap"></i> 12 Academic Schools
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('why_aku_manager.php')): ?>
             <a href="why_aku_manager.php" class="sidebar-link <?php echo ($currentPage == 'why_aku_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-star"></i> Why AKU (6 Cards)
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('research_manager.php')): ?>
             <a href="research_manager.php" class="sidebar-link <?php echo ($currentPage == 'research_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-flask-vial"></i> Research &amp; Kalam
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('alumni_manager.php')): ?>
             <a href="alumni_manager.php" class="sidebar-link <?php echo ($currentPage == 'alumni_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-quote-left"></i> Alumni Voices
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('portals_manager.php')): ?>
             <a href="portals_manager.php" class="sidebar-link <?php echo ($currentPage == 'portals_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-table-cells"></i> Portals &amp; Services
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('admissions_cta_manager.php')): ?>
             <a href="admissions_cta_manager.php" class="sidebar-link <?php echo ($currentPage == 'admissions_cta_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-bullhorn"></i> Admissions CTA
             </a>
+            <?php endif; ?>
+            <?php endif; ?>
 
             <!-- 3. Academics & Faculty -->
+            <?php if (has_permission('departments_manager.php') || has_permission('faculty_manager.php') || has_permission('courses_manager.php')): ?>
             <div class="sidebar-nav-section">Academics &amp; Departments</div>
+            <?php if (has_permission('departments_manager.php')): ?>
             <a href="departments_manager.php" class="sidebar-link <?php echo ($currentPage == 'departments_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-building-columns"></i> Departments &amp; Tabs
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('faculty_manager.php')): ?>
             <a href="faculty_manager.php" class="sidebar-link <?php echo ($currentPage == 'faculty_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-chalkboard-user"></i> Faculty &amp; Staff
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('courses_manager.php')): ?>
             <a href="courses_manager.php" class="sidebar-link <?php echo ($currentPage == 'courses_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-book-bookmark"></i> Courses &amp; Syllabi
             </a>
+            <?php endif; ?>
+            <?php endif; ?>
 
             <!-- 4. Dynamic News & Events -->
+            <?php if (has_permission('events.php') || has_permission('notices.php') || has_permission('blogs.php') || has_permission('media.php')): ?>
             <div class="sidebar-nav-section">Dynamic Modules</div>
+            <?php if (has_permission('events.php')): ?>
             <a href="events.php" class="sidebar-link <?php echo ($currentPage == 'events.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-calendar-days"></i> Events Calendar
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('notices.php')): ?>
             <a href="notices.php" class="sidebar-link <?php echo ($currentPage == 'notices.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-bell"></i> Official Notices
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('blogs.php')): ?>
             <a href="blogs.php" class="sidebar-link <?php echo ($currentPage == 'blogs.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-newspaper"></i> Blogs &amp; Articles
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('media.php')): ?>
             <a href="media.php" class="sidebar-link <?php echo ($currentPage == 'media.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-photo-film"></i> Media Coverage
             </a>
+            <?php endif; ?>
+            <?php endif; ?>
 
             <!-- 5. Placement & Campus Life -->
+            <?php if (has_permission('recruiters_manager.php') || has_permission('gallery_manager.php') || has_permission('voi.php')): ?>
             <div class="sidebar-nav-section">Placement &amp; Campus Life</div>
+            <?php if (has_permission('recruiters_manager.php')): ?>
             <a href="recruiters_manager.php" class="sidebar-link <?php echo ($currentPage == 'recruiters_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-briefcase"></i> 500+ Recruiters
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('gallery_manager.php')): ?>
             <a href="gallery_manager.php" class="sidebar-link <?php echo ($currentPage == 'gallery_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-images"></i> Photo Gallery
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('voi.php')): ?>
             <a href="voi.php" class="sidebar-link <?php echo ($currentPage == 'voi.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-comments"></i> Visitor Testimonials
             </a>
+            <?php endif; ?>
+            <?php endif; ?>
 
             <!-- 6. About Pages & Configuration -->
+            <?php if (has_permission('about_pages_manager.php') || has_permission('pages.php')): ?>
             <div class="sidebar-nav-section">About Pages &amp; Config</div>
+            <?php if (has_permission('about_pages_manager.php')): ?>
             <a href="about_pages_manager.php" class="sidebar-link <?php echo ($currentPage == 'about_pages_manager.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-users-gear"></i> Leadership Pages
             </a>
+            <?php endif; ?>
+            <?php if (has_permission('pages.php')): ?>
             <a href="pages.php" class="sidebar-link <?php echo ($currentPage == 'pages.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-file-lines"></i> Custom Pages
+            </a>
+            <?php endif; ?>
+            <?php endif; ?>
+
+            <!-- 7. Super Admin System Settings & User Management -->
+            <?php if (is_superadmin()): ?>
+            <div class="sidebar-nav-section">System &amp; Security</div>
+            <a href="users_manager.php" class="sidebar-link <?php echo ($currentPage == 'users_manager.php') ? 'active' : ''; ?>">
+                <i class="fa-solid fa-shield-halved text-gold"></i> Manage Users &amp; Roles
             </a>
             <a href="settings.php" class="sidebar-link <?php echo ($currentPage == 'settings.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-gear"></i> Site Settings
             </a>
+            <?php endif; ?>
 
             <hr style="border-color: rgba(255,255,255,0.1); margin: 16px 12px 8px 12px;">
 
@@ -735,11 +799,13 @@
 
                 <div class="d-flex align-items-center gap-2">
                     <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center shadow-xs" style="width: 34px; height: 34px; font-size: 0.85rem; font-weight: 700; background: var(--admin-maroon) !important;">
-                        <?php echo strtoupper(substr($_SESSION['admin_username'] ?? 'A', 0, 1)); ?>
+                        <?php echo strtoupper(substr($_SESSION['admin_name'] ?? $_SESSION['admin_username'] ?? 'A', 0, 1)); ?>
                     </div>
                     <div class="d-none d-md-block lh-1 text-start">
-                        <span class="d-block fw-bold small text-dark"><?php echo htmlspecialchars($_SESSION['admin_username'] ?? 'Administrator'); ?></span>
-                        <span class="text-muted" style="font-size: 0.68rem;">Super Admin</span>
+                        <span class="d-block fw-bold small text-dark"><?php echo htmlspecialchars($_SESSION['admin_name'] ?? $_SESSION['admin_username'] ?? 'Administrator'); ?></span>
+                        <span class="badge <?php echo is_superadmin() ? 'badge-gold' : 'badge-maroon'; ?> px-1.5 py-0.5 mt-0.5 rounded-pill" style="font-size: 0.65rem;">
+                            <?php echo is_superadmin() ? 'Super Admin' : 'Sub-Admin / Editor'; ?>
+                        </span>
                     </div>
                 </div>
             </div>

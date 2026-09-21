@@ -1,6 +1,11 @@
 <?php
 require_once 'auth.php';
 
+if (!is_superadmin()) {
+    render_access_denied('settings.php');
+    exit;
+}
+
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $site_title = $_POST['site_title'] ?? 'Dr. A.P.J. Abdul Kalam University, Indore';
