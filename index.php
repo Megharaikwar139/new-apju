@@ -1,8 +1,13 @@
 <?php
 require_once 'header.php';
 
-// 1. Fetch Hero Section Data
-$hero = $pdo->query("SELECT * FROM homepage_hero LIMIT 1")->fetch() ?: [
+// 1. Fetch Hero Section Data (With Safe Fallback)
+try {
+    $hero = $pdo->query("SELECT * FROM homepage_hero LIMIT 1")->fetch() ?: [];
+} catch (Exception $e) {
+    $hero = [];
+}
+$hero = array_merge([
     'headline' => 'Where <em class="text-gold fst-italic fw-medium">extraordinary</em> minds are shaped.',
     'subheadline' => 'For over a decade, Dr. A.P.J. Abdul Kalam University has stood at the intersection of research, character and craft — nurturing India\'s next generation of engineers, scientists, entrepreneurs and citizens.',
     'video_url' => 'assets/lovable/campus-hero.mp4',
@@ -16,10 +21,15 @@ $hero = $pdo->query("SELECT * FROM homepage_hero LIMIT 1")->fetch() ?: [
     'stat4_value' => '500+', 'stat4_label' => 'Recruiting Partners',
     'btn1_text' => 'Begin your application', 'btn1_url' => 'apply-now.php',
     'btn2_text' => 'Explore programs', 'btn2_url' => 'programs.php'
-];
+], $hero);
 
-// 2. Fetch About Section Data
-$about = $pdo->query("SELECT * FROM homepage_about LIMIT 1")->fetch() ?: [
+// 2. Fetch About Section Data (With Safe Fallback)
+try {
+    $about = $pdo->query("SELECT * FROM homepage_about LIMIT 1")->fetch() ?: [];
+} catch (Exception $e) {
+    $about = [];
+}
+$about = array_merge([
     'eyebrow' => 'About the University',
     'title' => 'A university built on Dr. Kalam\'s conviction that character is the true curriculum.',
     'image_path' => 'assets/lovable/apj4.webp',
@@ -30,16 +40,51 @@ $about = $pdo->query("SELECT * FROM homepage_about LIMIT 1")->fetch() ?: [
     'pillar1_title' => 'Research-Led', 'pillar1_desc' => 'Undergraduates published in Q1 journals', 'pillar1_icon' => 'fa-solid fa-bullseye',
     'pillar2_title' => 'Values-First', 'pillar2_desc' => 'Ethics woven into every curriculum', 'pillar2_icon' => 'fa-solid fa-heart',
     'pillar3_title' => 'Industry-Ready', 'pillar3_desc' => 'Co-designed with 500+ recruiters', 'pillar3_icon' => 'fa-solid fa-lightbulb'
-];
+], $about);
 
-// 3. Fetch Academic Schools Data
-$schools = $pdo->query("SELECT * FROM homepage_schools ORDER BY sort_order ASC, id ASC")->fetchAll();
+// 3. Fetch Academic Schools Data (With Safe Fallback)
+try {
+    $schools = $pdo->query("SELECT * FROM homepage_schools ORDER BY sort_order ASC, id ASC")->fetchAll() ?: [];
+} catch (Exception $e) {
+    $schools = [];
+}
+if (empty($schools)) {
+    $schools = [
+        ['title' => 'School of Engineering & Technology', 'program_count' => '24 Programs', 'categories' => 'ug pg diploma phd', 'icon' => 'fa-solid fa-microchip', 'url' => 'department-of-computer-science-engineering.php'],
+        ['title' => 'School of Pharmacy (SOP & COP)', 'program_count' => '8 Programs', 'categories' => 'ug pg diploma phd', 'icon' => 'fa-solid fa-pills', 'url' => 'school-of-pharmacy.php'],
+        ['title' => 'Faculty of Management & Commerce', 'program_count' => '14 Programs', 'categories' => 'ug pg phd', 'icon' => 'fa-solid fa-chart-line', 'url' => 'department-of-management-studies.php'],
+        ['title' => 'School of Agriculture Sciences', 'program_count' => '6 Programs', 'categories' => 'ug pg', 'icon' => 'fa-solid fa-seedling', 'url' => 'department-of-agriculture.php'],
+        ['title' => 'Faculty of Law & Legal Studies', 'program_count' => '5 Programs', 'categories' => 'ug pg', 'icon' => 'fa-solid fa-scale-balanced', 'url' => 'department-of-law.php'],
+        ['title' => 'School of Computer Applications (MCA/BCA)', 'program_count' => '8 Programs', 'categories' => 'ug pg diploma', 'icon' => 'fa-solid fa-laptop-code', 'url' => 'department-of-computer-applications-coe.php'],
+        ['title' => 'School of Basic & Applied Sciences', 'program_count' => '12 Programs', 'categories' => 'ug pg phd', 'icon' => 'fa-solid fa-flask-vial', 'url' => 'department-of-science.php'],
+        ['title' => 'Faculty of Arts & Humanities', 'program_count' => '10 Programs', 'categories' => 'ug pg', 'icon' => 'fa-solid fa-book-open-reader', 'url' => 'department-of-arts.php']
+    ];
+}
 
-// 4. Fetch Why AKU Features Data
-$why_features = $pdo->query("SELECT * FROM why_aku_features ORDER BY sort_order ASC, id ASC LIMIT 6")->fetchAll();
+// 4. Fetch Why AKU Features Data (With Safe Fallback)
+try {
+    $why_features = $pdo->query("SELECT * FROM why_aku_features ORDER BY sort_order ASC, id ASC LIMIT 6")->fetchAll() ?: [];
+} catch (Exception $e) {
+    $why_features = [];
+}
+if (empty($why_features)) {
+    $why_features = [
+        ['title' => 'UGC & Multi-Council Recognized', 'description' => 'Fully empowered under UGC Section 2(f) and approved by statutory councils AICTE, PCI, BCI, NCTE, NCISM and MPPURC.', 'image_path' => 'assets/lovable/APJ1.jpg', 'link_url' => 'ugc-recognition.php'],
+        ['title' => 'Industry-Integrated Pedagogy', 'description' => 'Over 500+ active recruiting partners co-designing specialized curriculum and real-world industrial capstone projects.', 'image_path' => 'assets/lovable/APJ2.jpg', 'link_url' => 'placement-cell.php'],
+        ['title' => '40-Acre Lush Green Campus', 'description' => 'State-of-the-art academic blocks, hi-tech computing centers, multi-cuisine cafeterias, and vibrant residential hostels.', 'image_path' => 'assets/lovable/apj3.jpg', 'link_url' => 'world-class-infrastructure.php'],
+        ['title' => 'Kalam Innovation & Startup Cell', 'description' => 'An active ecosystem promoting student research patents, incubation funding, and mentorship for young innovators.', 'image_path' => 'assets/lovable/apj4.webp', 'link_url' => 'incubation-center.php'],
+        ['title' => 'Distinguished Global Faculty', 'description' => 'Seasoned academicians and industry veterans with peer-reviewed publications and deep domain scholarship.', 'image_path' => 'assets/lovable/apj5.jpg', 'link_url' => 'eminent-faculty.php'],
+        ['title' => 'Merit & Need Scholarships', 'description' => 'Extensive scholarship schemes empowering deserving scholars and rural talents to achieve their highest potential.', 'image_path' => 'assets/lovable/apj6.webp', 'link_url' => 'scholarships.php']
+    ];
+}
 
-// 5. Fetch Research Data
-$research = $pdo->query("SELECT * FROM homepage_research LIMIT 1")->fetch() ?: [
+// 5. Fetch Research Data (With Safe Fallback)
+try {
+    $research = $pdo->query("SELECT * FROM homepage_research LIMIT 1")->fetch() ?: [];
+} catch (Exception $e) {
+    $research = [];
+}
+$research = array_merge([
     'title' => 'The <em class="text-gold fst-italic">Kalam Innovation Center</em> — where curiosity becomes patent.',
     'description' => 'Fourteen research centers. Over 300 publications in the last three years. A student incubator that has funded 42 startups. Research at AKU isn\'t reserved for the corner office — it starts on day one.',
     'image_path' => 'assets/lovable/apj8.jpeg',
@@ -50,16 +95,43 @@ $research = $pdo->query("SELECT * FROM homepage_research LIMIT 1")->fetch() ?: [
     'paper2_num' => '02', 'paper2_tag' => 'AI · Health', 'paper2_title' => 'Explainable deep-learning models for cardiac imaging', 'paper2_author' => 'Prof. A. Verma',
     'paper3_num' => '03', 'paper3_tag' => 'Pharmacy', 'paper3_title' => 'Plant-derived antivirals: three new lead compounds', 'paper3_author' => 'Dr. S. Iyer',
     'report_link' => 'faculty-publications.php'
-];
+], $research);
 
-// 6. Fetch Alumni Voices Data
-$alumni_voices = $pdo->query("SELECT * FROM homepage_alumni ORDER BY sort_order ASC, id ASC LIMIT 3")->fetchAll();
+// 6. Fetch Alumni Voices Data (With Safe Fallback)
+try {
+    $alumni_voices = $pdo->query("SELECT * FROM homepage_alumni ORDER BY sort_order ASC, id ASC LIMIT 3")->fetchAll() ?: [];
+} catch (Exception $e) {
+    $alumni_voices = [];
+}
+if (empty($alumni_voices)) {
+    $alumni_voices = [
+        ['name' => 'Aayush Sharma', 'designation' => 'Software Engineer, Microsoft', 'batch' => 'B.Tech CSE (Batch 2022)', 'quote' => 'AKU provided me the perfect launchpad — the faculty guidance and lab infrastructure were crucial for my tech career.', 'image_path' => 'assets/lovable/APJ1.jpg'],
+        ['name' => 'Priya Patel', 'designation' => 'Clinical Research Associate, Cipla', 'batch' => 'B.Pharm (Batch 2021)', 'quote' => 'The pharmaceutical labs and practical exposure prepared me from day one to excel in the competitive healthcare sector.', 'image_path' => 'assets/lovable/APJ2.jpg'],
+        ['name' => 'Rohan Joshi', 'designation' => 'Senior Business Analyst, Deloitte', 'batch' => 'MBA (Batch 2020)', 'quote' => 'Case-study methodology and corporate networking opportunities at AKU were truly world-class.', 'image_path' => 'assets/lovable/apj3.jpg']
+    ];
+}
 
-// 7. Fetch Portals Data
-$portals = $pdo->query("SELECT * FROM homepage_portals ORDER BY sort_order ASC, id ASC")->fetchAll();
+// 7. Fetch Portals Data (With Safe Fallback)
+try {
+    $portals = $pdo->query("SELECT * FROM homepage_portals ORDER BY sort_order ASC, id ASC")->fetchAll() ?: [];
+} catch (Exception $e) {
+    $portals = [];
+}
+if (empty($portals)) {
+    $portals = [
+        ['title' => 'Student ERP Portal', 'category' => 'ACADEMIC SERVICES', 'description' => 'Online attendance, semester grades, fee records and academic registration.', 'icon' => 'fa-solid fa-graduation-cap', 'link_url' => 'https://login.rssrcampusconnect.com/', 'is_external' => 1],
+        ['title' => 'Document Verification (UMS)', 'category' => 'OFFICIAL VERIFICATION', 'description' => 'Statutory degree, marksheet and transcript verification for employers and students.', 'icon' => 'fa-solid fa-file-circle-check', 'link_url' => 'https://www.universitymanagementsystem.in/aku/Home/Dashboard', 'is_external' => 1],
+        ['title' => 'UGC e-Samadhan Portal', 'category' => 'STUDENT REDRESSAL', 'description' => 'National higher education grievance resolution mechanism for transparent governance.', 'icon' => 'fa-solid fa-building-columns', 'link_url' => 'https://samadhaan.ugc.ac.in/', 'is_external' => 1]
+    ];
+}
 
-// 8. Fetch Admissions CTA Data
-$admissions_cta = $pdo->query("SELECT * FROM homepage_admissions_cta LIMIT 1")->fetch() ?: [
+// 8. Fetch Admissions CTA Data (With Safe Fallback)
+try {
+    $admissions_cta = $pdo->query("SELECT * FROM homepage_admissions_cta LIMIT 1")->fetch() ?: [];
+} catch (Exception $e) {
+    $admissions_cta = [];
+}
+$admissions_cta = array_merge([
     'eyebrow' => 'Admissions 2026',
     'headline' => 'Your seat at <em class="text-gold fst-italic">AKU</em> begins with a single form.',
     'description' => 'Applications for the 2026 intake are now open across all undergraduate, postgraduate and doctoral programs. Merit-based scholarships available for eligible candidates.',
@@ -68,13 +140,21 @@ $admissions_cta = $pdo->query("SELECT * FROM homepage_admissions_cta LIMIT 1")->
     'date1_label' => 'Application Deadline', 'date1_value' => '31 May 2026',
     'date2_label' => 'Entrance Test Window', 'date2_value' => 'Jun 08–15, 2026',
     'date3_label' => 'Session Begins', 'date3_value' => 'Jul 22, 2026'
-];
+], $admissions_cta);
 
-// 9. Fetch Dynamic Events
-$events = $pdo->query("SELECT * FROM events ORDER BY event_date ASC, id DESC LIMIT 4")->fetchAll();
+// 9. Fetch Dynamic Events (With Safe Fallback)
+try {
+    $events = $pdo->query("SELECT * FROM events ORDER BY event_date ASC, id DESC LIMIT 4")->fetchAll() ?: [];
+} catch (Exception $e) {
+    $events = [];
+}
 
-// 10. Fetch Dynamic News / Blogs
-$blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll();
+// 10. Fetch Dynamic News / Blogs (With Safe Fallback)
+try {
+    $blogs = $pdo->query("SELECT * FROM blogs ORDER BY id DESC LIMIT 3")->fetchAll() ?: [];
+} catch (Exception $e) {
+    $blogs = [];
+}
 
 // 11. Fetch Dynamic Chancellor Leadership Data
 try {

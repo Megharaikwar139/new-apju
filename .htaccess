@@ -2,8 +2,20 @@
 # Security & Performance Hardening Configuration - Dr. APJ University
 # ==============================================================================
 
-# Disable directory browsing (Directory Listing)
-Options -Indexes -FollowSymLinks +SymLinksIfOwnerMatch
+# Safe directory browsing & symlinks compatibility
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+Options +FollowSymLinks
+
+# Ensure correct MIME Types for CSS and JS assets (Prevents nosniff blocking)
+<IfModule mod_mime.c>
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType image/svg+xml .svg
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+</IfModule>
 
 # Prevent direct access to hidden files and directories (.git, .env, etc.)
 <FilesMatch "^\.">

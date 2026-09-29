@@ -27,7 +27,7 @@ try {
     <meta name="description" content="Dr. A.P.J. Abdul Kalam University, Indore — a multidisciplinary university nurturing India's next generation of engineers, researchers, and citizens."/>
     
     <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,10 +37,10 @@ try {
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Lovable Custom Theme Styles -->
-    <link rel="stylesheet" href="assets/css/lovable-theme.css">
+    <!-- Lovable Custom Theme Styles (With Dynamic Cache-Buster) -->
+    <link rel="stylesheet" href="assets/css/lovable-theme.css?v=<?php echo file_exists(__DIR__ . '/assets/css/lovable-theme.css') ? filemtime(__DIR__ . '/assets/css/lovable-theme.css') : '3.5'; ?>">
     <!-- Universal In-Page PDF & Image Previewer Styles -->
-    <link rel="stylesheet" href="assets/css/pdf-preview-modal.css?v=2.2">
+    <link rel="stylesheet" href="assets/css/pdf-preview-modal.css?v=<?php echo file_exists(__DIR__ . '/assets/css/pdf-preview-modal.css') ? filemtime(__DIR__ . '/assets/css/pdf-preview-modal.css') : '2.3'; ?>">
     <link rel="icon" href="assets/lovable/aku-logo.jpeg" type="image/x-icon">
 </head>
 <body>

@@ -485,8 +485,8 @@ $wa_message = urlencode("Hello Dr. APJ Abdul Kalam University, I would like to i
     </div>
 </div>
 
-<!-- PDF & Image Previewer Modal Script -->
-<script src="assets/js/pdf-preview-modal.js?v=2.2"></script>
+<!-- PDF & Image Previewer Modal Script (Dynamic Cache-Buster) -->
+<script src="assets/js/pdf-preview-modal.js?v=<?php echo file_exists(__DIR__ . '/assets/js/pdf-preview-modal.js') ? filemtime(__DIR__ . '/assets/js/pdf-preview-modal.js') : '2.3'; ?>"></script>
 
 </body>
 </html>
