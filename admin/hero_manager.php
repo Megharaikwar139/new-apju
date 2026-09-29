@@ -25,11 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Handle poster image upload if provided
     if (isset($_FILES['poster_file']) && $_FILES['poster_file']['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = '../uploads/';
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . basename($_FILES['poster_file']['name']);
-        if (move_uploaded_file($_FILES['poster_file']['tmp_name'], $uploadDir . $fileName)) {
-            $poster_image = 'uploads/' . $fileName;
+        $uploadRes = secure_upload_file($_FILES['poster_file'], __DIR__ . '/../uploads/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $poster_image = 'uploads/' . $uploadRes['fileName'];
         }
     }
 

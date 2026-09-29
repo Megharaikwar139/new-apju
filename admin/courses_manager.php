@@ -28,10 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = trim($_POST['content'] ?? '');
     $status = isset($_POST['status']) ? 1 : 0;
     
-    if (empty($slug)) {
-        $slug = strtolower(preg_replace('/[^a-zA-Z0-9]+/', '-', $title));
-        $slug = trim($slug, '-');
-    }
+    // Strict sanitization of slug to prevent path traversal and script injection
+    $slug = strtolower(preg_replace('/[^a-zA-Z0-9]+/', '-', !empty($slug) ? $slug : $title));
+    $slug = trim($slug, '-');
     
     if ($action === 'save') {
         if ($id) {
@@ -51,13 +50,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $message = 'New academic course program created successfully!';
         }
         
-        // Auto-generate dynamic course page wrapper in course/ directory
+        // Auto-generate dynamic course page wrapper in course/ directory safely
         if (!empty($slug)) {
             $courseDir = __DIR__ . '/../course';
-            if (!is_dir($courseDir)) mkdir($courseDir, 0777, true);
-            $courseFile = $courseDir . '/' . $slug . '.php';
-            $phpCode = "<?php\n\$_GET['slug'] = '" . addslashes($slug) . "';\nrequire_once __DIR__ . '/course-view.php';\n";
-            file_put_contents($courseFile, $phpCode);
+            if (!is_dir($courseDir)) mkdir($courseDir, 0755, true);
+            $safeSlug = preg_replace('/[^a-z0-9\-]/', '', $slug);
+            if (!empty($safeSlug)) {
+                $courseFile = $courseDir . '/' . $safeSlug . '.php';
+                $phpCode = "<?php\n\$_GET['slug'] = '" . addslashes($safeSlug) . "';\nrequire_once __DIR__ . '/course-view.php';\n";
+                file_put_contents($courseFile, $phpCode);
+            }
         }
     } elseif ($action === 'delete' && $id) {
         $stmt = $pdo->prepare("DELETE FROM courses WHERE id = ?");

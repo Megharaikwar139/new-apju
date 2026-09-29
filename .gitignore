@@ -1,2 +1,22 @@
+# Sensitive configuration & database credentials
+db.php
+.env
+
+# Backups, SQL dumps, and archives
+uploads/db-backup/
+*.sql
+*.bak
+*.zip
+*.tar.gz
+*.7z
+
+# Internal developer scripts & reports
+scratch/
 check_carousel.php
+AKU_Website_Page_Comparison_Report.csv
+AKU_Website_Page_Comparison_Report.xls
+
+# Logs & temp files
 *.log
+.DS_Store
+Thumbs.db

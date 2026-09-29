@@ -26,11 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_album'])) {
     }
     
     if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = "../uploads/2026/gallery/";
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $_FILES['cover_image']['name']);
-        if (move_uploaded_file($_FILES['cover_image']['tmp_name'], $uploadDir . $fileName)) {
-            $image_path = "2026/gallery/" . $fileName;
+        $uploadRes = secure_upload_file($_FILES['cover_image'], __DIR__ . '/../uploads/2026/gallery/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = "2026/gallery/" . $uploadRes['fileName'];
         }
     }
 
@@ -60,11 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_album'])) {
     }
     
     if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = "../uploads/2026/gallery/";
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $_FILES['cover_image']['name']);
-        if (move_uploaded_file($_FILES['cover_image']['tmp_name'], $uploadDir . $fileName)) {
-            $image_path = "2026/gallery/" . $fileName;
+        $uploadRes = secure_upload_file($_FILES['cover_image'], __DIR__ . '/../uploads/2026/gallery/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = "2026/gallery/" . $uploadRes['fileName'];
         }
     }
 

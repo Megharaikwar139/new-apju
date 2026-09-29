@@ -17,12 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_notice'])) {
     $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $title)));
     $file_path = '';
 
-    if (isset($_FILES['notice_pdf']) && $_FILES['notice_pdf']['error'] == UPLOAD_ERR_OK) {
-        $uploadDir = "../uploads/2026/notices/";
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $_FILES['notice_pdf']['name']);
-        if (move_uploaded_file($_FILES['notice_pdf']['tmp_name'], $uploadDir . $fileName)) {
-            $file_path = "uploads/2026/notices/" . $fileName;
+    if (isset($_FILES['notice_pdf']) && $_FILES['notice_pdf']['error'] === UPLOAD_ERR_OK) {
+        $uploadRes = secure_upload_file($_FILES['notice_pdf'], __DIR__ . '/../uploads/2026/notices/', ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $file_path = "uploads/2026/notices/" . $uploadRes['fileName'];
         }
     }
     
@@ -39,12 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit_notice'])) {
     $notice_date = $_POST['notice_date'] ?: date('Y-m-d');
     $description = trim($_POST['description'] ?? '');
 
-    if (isset($_FILES['notice_pdf']) && $_FILES['notice_pdf']['error'] == UPLOAD_ERR_OK) {
-        $uploadDir = "../uploads/2026/notices/";
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $_FILES['notice_pdf']['name']);
-        if (move_uploaded_file($_FILES['notice_pdf']['tmp_name'], $uploadDir . $fileName)) {
-            $file_path = "uploads/2026/notices/" . $fileName;
+    if (isset($_FILES['notice_pdf']) && $_FILES['notice_pdf']['error'] === UPLOAD_ERR_OK) {
+        $uploadRes = secure_upload_file($_FILES['notice_pdf'], __DIR__ . '/../uploads/2026/notices/', ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $file_path = "uploads/2026/notices/" . $uploadRes['fileName'];
             $stmt = $pdo->prepare("UPDATE notices SET title = ?, notice_date = ?, description = ?, file_path = ? WHERE id = ?");
             $stmt->execute([$title, $notice_date, $description, $file_path, $id]);
         }

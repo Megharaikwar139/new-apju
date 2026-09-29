@@ -16,16 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_page'])) {
     $content = $_POST['content'];
     
     $image_path = '';
-    if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-        $upload_dir = '../assets/images/uploads/';
-        if (!is_dir($upload_dir)) {
-            mkdir($upload_dir, 0777, true);
-        }
-        $file_name = time() . '_' . basename($_FILES['image']['name']);
-        $target_file = $upload_dir . $file_name;
-        
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
-            $image_path = 'assets/images/uploads/' . $file_name;
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $uploadRes = secure_upload_file($_FILES['image'], __DIR__ . '/../assets/images/uploads/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = 'assets/images/uploads/' . $uploadRes['fileName'];
         }
     }
     
@@ -42,16 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit_page'])) {
     $slug = $_POST['slug'];
     $content = $_POST['content'];
     
-    if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-        $upload_dir = '../assets/images/uploads/';
-        if (!is_dir($upload_dir)) {
-            mkdir($upload_dir, 0777, true);
-        }
-        $file_name = time() . '_' . basename($_FILES['image']['name']);
-        $target_file = $upload_dir . $file_name;
-        
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
-            $image_path = 'assets/images/uploads/' . $file_name;
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $uploadRes = secure_upload_file($_FILES['image'], __DIR__ . '/../assets/images/uploads/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = 'assets/images/uploads/' . $uploadRes['fileName'];
             $stmt = $pdo->prepare("UPDATE pages SET title = ?, slug = ?, content = ?, image_path = ? WHERE id = ?");
             $stmt->execute([$title, $slug, $content, $image_path, $id]);
         }

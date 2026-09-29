@@ -1,5 +1,15 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+    session_set_cookie_params([
+        'lifetime' => 0,
+        'path' => '/',
+        'domain' => '',
+        'secure' => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on',
+        'httponly' => true,
+        'samesite' => 'Lax'
+    ]);
+    session_start();
+}
 require_once '../db.php';
 
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
@@ -9,44 +19,92 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 
 $error = '';
 
+// Initialize brute-force protection
+$maxAttempts = 5;
+$lockoutTime = 900; // 15 minutes in seconds
+
+if (!isset($_SESSION['login_attempts'])) {
+    $_SESSION['login_attempts'] = 0;
+}
+if (!isset($_SESSION['last_attempt_time'])) {
+    $_SESSION['last_attempt_time'] = 0;
+}
+
+// Generate CSRF token if not set
+if (empty($_SESSION['csrf_login_token'])) {
+    $_SESSION['csrf_login_token'] = bin2hex(random_bytes(32));
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = trim($_POST['username'] ?? '');
-    $password = $_POST['password'] ?? '';
+    $timeSinceLast = time() - $_SESSION['last_attempt_time'];
 
-    if (isset($_GET['error']) && $_GET['error'] === 'inactive') {
-        $error = 'Your session expired or account has been deactivated. Please contact the Super Administrator.';
-    }
-
-    if (empty($username) || empty($password)) {
-        $error = 'Please enter both username and password.';
+    // Check if user is locked out
+    if ($_SESSION['login_attempts'] >= $maxAttempts && $timeSinceLast < $lockoutTime) {
+        $remainingMins = ceil(($lockoutTime - $timeSinceLast) / 60);
+        $error = "Too many failed login attempts. For security, access is temporarily locked. Please try again in {$remainingMins} minute(s).";
     } else {
-        $stmt = $pdo->prepare("SELECT id, name, username, password_hash, role, status FROM admins WHERE username = ? LIMIT 1");
-        $stmt->execute([$username]);
-        $admin = $stmt->fetch();
+        // Reset counter if lockout window passed
+        if ($timeSinceLast >= $lockoutTime) {
+            $_SESSION['login_attempts'] = 0;
+        }
 
-        if ($admin && password_verify($password, $admin['password_hash'])) {
-            if ((int)$admin['status'] !== 1) {
-                $error = 'Your account has been deactivated. Please contact the Super Administrator.';
-            } else {
-                $_SESSION['admin_logged_in'] = true;
-                $_SESSION['admin_id'] = (int)$admin['id'];
-                $_SESSION['admin_username'] = $admin['username'];
-                $_SESSION['admin_name'] = !empty($admin['name']) ? $admin['name'] : $admin['username'];
-                $_SESSION['admin_role'] = $admin['role'] ?? 'editor';
-
-                if ($_SESSION['admin_role'] === 'superadmin') {
-                    $_SESSION['admin_permissions'] = ['*'];
-                } else {
-                    $pStmt = $pdo->prepare("SELECT module_key FROM admin_permissions WHERE admin_id = ?");
-                    $pStmt->execute([$admin['id']]);
-                    $_SESSION['admin_permissions'] = $pStmt->fetchAll(PDO::FETCH_COLUMN) ?: [];
-                }
-
-                header("Location: index.php");
-                exit;
-            }
+        $csrfToken = $_POST['csrf_token'] ?? '';
+        if (!hash_equals($_SESSION['csrf_login_token'] ?? '', $csrfToken)) {
+            $error = 'Security session expired. Please refresh the page and try again.';
         } else {
-            $error = 'Invalid username or password.';
+            $username = trim($_POST['username'] ?? '');
+            $password = $_POST['password'] ?? '';
+
+            if (isset($_GET['error']) && $_GET['error'] === 'inactive') {
+                $error = 'Your session expired or account has been deactivated. Please contact the Super Administrator.';
+            }
+
+            if (empty($username) || empty($password)) {
+                $error = 'Please enter both username and password.';
+            } else {
+                $stmt = $pdo->prepare("SELECT id, name, username, password_hash, role, status FROM admins WHERE username = ? LIMIT 1");
+                $stmt->execute([$username]);
+                $admin = $stmt->fetch();
+
+                if ($admin && password_verify($password, $admin['password_hash'])) {
+                    if ((int)$admin['status'] !== 1) {
+                        $error = 'Your account has been deactivated. Please contact the Super Administrator.';
+                    } else {
+                        // Successful login - regenerate session ID to prevent fixation
+                        session_regenerate_id(true);
+
+                        // Reset failed attempts
+                        $_SESSION['login_attempts'] = 0;
+                        $_SESSION['last_attempt_time'] = 0;
+
+                        $_SESSION['admin_logged_in'] = true;
+                        $_SESSION['admin_id'] = (int)$admin['id'];
+                        $_SESSION['admin_username'] = $admin['username'];
+                        $_SESSION['admin_name'] = !empty($admin['name']) ? $admin['name'] : $admin['username'];
+                        $_SESSION['admin_role'] = $admin['role'] ?? 'editor';
+
+                        if ($_SESSION['admin_role'] === 'superadmin') {
+                            $_SESSION['admin_permissions'] = ['*'];
+                        } else {
+                            $pStmt = $pdo->prepare("SELECT module_key FROM admin_permissions WHERE admin_id = ?");
+                            $pStmt->execute([$admin['id']]);
+                            $_SESSION['admin_permissions'] = $pStmt->fetchAll(PDO::FETCH_COLUMN) ?: [];
+                        }
+
+                        header("Location: index.php");
+                        exit;
+                    }
+                } else {
+                    $_SESSION['login_attempts']++;
+                    $_SESSION['last_attempt_time'] = time();
+                    $remaining = max(0, $maxAttempts - $_SESSION['login_attempts']);
+                    if ($remaining > 0) {
+                        $error = "Invalid username or password. ({$remaining} attempt(s) remaining)";
+                    } else {
+                        $error = "Account locked due to multiple failed attempts. Please wait 15 minutes.";
+                    }
+                }
+            }
         }
     }
 }
@@ -155,6 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
 
         <form method="post" action="login.php">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_login_token']); ?>">
             <div class="mb-3">
                 <label class="form-label small fw-bold text-dark">Admin Username</label>
                 <div class="input-group">

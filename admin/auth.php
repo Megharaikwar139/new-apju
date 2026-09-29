@@ -9,6 +9,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
 }
 
 require_once __DIR__ . '/../db.php';
+require_once __DIR__ . '/upload_helper.php';
 
 // Verify active status in database
 if (isset($_SESSION['admin_id'])) {

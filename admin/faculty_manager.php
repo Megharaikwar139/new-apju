@@ -50,25 +50,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle File Upload if provided
     $image_path = $_POST['existing_image'] ?? '';
     if (!empty($_FILES['image_file']['name'])) {
-        $file = $_FILES['image_file'];
-        $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
-        $allowed = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
-        
-        if (in_array($ext, $allowed)) {
-            $uploadDir = '../uploads/faculty/';
-            if (!is_dir($uploadDir)) {
-                mkdir($uploadDir, 0777, true);
-            }
-            $filename = 'faculty_' . time() . '_' . rand(1000, 9999) . '.' . $ext;
-            $destination = $uploadDir . $filename;
-            
-            if (move_uploaded_file($file['tmp_name'], $destination)) {
-                $image_path = 'uploads/faculty/' . $filename;
-            } else {
-                $error = 'Failed to upload photo.';
-            }
+        $uploadRes = secure_upload_file($_FILES['image_file'], __DIR__ . '/../uploads/faculty/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = 'uploads/faculty/' . $uploadRes['fileName'];
         } else {
-            $error = 'Invalid image format. Allowed formats: JPG, PNG, WEBP.';
+            $error = $uploadRes['error'];
         }
     }
     

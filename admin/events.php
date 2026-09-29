@@ -20,12 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_event'])) {
     $image_path = '2025/03/events.jpg';
     
     // Handle image upload if provided
-    if (isset($_FILES['event_image']) && $_FILES['event_image']['error'] == UPLOAD_ERR_OK) {
-        $uploadDir = "../uploads/2026/events/";
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $_FILES['event_image']['name']);
-        if (move_uploaded_file($_FILES['event_image']['tmp_name'], $uploadDir . $fileName)) {
-            $image_path = "2026/events/" . $fileName;
+    if (isset($_FILES['event_image']) && $_FILES['event_image']['error'] === UPLOAD_ERR_OK) {
+        $uploadRes = secure_upload_file($_FILES['event_image'], __DIR__ . '/../uploads/2026/events/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = "2026/events/" . $uploadRes['fileName'];
         }
     }
 
@@ -46,12 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit_event'])) {
     $content = trim($_POST['content'] ?? '');
     
     // Check if new image uploaded
-    if (isset($_FILES['event_image']) && $_FILES['event_image']['error'] == UPLOAD_ERR_OK) {
-        $uploadDir = "../uploads/2026/events/";
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $_FILES['event_image']['name']);
-        if (move_uploaded_file($_FILES['event_image']['tmp_name'], $uploadDir . $fileName)) {
-            $image_path = "2026/events/" . $fileName;
+    if (isset($_FILES['event_image']) && $_FILES['event_image']['error'] === UPLOAD_ERR_OK) {
+        $uploadRes = secure_upload_file($_FILES['event_image'], __DIR__ . '/../uploads/2026/events/', ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = "2026/events/" . $uploadRes['fileName'];
             $stmt = $pdo->prepare("UPDATE events SET title = ?, event_date = ?, venue = ?, content = ?, image_path = ? WHERE id = ?");
             $stmt->execute([$title, $event_date, $venue, $content, $image_path, $id]);
         }

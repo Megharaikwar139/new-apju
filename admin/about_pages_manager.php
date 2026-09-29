@@ -25,31 +25,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_about_page'])) {
 
     // Handle Image Upload
     if (isset($_FILES['image_file']) && $_FILES['image_file']['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = '../uploads/' . date('Y/m/');
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_' . basename($_FILES['image_file']['name']);
-        if (move_uploaded_file($_FILES['image_file']['tmp_name'], $uploadDir . $fileName)) {
-            $image_path = 'uploads/' . date('Y/m/') . $fileName;
+        $subDir = date('Y/m/');
+        $uploadRes = secure_upload_file($_FILES['image_file'], __DIR__ . '/../uploads/' . $subDir, ['jpg', 'jpeg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $image_path = 'uploads/' . $subDir . $uploadRes['fileName'];
         }
     }
 
     // Handle Doc 1 Upload
     if (isset($_FILES['doc_upload_1']) && $_FILES['doc_upload_1']['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = '../uploads/' . date('Y/m/');
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_doc1_' . basename($_FILES['doc_upload_1']['name']);
-        if (move_uploaded_file($_FILES['doc_upload_1']['tmp_name'], $uploadDir . $fileName)) {
-            $doc_file_1 = 'uploads/' . date('Y/m/') . $fileName;
+        $subDir = date('Y/m/');
+        $uploadRes = secure_upload_file($_FILES['doc_upload_1'], __DIR__ . '/../uploads/' . $subDir, ['pdf', 'doc', 'docx', 'jpg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $doc_file_1 = 'uploads/' . $subDir . $uploadRes['fileName'];
         }
     }
 
     // Handle Doc 2 Upload
     if (isset($_FILES['doc_upload_2']) && $_FILES['doc_upload_2']['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = '../uploads/' . date('Y/m/');
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-        $fileName = time() . '_doc2_' . basename($_FILES['doc_upload_2']['name']);
-        if (move_uploaded_file($_FILES['doc_upload_2']['tmp_name'], $uploadDir . $fileName)) {
-            $doc_file_2 = 'uploads/' . date('Y/m/') . $fileName;
+        $subDir = date('Y/m/');
+        $uploadRes = secure_upload_file($_FILES['doc_upload_2'], __DIR__ . '/../uploads/' . $subDir, ['pdf', 'doc', 'docx', 'jpg', 'png', 'webp']);
+        if ($uploadRes['success']) {
+            $doc_file_2 = 'uploads/' . $subDir . $uploadRes['fileName'];
         }
     }
 
