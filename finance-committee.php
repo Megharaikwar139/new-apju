@@ -71,8 +71,9 @@ $main_content = !empty($page_data['main_content']) ? $page_data['main_content'] 
                                         <div class="small text-muted">Statutory financial committee constitution and notifications</div>
                                     </td>
                                     <td class="text-center">
-                                        <a href="<?php echo htmlspecialchars($doc_file_1); ?>" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1.5 small fw-semibold" style="border-color: var(--primary-color); color: var(--primary-color);">
-                                            <i class="fa-solid fa-file-pdf text-danger me-1"></i> View Document
+                                        <?php $is_fc_img = preg_match('/\.(jpe?g|png|webp|gif)$/i', $doc_file_1); ?>
+                                        <a href="<?php echo htmlspecialchars($doc_file_1); ?>" data-doc-title="<?php echo htmlspecialchars($doc_title_1); ?>" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1.5 small fw-semibold" style="border-color: var(--primary-color); color: var(--primary-color);">
+                                            <i class="fa-solid <?php echo $is_fc_img ? 'fa-award text-gold' : 'fa-file-pdf text-danger'; ?> me-1"></i> View Document
                                         </a>
                                     </td>
                                 </tr>

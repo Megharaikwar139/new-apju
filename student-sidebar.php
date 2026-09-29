@@ -3,16 +3,18 @@
 $current_student_page = basename($_SERVER['PHP_SELF']);
 
 $student_menu_items = [
-    'notice-board.php' => ['title' => 'Official Notice Board', 'icon' => 'fa-solid fa-bell'],
+    'notice-board.php' => ['title' => 'Notice Board', 'icon' => 'fa-solid fa-bell'],
+    'academic-calendar.php' => ['title' => 'Academic Calendar', 'icon' => 'fa-solid fa-calendar'],
+    'student-holiday-calender.php' => ['title' => 'Student Holiday Calendar', 'icon' => 'fa-regular fa-calendar-days'],
+    'student-assistance.php' => ['title' => 'Student Assistance', 'icon' => 'fa-solid fa-hand-holding-heart'],
     'student-grievance-cell.php' => ['title' => 'Student Grievance Cell', 'icon' => 'fa-solid fa-scale-balanced'],
-    'sc-st-committee.php' => ['title' => 'SC / ST Welfare Cell', 'icon' => 'fa-solid fa-hands-holding-child'],
-    'scholarship-committee.php' => ['title' => 'Scholarship Cell & Govt Schemes', 'icon' => 'fa-solid fa-award'],
-    'transport-committee.php' => ['title' => 'Hostel & Transport Committee', 'icon' => 'fa-solid fa-bus'],
-    'download-form-student.php' => ['title' => 'Download Student Forms', 'icon' => 'fa-solid fa-file-pdf'],
-    'sgrc.php' => ['title' => 'Students Grievance (SGRC)', 'icon' => 'fa-solid fa-shield-halved'],
-    'ncc-nss-cell.php' => ['title' => 'NCC & NSS Social Wing', 'icon' => 'fa-solid fa-flag'],
-    'alumini-committee.php' => ['title' => 'Alumni Relations Cell', 'icon' => 'fa-solid fa-users-line'],
-    'student-holiday-calender.php' => ['title' => 'Student Holiday Calendar', 'icon' => 'fa-solid fa-calendar-days']
+    'sc-st-committee.php' => ['title' => 'SC/ST Committee', 'icon' => 'fa-solid fa-hands-holding-child'],
+    'scholarship-committee.php' => ['title' => 'Scholarship Committee', 'icon' => 'fa-solid fa-award'],
+    'transport-committee.php' => ['title' => 'Hostel/Canteen/Transport Committee', 'icon' => 'fa-solid fa-bus'],
+    'download-form-student.php' => ['title' => 'Student Request Forms', 'icon' => 'fa-solid fa-file-signature'],
+    'sgrc.php' => ['title' => 'SGRC (Grievance Redressal)', 'icon' => 'fa-solid fa-shield-halved'],
+    'ncc-nss-cell.php' => ['title' => 'NCC/NSS Cell', 'icon' => 'fa-solid fa-flag'],
+    'alumini-committee.php' => ['title' => 'Alumni Committee', 'icon' => 'fa-solid fa-users-line']
 ];
 ?>
 
@@ -28,7 +30,7 @@ $student_menu_items = [
             <span class="badge bg-gold text-dark fw-bold rounded-pill" style="font-size: 0.65rem; padding: 0.2rem 0.55rem;">PORTAL</span>
         </div>
         
-        <nav class="d-flex flex-column" style="max-height: 460px; overflow-y: auto;">
+        <nav class="d-flex flex-column">
             <?php foreach ($student_menu_items as $url => $item): 
                 $isActive = ($current_student_page === $url);
             ?>
@@ -52,17 +54,17 @@ $student_menu_items = [
         <p class="small text-white text-opacity-80 mb-3" style="font-size: 0.85rem; line-height: 1.55;">
             Access online fee payment, attendance records, semester grade cards, and e-learning resources 24x7.
         </p>
-        <a href="http://erp.aku.ac.in/" target="_blank" class="btn btn-sm btn-gold-pill w-100 py-2 fw-bold text-center text-decoration-none d-block mb-3" style="font-size: 0.85rem;">
+        <a href="https://login.rssrcampusconnect.com/" target="_blank" class="btn btn-sm btn-gold-pill w-100 py-2 fw-bold text-center text-decoration-none d-block mb-3" style="font-size: 0.85rem;">
             <i class="fa-solid fa-right-to-bracket me-1"></i> Student ERP Login
         </a>
         <div class="pt-2.5 border-top border-white border-opacity-15 small text-white text-opacity-80">
             <div class="d-flex align-items-center gap-2 mb-1.5">
                 <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
-                <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a>
+                <span>Helpline: <a href="tel:180030026072" class="text-white text-opacity-90 text-decoration-none fw-semibold">180030026072</a></span>
             </div>
             <div class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>
-                <a href="mailto:studenthelp@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">studenthelp@aku.ac.in</a>
+                <a href="mailto:support@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">support@aku.ac.in</a>
             </div>
         </div>
     </div>

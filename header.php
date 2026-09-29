@@ -39,6 +39,8 @@ try {
     
     <!-- Lovable Custom Theme Styles -->
     <link rel="stylesheet" href="assets/css/lovable-theme.css">
+    <!-- Universal In-Page PDF & Image Previewer Styles -->
+    <link rel="stylesheet" href="assets/css/pdf-preview-modal.css?v=2.2">
     <link rel="icon" href="assets/lovable/aku-logo.jpeg" type="image/x-icon">
 </head>
 <body>
@@ -75,14 +77,10 @@ try {
                 <ul class="dropdown-menu dropdown-menu-end shadow-lg border-custom rounded-3 py-2 mt-1" style="min-width: 240px;">
                     <li><a class="dropdown-item py-1.5 small" href="https://www.universitymanagementsystem.in/aku/Home/Dashboard" target="_blank"><i class="fa-solid fa-file-circle-check text-primary me-2"></i> Document Verify (UMS)</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="https://login.rssrcampusconnect.com/" target="_blank"><i class="fa-solid fa-right-to-bracket text-success me-2"></i> Student ERP Login</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="results.php"><i class="fa-solid fa-award text-warning me-2"></i> Results Portal</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="academic-calendar.php"><i class="fa-solid fa-calendar me-2"></i> Academic Calendar</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="notice-board.php"><i class="fa-solid fa-bell me-2"></i> Notice Board</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="contact-us.php"><i class="fa-solid fa-envelope-open-text me-2"></i> Contact &amp; Helpdesk</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="https://samadhaan.ugc.ac.in/" target="_blank"><i class="fa-solid fa-building-columns me-2"></i> UGC e-Samadhan Portal</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="iqac.php"><i class="fa-solid fa-certificate text-primary me-2"></i> IQAC (NAAC / NIRF)</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="career.php"><i class="fa-solid fa-briefcase me-2"></i> Careers @ AKU</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="https://samadhaan.ugc.ac.in/" target="_blank"><i class="fa-solid fa-building-columns me-2"></i> UGC e-Samadhan</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="rti-act.php"><i class="fa-solid fa-scale-balanced me-2"></i> RTI Act</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="rti-act.php"><i class="fa-solid fa-scale-balanced me-2"></i> RTI Act Portal</a></li>
                     <li><hr class="dropdown-divider my-1"></li>
                     <li><a class="dropdown-item py-1.5 small text-primary fw-medium" href="admin/login.php"><i class="fa-solid fa-lock text-primary me-2"></i> CMS Admin Login</a></li>
                 </ul>
@@ -121,13 +119,13 @@ try {
 <?php
 $currentScript = basename($_SERVER['PHP_SELF'] ?? '');
 $isAboutActive = in_array($currentScript, ['why-aku.php', 'the-founder-2.php', 'the-chancellor.php', 'pro-chancellor.php', 'the-vice-chancellor.php', 'the-pro-vice-chancellor.php', 'the-chairman.php', 'registrar.php', 'chief-proctor.php', 'governing-body.php', 'board-of-management.php', 'academic-council.php', 'sponsoring-body.php', 'finance-committee.php', 'mandatory-disclosers.php', 'awardsand-recognigation.php', 'ugc-recognition.php', 'naac.php', 'nirf.php', 'ariia.php', 'aicte-approvals.php', 'approvals.php', 'mous.php', 'aku-in-media.php', 'world-class-infrastructure.php']);
-$isFacultyActive = (strpos($currentScript, 'department-') === 0 || strpos($currentScript, 'faculty') === 0 || strpos($currentScript, 'polytechnic') === 0 || strpos($currentScript, 'diploma-') === 0 || in_array($currentScript, ['college-of-pharmacy.php', 'institute-of-pharmacy.php', 'school-of-pharmacy.php', 'school-of-engineering.php', 'school-of-business-administration-management.php', 'dean-principal-messege.php', 'faculty-staff-profile.php', 'syllabus-scheme.php', 'so-po.php', 'time-table.php', 'activities.php', 'notice-board-department.php', 'about-the-department.php', 'vision-mission.php', 'department-intake.php', 'm-tech-cse.php']));
-$isAdmissionsActive = in_array($currentScript, ['programs.php', 'admission-procedure.php', 'admission-assistance.php', 'admission-committee.php', 'student-assistance.php', 'department-intake.php', 'ph-d-selection-process.php', 'fee-structure.php', 'scholarships.php', 'general-rules-and-regulations.php', 'hostel-rules-regulations.php', 'faqs.php', 'download-form.php', 'apply-now.php']);
+$isFacultyActive = (strpos($currentScript, 'department-') === 0 || strpos($currentScript, 'faculty') === 0 || strpos($currentScript, 'polytechnic') === 0 || strpos($currentScript, 'diploma-') === 0 || in_array($currentScript, ['college-of-pharmacy.php', 'institute-of-pharmacy.php', 'school-of-pharmacy.php', 'school-of-engineering.php', 'school-of-business-administration-management.php', 'dean-principal-messege.php', 'faculty-staff-profile.php', 'syllabus-scheme.php', 'so-po.php', 'time-table.php', 'activities.php', 'notice-board-department.php', 'about-the-department.php', 'vision-mission.php', 'm-tech-cse.php']));
+$isAdmissionsActive = in_array($currentScript, ['programs.php', 'admission-procedure.php', 'admission-assistance.php', 'admission-committee.php', 'department-intake.php', 'fee-structure.php', 'fees-details.php', 'payment-terms.php', 'refund-cancellation.php', 'scholarships.php', 'general-rules-and-regulations.php', 'hostel-rules-regulations.php', 'faqs.php', 'download-form.php', 'apply-now.php']);
 $isExamActive = in_array($currentScript, ['about-the-section.php', 'examination-committee.php', 'examination-board.php', 'examination-calendar.php', 'results.php', 'exam-notice.php', 'exam-policy.php', 'exam-code.php', 'old-question-papers.php', 'convocation.php', 'digi-locker-nad-gov-in.php', 'admit-card-download.php', 'forms.php']);
-$isCommitteesActive = in_array($currentScript, ['anti-reggiging-committee.php', 'anti-ragging-squad.php', 'academic-committee.php', 'cultruaral-committee.php', 'staff-selection-screening-committee.php', 'employee-grievance-wellfare-cell.php', 'equalization-committee.php', 'infrastructure-campus-beautification-committee.php', 'regulatory-committee.php', 'management-information-system-erp-committee.php', 'library-committee.php', 'purchase-committee.php', 'sports-committee.php', 'sprots-committee.php', 'transport-committee.php', 'jan-aushadhi-committee.php', 'fdp-committee.php', 'student-grievance-cell.php', 'scholarship-committee.php', 'research-committee.php', 'iqac.php', 'icc.php', 'womens-grievance-redressal-and-welfare-cell.php', 'sc-st-committee.php', 'sgrc.php', 'ncc-nss-cell.php', 'intellectual-property-rights-cell-ipr-cell.php', 'hostel-disciplinary-committee.php', 'i-block-seminar-hall-committee.php']);
+$isCommitteesActive = in_array($currentScript, ['anti-reggiging-committee.php', 'anti-ragging-squad.php', 'academic-committee.php', 'cultruaral-committee.php', 'staff-selection-screening-committee.php', 'employee-grievance-wellfare-cell.php', 'equalization-committee.php', 'infrastructure-campus-beautification-committee.php', 'regulatory-committee.php', 'management-information-system-erp-committee.php', 'library-committee.php', 'purchase-committee.php', 'sports-committee.php', 'sprots-committee.php', 'jan-aushadhi-committee.php', 'fdp-committee.php', 'icc.php', 'womens-grievance-redressal-and-welfare-cell.php', 'intellectual-property-rights-cell-ipr-cell.php', 'hostel-disciplinary-committee.php', 'i-block-seminar-hall-committee.php']);
 $isPlacementActive = in_array($currentScript, ['placement-cell.php', 'our-recruiters.php', 'corporate-interaction.php', 'visits-events.php', 'tp-industry.php', 'placement-chart.php']);
-$isResearchActive = in_array($currentScript, ['ugc-recognition.php', 'research-area.php', 'research-committee.php', 'fees-details.php', 'ph-d-selection-process.php', 'faculty-publications.php', 'incubation-center.php', 'profile.php']);
-$isStudentZoneActive = in_array($currentScript, ['notice-board.php', 'academic-calendar.php', 'student-holiday-calender.php', 'download-form-student.php', 'student-assistance.php']);
+$isResearchActive = in_array($currentScript, ['research-area.php', 'research-committee.php', 'fees-details.php', 'ph-d-selection-process.php', 'faculty-publications.php', 'incubation-center.php', 'profile.php']);
+$isStudentZoneActive = in_array($currentScript, ['notice-board.php', 'academic-calendar.php', 'student-holiday-calender.php', 'download-form-student.php', 'student-assistance.php', 'student-grievance-cell.php', 'sc-st-committee.php', 'scholarship-committee.php', 'transport-committee.php', 'sgrc.php', 'ncc-nss-cell.php', 'alumini-committee.php']);
 $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php', 'upcoming-events-and-news.php', 'visiters-testomonials.php', 'students-testomonials.php']);
 ?>
 <header id="mainHeader" class="site-header-navbar">
@@ -165,11 +163,11 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                             <ul class="list-unstyled mb-0">
                                 <li><a class="dropdown-item py-1.5 small fw-semibold text-primary" href="why-aku.php"><i class="fa-solid fa-star text-gold me-1.5"></i> Why AKU</a></li>
                                 <li><a class="dropdown-item py-1 small" href="the-founder-2.php">The Founder</a></li>
+                                <li><a class="dropdown-item py-1 small" href="the-chairman.php">The Chairman</a></li>
                                 <li><a class="dropdown-item py-1 small" href="the-chancellor.php">Chancellor</a></li>
                                 <li><a class="dropdown-item py-1 small" href="pro-chancellor.php">Pro Chancellor</a></li>
                                 <li><a class="dropdown-item py-1 small" href="the-vice-chancellor.php">Vice Chancellor</a></li>
                                 <li><a class="dropdown-item py-1 small" href="the-pro-vice-chancellor.php">Pro Vice Chancellor</a></li>
-                                <li><a class="dropdown-item py-1 small" href="the-chairman.php">The Chairman</a></li>
                                 <li><a class="dropdown-item py-1 small" href="registrar.php">Registrar</a></li>
                                 <li><a class="dropdown-item py-1 small" href="chief-proctor.php">Chief Proctor</a></li>
                             </ul>
@@ -321,7 +319,6 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                             <a href="syllabus-scheme.php" class="mega-item-link"><i class="fa-solid fa-book-open text-muted me-1"></i> Syllabus &amp; Scheme</a>
                             <a href="time-table.php" class="mega-item-link"><i class="fa-solid fa-clock text-muted me-1"></i> Class Time Table</a>
                             <a href="so-po.php" class="mega-item-link"><i class="fa-solid fa-bullseye text-muted me-1"></i> Program Outcomes (SO / PO)</a>
-                            <a href="department-intake.php" class="mega-item-link"><i class="fa-solid fa-users-viewfinder text-muted me-1"></i> Department Intake Capacity</a>
                         </div>
 
                     </div>
@@ -390,14 +387,13 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                     <li><a class="dropdown-item py-1.5 small" href="admission-assistance.php">Admission Assistance</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="admission-procedure.php">Admission Procedure</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="admission-committee.php">Admission Committee</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="student-assistance.php">Student Assistance</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="department-intake.php">Department Intake</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="department-intake.php">Department Intake Capacity</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="faqs.php">FAQs</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="fee-structure.php">Fee Structure</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="general-rules-and-regulations.php">General Rules and Regulations</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="hostel-rules-regulations.php">Hostel Rules &amp; Regulations</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="scholarships.php">Scholarships</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="download-form.php">Download Form</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="download-form.php">Admission Application Form</a></li>
                 </ul>
             </div>
 
@@ -422,7 +418,6 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                     Research <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.65rem;"></i>
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 270px;">
-                    <li><a class="dropdown-item py-1.5 small" href="ugc-recognition.php">UGC Recognition</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="research-area.php">Research Areas</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="research-committee.php">Research and Development Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="fees-details.php">Fees Details</a></li>
@@ -433,7 +428,7 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                     <li><a class="dropdown-item py-1.5 small" href="https://jier.co.in/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square text-muted me-2"></i> JIER Research Journal</a></li>
                     <li><hr class="dropdown-divider my-1"></li>
                     <li><a class="dropdown-item py-1.5 small" href="faculty-publications.php">Faculty Publications</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="incubation-center.php"><i class="fa-solid fa-lightbulb text-gold me-2"></i> Incubation Center</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="incubation-center.php"><i class="fa-solid fa-lightbulb text-gold me-2"></i> Kalam Incubation Center</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="profile.php">Academic &amp; Research Profile</a></li>
                 </ul>
             </div>
@@ -449,16 +444,16 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                     <li><a class="dropdown-item py-1.5 small" href="student-holiday-calender.php"><i class="fa-regular fa-calendar-days text-gold me-2"></i> Student Holiday Calendar</a></li>
                     <li><hr class="dropdown-divider my-1"></li>
                     <li class="dropdown-header text-uppercase fw-bold text-muted-custom" style="font-size: 0.68rem; letter-spacing: 0.08em;">Student Support Cells</li>
+                    <li><a class="dropdown-item py-1.5 small" href="student-assistance.php"><i class="fa-solid fa-hand-holding-heart text-gold me-2"></i> Student Assistance</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="student-grievance-cell.php">Student Grievance Cell</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="sc-st-committee.php">SC/ST Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="scholarship-committee.php">Scholarship Committee</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="transport-committee.php">Hostel/Canteen/Transport Committee</a></li>
                     <li><hr class="dropdown-divider my-1"></li>
-                    <li><a class="dropdown-item py-1.5 small" href="download-form-student.php">Download Form</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="sgrc.php">SGRC</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="incubation-center.php">Incubation Center</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="download-form-student.php"><i class="fa-solid fa-file-signature text-gold me-2"></i> Student Request Forms</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="sgrc.php">SGRC (Grievance Redressal)</a></li>
                     <li><a class="dropdown-item py-1.5 small" href="ncc-nss-cell.php">NCC/NSS Cell</a></li>
-                    <li><a class="dropdown-item py-1.5 small" href="alumini-committee.php">Alumini Committee</a></li>
+                    <li><a class="dropdown-item py-1.5 small" href="alumini-committee.php">Alumni Committee</a></li>
                 </ul>
             </div>
 
@@ -564,5 +559,67 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
             window.addEventListener('scroll', handleScroll, { passive: true });
             handleScroll();
         }
+    })();
+</script>
+
+<!-- Desktop Navigation Smooth Hover & Submenu Click Handler -->
+<script>
+    (function() {
+        function initNavHover() {
+            if (window.innerWidth < 992) return;
+            
+            const dropdowns = document.querySelectorAll('.site-header-navbar .dropdown');
+            dropdowns.forEach(function(dd) {
+                const toggle = dd.querySelector('.nav-link-item');
+                const menu = dd.querySelector('.dropdown-menu');
+                if (!toggle || !menu) return;
+                
+                let closeTimer = null;
+                
+                function openDropdown() {
+                    clearTimeout(closeTimer);
+                    // Close other dropdowns
+                    dropdowns.forEach(function(other) {
+                        if (other !== dd) {
+                            const otherMenu = other.querySelector('.dropdown-menu');
+                            const otherToggle = other.querySelector('.nav-link-item');
+                            if (otherMenu) otherMenu.classList.remove('show');
+                            if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                    menu.classList.add('show');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+                
+                function closeDropdown() {
+                    closeTimer = setTimeout(function() {
+                        menu.classList.remove('show');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    }, 220); // 220ms grace buffer ensures cursor transition never drops hover
+                }
+                
+                dd.addEventListener('mouseenter', openDropdown);
+                dd.addEventListener('mouseleave', closeDropdown);
+                menu.addEventListener('mouseenter', openDropdown);
+                menu.addEventListener('mouseleave', closeDropdown);
+                
+                // Allow clicking the parent nav link on desktop to navigate to its URL
+                toggle.addEventListener('click', function(e) {
+                    if (window.innerWidth >= 992) {
+                        const href = this.getAttribute('href');
+                        if (href && href !== '#' && !href.startsWith('javascript:')) {
+                            window.location.href = href;
+                        }
+                    }
+                });
+            });
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initNavHover);
+        } else {
+            initNavHover();
+        }
+        window.addEventListener('resize', initNavHover);
     })();
 </script>

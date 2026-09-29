@@ -3,14 +3,15 @@
 $current_research_page = basename($_SERVER['PHP_SELF']);
 
 $research_menu_items = [
-    'incubation-center.php' => ['title' => 'Kalam Incubation Center', 'icon' => 'fa-solid fa-lightbulb', 'is_external' => false],
-    'research-committee.php' => ['title' => 'R&D Committee', 'icon' => 'fa-solid fa-flask-vial', 'is_external' => false],
-    'ugc-recognition.php' => ['title' => 'UGC Recognition', 'icon' => 'fa-solid fa-certificate', 'is_external' => false],
-    'ph-d-selection-process.php' => ['title' => 'Ph.D Selection Process', 'icon' => 'fa-solid fa-user-graduate', 'is_external' => false],
-    'faculty-publications.php' => ['title' => 'Faculty Publications', 'icon' => 'fa-solid fa-newspaper', 'is_external' => false],
+    'research-area.php' => ['title' => 'Research Areas', 'icon' => 'fa-solid fa-microscope', 'is_external' => false],
+    'research-committee.php' => ['title' => 'Research & Development Committee', 'icon' => 'fa-solid fa-flask-vial', 'is_external' => false],
+    'fees-details.php' => ['title' => 'Fees Details', 'icon' => 'fa-solid fa-receipt', 'is_external' => false],
+    'ph-d-selection-process.php' => ['title' => 'Ph.D. Selection Process', 'icon' => 'fa-solid fa-user-graduate', 'is_external' => false],
     'https://jiips.in/' => ['title' => 'JIIPS Research Journal', 'icon' => 'fa-solid fa-book-open', 'is_external' => true],
     'https://jier.co.in/' => ['title' => 'JIER Research Journal', 'icon' => 'fa-solid fa-bookmark', 'is_external' => true],
-    'iqac.php' => ['title' => 'Internal Quality Assurance (IQAC)', 'icon' => 'fa-solid fa-chart-pie', 'is_external' => false]
+    'faculty-publications.php' => ['title' => 'Faculty Publications', 'icon' => 'fa-solid fa-newspaper', 'is_external' => false],
+    'incubation-center.php' => ['title' => 'Kalam Incubation Center', 'icon' => 'fa-solid fa-lightbulb', 'is_external' => false],
+    'profile.php' => ['title' => 'Academic & Research Profile', 'icon' => 'fa-solid fa-id-badge', 'is_external' => false]
 ];
 ?>
 
@@ -58,27 +59,27 @@ $research_menu_items = [
                 <span class="font-serif fw-bold text-gold fs-6">50+ Filed</span>
             </div>
             <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-white bg-opacity-10">
-                <span class="small text-white text-opacity-90">Scopus Publications</span>
-                <span class="font-serif fw-bold text-gold fs-6">500+ Papers</span>
+                <span class="small text-white text-opacity-90">Peer-Reviewed Papers</span>
+                <span class="font-serif fw-bold text-gold fs-6">1200+ Scopus</span>
             </div>
             <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-white bg-opacity-10">
-                <span class="small text-white text-opacity-90">Incubated Startups</span>
-                <span class="font-serif fw-bold text-gold fs-6">25+ Ventures</span>
+                <span class="small text-white text-opacity-90">Active Ph.D Scholars</span>
+                <span class="font-serif fw-bold text-gold fs-6">350+ Scholars</span>
             </div>
         </div>
 
-        <a href="incubation-center.php" class="btn btn-sm btn-gold-pill w-100 py-2 fw-bold text-center text-decoration-none d-block mb-3" style="font-size: 0.85rem;">
-            <i class="fa-solid fa-lightbulb me-1"></i> Kalam Incubation Center
+        <a href="ph-d-selection-process.php" class="btn btn-sm btn-gold-pill w-100 py-2 fw-bold text-center text-decoration-none d-block mb-3" style="font-size: 0.85rem;">
+            Ph.D Admissions 2026 <i class="fa-solid fa-arrow-right fs-6 ms-1"></i>
         </a>
 
         <div class="pt-2.5 border-top border-white border-opacity-15 small text-white text-opacity-80">
             <div class="d-flex align-items-center gap-2 mb-1.5">
-                <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>
-                <a href="mailto:research@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">research@aku.ac.in</a>
+                <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
+                <span>R&amp;D Cell: <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a></span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
-                <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a>
+                <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>
+                <a href="mailto:research@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">research@aku.ac.in</a>
             </div>
         </div>
     </div>

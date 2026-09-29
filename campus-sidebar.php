@@ -1,12 +1,13 @@
 <?php
-// Unified Campus Life Sidebar Component
+// Unified Campus Life / Event Sidebar Component
 $current_campus_page = basename($_SERVER['PHP_SELF']);
 
 $campus_menu_items = [
-    'gallery.php' => ['title' => 'Campus Photo Gallery', 'icon' => 'fa-solid fa-images'],
-    'world-class-infrastructure.php' => ['title' => 'Life @ AKU & Infrastructure', 'icon' => 'fa-solid fa-building-columns'],
-    'students-testomonials.php' => ['title' => 'Student Video Testimonials', 'icon' => 'fa-solid fa-video'],
-    'visiters-testomonials.php' => ['title' => 'Dignitary & Visitor Reviews', 'icon' => 'fa-solid fa-comments']
+    'gallery.php' => ['title' => 'Gallery', 'icon' => 'fa-solid fa-images'],
+    'university-events.php' => ['title' => 'University Events & Fests', 'icon' => 'fa-solid fa-calendar-star'],
+    'upcoming-events-and-news.php' => ['title' => 'Upcoming Events and News', 'icon' => 'fa-solid fa-bullhorn'],
+    'visiters-testomonials.php' => ['title' => 'Visiters Testomonials', 'icon' => 'fa-solid fa-comments'],
+    'students-testomonials.php' => ['title' => 'Students Testomonials', 'icon' => 'fa-solid fa-video']
 ];
 ?>
 
@@ -16,10 +17,10 @@ $campus_menu_items = [
     <div class="about-sidebar-card">
         <div class="about-sidebar-heading d-flex align-items-center justify-content-between">
             <span class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-tree-city text-gold fs-6"></i>
-                <span>CAMPUS LIFE</span>
+                <i class="fa-solid fa-calendar-check text-gold fs-6"></i>
+                <span>EVENTS &amp; CAMPUS</span>
             </span>
-            <span class="badge bg-gold text-dark fw-bold rounded-pill" style="font-size: 0.65rem; padding: 0.2rem 0.55rem;">EXPERIENCE</span>
+            <span class="badge bg-gold text-dark fw-bold rounded-pill" style="font-size: 0.65rem; padding: 0.2rem 0.55rem;">HAPPENINGS</span>
         </div>
         
         <nav class="d-flex flex-column">
@@ -60,17 +61,17 @@ $campus_menu_items = [
         </div>
 
         <a href="gallery.php" class="btn btn-sm btn-gold-pill w-100 py-2 fw-bold text-center text-decoration-none d-block mb-3" style="font-size: 0.85rem;">
-            <i class="fa-solid fa-images me-1"></i> View Photo Gallery
+            Explore Campus Tour <i class="fa-solid fa-arrow-right fs-6 ms-1"></i>
         </a>
 
         <div class="pt-2.5 border-top border-white border-opacity-15 small text-white text-opacity-80">
             <div class="d-flex align-items-center gap-2 mb-1.5">
-                <i class="fa-solid fa-location-dot text-gold" style="font-size: 0.75rem;"></i>
-                <span class="text-white text-opacity-90">Bypass Road, Indore (M.P.)</span>
+                <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
+                <span>Events Desk: <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a></span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
-                <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a>
+                <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>
+                <a href="mailto:events@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">events@aku.ac.in</a>
             </div>
         </div>
     </div>

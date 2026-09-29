@@ -130,9 +130,7 @@ $formsList = [
 
             <!-- Right Sidebar -->
             <div class="col-lg-4 col-xl-3">
-                <div class="sidebar-sticky-wrapper">
-                    <?php include "faculty-sidebar.php"; ?>
-                </div>
+                <?php include "admission-sidebar.php"; ?>
             </div>
 
         </div>

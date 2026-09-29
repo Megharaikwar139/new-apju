@@ -127,7 +127,7 @@
 
             <!-- Right Sidebar Area -->
             <div class="col-lg-4 col-xl-3">
-                <?php include 'campus-sidebar.php'; ?>
+                <?php include 'about-sidebar.php'; ?>
             </div>
 
         </div>

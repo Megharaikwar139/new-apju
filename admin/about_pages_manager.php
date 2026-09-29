@@ -216,7 +216,7 @@ require_once 'header.php';
                 </div>
 
                 <!-- Section 4: Attached PDF / Official Documents (if applicable) -->
-                <?php if (in_array($current_page['page_slug'], ['governing-body', 'board-of-management', 'finance-committee', 'mandatory-disclosers', 'ugc-recognition'])): ?>
+                <?php if (in_array($current_page['page_slug'], ['governing-body', 'board-of-management', 'academic-council', 'sponsoring-body', 'finance-committee', 'mandatory-disclosers', 'ugc-recognition'])): ?>
                 <h6 class="font-serif text-primary fw-bold mb-3 border-bottom pb-2">4. Official Attached Documents & PDFs</h6>
                 <div class="row g-3 mb-4">
                     <div class="col-md-6">
@@ -224,18 +224,42 @@ require_once 'header.php';
                         <input type="text" name="doc_title_1" class="form-control form-control-sm" value="<?php echo htmlspecialchars($current_page['doc_title_1'] ?? ''); ?>">
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label fw-semibold small">Document 1 File / Upload</label>
+                        <label class="form-label fw-semibold small d-flex justify-content-between align-items-center">
+                            <span>Document 1 File / Upload</span>
+                            <?php if (!empty($current_page['doc_file_1'])): 
+                                $f1 = trim($current_page['doc_file_1']);
+                                $is_img_1 = (bool) preg_match('/\.(jpe?g|png|webp|gif|svg)(\?.*)?$/i', $f1);
+                                $url_1 = (strpos($f1, 'http://') === 0 || strpos($f1, 'https://') === 0) ? $f1 : '../' . ltrim($f1, '/');
+                            ?>
+                                <a href="<?php echo htmlspecialchars($url_1); ?>" class="<?php echo $is_img_1 ? 'text-primary' : 'text-danger'; ?> fw-bold small text-decoration-none d-inline-flex align-items-center gap-1" title="Click to preview in modal">
+                                    <i class="fa-solid <?php echo $is_img_1 ? 'fa-award text-gold' : 'fa-file-pdf text-danger'; ?>"></i>
+                                    <span><?php echo $is_img_1 ? 'Preview Image' : 'Preview PDF'; ?></span>
+                                </a>
+                            <?php endif; ?>
+                        </label>
                         <input type="text" name="doc_file_1" class="form-control form-control-sm mb-1" value="<?php echo htmlspecialchars($current_page['doc_file_1'] ?? ''); ?>">
                         <input type="file" name="doc_upload_1" class="form-control form-control-sm" accept=".pdf,image/*">
                     </div>
 
-                    <?php if (in_array($current_page['page_slug'], ['mandatory-disclosers', 'ugc-recognition'])): ?>
+                    <?php if (in_array($current_page['page_slug'], ['mandatory-disclosers', 'ugc-recognition', 'academic-council', 'sponsoring-body'])): ?>
                     <div class="col-md-6">
                         <label class="form-label fw-semibold small">Document 2 Title</label>
                         <input type="text" name="doc_title_2" class="form-control form-control-sm" value="<?php echo htmlspecialchars($current_page['doc_title_2'] ?? ''); ?>">
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label fw-semibold small">Document 2 File / Upload</label>
+                        <label class="form-label fw-semibold small d-flex justify-content-between align-items-center">
+                            <span>Document 2 File / Upload</span>
+                            <?php if (!empty($current_page['doc_file_2'])): 
+                                $f2 = trim($current_page['doc_file_2']);
+                                $is_img_2 = (bool) preg_match('/\.(jpe?g|png|webp|gif|svg)(\?.*)?$/i', $f2);
+                                $url_2 = (strpos($f2, 'http://') === 0 || strpos($f2, 'https://') === 0) ? $f2 : '../' . ltrim($f2, '/');
+                            ?>
+                                <a href="<?php echo htmlspecialchars($url_2); ?>" class="<?php echo $is_img_2 ? 'text-primary' : 'text-danger'; ?> fw-bold small text-decoration-none d-inline-flex align-items-center gap-1" title="Click to preview in modal">
+                                    <i class="fa-solid <?php echo $is_img_2 ? 'fa-award text-gold' : 'fa-file-pdf text-danger'; ?>"></i>
+                                    <span><?php echo $is_img_2 ? 'Preview Image' : 'Preview PDF'; ?></span>
+                                </a>
+                            <?php endif; ?>
+                        </label>
                         <input type="text" name="doc_file_2" class="form-control form-control-sm mb-1" value="<?php echo htmlspecialchars($current_page['doc_file_2'] ?? ''); ?>">
                         <input type="file" name="doc_upload_2" class="form-control form-control-sm" accept=".pdf,image/*">
                     </div>

@@ -121,7 +121,7 @@ $ugcTiers = [
 
             <!-- Right Sidebar -->
             <div class="col-lg-4 col-xl-3">
-                <?php include "faculty-sidebar.php"; ?>
+                <?php include "admission-sidebar.php"; ?>
             </div>
 
         </div>

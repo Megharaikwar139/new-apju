@@ -4,21 +4,24 @@ $current_committee_page = basename($_SERVER['PHP_SELF']);
 
 $committee_menu_items = [
     'anti-reggiging-committee.php' => ['title' => 'Anti Ragging Committee', 'icon' => 'fa-solid fa-shield-halved'],
+    'anti-ragging-squad.php' => ['title' => 'Anti Ragging Squad', 'icon' => 'fa-solid fa-shield-cat'],
     'academic-committee.php' => ['title' => 'Academic Committee', 'icon' => 'fa-solid fa-graduation-cap'],
-    'staff-selection-screening-committee.php' => ['title' => 'Staff Screening / Cultural', 'icon' => 'fa-solid fa-user-check'],
-    'employee-grievance-wellfare-cell.php' => ['title' => 'Employee Grievance & Welfare', 'icon' => 'fa-solid fa-hands-holding-child'],
+    'cultruaral-committee.php' => ['title' => 'Cultural Committee', 'icon' => 'fa-solid fa-masks-theater'],
+    'employee-grievance-wellfare-cell.php' => ['title' => 'Employee Grievance / Welfare Cell', 'icon' => 'fa-solid fa-hands-holding-child'],
     'equalization-committee.php' => ['title' => 'Equalization Committee', 'icon' => 'fa-solid fa-scale-balanced'],
-    'infrastructure-campus-beautification-committee.php' => ['title' => 'Campus Beautification', 'icon' => 'fa-solid fa-tree-city'],
+    'infrastructure-campus-beautification-committee.php' => ['title' => 'Infrastructure / Beautification', 'icon' => 'fa-solid fa-tree-city'],
     'regulatory-committee.php' => ['title' => 'Regulatory Committee', 'icon' => 'fa-solid fa-gavel'],
     'management-information-system-erp-committee.php' => ['title' => 'MIS / ERP Committee', 'icon' => 'fa-solid fa-server'],
     'library-committee.php' => ['title' => 'Library Committee', 'icon' => 'fa-solid fa-book-bookmark'],
-    'womens-grievance-redressal-and-welfare-cell.php' => ['title' => 'Women’s Grievance Cell', 'icon' => 'fa-solid fa-person-dress'],
+    'womens-grievance-redressal-and-welfare-cell.php' => ['title' => 'Women’s Grievance Redressal Cell', 'icon' => 'fa-solid fa-person-dress'],
     'jan-aushadhi-committee.php' => ['title' => 'Jan Aushadhi Committee', 'icon' => 'fa-solid fa-pills'],
     'fdp-committee.php' => ['title' => 'FDP Committee', 'icon' => 'fa-solid fa-chalkboard-user'],
     'purchase-committee.php' => ['title' => 'Purchase Committee', 'icon' => 'fa-solid fa-cart-flatbed'],
     'intellectual-property-rights-cell-ipr-cell.php' => ['title' => 'IPR & Patent Cell', 'icon' => 'fa-solid fa-lightbulb'],
-    'icc.php' => ['title' => 'Internal Complaint (ICC)', 'icon' => 'fa-solid fa-shield'],
-    'sprots-committee.php' => ['title' => 'Sports & Fitness Committee', 'icon' => 'fa-solid fa-volleyball']
+    'icc.php' => ['title' => 'Internal Complaint Committee (ICC)', 'icon' => 'fa-solid fa-shield'],
+    'sprots-committee.php' => ['title' => 'Sports Committee', 'icon' => 'fa-solid fa-volleyball'],
+    'hostel-disciplinary-committee.php' => ['title' => 'Hostel Disciplinary Committee', 'icon' => 'fa-solid fa-hotel'],
+    'i-block-seminar-hall-committee.php' => ['title' => 'I-Block Seminar Hall Committee', 'icon' => 'fa-solid fa-chalkboard']
 ];
 ?>
 
@@ -29,12 +32,12 @@ $committee_menu_items = [
         <div class="about-sidebar-heading d-flex align-items-center justify-content-between">
             <span class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-sitemap text-gold fs-6"></i>
-                <span>STATUTORY BODIES</span>
+                <span>STATUTORY COMMITTEES</span>
             </span>
-            <span class="badge bg-gold text-dark fw-bold rounded-pill" style="font-size: 0.65rem; padding: 0.2rem 0.55rem;">GOVERNANCE</span>
+            <span class="badge bg-gold text-dark fw-bold rounded-pill" style="font-size: 0.65rem; padding: 0.2rem 0.55rem;">BODIES</span>
         </div>
         
-        <nav class="d-flex flex-column" style="max-height: 480px; overflow-y: auto;">
+        <nav class="d-flex flex-column">
             <?php foreach ($committee_menu_items as $url => $item): 
                 $isActive = ($current_committee_page === $url);
             ?>
@@ -59,12 +62,12 @@ $committee_menu_items = [
             Dedicated committees ensure a safe, inclusive, ragging-free campus environment and speedy redressal of grievances.
         </p>
         <a href="anti-reggiging-committee.php" class="btn btn-sm btn-gold-pill w-100 py-2 fw-bold text-center text-decoration-none d-block mb-3" style="font-size: 0.85rem;">
-            <i class="fa-solid fa-shield-halved me-1"></i> Anti-Ragging Cell
+            <i class="fa-solid fa-shield-halved me-1"></i> Anti-Ragging Policy
         </a>
         <div class="pt-2.5 border-top border-white border-opacity-15 small text-white text-opacity-80">
             <div class="d-flex align-items-center gap-2 mb-1.5">
-                <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
-                <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a>
+                <i class="fa-solid fa-phone-volume text-gold" style="font-size: 0.75rem;"></i>
+                <span>Helpline: <a href="tel:180030026072" class="text-white text-opacity-90 text-decoration-none fw-semibold">180030026072</a></span>
             </div>
             <div class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>

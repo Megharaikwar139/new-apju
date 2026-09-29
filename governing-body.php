@@ -80,6 +80,29 @@ $main_content = !empty($page_data['main_content']) ? $page_data['main_content'] 
                         </table>
                     </div>
 
+                    <!-- Direct In-Page PDF Viewer -->
+                    <?php if (!empty($doc_file_1) && stripos($doc_file_1, '.pdf') !== false): ?>
+                    <div class="mt-4 rounded-4 overflow-hidden border border-custom shadow-xs bg-white">
+                        <div class="p-3 bg-light border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-file-pdf text-danger fs-5"></i>
+                                <span class="fw-bold text-primary small"><?php echo htmlspecialchars($doc_title_1); ?></span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <a href="<?php echo htmlspecialchars($doc_file_1); ?>" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small">
+                                    <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Full Page View
+                                </a>
+                                <a href="<?php echo htmlspecialchars($doc_file_1); ?>" download class="btn btn-sm btn-gold-pill px-3 py-1 small fw-bold">
+                                    <i class="fa-solid fa-download me-1"></i> Download PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div style="height: 650px; background: #525659;">
+                            <iframe src="<?php echo htmlspecialchars($doc_file_1); ?>#toolbar=1&navpanes=0&view=FitH" width="100%" height="100%" style="border: none;" title="<?php echo htmlspecialchars($doc_title_1); ?>"></iframe>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+
                     <div class="p-4 rounded-4 mt-4 border border-custom" style="background: #fcfbf9;">
                         <h4 class="font-serif text-primary fs-5 fw-bold mb-2"><i class="fa-solid fa-scale-balanced text-gold me-2"></i> Powers and Functions of Governing Body</h4>
                         <ul class="small text-muted-custom lh-base mb-0 ps-3">

@@ -416,5 +416,77 @@ $wa_message = urlencode("Hello Dr. APJ Abdul Kalam University, I would like to i
 <!-- Bootstrap 5.3.3 JavaScript Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+<!-- Universal In-Page Document & Certificate Previewer Modal -->
+<div id="pdfPreviewModal" class="pdf-preview-backdrop" role="dialog" aria-modal="true" aria-labelledby="pdfPreviewTitle">
+    <div class="pdf-preview-dialog">
+        <!-- Header -->
+        <div class="pdf-preview-header">
+            <div class="pdf-preview-info">
+                <div class="pdf-preview-icon-badge" id="pdfPreviewIconBadge">
+                    <i id="pdfPreviewHeaderIcon" class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div class="pdf-preview-title-group">
+                    <h3 id="pdfPreviewTitle" class="pdf-preview-title">Document Preview</h3>
+                    <div class="pdf-preview-meta">
+                        <span id="pdfPreviewTypeBadge" class="pdf-preview-badge">PDF DOCUMENT</span>
+                        <span id="pdfPreviewFilename" class="pdf-preview-filename">document.pdf</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Toolbar -->
+            <div class="pdf-preview-actions">
+                <a id="pdfPreviewFullViewBtn" href="#" target="_blank" class="pdf-btn pdf-btn-fullview" title="Open full screen in a new tab">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span class="pdf-btn-text">Full Page View</span>
+                </a>
+                <a id="pdfPreviewDownloadBtn" href="#" download class="pdf-btn pdf-btn-download" title="Download this file">
+                    <i class="fa-solid fa-download"></i>
+                    <span class="pdf-btn-text">Download</span>
+                </a>
+                <button type="button" id="pdfPreviewCloseBtn" class="pdf-btn-close" aria-label="Close preview" title="Close (Esc)">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Body / Viewer -->
+        <div class="pdf-preview-body">
+            <div id="pdfPreviewLoader" class="pdf-preview-loader">
+                <div class="pdf-preview-spinner"></div>
+                <p id="pdfPreviewLoaderText">Loading document preview...</p>
+            </div>
+            <iframe id="pdfPreviewFrame" class="pdf-preview-frame" src="about:blank" title="Document Preview Frame"></iframe>
+            <div id="pdfPreviewImageWrap" class="pdf-preview-image-container d-none">
+                <div class="pdf-image-toolbar">
+                    <button type="button" class="pdf-img-tool-btn" id="pdfZoomOutBtn" title="Zoom Out"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <span class="pdf-img-zoom-text" id="pdfZoomLevel">100%</span>
+                    <button type="button" class="pdf-img-tool-btn" id="pdfZoomInBtn" title="Zoom In"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button type="button" class="pdf-img-tool-btn" id="pdfZoomResetBtn" title="Reset Fit"><i class="fa-solid fa-compress me-1"></i>Fit</button>
+                </div>
+                <div class="pdf-image-scroll-stage">
+                    <img id="pdfPreviewImg" class="pdf-preview-image" src="" alt="Preview Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Fallback Footer for mobile devices -->
+        <div class="pdf-preview-fallback">
+            <span>Viewing on mobile or having trouble with inline preview?</span>
+            <div>
+                <a id="pdfFallbackViewLink" href="#" target="_blank" class="me-3">
+                    <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Open Full Page
+                </a>
+                <a id="pdfFallbackDownloadLink" href="#" download>
+                    <i class="fa-solid fa-download me-1"></i>Direct Download
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PDF & Image Previewer Modal Script -->
+<script src="assets/js/pdf-preview-modal.js?v=2.2"></script>
+
 </body>
 </html>

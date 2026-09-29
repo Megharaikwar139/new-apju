@@ -3,12 +3,12 @@
 $current_placement_page = basename($_SERVER['PHP_SELF']);
 
 $placement_menu_items = [
-    'our-recruiters.php' => ['title' => 'Our 500+ Recruiters', 'icon' => 'fa-solid fa-handshake'],
-    'placement-cell.php' => ['title' => 'Training & Placement Cell', 'icon' => 'fa-solid fa-briefcase'],
-    'corporate-interaction.php' => ['title' => 'Corporate Interactions', 'icon' => 'fa-solid fa-handshake-angle'],
-    'visits-events.php' => ['title' => 'Industrial Visits & Events', 'icon' => 'fa-solid fa-industry'],
-    'tp-industry.php' => ['title' => 'Industry Linkage Committee', 'icon' => 'fa-solid fa-users-gear'],
-    'placement-chart.php' => ['title' => 'Placement Statistics & Records', 'icon' => 'fa-solid fa-chart-line']
+    'our-recruiters.php' => ['title' => 'Our Recruiters', 'icon' => 'fa-solid fa-handshake'],
+    'placement-cell.php' => ['title' => 'Placement Cell', 'icon' => 'fa-solid fa-briefcase'],
+    'corporate-interaction.php' => ['title' => 'Corporate Interaction', 'icon' => 'fa-solid fa-handshake-angle'],
+    'visits-events.php' => ['title' => 'Visits/Events', 'icon' => 'fa-solid fa-industry'],
+    'tp-industry.php' => ['title' => 'T&P/Industry Linkage Committee', 'icon' => 'fa-solid fa-users-gear'],
+    'placement-chart.php' => ['title' => 'Placement Chart', 'icon' => 'fa-solid fa-chart-line']
 ];
 ?>
 
@@ -19,7 +19,7 @@ $placement_menu_items = [
         <div class="about-sidebar-heading d-flex align-items-center justify-content-between">
             <span class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-briefcase text-gold fs-6"></i>
-                <span>CAREER & PLACEMENTS</span>
+                <span>CAREER &amp; PLACEMENTS</span>
             </span>
             <span class="badge bg-gold text-dark fw-bold rounded-pill" style="font-size: 0.65rem; padding: 0.2rem 0.55rem;">T&amp;P CELL</span>
         </div>
@@ -62,17 +62,17 @@ $placement_menu_items = [
         </div>
 
         <a href="our-recruiters.php" class="btn btn-sm btn-gold-pill w-100 py-2 fw-bold text-center text-decoration-none d-block mb-3" style="font-size: 0.85rem;">
-            <i class="fa-solid fa-building me-1"></i> View 500+ Recruiters
+            Explore Recruiters <i class="fa-solid fa-arrow-right fs-6 ms-1"></i>
         </a>
 
         <div class="pt-2.5 border-top border-white border-opacity-15 small text-white text-opacity-80">
             <div class="d-flex align-items-center gap-2 mb-1.5">
-                <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>
-                <a href="mailto:placements@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">placements@aku.ac.in</a>
+                <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
+                <span>T&amp;P Desk: <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a></span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
-                <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a>
+                <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>
+                <a href="mailto:placements@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">placements@aku.ac.in</a>
             </div>
         </div>
     </div>

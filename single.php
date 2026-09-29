@@ -223,6 +223,8 @@ require_once 'header.php';
                 <?php 
                 if ($type === 'event') {
                     include 'campus-sidebar.php';
+                } elseif ($type === 'notice') {
+                    include 'student-sidebar.php';
                 } else {
                     include 'about-sidebar.php';
                 }

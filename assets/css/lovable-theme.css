@@ -434,9 +434,32 @@ h6,
 }
 
 @media (min-width: 992px) {
+  /* Eliminate physical gap between nav items and dropdown menus */
+  .site-header-navbar .dropdown-menu,
+  .site-header-navbar .faculty-mega-menu {
+    margin-top: 0 !important;
+    top: 100% !important;
+  }
 
-  .site-header-navbar .dropdown:hover>.dropdown-menu,
-  .site-header-navbar .dropdown-mega:hover>.faculty-mega-menu {
+  /* Invisible hover bridge: prevents cursor loss while transitioning from link to menu */
+  .site-header-navbar .dropdown-menu::before,
+  .site-header-navbar .faculty-mega-menu::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: transparent;
+    display: block;
+    z-index: 1050;
+  }
+
+  /* Persistent hover state */
+  .site-header-navbar .dropdown:hover > .dropdown-menu,
+  .site-header-navbar .dropdown-menu:hover,
+  .site-header-navbar .dropdown-mega:hover > .faculty-mega-menu,
+  .site-header-navbar .faculty-mega-menu:hover {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -449,7 +472,7 @@ h6,
   top: 100% !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  margin-top: 0.5rem !important;
+  margin-top: 0 !important;
   width: 95vw !important;
   max-width: 1220px !important;
   background: #ffffff !important;
@@ -1160,15 +1183,35 @@ button.btn-gold-pill:hover * {
   transform: translateX(3px);
 }
 
-.inner-page-body-text table td a::before,
-.luxury-table td a::before,
-.filr-table td a::before {
+.inner-page-body-text table td a:not(.btn)::before,
+.luxury-table td a:not(.btn)::before,
+.filr-table td a:not(.btn)::before {
   content: "\f15c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: var(--gold-color);
   font-size: 0.85rem;
 }
+
+.inner-page-body-text table td a.btn::before,
+.luxury-table td a.btn::before,
+.luxury-table td a.btn-gold-pill::before,
+.luxury-table td a.preview-pdf-btn::before,
+.filr-table td a.btn::before {
+  content: none !important;
+  display: none !important;
+}
+
+.luxury-table td a.btn:hover,
+.luxury-table td a.btn-gold-pill:hover {
+  transform: none !important;
+}
+
+.luxury-table th.text-nowrap,
+.luxury-table td.text-nowrap {
+  white-space: nowrap !important;
+}
+
 
 /* Override any hardcoded blue buttons inside tab contents */
 .inner-page-body-text a[style*="background:#580813"],

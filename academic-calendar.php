@@ -89,7 +89,27 @@ include 'header.php';
                                     <i class="fa-solid fa-file-pdf text-gold fs-5"></i>
                                     <h3 class="font-serif text-primary fs-4 fw-bold m-0">Academic Calendars · Session 2025-26</h3>
                                 </div>
-                                <span class="badge bg-gold text-dark fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.75rem;">Current Active Session</span>
+                            </div>
+
+                            <!-- Live In-Page Calendar Viewer -->
+                            <div id="inPageCalendarViewer" class="mb-4 rounded-4 overflow-hidden border border-custom shadow-xs bg-white">
+                                <div class="p-3 bg-light border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-file-pdf text-danger fs-5"></i>
+                                        <span id="inPageCalendarTitle" class="fw-bold text-primary small">BHMS Academic Calendar (Nov 2025 – Apr 2027)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a id="inPageCalendarFullBtn" href="uploads/2026/03/82_BHMS_25-26_Nov_2025-to-Apr_2027.pdf" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1 small">
+                                            <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Full Page View
+                                        </a>
+                                        <a id="inPageCalendarDownloadBtn" href="uploads/2026/03/82_BHMS_25-26_Nov_2025-to-Apr_2027.pdf" download class="btn btn-sm btn-gold-pill px-3 py-1 small fw-bold">
+                                            <i class="fa-solid fa-download me-1"></i> Download PDF
+                                        </a>
+                                    </div>
+                                </div>
+                                <div style="height: 600px; background: #525659;">
+                                    <iframe id="inPageCalendarIframe" src="uploads/2026/03/82_BHMS_25-26_Nov_2025-to-Apr_2027.pdf#toolbar=1&navpanes=0&view=FitH" width="100%" height="100%" style="border: none;" title="Academic Calendar Preview"></iframe>
+                                </div>
                             </div>
 
                             <div class="table-responsive rounded-4 border border-custom overflow-hidden shadow-xs bg-white mb-4">
@@ -337,13 +357,53 @@ include 'header.php';
 
             <!-- Right Sidebar -->
             <div class="col-lg-4 col-xl-3">
-                <div class="sidebar-sticky-wrapper">
-                    <?php include "faculty-sidebar.php"; ?>
-                </div>
+                <?php include "student-sidebar.php"; ?>
             </div>
 
         </div>
     </div>
 </main>
+
+<!-- In-Page Calendar Dynamic Switcher Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const viewer = document.getElementById('inPageCalendarViewer');
+    const iframe = document.getElementById('inPageCalendarIframe');
+    const titleEl = document.getElementById('inPageCalendarTitle');
+    const fullBtn = document.getElementById('inPageCalendarFullBtn');
+    const downloadBtn = document.getElementById('inPageCalendarDownloadBtn');
+
+    if (!viewer || !iframe) return;
+
+    // Listen to all calendar links inside tables
+    document.querySelectorAll('.luxury-table a[href$=".pdf"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            // Intercept and update in-page viewer instead of modal/download
+            e.preventDefault();
+            e.stopPropagation();
+
+            const pdfUrl = this.getAttribute('href');
+            let docTitle = this.innerText.trim();
+            if (docTitle.toLowerCase() === 'pdf' || docTitle.toLowerCase() === 'download') {
+                const row = this.closest('tr');
+                if (row) {
+                    const firstTd = row.querySelector('td:first-child');
+                    if (firstTd) docTitle = firstTd.innerText.split('\n')[0].trim();
+                }
+            }
+
+            if (titleEl) titleEl.textContent = docTitle;
+            if (fullBtn) fullBtn.href = pdfUrl;
+            if (downloadBtn) {
+                downloadBtn.href = pdfUrl;
+                downloadBtn.setAttribute('download', pdfUrl.split('/').pop());
+            }
+
+            iframe.src = pdfUrl + '#toolbar=1&navpanes=0&view=FitH';
+            viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+});
+</script>
 
 <?php include 'footer.php'; ?>

@@ -77,9 +77,9 @@ include "header.php";
                               </tr><tr>
                                 <td><a href="https://aku.ac.in/wp-content/uploads/2025/04/13112024_103210_COE-EOA-REPORT-2024-2025.pdf" target="_blank">College of Engineering AICTE Approval Letter 2024-25</a></td>
                               </tr></table></div><h3 style="margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">ASSOCIATION OF INDIAN UNIVERSITIES</h3><div class="table-responsive my-4"><table class="luxury-table table table-hover table-striped border rounded-3" class="filr-table"><tr>
-                                <td><a href="https://aku.ac.in/wp-content/uploads/2025/06/09082021_121610_AIU-Approval-of-Dr.-APJ-Abdul-Kalam-University-scaled.jpg" target="_blank">Membership of AIU</a></td>
+                                <td><a href="uploads/2025/06/09082021_121610_AIU-Approval-of-Dr.-APJ-Abdul-Kalam-University-scaled.jpg" data-doc-title="Association of Indian Universities (AIU) Membership Certificate" target="_blank">Membership of AIU</a></td>
                               </tr></table></div><h3 style="margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">ASSOCIATION OF THE UNIVERSITIES OF ASIA AND THE PACIFIC</h3><div class="table-responsive my-4"><table class="luxury-table table table-hover table-striped border rounded-3" class="filr-table"><tr>
-                                <td><a href="https://aku.ac.in/wp-content/uploads/2025/06/02042021_041948_AUAP-CERTIFICATE.jpg" target="_blank">Membership of AUAP</a></td>
+                                <td><a href="uploads/2025/06/02042021_041948_AUAP-CERTIFICATE.jpg" data-doc-title="Association of the Universities of Asia and the Pacific (AUAP) Certificate" target="_blank">Membership of AUAP</a></td>
                               </tr></table></div><h3 style="margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">AYUSH APPROVAL</h3><div class="table-responsive my-4"><table class="luxury-table table table-hover table-striped border rounded-3" class="filr-table"><tr>
                                 <td><a href="https://aku.ac.in/wp-content/uploads/2026/03/R.N.-Kapoor-HMC-_-28-7-2025_0001.pdf" target="_blank">R N Kapoor Memorial Homoeopathic Medical College (PG) AYUSH Approval 2025-26</a></td>
                               </tr><tr>

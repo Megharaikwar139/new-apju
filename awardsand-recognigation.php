@@ -51,7 +51,7 @@ require_once 'header.php';
                     </div>
 
                     <!-- Awards Grid -->
-                    <div class="row g-4 mb-5">
+                    <div class="row g-4 mb-4">
                         
                         <!-- Award 1 -->
                         <div class="col-md-6">
@@ -71,7 +71,7 @@ require_once 'header.php';
                                 </div>
                                 <div class="pt-3 border-top border-custom d-flex align-items-center justify-content-between">
                                     <span class="small text-muted"><i class="fa-regular fa-calendar text-gold me-1"></i> Pride Hotel, Indore</span>
-                                    <a href="https://aku.thetask.in/wp-content/uploads/2025/08/AKU-Awards_09.07.2021_page-0003.jpg" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
+                                    <a href="uploads/2025/08/AKU-Awards_09.07.2021_page-0003.jpg" data-doc-title="Education Leadership Award - Dr. A.P.J. Abdul Kalam University" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
                                         <i class="fa-solid fa-award me-1 text-gold"></i> Certificate
                                     </a>
                                 </div>
@@ -79,6 +79,27 @@ require_once 'header.php';
                         </div>
 
                         <!-- Award 2 -->
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-4 border border-custom h-100 d-flex flex-column justify-content-between bg-white shadow-xs" style="transition: transform 0.25s ease;">
+                                <div>
+                                    <div class="award-pill-badge blue mb-3">
+                                        <i class="fa-solid fa-earth-americas text-primary me-1.5"></i> GLOBAL RECOGNITION
+                                    </div>
+                                    <h4 class="font-serif text-primary fs-5 fw-bold mb-2">World Book of Records, London (UK)</h4>
+                                    <p class="small text-muted-custom lh-base mb-3">
+                                        Certificate of Participation &amp; Exclusive Honour presented to <strong>Dr. APJ Abdul Kalam University</strong> for participating and being part of the World Record event for the national cause <em>"Mera Tiranga Mera Abhimaan"</em>.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top border-custom d-flex align-items-center justify-content-between">
+                                    <span class="small text-muted"><i class="fa-solid fa-globe text-gold me-1"></i> London, United Kingdom</span>
+                                    <a href="uploads/2025/08/AKU-Awards_09.07.2021_page-0004.jpg" data-doc-title="World Book of Records, London (UK) - Certificate of Honour" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
+                                        <i class="fa-solid fa-award me-1 text-gold"></i> Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Award 3 -->
                         <div class="col-md-6">
                             <div class="p-4 rounded-4 border border-custom h-100 d-flex flex-column justify-content-between bg-white shadow-xs" style="transition: transform 0.25s ease;">
                                 <div>
@@ -92,14 +113,14 @@ require_once 'header.php';
                                 </div>
                                 <div class="pt-3 border-top border-custom d-flex align-items-center justify-content-between">
                                     <span class="small text-muted"><i class="fa-regular fa-calendar text-gold me-1"></i> Bhopal, M.P.</span>
-                                    <a href="https://aku.thetask.in/wp-content/uploads/2025/08/AKU-Awards_09.07.2021_page-0006.jpg" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
+                                    <a href="uploads/2025/08/AKU-Awards_09.07.2021_page-0006.jpg" data-doc-title="मध्य प्रदेश निजी विश्वविद्यालय विनियामक आयोग - उत्कृष्ट विश्वविद्यालय प्रमाण-पत्र" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
                                         <i class="fa-solid fa-certificate me-1 text-gold"></i> प्रमाण-पत्र
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Award 3 -->
+                        <!-- Award 4 -->
                         <div class="col-md-6">
                             <div class="p-4 rounded-4 border border-custom h-100 d-flex flex-column justify-content-between bg-white shadow-xs" style="transition: transform 0.25s ease;">
                                 <div>
@@ -113,34 +134,76 @@ require_once 'header.php';
                                 </div>
                                 <div class="pt-3 border-top border-custom d-flex align-items-center justify-content-between">
                                     <span class="small text-muted"><i class="fa-regular fa-calendar text-gold me-1"></i> Indore, M.P.</span>
-                                    <a href="https://aku.thetask.in/wp-content/uploads/2025/08/AKU-Awards_09.07.2021_page-0007.jpg" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
+                                    <a href="uploads/2025/08/AKU-Awards_09.07.2021_page-0007.jpg" data-doc-title="रक्तदान एवं समाज सेवा प्रशस्ति पत्र - आर. एन. कपूर मेमोरियल अस्पताल" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
                                         <i class="fa-solid fa-file-invoice me-1 text-gold"></i> प्रशस्ति पत्र
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Award 4 -->
+                        <!-- Award 5 -->
                         <div class="col-md-6">
                             <div class="p-4 rounded-4 border border-custom h-100 d-flex flex-column justify-content-between bg-white shadow-xs" style="transition: transform 0.25s ease;">
                                 <div>
-                                    <div class="award-pill-badge blue mb-3">
-                                        <i class="fa-solid fa-earth-americas text-primary me-1.5"></i> GLOBAL RECOGNITION
+                                    <div class="award-pill-badge red mb-3">
+                                        <i class="fa-solid fa-square-h text-danger me-1.5"></i> HEALTHCARE DISTINCTION
                                     </div>
-                                    <h4 class="font-serif text-primary fs-5 fw-bold mb-2">Academic Union Oxford, UK</h4>
+                                    <h4 class="font-serif text-primary fs-5 fw-bold mb-2">स्टेट ऑफ आर्ट मॉडल ब्लड बैंक</h4>
                                     <p class="small text-muted-custom lh-base mb-3">
-                                        Honorary international fellowship and recognition conferred by Academic Union Oxford, UK, honoring leadership in skill development, research initiatives, and global pedagogical alignment.
+                                        महात्मा गांधी स्मृति चिकित्सा महाविद्यालय एवं एम. वाई. चिकित्सालय, इंदौर द्वारा <strong>डॉ. ए. पी. जे. अब्दुल कलाम विश्वविद्यालय</strong> को रक्तदान कार्यक्रम में उल्लेखनीय सहयोग हेतु प्रशस्ति पत्र।
                                     </p>
                                 </div>
                                 <div class="pt-3 border-top border-custom d-flex align-items-center justify-content-between">
-                                    <span class="small text-muted"><i class="fa-solid fa-globe text-gold me-1"></i> Oxford, United Kingdom</span>
-                                    <a href="pro-chancellor.php" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
-                                        <i class="fa-solid fa-eye me-1 text-gold"></i> Details
+                                    <span class="small text-muted"><i class="fa-regular fa-calendar text-gold me-1"></i> M.Y. Hospital, Indore</span>
+                                    <a href="uploads/2025/08/AKU-Awards_09.07.2021_page-0005.jpg" data-doc-title="स्टेट ऑफ आर्ट मॉडल ब्लड बैंक - एम. वाई. चिकित्सालय इंदौर" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
+                                        <i class="fa-solid fa-file-invoice me-1 text-gold"></i> प्रशस्ति पत्र
                                     </a>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Award 6 -->
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-4 border border-custom h-100 d-flex flex-column justify-content-between bg-white shadow-xs" style="transition: transform 0.25s ease;">
+                                <div>
+                                    <div class="award-pill-badge amber mb-3">
+                                        <i class="fa-solid fa-shield-halved text-gold me-1.5"></i> DEFENCE &amp; CADET SERVICE
+                                    </div>
+                                    <h4 class="font-serif text-primary fs-5 fw-bold mb-2">1 MP Girls Battalion NCC Indore</h4>
+                                    <p class="small text-muted-custom lh-base mb-3">
+                                        NCC Group Headquarters, Indore presented <strong>Memento of Appreciation</strong> to Dr. APJ Abdul Kalam University for invaluable contribution towards guidance and motivation of cadets during Combined Annual Training Camp.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top border-custom d-flex align-items-center justify-content-between">
+                                    <span class="small text-muted"><i class="fa-regular fa-calendar text-gold me-1"></i> NCC HQ, Indore</span>
+                                    <a href="uploads/2025/08/AKU-Awards_09.07.2021_page-0008.jpg" data-doc-title="1 MP Girls Battalion NCC Indore - Memento of Appreciation" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
+                                        <i class="fa-solid fa-award me-1 text-gold"></i> Memento
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Academic Union Oxford Fellowship & Leadership Honors Banner -->
+                    <div class="p-4 rounded-4 border border-custom bg-white shadow-xs mb-4">
+                        <div class="d-flex flex-column flex-md-row align-items-start gap-3">
+                            <div class="intro-highlight-badge flex-shrink-0" style="width: 48px; height: 48px; font-size: 1.25rem; background: #eef4fb; color: #034488; border: 1px solid rgba(3, 68, 136, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="award-pill-badge blue mb-2">
+                                    <i class="fa-solid fa-earth-americas text-primary me-1.5"></i> INTERNATIONAL ACADEMIC FELLOWSHIP
+                                </div>
+                                <h4 class="font-serif text-primary fs-5 fw-bold mb-1">Academic Union Oxford, UK — Honorary Recognition</h4>
+                                <p class="small text-muted-custom mb-3" style="line-height: 1.65;">
+                                    Honorary international fellowship and recognition conferred by <strong>Academic Union Oxford, UK</strong>, honoring leadership in skill development, research initiatives, and global pedagogical alignment (Conferred upon Pro Chancellor Dr. Sadhna Kapoor).
+                                </p>
+                                <a href="pro-chancellor.php" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 small fw-semibold">
+                                    <i class="fa-solid fa-user-tie me-1 text-gold"></i> View Pro Chancellor Profile &raquo;
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <style>

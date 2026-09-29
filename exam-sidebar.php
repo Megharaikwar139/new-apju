@@ -3,18 +3,19 @@
 $current_exam_page = basename($_SERVER['PHP_SELF']);
 
 $exam_menu_items = [
-    'about-the-section.php' => ['title' => 'Section Overview', 'icon' => 'fa-solid fa-building-columns'],
-    'examination-committee.php' => ['title' => 'Exam Committee', 'icon' => 'fa-solid fa-users'],
-    'examination-calendar.php' => ['title' => 'Exam Schedule / Datesheet', 'icon' => 'fa-solid fa-calendar-days'],
-    'results.php' => ['title' => 'Results Portal', 'icon' => 'fa-solid fa-award'],
-    'exam-notice.php' => ['title' => 'Examination Notices', 'icon' => 'fa-solid fa-bullhorn'],
-    'exam-policy.php' => ['title' => 'Exam Policies & Rules', 'icon' => 'fa-solid fa-scale-balanced'],
-    'exam-code.php' => ['title' => 'Code of Conduct', 'icon' => 'fa-solid fa-gavel'],
+    'about-the-section.php' => ['title' => 'About The Section', 'icon' => 'fa-solid fa-building-columns'],
+    'examination-committee.php' => ['title' => 'Examination Committee', 'icon' => 'fa-solid fa-users'],
+    'examination-board.php' => ['title' => 'Examination Board', 'icon' => 'fa-solid fa-sitemap'],
+    'exam-policy.php' => ['title' => 'Examination Policy', 'icon' => 'fa-solid fa-scale-balanced'],
+    'exam-code.php' => ['title' => 'Examination Code', 'icon' => 'fa-solid fa-gavel'],
+    'examination-calendar.php' => ['title' => 'Examination Schedule', 'icon' => 'fa-solid fa-calendar-days'],
     'old-question-papers.php' => ['title' => 'Old Question Papers', 'icon' => 'fa-solid fa-file-lines'],
-    'convocation.php' => ['title' => 'Convocation Ceremony', 'icon' => 'fa-solid fa-user-graduate'],
-    'digi-locker-nad-gov-in.php' => ['title' => 'DigiLocker (NAD Portal)', 'icon' => 'fa-solid fa-shield-halved'],
-    'admit-card-download.php' => ['title' => 'Admit Card Portal', 'icon' => 'fa-solid fa-id-card'],
-    'forms.php' => ['title' => 'Examination Forms', 'icon' => 'fa-solid fa-file-invoice']
+    'results.php' => ['title' => 'Results', 'icon' => 'fa-solid fa-award'],
+    'convocation.php' => ['title' => 'Convocation', 'icon' => 'fa-solid fa-user-graduate'],
+    'digi-locker-nad-gov-in.php' => ['title' => 'Digi Locker (nad.gov.in)', 'icon' => 'fa-solid fa-shield-halved'],
+    'admit-card-download.php' => ['title' => 'Admit Card Download', 'icon' => 'fa-solid fa-id-card'],
+    'forms.php' => ['title' => 'Forms', 'icon' => 'fa-solid fa-file-invoice'],
+    'exam-notice.php' => ['title' => 'Exam Notice', 'icon' => 'fa-solid fa-bullhorn']
 ];
 ?>
 
@@ -60,11 +61,11 @@ $exam_menu_items = [
         <div class="pt-2.5 border-top border-white border-opacity-15 small text-white text-opacity-80">
             <div class="d-flex align-items-center gap-2 mb-1.5">
                 <i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i>
-                <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a>
+                <span>COE Office: <a href="tel:+917312530500" class="text-white text-opacity-90 text-decoration-none">+91 731 2530 500</a></span>
             </div>
             <div class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-envelope text-gold" style="font-size: 0.75rem;"></i>
-                <a href="mailto:exam@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">exam@aku.ac.in</a>
+                <a href="mailto:coe@aku.ac.in" class="text-white text-opacity-90 text-decoration-none">coe@aku.ac.in</a>
             </div>
         </div>
     </div>

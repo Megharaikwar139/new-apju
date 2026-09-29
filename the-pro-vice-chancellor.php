@@ -84,7 +84,7 @@ include "header.php";
 
             <!-- Right Sidebar -->
             <div class="col-lg-4 col-xl-3">
-                <?php include "committee-sidebar.php"; ?>
+                <?php include "about-sidebar.php"; ?>
             </div>
 
         </div>

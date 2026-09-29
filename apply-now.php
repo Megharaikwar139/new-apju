@@ -383,8 +383,8 @@ include 'header.php';
                         </a>
                     </div>
 
-                    <!-- Department Sidebar Navigation -->
-                    <?php include "faculty-sidebar.php"; ?>
+                    <!-- Admissions Sidebar Navigation -->
+                    <?php include "admission-sidebar.php"; ?>
 
                 </div>
             </div>

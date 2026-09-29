@@ -16,6 +16,9 @@
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- Universal In-Page PDF & Image Previewer Styles -->
+    <link rel="stylesheet" href="../assets/css/pdf-preview-modal.css?v=2.2">
+    
     <style>
         :root {
             --admin-maroon-dark: #3b050d;
@@ -743,7 +746,7 @@
             <div class="sidebar-nav-section">About Pages &amp; Config</div>
             <?php if (has_permission('about_pages_manager.php')): ?>
             <a href="about_pages_manager.php" class="sidebar-link <?php echo ($currentPage == 'about_pages_manager.php') ? 'active' : ''; ?>">
-                <i class="fa-solid fa-users-gear"></i> Leadership Pages
+                <i class="fa-solid fa-users-gear"></i> Leadership &amp; Governance
             </a>
             <?php endif; ?>
             <?php if (has_permission('pages.php')): ?>
