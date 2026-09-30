@@ -3,10 +3,10 @@
 try {
     $settings = $pdo->query("SELECT * FROM site_settings_custom LIMIT 1")->fetch() ?: [
         'university_tagline' => '…Nurturing Talents to Success',
-        'address' => 'Indore-Dewas Bypass Road, Village Arandia, Post Jhalaria, Dewas Naka, Indore – 452016, Madhya Pradesh, India',
-        'phone' => '+91 731 2530 500 / +91 91111 09999',
+        'address' => 'Campus: Indore-Dewas Bypass Road, Village Arandia, P.O. Vijay Nagar, Indore – 452 010 (M.P.) | City Office: 201, Sapphire Heights, A.B. Road, Indore',
+        'phone' => '180030026072 / +91-9174007611 / 9009771717',
         'email' => 'info@aku.ac.in',
-        'admissions_email' => 'admissions@aku.ac.in',
+        'admissions_email' => 'admission_enquiry@aku.ac.in',
         'facebook_url' => 'https://www.facebook.com/DR.APJAK.University',
         'instagram_url' => 'https://www.instagram.com/drapjaku_universityindore/',
         'twitter_url' => 'https://x.com/APJ_University',

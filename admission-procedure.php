@@ -21,7 +21,7 @@ include 'header.php';
             Admission Procedure &amp; Eligibility Criteria
         </h1>
         <p class="text-white text-opacity-80 small mb-0" style="letter-spacing: 0.12em; text-transform: uppercase;">
-            Dr. A.P.J. Abdul Kalam University · Approved by AICTE, PCI, UGC &amp; Govt. of MP
+            Dr. A.P.J. Abdul Kalam University · Recognized &amp; Approved by UGC, AICTE, PCI, BCI, NCTE, NCISM &amp; NCH
         </p>
     </div>
 </section>
@@ -117,9 +117,10 @@ include 'header.php';
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <!-- Engineering & Technology -->
                                     <tr>
                                         <td><strong>1</strong></td>
-                                        <td><span class="fw-bold text-primary">Diploma Engineering</span></td>
+                                        <td><span class="fw-bold text-primary">Diploma Engineering (Polytechnic)</span><br><small class="text-muted">Civil, Mechanical, Electrical, CS</small></td>
                                         <td><span class="badge bg-light text-dark border">3 Years</span></td>
                                         <td>10th with Science &amp; Mathematics (Minimum 35% for all categories) from a recognized Board.</td>
                                     </tr>
@@ -127,79 +128,215 @@ include 'header.php';
                                         <td><strong>2</strong></td>
                                         <td><span class="fw-bold text-primary">Diploma Engineering (Lateral Entry)</span></td>
                                         <td><span class="badge bg-light text-dark border">2 Years</span></td>
-                                        <td>12th with Physics, Chemistry &amp; Mathematics OR ITI (2 Years) in relevant trade.</td>
+                                        <td>12th with PCM or 10th + 2 Years ITI in relevant trade from a recognized Board/NCVT.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>3</strong></td>
-                                        <td><span class="fw-bold text-primary">B.E. (Bachelor of Engineering)</span></td>
+                                        <td><span class="fw-bold text-primary">B.Tech. / B.E. (Bachelor of Technology)</span><br><small class="text-muted">CSE, ME, CE, AI &amp; Robotics</small></td>
                                         <td><span class="badge bg-light text-dark border">4 Years</span></td>
-                                        <td>10+2 with Mathematics &amp; Physics along with Chemistry/Biotechnology/Technical Vocational subject. Minimum 45% (40% for reserved category).</td>
+                                        <td>10+2 with Physics, Chemistry &amp; Mathematics (PCM). Minimum 45% for General, 40% for SC/ST/OBC (MP Domicile). Merit of JEE Main / 10+2.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>4</strong></td>
-                                        <td><span class="fw-bold text-primary">B.E. (Lateral Entry)</span></td>
+                                        <td><span class="fw-bold text-primary">B.Tech. / B.E. (Lateral Entry)</span></td>
                                         <td><span class="badge bg-light text-dark border">3 Years</span></td>
-                                        <td>Diploma in Engineering from an AICTE approved institute OR B.Sc. with Mathematics with at least 45% (40% for SC/ST/OBC).</td>
+                                        <td>Diploma in relevant branch of Engineering with at least 45% marks (40% for SC/ST/OBC) or B.Sc. with Maths.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>5</strong></td>
-                                        <td><span class="fw-bold text-primary">M.Tech (Master of Technology)</span></td>
+                                        <td><span class="fw-bold text-primary">M.Tech. / M.E.</span><br><small class="text-muted">CSE, IT, VLSI, SE, DC, CS, CT, TS, PS</small></td>
                                         <td><span class="badge bg-light text-dark border">2 Years</span></td>
-                                        <td>B.E. / B.Tech in relevant engineering discipline with at least 50% (45% for reserved category).</td>
+                                        <td>B.E. / B.Tech. in relevant engineering discipline with minimum 50% marks (45% for SC/ST/OBC category).</td>
                                     </tr>
+
+                                    <!-- Pharmacy -->
                                     <tr>
                                         <td><strong>6</strong></td>
                                         <td><span class="fw-bold text-primary">D.Pharm (Diploma in Pharmacy)</span></td>
                                         <td><span class="badge bg-light text-dark border">2 Years</span></td>
-                                        <td>10+2 with Physics, Chemistry as compulsory subjects along with Mathematics / Biology.</td>
+                                        <td>10+2 examination with Physics and Chemistry along with Mathematics / Biology (PCB/PCM) from a recognized Board.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>7</strong></td>
                                         <td><span class="fw-bold text-primary">B.Pharm (Bachelor of Pharmacy)</span></td>
                                         <td><span class="badge bg-light text-dark border">4 Years</span></td>
-                                        <td>10+2 with Physics &amp; Chemistry along with Mathematics / Biology with minimum 45% (40% reserved).</td>
+                                        <td>10+2 with Physics, Chemistry as compulsory subjects and Mathematics/Biology with at least 45% (40% for SC/ST/OBC).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>8</strong></td>
                                         <td><span class="fw-bold text-primary">B.Pharm (Lateral Entry)</span></td>
                                         <td><span class="badge bg-light text-dark border">3 Years</span></td>
-                                        <td>Passed D.Pharm from a PCI approved institution with at least 45% marks (40% reserved).</td>
+                                        <td>Passed D.Pharm from a PCI approved institution with at least 45% marks (40% for reserved category).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>9</strong></td>
-                                        <td><span class="fw-bold text-primary">M.Pharm</span></td>
+                                        <td><span class="fw-bold text-primary">M.Pharm</span><br><small class="text-muted">Pharmaceutics / Pharmacology</small></td>
                                         <td><span class="badge bg-light text-dark border">2 Years</span></td>
-                                        <td>B.Pharm with at least 55% marks (50% for reserved category) from a PCI recognized institution.</td>
+                                        <td>B.Pharm from a PCI recognized institution with minimum 55% marks (50% for SC/ST/OBC candidates). GPAT preferred.</td>
                                     </tr>
+
+                                    <!-- Management & Commerce -->
                                     <tr>
                                         <td><strong>10</strong></td>
-                                        <td><span class="fw-bold text-primary">MBA (Master of Business Administration)</span></td>
-                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
-                                        <td>Graduation in any discipline with at least 50% marks (45% for SC/ST/OBC).</td>
+                                        <td><span class="fw-bold text-primary">BBA (Bachelor of Business Administration)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 Examination passed in any discipline from a recognized Board.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>11</strong></td>
-                                        <td><span class="fw-bold text-primary">MCA (Master of Computer Applications)</span></td>
+                                        <td><span class="fw-bold text-primary">MBA (Master of Business Administration)</span></td>
                                         <td><span class="badge bg-light text-dark border">2 Years</span></td>
-                                        <td>Passed BCA / Bachelor Degree in Computer Science or equivalent with 50% marks (45% reserved) and Mathematics at 10+2 or Graduation.</td>
+                                        <td>Graduation in any discipline with minimum 50% aggregate (45% for SC/ST/OBC category candidates).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>12</strong></td>
-                                        <td><span class="fw-bold text-primary">BBA / BCA / B.Com / B.Sc</span></td>
-                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
-                                        <td>Passed 10+2 Examination in relevant stream from a recognized Board.</td>
+                                        <td><span class="fw-bold text-primary">MBA in Hospital Administration</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>Graduation in any stream (MBBS, BDS, BAMS, BHMS, B.Pharm, B.Sc. Nursing, or general graduate) with 50% (45% reserved).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>13</strong></td>
-                                        <td><span class="fw-bold text-primary">B.A. LL.B. / LL.B. (Law)</span></td>
-                                        <td><span class="badge bg-light text-dark border">5 Yrs / 3 Yrs</span></td>
-                                        <td>Passed 10+2 (for 5-year Integrated) or Graduation (for 3-year LL.B.) with minimum 45% marks (40% reserved) as per BCI norms.</td>
+                                        <td><span class="fw-bold text-primary">B.Com (Plain / Computer Applications / Honours)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 passed with Commerce or Mathematics/Science stream from a recognized Board.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>14</strong></td>
-                                        <td><span class="fw-bold text-primary">B.Ed. / M.Ed.</span></td>
+                                        <td><span class="fw-bold text-primary">M.Com (Master of Commerce)</span></td>
                                         <td><span class="badge bg-light text-dark border">2 Years</span></td>
-                                        <td>Graduation / Post Graduation with at least 50% marks (45% reserved) as per NCTE norms.</td>
+                                        <td>B.Com / BBA / Allied degree with minimum 50% aggregate marks (45% for SC/ST/OBC).</td>
+                                    </tr>
+
+                                    <!-- Computer Applications -->
+                                    <tr>
+                                        <td><strong>15</strong></td>
+                                        <td><span class="fw-bold text-primary">BCA (Bachelor of Computer Applications)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 passed with Mathematics or Computer Science with minimum 45% (40% for reserved category).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>16</strong></td>
+                                        <td><span class="fw-bold text-primary">MCA (Master of Computer Applications)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>BCA, B.Sc. (CS/IT) or Graduation with Mathematics at 10+2 or degree level with 50% marks (45% for SC/ST/OBC).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>17</strong></td>
+                                        <td><span class="fw-bold text-primary">PGDCA / DCA</span></td>
+                                        <td><span class="badge bg-light text-dark border">1 Year</span></td>
+                                        <td>Graduation in any stream (for PGDCA) / 10+2 in any stream (for DCA) from a recognized Board/University.</td>
+                                    </tr>
+
+                                    <!-- Law & Legal Studies -->
+                                    <tr>
+                                        <td><strong>18</strong></td>
+                                        <td><span class="fw-bold text-primary">B.A. LL.B. (Hons.) - 5 Yrs Integrated</span></td>
+                                        <td><span class="badge bg-light text-dark border">5 Years</span></td>
+                                        <td>10+2 in any discipline with minimum 45% marks for General, 42% for OBC, and 40% for SC/ST as per BCI norms.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>19</strong></td>
+                                        <td><span class="fw-bold text-primary">LL.B. (Hons.) - 3 Yrs Graduate Course</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>Graduation in any discipline with minimum 45% marks for General, 42% for OBC, and 40% for SC/ST as per BCI norms.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>20</strong></td>
+                                        <td><span class="fw-bold text-primary">LL.M. (Master of Laws)</span><br><small class="text-muted">6 Specializations</small></td>
+                                        <td><span class="badge bg-light text-dark border">1 / 2 Years</span></td>
+                                        <td>LL.B. or B.A. LL.B. degree with at least 55% marks (50% for SC/ST/OBC category candidates).</td>
+                                    </tr>
+
+                                    <!-- Education & Teacher Training -->
+                                    <tr>
+                                        <td><strong>21</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Ed. (Bachelor of Education)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>Graduation / Post Graduation in any discipline with at least 50% aggregate (45% for SC/ST/OBC) as per NCTE norms.</td>
+                                    </tr>
+
+                                    <!-- Agriculture & Life Sciences -->
+                                    <tr>
+                                        <td><strong>22</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Sc. (Hons.) Agriculture</span></td>
+                                        <td><span class="badge bg-light text-dark border">4 Years</span></td>
+                                        <td>10+2 with Agriculture, PCB (Physics, Chemistry, Biology) or PCM with minimum 45% marks (40% reserved).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>23</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Sc. (Computer Science)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 with Physics, Mathematics and Chemistry/Computer Science from a recognized Board.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>24</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Sc. (Plain / PCM / CBZ)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 passed with Science stream (PCM or PCB) from a recognized Board.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>25</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Sc. (Biotechnology / Microbiology)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 with Biology, Chemistry and Physics/Mathematics from a recognized Board.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>26</strong></td>
+                                        <td><span class="fw-bold text-primary">M.Sc. (Physics, Chemistry, Mathematics)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>B.Sc. degree in relevant subject with minimum 50% aggregate (45% for SC/ST/OBC).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>27</strong></td>
+                                        <td><span class="fw-bold text-primary">M.Sc. (Biotechnology / Microbiology / CS)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>B.Sc. in Life Sciences / Biotech / Microbiology / CS with 50% aggregate (45% reserved).</td>
+                                    </tr>
+
+                                    <!-- Design & Arts -->
+                                    <tr>
+                                        <td><strong>28</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Sc. (Fashion Design)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 passed in any stream (Arts, Commerce, Science) from a recognized Board.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>29</strong></td>
+                                        <td><span class="fw-bold text-primary">M.Sc. (Fashion Design)</span></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>Graduation in Fashion Design, Home Science, or any discipline with creative aptitude.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>30</strong></td>
+                                        <td><span class="fw-bold text-primary">Diploma in Fashion Design</span></td>
+                                        <td><span class="badge bg-light text-dark border">1 Year</span></td>
+                                        <td>10+2 passed in any stream from a recognized Board.</td>
+                                    </tr>
+
+                                    <!-- Humanities & Social Sciences -->
+                                    <tr>
+                                        <td><strong>31</strong></td>
+                                        <td><span class="fw-bold text-primary">B.A. (Bachelor of Arts)</span><br><small class="text-muted">Plain, Journalism, Economics, Sociology</small></td>
+                                        <td><span class="badge bg-light text-dark border">3 Years</span></td>
+                                        <td>10+2 passed in any stream from a recognized educational Board.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>32</strong></td>
+                                        <td><span class="fw-bold text-primary">M.A. (Master of Arts)</span><br><small class="text-muted">English, Sociology, Pol. Sci., Economics, History</small></td>
+                                        <td><span class="badge bg-light text-dark border">2 Years</span></td>
+                                        <td>Bachelor's degree in any discipline with minimum 45% aggregate from a recognized University.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>33</strong></td>
+                                        <td><span class="fw-bold text-primary">BSW / MSW (Social Work)</span></td>
+                                        <td><span class="badge bg-light text-dark border">3 Yrs / 2 Yrs</span></td>
+                                        <td>10+2 for BSW / Graduation in any discipline with 50% (45% reserved) for MSW.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>34</strong></td>
+                                        <td><span class="fw-bold text-primary">B.Lib.I.Sc. / M.Lib.I.Sc. (Library Science)</span></td>
+                                        <td><span class="badge bg-light text-dark border">1 Year Each</span></td>
+                                        <td>Graduation for B.Lib.I.Sc. / B.Lib.I.Sc. with 50% aggregate for M.Lib.I.Sc.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -220,15 +357,17 @@ include 'header.php';
                                         <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> 10th Standard Marksheet &amp; Passing Certificate</li>
                                         <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> 12th Standard / Diploma Final Marksheet</li>
                                         <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Graduation Marksheets &amp; Degree (for PG Admissions)</li>
-                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Transfer Certificate (TC) &amp; Migration Certificate</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Transfer Certificate (TC) &amp; Character Certificate</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Migration Certificate (Original)</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="d-flex flex-column gap-2 mb-0 ps-0 list-unstyled" style="font-size: 0.92rem; color: #3d3031;">
-                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Caste &amp; Domicile Certificate (if claiming reservation)</li>
-                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Income Certificate (for Scholarship Applicants)</li>
-                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Aadhar Card Copy of Student &amp; Parents</li>
-                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Recent Passport Size Photographs (6 Copies)</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Caste &amp; Domicile Certificate (for MP Reserved Category)</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Income Certificate (for Scholarship &amp; Fee Concessions)</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Aadhar Card Copy of Candidate &amp; Parents</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> <strong>APAAR ID / ABC ID</strong> (Automated Permanent Academic Account Registry)</li>
+                                        <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-circle-check text-gold mt-1"></i> Recent Passport Size Color Photographs (6 Copies)</li>
                                     </ul>
                                 </div>
                             </div>

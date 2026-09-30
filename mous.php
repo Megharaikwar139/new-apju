@@ -5,87 +5,143 @@ include "header.php";
 
 $mouPartners = [
     [
-        'name' => 'Microsoft Academic Alliance / Ed-vantage',
-        'type' => 'Global Technology Partner',
-        'scope' => 'Azure Cloud Computing, Artificial Intelligence certifications, software curriculum integration, and student hackathons.',
-        'target' => 'Faculty of Engineering & IT',
+        'name' => 'Infosys Springboard',
+        'type' => 'Digital Learning & Industry Readiness',
+        'scope' => 'Access to digital learning platforms, emerging technology pathways, industry curriculum, and faculty enablement programs.',
+        'target' => 'Faculty of Engineering, BCA, MCA, Management',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Amazon Web Services (AWS) Academy',
-        'type' => 'Cloud Computing Alliance',
-        'scope' => 'Official AWS Cloud Practitioner, Solutions Architect training modules, cloud credits for students, and faculty certification.',
+        'name' => 'Coursera for Campus (USA)',
+        'type' => 'Global Online Academic Partner',
+        'scope' => 'Unlimited access to 5,000+ world-class courses, guided projects, and accredited credentials from top international universities.',
+        'target' => 'All University Departments & Faculty',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'EC-Council Academia Partner',
+        'type' => 'Cybersecurity & Ethical Hacking Alliance',
+        'scope' => 'Global certifications including Certified Ethical Hacker (CEH), Certified Network Defender (CND), and cybersecurity lab simulations.',
+        'target' => 'Computer Science & Information Technology',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'IBM Academic Initiative',
+        'type' => 'Global Technology Enterprise Partner',
+        'scope' => 'Access to IBM Cloud, enterprise software, AI, Data Science, and Quantum Computing developer toolkits for students and faculty.',
+        'target' => 'Faculty of Engineering & Technology',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'Research For Resurgence Foundation (RFRF)',
+        'type' => 'National Research & Innovation Body',
+        'scope' => 'Joint multidisciplinary research, indigenous technology incubation, research methodology workshops, and scholarly publications.',
+        'target' => 'University Research Council & Ph.D Scholars',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'TCS iON Learning Hub',
+        'type' => 'Corporate Assessment & Digital Pedagogy',
+        'scope' => 'Industry-aligned digital courses, National Qualifier Test (NQT) readiness, corporate communication training, and placement support.',
+        'target' => 'Engineering, Pharmacy, Commerce, Management',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'edX Campus Essential (USA)',
+        'type' => 'Premier International MOOC Alliance',
+        'scope' => 'Curated university courses from Harvard, MIT, Berkeley, and leading worldwide institutions with credit transfer framework.',
+        'target' => 'Multidisciplinary Academic Programs',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'IT-ITeS SSC NASSCOM',
+        'type' => 'National Skill Standards & Sector Skill Council',
+        'scope' => 'National Occupational Standards (NOS) assessments, FutureSkills Prime certifications, and qualification packs for IT workforce.',
+        'target' => 'Department of Computer Science & IT',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'UiPath Academic Alliance',
+        'type' => 'Robotic Process Automation (RPA)',
+        'scope' => 'Curriculum integration in RPA, bot design, artificial intelligence orchestration, and global developer certifications.',
         'target' => 'Computer Science & Engineering',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Cipla Pharmaceuticals Ltd.',
-        'type' => 'Pharmaceutical Multinational',
-        'scope' => 'Industrial formulations research, summer internships, GMP manufacturing plant exposure, and campus recruitment drives.',
-        'target' => 'College & School of Pharmacy',
+        'name' => 'CuriosIT India',
+        'type' => 'Full-Stack Software Development & IT Services',
+        'scope' => 'Live commercial software projects, industrial internships, product engineering workshops, and campus recruitments.',
+        'target' => 'B.Tech, BCA, MCA Students',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Sun Pharmaceutical Industries Ltd.',
-        'type' => 'Global Healthcare Leader',
-        'scope' => 'Quality assurance and analytical drug validation research, live laboratory projects, and pre-placement training modules.',
-        'target' => 'Faculty of Pharmacy',
+        'name' => 'AICTE - The Urban Learning Internship Program (TULIP)',
+        'type' => 'Ministry of Housing & Urban Affairs / AICTE',
+        'scope' => 'Experiential learning with Urban Local Bodies (ULBs) and Smart Cities, public infrastructure projects, and urban governance.',
+        'target' => 'Engineering, Management & Planning Students',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Larsen & Toubro (L&T) EduTech',
-        'type' => 'Infrastructure & Heavy Engineering',
-        'scope' => 'Practical industry modules for Civil and Mechanical Engineering students, site visits, structural modeling, and industry apprenticeships.',
-        'target' => 'Civil & Mechanical Engineering',
+        'name' => 'Virtual Labs - IIT Delhi (MHRD / MoE Govt. of India)',
+        'type' => 'National Remote Laboratory Nodal Center',
+        'scope' => 'Simulation-based online laboratory experiments across 9 engineering disciplines with 24/7 remote lab access.',
+        'target' => 'School & College of Engineering',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Tata Consultancy Services (TCS) iON',
-        'type' => 'IT Services & Skill Assessment',
-        'scope' => 'Industry-aligned digital learning courses, national qualifier test (NQT) preparation, and soft skills training.',
-        'target' => 'Engineering, BCA, MCA, Management',
+        'name' => 'Enhancement in Learning with Improvement in Skills (ELIS - AICTE)',
+        'type' => 'AICTE Digital Learning Portal',
+        'scope' => 'Free access to cutting-edge technical education e-learning courses developed by top EdTech companies globally.',
+        'target' => 'All Engineering & Technical Students',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Glenmark Life Sciences Limited',
-        'type' => 'API Synthesis & Pharma R&D',
-        'scope' => 'Hands-on training in synthetic organic chemistry, specialized instrumentation (HPLC, GC-MS), and recruitment for M.Sc. & Pharmacy graduates.',
-        'target' => 'Chemistry & Pharmacy Depts',
+        'name' => 'SWAYAM - Ministry of Education Govt. of India',
+        'type' => 'National MOOCs & NPTEL Portal',
+        'scope' => 'Credit mobility courses by premier IITs & IISc with proctored national certification and credit integration into university transcripts.',
+        'target' => 'All Undergraduate & Postgraduate Programs',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Red Hat Academy',
-        'type' => 'Open Source Enterprise Systems',
-        'scope' => 'Enterprise Linux system administration, Kubernetes containerization training, and global Red Hat Certified System Administrator (RHCSA) tracks.',
-        'target' => 'Faculty of Engineering & IT',
+        'name' => 'Smart City Indore (Indore Smart City Development Ltd.)',
+        'type' => 'Municipal Corporation & Urban Innovation Partner',
+        'scope' => 'Live projects in smart waste management, intelligent transport, environmental IoT monitoring, and urban sustainability hackathons.',
+        'target' => 'Engineering, Science & Management',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Cisco Networking Academy',
-        'type' => 'Telecommunications & Cybersecurity',
-        'scope' => 'CCNA routing, switching, packet tracer labs, network defense, and ethical hacking certification curriculum.',
-        'target' => 'Computer Science & Electronics',
+        'name' => 'Spoken Tutorial - IIT Bombay (MHRD Govt. of India)',
+        'type' => 'National FOSS Open Source Training Initiative',
+        'scope' => 'Hands-on IT software training (Python, Linux, C++, Java, Scilab, LibreOffice) with online tests and IIT Bombay certificates.',
+        'target' => 'All University Students & Faculty',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Medanta Super Specialty Hospital / CHL Indore',
-        'type' => 'Clinical Healthcare Partner',
-        'scope' => 'Hospital pharmacy internships, clinical research rotations, and biomedical instrumentation observational training.',
-        'target' => 'Pharmacy & Paramedical Sciences',
+        'name' => 'KAPILA - Kalam Program for IP Literacy and Awareness',
+        'type' => 'Ministry of Education Innovation Cell (MIC)',
+        'scope' => 'Intellectual Property Rights (IPR) education, patent drafting, financial assistance for patent filing, and IP literacy workshops.',
+        'target' => 'University Research Cell, Faculty & Innovators',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'Confederation of Indian Industry (CII)',
-        'type' => 'National Apex Industry Body',
-        'scope' => 'Industry-academia conclaves, executive guest lectures, MSME collaborative research, and youth entrepreneurship initiatives.',
-        'target' => 'All University Departments',
+        'name' => 'Institution\'s Innovation Council (IIC - MoE)',
+        'type' => 'Ministry of Education Innovation Cell (MIC)',
+        'scope' => 'Systematic promotion of innovation, startup pre-incubation, ideation challenges, Smart India Hackathon participation, and mentoring.',
+        'target' => 'Kalam Incubation Center & All Departments',
         'status' => 'Active & Ongoing'
     ],
     [
-        'name' => 'M.P. Association of Technical & Management Institutions',
-        'type' => 'State Educational Consortium',
-        'scope' => 'Curriculum harmonization, faculty development programs (FDPs), joint academic seminars, and state-level placement drives.',
-        'target' => 'All Constituent Colleges',
+        'name' => 'Unnat Bharat Abhiyan (UBA) - Govt. of India',
+        'type' => 'Flagship Rural Development Mission (IIT Delhi)',
+        'scope' => 'Adoption of 5 surrounding rural villages, participatory development, rural technology deployment, and community health interventions.',
+        'target' => 'NSS, Agriculture, Social Work (MSW) & Engineering',
+        'status' => 'Active & Ongoing'
+    ],
+    [
+        'name' => 'Ministry of Micro, Small and Medium Enterprises (MSME)',
+        'type' => 'Govt. of India Enterprise Development',
+        'scope' => 'Entrepreneurship Skill Development Programs (ESDP), MSME business incubator grant support, and student startup acceleration.',
+        'target' => 'All University Departments & Budding Entrepreneurs',
         'status' => 'Active & Ongoing'
     ]
 ];
@@ -142,7 +198,7 @@ $mouPartners = [
                     <div class="row g-3 mb-5">
                         <div class="col-6 col-md-3">
                             <div class="p-3.5 rounded-4 border border-custom bg-white text-center shadow-xs">
-                                <div class="font-serif text-primary display-6 fw-bold mb-0.5">12+</div>
+                                <div class="font-serif text-primary display-6 fw-bold mb-0.5">20+</div>
                                 <div class="small text-muted-custom fw-medium">Active Major MoUs</div>
                             </div>
                         </div>

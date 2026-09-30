@@ -38,47 +38,88 @@ include "header.php";
                     
                     <!-- Content Area -->
                     <div class="inner-page-body-text" style="line-height: 1.8; font-size: 0.95rem; color: #3e3233;">
-                        <main id="primary" class="site-main">
-   
-    
- 
-		 
-<article id="post-1576" class="post-1576 page type-page status-publish hentry">
-	 
-	<div class="uk-container">
-		
+                        <!-- Dr. Kalam Inspiring Quote -->
+                        <div class="leader-quote-box mb-4">
+                            <i class="fa-solid fa-quote-left text-gold me-2 fs-4"></i>
+                            <span class="fst-italic fw-medium">"One Best Book is equal to hundred good friends, but one good friend is equal to a library."</span>
+                            <div class="mt-2 text-end fw-bold text-primary small">— Dr. A.P.J. Abdul Kalam</div>
+                        </div>
 
-	<div class="entry-content">
-		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-	<div class="wpb_raw_code wpb_raw_html wpb_content_element">
-		<div class="wpb_wrapper">
-			<div class="section-wrapper">
+                        <!-- About Ayushmati Education and Social Society -->
+                        <div class="mb-5">
+                            <h3 class="font-serif text-primary fs-4 fw-bold mb-3">About The University</h3>
+                            <p class="text-secondary leading-relaxed">
+                                <strong>Ayushmati Education and Social Society</strong>, established in 2004 under the flagship of <strong>Central India Institute of Technology</strong>, has been nurturing professionals of high calibre. Spread over a sprawling campus about 10 kms from Indore railway station on the Indore-Dewas bypass road, <strong>Dr. A.P.J. Abdul Kalam University, Indore</strong> has been recognized as one of the best educational institutes in the State of Madhya Pradesh.
+                            </p>
+                        </div>
 
+                        <!-- Vision Card -->
+                        <div class="p-4 rounded-4 mb-4" style="background: linear-gradient(135deg, rgba(240, 234, 225, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid rgba(197, 160, 89, 0.35);">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 48px; height: 48px; background: var(--primary-color, #1a2e40);">
+                                    <i class="fa-solid fa-eye fs-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-gold text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.1em;">OUR GUIDING LIGHT</span>
+                                    <h3 class="font-serif text-primary fs-3 fw-bold mb-0">Our Vision</h3>
+                                </div>
+                            </div>
+                            <p class="fs-6 fw-medium text-dark mb-0 lh-lg" style="color: #2b2b2b !important;">
+                                "Ensure the footprints of global leaders, escalate the prosperity of the nation in holistic education, research, innovation and economy embedded with traditional values."
+                            </p>
+                        </div>
 
-  <div class="section-box">
-    <img decoding="async" src="https://aku.thetask.in/wp-content/uploads/2025/06/2606053_5537.png" alt="Vision">
-    <div class="section-text">
-      <h3>Vision</h3>
-      <p>Ensure the footprints of global leaders, escalate the prosperity of the nation in holistic education, research, innovation and economy embedded with traditional values...</p>
-    </div>
-  </div>
+                        <!-- Mission Section -->
+                        <div class="p-4 rounded-4 mb-4" style="background: #ffffff; border: 1px solid var(--border-color, #e5e0d8);">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 48px; height: 48px; background: var(--gold-color, #c5a059);">
+                                    <i class="fa-solid fa-bullseye fs-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-gold text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.1em;">OUR CORE PURPOSE</span>
+                                    <h3 class="font-serif text-primary fs-3 fw-bold mb-0">Our Mission</h3>
+                                </div>
+                            </div>
 
-  <div class="section-box">
-    <img decoding="async" src="https://aku.thetask.in/wp-content/uploads/2025/06/mission11.jpg" alt="Mission">
-    <div class="section-text">
-      <h3>Mission</h3>
-      <p>Knowledge creation by engaging in cutting-edge research and to promote academic growth based on an informed perception of regional, Indian and global needs...</p>
-    </div>
-  </div>
-</div>
-
-		</div>
-	</div>
-</div></div></div></div>
-</div>	</div><!-- .entry-content -->
-	</div>
-	</article><!-- #post-1576 -->  
-	</main>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="p-3 rounded-3 bg-light d-flex align-items-start gap-3">
+                                        <div class="badge bg-primary text-white rounded-pill px-2.5 py-1.5 mt-0.5 fw-bold">1</div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-1">Cutting-Edge Research &amp; Academic Growth</h5>
+                                            <p class="text-muted-custom small mb-0">Knowledge creation by engaging in cutting-edge research and to promote academic growth based on an informed perception of regional, Indian and global needs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 rounded-3 bg-light d-flex align-items-start gap-3">
+                                        <div class="badge bg-primary text-white rounded-pill px-2.5 py-1.5 mt-0.5 fw-bold">2</div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-1">Human Potential &amp; Professional Ethics</h5>
+                                            <p class="text-muted-custom small mb-0">To develop human potential by inculcating analytical and leadership skills with human values, and professional ethics among youth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 rounded-3 bg-light d-flex align-items-start gap-3">
+                                        <div class="badge bg-primary text-white rounded-pill px-2.5 py-1.5 mt-0.5 fw-bold">3</div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-1">Flexible &amp; Blended Learning</h5>
+                                            <p class="text-muted-custom small mb-0">To promote education through flexible and blended learning to cater to the diverse needs of society.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 rounded-3 bg-light d-flex align-items-start gap-3">
+                                        <div class="badge bg-primary text-white rounded-pill px-2.5 py-1.5 mt-0.5 fw-bold">4</div>
+                                        <div>
+                                            <h5 class="font-serif text-primary fw-bold fs-6 mb-1">Industry-Academia Collaboration</h5>
+                                            <p class="text-muted-custom small mb-0">To foster industry-academia collaboration for addressing real-world challenges, societal needs, and sustainable development.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Contact Inquiries Footer Box -->

@@ -164,7 +164,7 @@ try {
 } catch (Exception $e) {
     $chancellor_data = [];
 }
-$chan_name = !empty($chancellor_data['leader_name']) ? $chancellor_data['leader_name'] : 'Dr. Shruti Kapoor';
+$chan_name = !empty($chancellor_data['leader_name']) ? $chancellor_data['leader_name'] : 'Dr. Shruti Kumari';
 $chan_designation = !empty($chancellor_data['leader_designation']) ? $chancellor_data['leader_designation'] : 'Chancellor, Dr. A.P.J. Abdul Kalam University';
 $chan_quote = !empty($chancellor_data['quote']) ? $chancellor_data['quote'] : 'I have always dreamt of empowering society with enlightened, skillful, and socially relevant citizens, which can be achieved through excellence in quality education.';
 $chan_img = !empty($chancellor_data['image_path']) ? $chancellor_data['image_path'] : 'uploads/2025/08/hruti-Kumari.jpg';

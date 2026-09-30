@@ -99,25 +99,81 @@
 
                     <!-- Campus Highlights Banner -->
                     <div class="p-4 rounded-4 mt-5 border border-custom" style="background: #fcfbf9;">
-                        <h4 class="font-serif text-primary fs-5 fw-bold mb-3"><i class="fa-solid fa-star text-gold me-2"></i> Comprehensive Campus Amenities</h4>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 pb-2 border-bottom border-custom">
+                            <h4 class="font-serif text-primary fs-5 fw-bold m-0"><i class="fa-solid fa-star text-gold me-2"></i> Comprehensive Campus Facilities &amp; Amenities</h4>
+                            <span class="badge bg-gold text-dark fw-bold px-3 py-1 rounded-pill small">Official Prospectus Highlights</span>
+                        </div>
+                        
                         <div class="row g-3 small text-muted-custom">
-                            <div class="col-sm-6 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-book-open-reader text-gold" style="width: 20px;"></i> 100,000+ Volumes Central Library
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-radio text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">Radio Popcorn 90.4 FM</strong>
+                                    Indore's popular Community Radio Station (CRS) operated right on campus, offering media broadcasting and audio production training.
+                                </div>
                             </div>
-                            <div class="col-sm-6 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-flask-vial text-gold" style="width: 20px;"></i> 65+ High-Tech R&D Laboratories
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-building-columns text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">PNB Bank &amp; 24/7 ATM</strong>
+                                    Punjab National Bank branch and 24-hour ATM counter situated within campus premises for seamless student banking.
+                                </div>
                             </div>
-                            <div class="col-sm-6 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-wifi text-gold" style="width: 20px;"></i> High-Speed 1 Gbps Wi-Fi Campus
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-bus text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">Extensive Transport Fleet (25 Buses)</strong>
+                                    Fleet of 25 university buses providing comfortable and secure daily transit across Indore, Dewas, Mhow, and Pithampur.
+                                </div>
                             </div>
-                            <div class="col-sm-6 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-bed text-gold" style="width: 20px;"></i> Separate Boys & Girls AC Hostels
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-hotel text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">Boys Hostel (150 Rooms)</strong>
+                                    Well-furnished in-campus residential accommodation with 150 rooms, nutritious dining mess, Wi-Fi, and 24/7 warden supervision.
+                                </div>
                             </div>
-                            <div class="col-sm-6 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-bus text-gold" style="width: 20px;"></i> Fleet of 40+ University Buses
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-book-open-reader text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">Library &amp; Book Bank Scheme</strong>
+                                    Over 20,000+ curriculum textbooks, reference encyclopedias, international research journals, and semester-long book bank lending.
+                                </div>
                             </div>
-                            <div class="col-sm-6 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-utensils text-gold" style="width: 20px;"></i> Hygienic Multi-Cuisine Cafeteria
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-truck-medical text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">Healthcare &amp; 24/7 Ambulance</strong>
+                                    Dedicated campus health center with qualified medical officer, nursing staff, primary first-aid facilities, and emergency ambulance.
+                                </div>
+                            </div>
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-wifi text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">High-Speed Wi-Fi Campus</strong>
+                                    Optical fiber internet connectivity covering all academic blocks, digital research labs, libraries, and common student zones.
+                                </div>
+                            </div>
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-bolt text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">100% Uninterrupted Power Backup</strong>
+                                    Heavy-duty automatic diesel generator sets ensuring round-the-clock uninterrupted power supply to classrooms and labs.
+                                </div>
+                            </div>
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-shield-halved text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">24/7 Security &amp; CCTV Monitoring</strong>
+                                    Round-the-clock trained security guards and comprehensive CCTV camera surveillance across all entry points and corridors.
+                                </div>
+                            </div>
+                            <div class="col-sm-6 d-flex align-items-start gap-2.5">
+                                <i class="fa-solid fa-print text-gold mt-1" style="width: 20px; font-size: 1.1rem;"></i>
+                                <div>
+                                    <strong class="text-dark d-block">Stationery &amp; Reprographic Xerox</strong>
+                                    In-house bookstore providing academic stationery, textbook supplies, photocopying, document binding, and printing facilities.
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -372,9 +372,20 @@ include "header.php";
                         <div class="d-flex flex-column gap-3">
                             <div class="pb-2 border-bottom border-custom">
                                 <div class="fw-bold small text-dark">Admissions Directorate</div>
-                                <div class="text-muted small" style="font-size: 0.78rem;">For admissions, eligibility &amp; scholarships</div>
+                                <div class="text-muted small" style="font-size: 0.78rem;">For admissions, eligibility &amp; course guidance</div>
                                 <div class="text-primary small fw-semibold mt-0.5">
-                                    <i class="fa-solid fa-phone text-gold me-1"></i> +91 91111 09999 / 731 2530 500
+                                    <i class="fa-solid fa-phone text-gold me-1"></i> <strong>180030026072</strong> (Toll Free) / +91-9174007611
+                                </div>
+                                <div class="text-muted small mt-0.5" style="font-size: 0.75rem;">
+                                    <i class="fa-solid fa-envelope text-gold me-1"></i> admission_enquiry@aku.ac.in
+                                </div>
+                            </div>
+
+                            <div class="pb-2 border-bottom border-custom">
+                                <div class="fw-bold small text-dark">City Office (Indore)</div>
+                                <div class="text-muted small" style="font-size: 0.78rem;">201, Sapphire Heights, Near Pakiza Showroom, A.B. Road, Indore (M.P.) - 452 010</div>
+                                <div class="text-primary small fw-semibold mt-0.5">
+                                    <i class="fa-solid fa-phone text-gold me-1"></i> Phone: 9009771717
                                 </div>
                             </div>
 

@@ -12,8 +12,8 @@ try {
 
 $hero_eyebrow = !empty($page_data['hero_eyebrow']) ? $page_data['hero_eyebrow'] : 'UNIVERSITY LEADERSHIP';
 $page_title = !empty($page_data['page_title']) ? $page_data['page_title'] : 'Message from the Chancellor';
-$hero_subtitle = !empty($page_data['hero_subtitle']) ? $page_data['hero_subtitle'] : 'Dr. Shruti Kapoor · Chancellor, Dr. A.P.J. Abdul Kalam University';
-$leader_name = !empty($page_data['leader_name']) ? $page_data['leader_name'] : 'Dr. Shruti Kapoor';
+$hero_subtitle = !empty($page_data['hero_subtitle']) ? $page_data['hero_subtitle'] : 'Dr. Shruti Kumari · Chancellor, Dr. A.P.J. Abdul Kalam University';
+$leader_name = !empty($page_data['leader_name']) ? $page_data['leader_name'] : 'Dr. Shruti Kumari';
 $leader_designation = !empty($page_data['leader_designation']) ? $page_data['leader_designation'] : 'Chancellor';
 $badge_text = !empty($page_data['badge_text']) ? $page_data['badge_text'] : 'University Leadership';
 $quote = !empty($page_data['quote']) ? $page_data['quote'] : 'I have always dreamt of empowering society with enlightened, skillful, and socially relevant citizens, which can be achieved through excellence in quality education.';

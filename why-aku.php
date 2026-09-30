@@ -156,6 +156,85 @@ require_once 'header.php';
 
                     </div>
 
+                    <!-- 9 Constituent Institutes Section (Prospectus Feature) -->
+                    <div class="mb-5">
+                        <div class="tab-section-header mb-4 pb-2.5 border-bottom border-custom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2.5">
+                                <span class="section-icon-pill"><i class="fa-solid fa-building-columns"></i></span>
+                                <h3 class="font-serif text-primary fs-4 fw-bold m-0">Constituent Institutes</h3>
+                            </div>
+                            <span class="custom-badge-pill">
+                                <i class="fa-solid fa-graduation-cap text-gold me-1.5"></i> 9 Premier Colleges
+                            </span>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-primary border small mb-2 font-monospace">Faculty of Engineering</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">College of Engineering</h5>
+                                    <p class="text-muted-custom small mb-0">AICTE approved B.Tech, M.Tech &amp; Ph.D programs in Computer Science, Mechanical &amp; Civil.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-primary border small mb-2 font-monospace">Faculty of Engineering</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">School of Engineering</h5>
+                                    <p class="text-muted-custom small mb-0">Industry-aligned degree courses focusing on emerging AI, Robotics &amp; VLSI technologies.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-primary border small mb-2 font-monospace">Polytechnic Studies</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">College of Polytechnic Engineering</h5>
+                                    <p class="text-muted-custom small mb-0">Practical diploma engineering programs with dedicated hands-on workshop training.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-success border small mb-2 font-monospace">Faculty of Pharmacy</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">College of Pharmacy</h5>
+                                    <p class="text-muted-custom small mb-0">PCI approved flagship pharmacy institution with modern formulation and QA labs.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-success border small mb-2 font-monospace">Faculty of Pharmacy</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">School of Pharmacy</h5>
+                                    <p class="text-muted-custom small mb-0">Advanced research-driven B.Pharm, M.Pharm and Ph.D in Pharmaceutical Sciences.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-success border small mb-2 font-monospace">Faculty of Pharmacy</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">Institute of Pharmacy</h5>
+                                    <p class="text-muted-custom small mb-0">Comprehensive clinical pharmacy, pharmacology research, and diploma programs.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-dark border small mb-2 font-monospace">Professional &amp; Law</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">College of Professional Studies</h5>
+                                    <p class="text-muted-custom small mb-0">Encompassing B.Ed (NCTE), Law (BCI B.A. LL.B., LL.B., LL.M.), Agriculture, Fashion Design &amp; Management.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-info border small mb-2 font-monospace">Medical &amp; AYUSH</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">R.N. Kapoor Memorial Homoeopathic Hospital &amp; Medical College</h5>
+                                    <p class="text-muted-custom small mb-0">NCH / AYUSH approved BHMS &amp; MD (Homoeopathy) with 100-bed attached hospital.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 rounded-4 bg-white border border-custom h-100 shadow-xs">
+                                    <div class="badge bg-light text-warning border small mb-2 font-monospace">Medical &amp; AYUSH</div>
+                                    <h5 class="font-serif text-primary fw-bold fs-6 mb-1">R.N. Kapoor Memorial Ayurvedic Medical College &amp; Hospital</h5>
+                                    <p class="text-muted-custom small mb-0">NCISM / AYUSH approved BAMS program with functional herbal garden and Panchakarma hospital.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Admission CTA Banner -->
                     <div class="p-4 p-md-5 rounded-4 border border-custom bg-white shadow-xs text-center">
                         <h4 class="font-serif text-primary fs-3 fw-bold mb-2">Ready to Start Your Journey with AKU?</h4>
