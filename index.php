@@ -69,12 +69,12 @@ try {
 }
 if (empty($why_features)) {
     $why_features = [
-        ['title' => 'UGC & Multi-Council Recognized', 'description' => 'Fully empowered under UGC Section 2(f) and approved by statutory councils AICTE, PCI, BCI, NCTE, NCISM and MPPURC.', 'image_path' => 'assets/lovable/APJ1.jpg', 'link_url' => 'ugc-recognition.php'],
-        ['title' => 'Industry-Integrated Pedagogy', 'description' => 'Over 500+ active recruiting partners co-designing specialized curriculum and real-world industrial capstone projects.', 'image_path' => 'assets/lovable/APJ2.jpg', 'link_url' => 'placement-cell.php'],
-        ['title' => '40-Acre Lush Green Campus', 'description' => 'State-of-the-art academic blocks, hi-tech computing centers, multi-cuisine cafeterias, and vibrant residential hostels.', 'image_path' => 'assets/lovable/apj3.jpg', 'link_url' => 'world-class-infrastructure.php'],
-        ['title' => 'Kalam Innovation & Startup Cell', 'description' => 'An active ecosystem promoting student research patents, incubation funding, and mentorship for young innovators.', 'image_path' => 'assets/lovable/apj4.webp', 'link_url' => 'incubation-center.php'],
-        ['title' => 'Distinguished Global Faculty', 'description' => 'Seasoned academicians and industry veterans with peer-reviewed publications and deep domain scholarship.', 'image_path' => 'assets/lovable/apj5.jpg', 'link_url' => 'eminent-faculty.php'],
-        ['title' => 'Merit & Need Scholarships', 'description' => 'Extensive scholarship schemes empowering deserving scholars and rural talents to achieve their highest potential.', 'image_path' => 'assets/lovable/apj6.webp', 'link_url' => 'scholarships.php']
+        ['title' => 'Faculty Welfare', 'description' => 'Our Faculty-to-Student Ratio allows faculties to focus on the individual learning styles and needs of each student in our University.', 'image_path' => 'assets/lovable/apj5.jpg', 'link_url' => 'faculty-welfare.php'],
+        ['title' => 'Awards and Recognition', 'description' => 'Recognized for excellence in education leadership, research contributions, and state-level university accolades.', 'image_path' => 'assets/images/award1.jpg', 'link_url' => 'awardsand-recognigation.php'],
+        ['title' => 'Our Recruiters', 'description' => 'Over 500+ top industry recruiters visit our campus, offering high packages and exceptional placement opportunities.', 'image_path' => 'uploads/2025/06/OUR-RECRUITMENT-PARTNERES-pdf-1024x768.jpg', 'link_url' => 'our-recruiters.php'],
+        ['title' => 'Gallery & Campus Life', 'description' => 'Experience vibrant campus celebrations, academic conventions, cultural festivities, and sports championships.', 'image_path' => 'assets/images/annual.jpg', 'link_url' => 'gallery.php'],
+        ['title' => 'Why AKU', 'description' => 'Discover our inspiring pedagogy, visionary leadership, modern research infrastructure, and sustainable smart campus.', 'image_path' => 'uploads/2025/10/New-Dron-Campus-Pic01-1.jpg', 'link_url' => 'why-aku.php'],
+        ['title' => 'World-Class Infrastructure', 'description' => 'Sprawling 50+ acre lush green campus equipped with smart classrooms, advanced R&D laboratories, and athletic complexes.', 'image_path' => 'uploads/2026/01/conference-hall.jpg', 'link_url' => 'world-class-infrastructure.php']
     ];
 }
 
