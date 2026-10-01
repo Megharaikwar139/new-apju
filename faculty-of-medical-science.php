@@ -1,3 +1,3 @@
 <?php
-$_GET['dept'] = 'department-of-computer-science';
+$_GET['dept'] = 'faculty-of-medical-science';
 require_once __DIR__ . '/department-view.php';

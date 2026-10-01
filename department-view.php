@@ -321,6 +321,7 @@ include "header.php";
             <!-- Left Main Content Area -->
             <div class="col-lg-8 col-xl-9">
                 <article class="inner-main-card">
+                    <?php if (!empty($dbTabs)): ?>
                     <!-- Dynamic Navigation Tabs -->
                     <ul class="nav nav-pills department-tabs mb-4 p-2 rounded-4 border border-custom bg-white" id="deptTab" role="tablist">
                         <?php foreach ($dbTabs as $idx => $t): ?>
@@ -353,11 +354,39 @@ include "header.php";
                         </div>
                         <?php endforeach; ?>
                     </div>
+                    <?php else: ?>
+                    <!-- Default Department Overview when no tabs are defined -->
+                    <div class="inner-page-body-text mb-4" style="line-height: 1.8; color: #3d3233;">
+                        <div class="p-4 rounded-4 border border-custom bg-white shadow-2xs mb-4">
+                            <span class="badge rounded-pill bg-gold text-dark fw-bold px-3 py-1.5 mb-3" style="font-size: 0.75rem;">
+                                <i class="fa-solid fa-graduation-cap me-1"></i> Academic Division
+                            </span>
+                            <h3 class="font-serif text-primary fs-4 fw-bold mb-3"><?php echo htmlspecialchars($pageTitle); ?></h3>
+                            <p class="mb-3">
+                                Welcome to the <strong><?php echo htmlspecialchars($pageTitle); ?></strong> at Dr. A.P.J. Abdul Kalam University, Indore. Our academic programs are designed to impart industry-aligned curriculum, state-of-the-art laboratory exposure, and holistic professional skills to prepare students for leadership in competitive global environments.
+                            </p>
+                            <p class="mb-0 text-muted-custom small">
+                                Approved by apex statutory bodies (AICTE / PCI / UGC / Central Councils) and following updated national educational frameworks. Explore all offered academic programs and degree options below.
+                            </p>
+                        </div>
+                    </div>
+                    <?php endif; ?>
 
                     <!-- Dynamic Offered Courses & Programs Section -->
                     <?php 
-                    $dynamicCoursesStmt = $pdo->prepare("SELECT * FROM courses WHERE department_slug = ? AND status = 1 ORDER BY degree_type ASC, title ASC");
-                    $dynamicCoursesStmt->execute([$currentDeptSlug]);
+                    $dynamicCoursesStmt = $pdo->prepare("SELECT * FROM courses 
+                        WHERE (department_slug = ? OR FIND_IN_SET(?, department_slug) OR department_slug LIKE ?) 
+                        AND status = 1 
+                        GROUP BY slug 
+                        ORDER BY 
+                            CASE 
+                                WHEN degree_type = 'Diploma' THEN 1
+                                WHEN degree_type = 'UG' THEN 2
+                                WHEN degree_type = 'PG' THEN 3
+                                WHEN degree_type = 'Doctorate' THEN 4
+                                ELSE 5
+                            END, title ASC");
+                    $dynamicCoursesStmt->execute([$currentDeptSlug, $currentDeptSlug, "%{$currentDeptSlug}%"]);
                     $dynamicDeptCourses = $dynamicCoursesStmt->fetchAll();
 
                     $dynamicGrouped = [];

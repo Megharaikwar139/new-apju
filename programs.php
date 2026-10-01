@@ -2,15 +2,16 @@
 require_once "db.php";
 
 $pageTitle = "All Academic Programs & Courses - Dr. APJ Abdul Kalam University, Indore";
-$metaDescription = "Explore undergraduate, postgraduate, and diploma programs at Dr. A.P.J. Abdul Kalam University, Indore. Discover courses in engineering, management, pharmacy, law, agriculture, and sciences.";
+$metaDescription = "Explore undergraduate, postgraduate, diploma, and doctoral research programs at Dr. A.P.J. Abdul Kalam University, Indore. Discover courses in engineering, management, pharmacy, law, agriculture, medical sciences, and arts.";
 
 // Fetch distinct active courses grouped by slug
 $courses = $pdo->query("SELECT * FROM courses WHERE status = 1 GROUP BY slug ORDER BY 
     CASE 
-        WHEN degree_type LIKE '%UG%' OR degree_type LIKE '%Undergraduate%' THEN 1
-        WHEN degree_type LIKE '%PG%' OR degree_type LIKE '%Postgraduate%' THEN 2
-        WHEN degree_type LIKE '%Diploma%' THEN 3
-        ELSE 4
+        WHEN degree_type = 'Diploma' THEN 1
+        WHEN degree_type = 'UG' THEN 2
+        WHEN degree_type = 'PG' THEN 3
+        WHEN degree_type = 'Doctorate' THEN 4
+        ELSE 5
     END, title ASC")->fetchAll(PDO::FETCH_ASSOC);
 
 // Counts
@@ -18,15 +19,18 @@ $totalPrograms = count($courses);
 $ugCount = 0;
 $pgCount = 0;
 $diplomaCount = 0;
+$phdCount = 0;
 
 foreach ($courses as $c) {
     $dt = strtoupper($c['degree_type'] ?? '');
-    if (strpos($dt, 'UG') !== false || strpos($dt, 'UNDERGRADUATE') !== false) {
+    if (strpos($dt, 'DIPLOMA') !== false) {
+        $diplomaCount++;
+    } elseif (strpos($dt, 'UG') !== false || strpos($dt, 'UNDERGRADUATE') !== false) {
         $ugCount++;
     } elseif (strpos($dt, 'PG') !== false || strpos($dt, 'POSTGRADUATE') !== false) {
         $pgCount++;
-    } elseif (strpos($dt, 'DIPLOMA') !== false) {
-        $diplomaCount++;
+    } elseif (strpos($dt, 'DOCTOR') !== false || strpos($dt, 'PH.D') !== false || strpos($dt, 'PHD') !== false) {
+        $phdCount++;
     }
 }
 
@@ -54,7 +58,7 @@ include "header.php";
                     Explore All Academic Programs
                 </h1>
                 <p class="text-white text-opacity-85 mb-0" style="max-width: 600px; font-size: 1rem; line-height: 1.65;">
-                    Discover career-focused degrees designed for innovation, leadership, and professional distinction across 12 academic schools at Dr. A.P.J. Abdul Kalam University, Indore.
+                    Discover career-focused degrees designed for innovation, leadership, and professional distinction across 12 academic faculties and constituent colleges at Dr. A.P.J. Abdul Kalam University, Indore.
                 </p>
             </div>
 
@@ -69,21 +73,25 @@ include "header.php";
                     </div>
 
                     <div class="row g-3 text-start">
-                        <div class="col-6">
-                            <div class="font-serif text-gold fw-bold display-6 lh-1 mb-1"><?php echo $totalPrograms; ?>+</div>
-                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.08em;">Total Degree Programs</div>
+                        <div class="col-6 col-sm-4">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1 mb-1"><?php echo $totalPrograms; ?></div>
+                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.08em;">Total Programs</div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 col-sm-4">
                             <div class="font-serif text-white fw-bold display-6 lh-1 mb-1"><?php echo $ugCount; ?></div>
-                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.08em;">Undergraduate (UG)</div>
+                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.08em;">Undergraduate (UG)</div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 col-sm-4">
                             <div class="font-serif text-white fw-bold display-6 lh-1 mb-1"><?php echo $pgCount; ?></div>
-                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.08em;">Postgraduate (PG)</div>
+                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.08em;">Postgraduate (PG)</div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 col-sm-6">
                             <div class="font-serif text-white fw-bold display-6 lh-1 mb-1"><?php echo $diplomaCount; ?></div>
-                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.68rem; letter-spacing: 0.08em;">Diploma Programs</div>
+                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.08em;">Diploma / Polytechnic</div>
+                        </div>
+                        <div class="col-6 col-sm-6">
+                            <div class="font-serif text-gold fw-bold display-6 lh-1 mb-1"><?php echo $phdCount; ?></div>
+                            <div class="text-uppercase text-white text-opacity-75 fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.08em;">Doctoral (Ph.D.)</div>
                         </div>
                     </div>
                 </div>
@@ -102,20 +110,21 @@ include "header.php";
             <div class="row g-3 align-items-center justify-content-between">
                 
                 <!-- Search Input -->
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <div class="position-relative">
                         <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
-                        <input type="text" id="programSearchInput" class="form-control rounded-pill ps-5 py-2.5 bg-light border-custom" placeholder="Search by degree title, branch, or keywords...">
+                        <input type="text" id="programSearchInput" class="form-control rounded-pill ps-5 py-2.5 bg-light border-custom" placeholder="Search by title, branch, or keywords...">
                     </div>
                 </div>
 
                 <!-- Degree Level Filter Tabs -->
-                <div class="col-lg-7 d-flex justify-content-lg-end">
-                    <div class="d-flex flex-nowrap align-items-center gap-2 overflow-x-auto pb-1" id="programLevelFilters">
+                <div class="col-lg-8 d-flex justify-content-lg-end">
+                    <div class="d-flex flex-nowrap align-items-center gap-2 overflow-x-auto pb-1" id="programLevelFilters" style="white-space: nowrap;">
                         <button class="academic-filter-btn active-tab" data-level="all">All Programs (<?php echo $totalPrograms; ?>)</button>
                         <button class="academic-filter-btn" data-level="ug">Undergraduate (<?php echo $ugCount; ?>)</button>
                         <button class="academic-filter-btn" data-level="pg">Postgraduate (<?php echo $pgCount; ?>)</button>
                         <button class="academic-filter-btn" data-level="diploma">Diploma (<?php echo $diplomaCount; ?>)</button>
+                        <button class="academic-filter-btn" data-level="doctorate">Doctorate (Ph.D.) (<?php echo $phdCount; ?>)</button>
                     </div>
                 </div>
 
@@ -138,6 +147,10 @@ include "header.php";
                     $levelCategory = 'diploma';
                     $levelBadgeClass = 'badge bg-dark text-white';
                     $levelTitle = 'Diploma';
+                } elseif (strpos($dtRaw, 'DOCTOR') !== false || strpos($dtRaw, 'PH.D') !== false || strpos($dtRaw, 'PHD') !== false) {
+                    $levelCategory = 'doctorate';
+                    $levelBadgeClass = 'badge bg-danger text-white fw-bold';
+                    $levelTitle = 'Doctorate / Research';
                 }
 
                 $duration = !empty($c['duration']) ? $c['duration'] : 'Full Time';

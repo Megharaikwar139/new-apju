@@ -119,7 +119,7 @@ try {
 <?php
 $currentScript = basename($_SERVER['PHP_SELF'] ?? '');
 $isAboutActive = in_array($currentScript, ['why-aku.php', 'the-founder-2.php', 'the-chancellor.php', 'pro-chancellor.php', 'the-vice-chancellor.php', 'the-pro-vice-chancellor.php', 'the-chairman.php', 'registrar.php', 'chief-proctor.php', 'governing-body.php', 'board-of-management.php', 'academic-council.php', 'sponsoring-body.php', 'finance-committee.php', 'mandatory-disclosers.php', 'awardsand-recognigation.php', 'ugc-recognition.php', 'naac.php', 'nirf.php', 'ariia.php', 'aicte-approvals.php', 'approvals.php', 'mous.php', 'aku-in-media.php', 'world-class-infrastructure.php']);
-$isFacultyActive = (strpos($currentScript, 'department-') === 0 || strpos($currentScript, 'faculty') === 0 || strpos($currentScript, 'polytechnic') === 0 || strpos($currentScript, 'diploma-') === 0 || in_array($currentScript, ['college-of-pharmacy.php', 'institute-of-pharmacy.php', 'school-of-pharmacy.php', 'school-of-engineering.php', 'school-of-business-administration-management.php', 'dean-principal-messege.php', 'faculty-staff-profile.php', 'syllabus-scheme.php', 'so-po.php', 'time-table.php', 'activities.php', 'notice-board-department.php', 'about-the-department.php', 'vision-mission.php', 'm-tech-cse.php']));
+$isFacultyActive = ($currentScript == 'programs.php' || strpos($currentScript, 'department-') !== false || strpos($currentScript, 'school-') !== false || strpos($currentScript, 'college-') !== false || strpos($currentScript, 'faculty-') !== false || strpos($currentScript, 'course-') !== false || (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], '/course/') !== false));
 $isAdmissionsActive = in_array($currentScript, ['programs.php', 'admission-procedure.php', 'admission-assistance.php', 'admission-committee.php', 'department-intake.php', 'fee-structure.php', 'fees-details.php', 'payment-terms.php', 'refund-cancellation.php', 'scholarships.php', 'general-rules-and-regulations.php', 'hostel-rules-regulations.php', 'faqs.php', 'download-form.php', 'apply-now.php']);
 $isExamActive = in_array($currentScript, ['about-the-section.php', 'examination-committee.php', 'examination-board.php', 'examination-calendar.php', 'results.php', 'exam-notice.php', 'exam-policy.php', 'exam-code.php', 'old-question-papers.php', 'convocation.php', 'digi-locker-nad-gov-in.php', 'admit-card-download.php', 'forms.php']);
 $isCommitteesActive = in_array($currentScript, ['anti-reggiging-committee.php', 'anti-ragging-squad.php', 'academic-committee.php', 'cultruaral-committee.php', 'staff-selection-screening-committee.php', 'employee-grievance-wellfare-cell.php', 'equalization-committee.php', 'infrastructure-campus-beautification-committee.php', 'regulatory-committee.php', 'management-information-system-erp-committee.php', 'library-committee.php', 'purchase-committee.php', 'sports-committee.php', 'sprots-committee.php', 'jan-aushadhi-committee.php', 'fdp-committee.php', 'icc.php', 'womens-grievance-redressal-and-welfare-cell.php', 'intellectual-property-rights-cell-ipr-cell.php', 'hostel-disciplinary-committee.php', 'i-block-seminar-hall-committee.php']);
@@ -210,115 +210,166 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                 </div>
             </div>
 
-            <!-- 2. Faculty Mega Menu (Complete Live Website Hierarchy) -->
+                        <!-- 2. Programs Mega Menu (Official Prospectus Pages 6 to 14) -->
             <div class="dropdown dropdown-mega position-static">
-                <a href="department-of-computer-science-engineering.php" class="nav-link-item <?php echo $isFacultyActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                    Faculty <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.65rem;"></i>
+                <a href="programs.php" class="nav-link-item <?php echo $isFacultyActive ? 'active' : ''; ?>" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    Programs <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.65rem;"></i>
                 </a>
                 <div class="dropdown-menu faculty-mega-menu shadow border-custom">
                     <div class="row g-4">
                         
-                        <!-- Col 1: Faculty of Engineering -->
+                        <!-- Col 1: Engineering & Technology (Diploma, B.E., M.Tech) -->
                         <div class="col-lg-3">
                             <div class="mega-column-title">
-                                <i class="fa-solid fa-microchip text-gold me-1.5"></i> Faculty of Engineering
+                                <i class="fa-solid fa-microchip text-gold me-1.5"></i> Engineering &amp; Technology
                             </div>
                             
-                            <div class="mega-sub-header">College of Engineering</div>
-                            <a href="department-of-civil-engineering.php" class="mega-item-link">Dept of Civil Engineering</a>
-                            <a href="department-of-computer-science-engineering.php" class="mega-item-link">Dept of Computer Science &amp; Engg</a>
-                            <a href="department-of-information-technology.php" class="mega-item-link">Dept of Information Technology</a>
-                            <a href="department-of-electrical-electronics-engineering.php" class="mega-item-link">Dept of Electrical &amp; Electronics</a>
-                            <a href="department-of-mechanical-engineering.php" class="mega-item-link">Dept of Mechanical Engineering</a>
-                            <a href="department-of-management-studies-coe.php" class="mega-item-link">Dept of Management Studies – COE</a>
-                            <a href="department-of-computer-applications-coe.php" class="mega-item-link">Dept of Computer Applications</a>
+                            <div class="mega-sub-header">Polytechnic / Diploma</div>
+                            <a href="course/diploma-in-civil-engineering.php" class="mega-item-link">Civil Engineering</a>
+                            <a href="course/diploma-in-mechanical-engineering.php" class="mega-item-link">Mechanical Engineering</a>
+                            <a href="course/diploma-in-electrical-engineering.php" class="mega-item-link">Electrical Engineering</a>
+                            <a href="course/diploma-in-cse-dc.php" class="mega-item-link">Computer Science &amp; Engineering</a>
+                            <a href="course/diploma-in-electronics-telecommunication.php" class="mega-item-link">Electronics &amp; Telecommunication</a>
+                            <a href="course/diploma-in-automobile-engineering-part-time.php" class="mega-item-link">Automobile Engineering (Part Time)</a>
+                            <a href="course/diploma-in-electrical-engineering-part-time.php" class="mega-item-link">Electrical Engineering (Part Time)</a>
 
-                            <div class="mega-sub-header">School of Engineering</div>
-                            <a href="school-of-engineering.php" class="mega-item-link fw-semibold text-primary">School of Engineering Overview</a>
-                            <a href="diploma-in-enginering.php" class="mega-item-link">Diploma in Engineering</a>
-                            <a href="department-of-computer-science-engineering-soe.php" class="mega-item-link">Dept of CSE (SOE)</a>
-                            <a href="department-of-electrical-electronics-engineering-soe.php" class="mega-item-link">Dept of EEE (SOE)</a>
-                            <a href="department-of-civil-engineering-soe.php" class="mega-item-link">Dept of Civil (SOE)</a>
-                            <a href="department-of-mechanical-engineering-soe.php" class="mega-item-link">Dept of Mechanical (SOE)</a>
-                            <a href="department-of-mca-soe.php" class="mega-item-link">Dept of MCA (SOE)</a>
+                            <div class="mega-sub-header">Bachelor of Engineering (B.E.)</div>
+                            <a href="course/b-e-civil-engg.php" class="mega-item-link">Civil Engineering</a>
+                            <a href="course/b-e-mechanical-engineering.php" class="mega-item-link">Mechanical Engineering</a>
+                            <a href="course/electrical-engineering-ex.php" class="mega-item-link">Electrical &amp; Electronics Engineering</a>
+                            <a href="course/b-e-computer-science-engineering.php" class="mega-item-link">Computer Science &amp; Engineering</a>
+                            <a href="course/b-e-ec.php" class="mega-item-link">Electronics &amp; Communication</a>
+                            <a href="course/b-e-information-technology.php" class="mega-item-link">Information Technology</a>
 
-                            <div class="mega-sub-header">College of Polytechnic Engineering</div>
-                            <a href="department-of-civil-engineering-polytechnic.php" class="mega-item-link">Civil Engg (Polytechnic)</a>
-                            <a href="department-of-mechanical-engineering-polytechnic.php" class="mega-item-link">Mechanical Engg (Polytechnic)</a>
-                        </div>
+                            <div class="mega-sub-header">Master of Technology (M.Tech)</div>
+                            <a href="course/m-tech-computer-science-engineering.php" class="mega-item-link">Computer Science &amp; Engineering</a>
+                            <a href="course/m-tech-digital-communication.php" class="mega-item-link">Digital Communication</a>
+                            <a href="course/m-tech-power-system.php" class="mega-item-link">Power System</a>
+                            <a href="course/m-tech-thermal-engg.php" class="mega-item-link">Thermal Engineering</a>
+                            <a href="course/m-tech-structural-engineering.php" class="mega-item-link">Structural Engineering</a>
+                            <a href="course/m-tech-cyber-security.php" class="mega-item-link">Cyber Security</a>
+                            <a href="course/m-tech-computer-technology-application.php" class="mega-item-link">Computer Technology &amp; App.</a>
 
-                        <!-- Col 2: Faculty of Health Science -->
-                        <div class="col-lg-3">
-                            <div class="mega-column-title">
-                                <i class="fa-solid fa-prescription text-gold me-1.5"></i> Faculty of Health Science
-                            </div>
-                            
-                            <div class="mega-sub-header">School of Pharmacy</div>
-                            <a href="school-of-pharmacy.php" class="mega-item-link fw-semibold text-primary">School of Pharmacy Overview</a>
-                            <a href="department-of-pharmacy-sop.php" class="mega-item-link">Department of Pharmacy (SOP)</a>
-
-                            <div class="mega-sub-header">College of Pharmacy</div>
-                            <a href="college-of-pharmacy.php" class="mega-item-link fw-semibold text-primary">College of Pharmacy Overview</a>
-                            <a href="department-of-pharmacy.php" class="mega-item-link">Department of Pharmacy (COP)</a>
-
-                            <div class="mega-sub-header">Institute Of Pharmacy</div>
-                            <a href="institute-of-pharmacy.php" class="mega-item-link fw-semibold text-primary">Institute of Pharmacy Overview</a>
-                            <a href="department-of-pharmacy-iop.php" class="mega-item-link">Department of Pharmacy (IOP)</a>
-
-                            <div class="p-3 rounded-3 mt-4 border border-custom" style="background: #fbf9f6;">
-                                <div class="fw-bold text-primary small mb-1"><i class="fa-solid fa-award text-gold me-1"></i> PCI &amp; AICTE Approved</div>
-                                <div class="text-muted-custom" style="font-size: 0.72rem;">All health science &amp; pharmacy degrees comply with statutory guidelines.</div>
+                            <div class="pt-2 mt-2 border-top border-custom d-flex gap-2">
+                                <a href="college-of-engineering.php" class="text-primary small fw-semibold text-decoration-none" style="font-size: 0.72rem;">College of Engg. &rarr;</a>
+                                <a href="school-of-engineering.php" class="text-primary small fw-semibold text-decoration-none ms-auto" style="font-size: 0.72rem;">School of Engg. &rarr;</a>
                             </div>
                         </div>
 
-                        <!-- Col 3: College of Professional Studies -->
+                        <!-- Col 2: Management, Computer Application & Law -->
                         <div class="col-lg-3">
                             <div class="mega-column-title">
-                                <i class="fa-solid fa-briefcase text-gold me-1.5"></i> Professional Studies
+                                <i class="fa-solid fa-briefcase text-gold me-1.5"></i> Management, IT &amp; Law
                             </div>
                             
-                            <div class="mega-sub-header">Management &amp; Commerce</div>
-                            <a href="school-of-business-administration-management.php" class="mega-item-link">College of Management (SBAM)</a>
-                            <a href="department-of-management-studies.php" class="mega-item-link">Department of Management Studies</a>
-                            <a href="department-of-commerce.php" class="mega-item-link">College &amp; Dept of Commerce</a>
+                            <div class="mega-sub-header">Management</div>
+                            <a href="course/bba.php" class="mega-item-link">Bachelor of Business Administration (BBA)</a>
+                            <a href="course/mba.php" class="mega-item-link">Master of Business Administration (MBA)</a>
+                            <a href="course/mba-hospital-administration.php" class="mega-item-link fw-semibold text-primary"><i class="fa-solid fa-star text-gold me-1"></i> MBA in Hospital Administration</a>
 
-                            <div class="mega-sub-header">Arts, Humanities &amp; Social Work</div>
-                            <a href="department-of-arts.php" class="mega-item-link">College of Arts and Humanities</a>
-                            <a href="department-of-social-work.php" class="mega-item-link">Department of Social Work</a>
+                            <div class="mega-sub-header">Commerce</div>
+                            <a href="course/b-com-bachelor-of-commerce.php" class="mega-item-link">Bachelor of Commerce (B.Com)</a>
+                            <a href="course/m-com-master-of-commerce.php" class="mega-item-link">Master of Commerce (M.Com - Tax)</a>
 
-                            <div class="mega-sub-header">Life Sciences &amp; Agriculture</div>
-                            <a href="department-of-science.php" class="mega-item-link">College of Life Science</a>
-                            <a href="department-of-zoology.php" class="mega-item-link">Department of Zoology</a>
-                            <a href="department-of-chemistry.php" class="mega-item-link">Department of Chemistry</a>
-                            <a href="department-of-physics.php" class="mega-item-link">Department of Physics</a>
-                            <a href="department-of-agriculture.php" class="mega-item-link">School of Agricultural Sciences</a>
+                            <div class="mega-sub-header">Computer Applications</div>
+                            <a href="course/dca-diploma-in-computer-applications.php" class="mega-item-link">Diploma in Computer Application (DCA)</a>
+                            <a href="course/pgdca.php" class="mega-item-link">PG Diploma in Computer Application (PGDCA)</a>
+                            <a href="course/bca.php" class="mega-item-link">Bachelor of Computer Application (BCA)</a>
+                            <a href="course/mca.php" class="mega-item-link">Master of Computer Application (MCA)</a>
 
-                            <div class="mega-sub-header">Education, IT &amp; Law</div>
-                            <a href="department-of-education.php" class="mega-item-link">College of Education</a>
-                            <a href="department-of-computer-science.php" class="mega-item-link">College of Computer Application</a>
-                            <a href="department-of-law.php" class="mega-item-link">College of Legal Studies (Law)</a>
+                            <div class="mega-sub-header">Law &amp; Legal Studies</div>
+                            <a href="course/ballb-5-year-course.php" class="mega-item-link">B.A. LL.B. (Integrated 5 Years)</a>
+                            <a href="course/bachelor-of-laws-ll-b.php" class="mega-item-link">Bachelor of Laws (LL.B.)</a>
+                            <a href="course/llm.php" class="mega-item-link">Master of Laws (LL.M.)</a>
+
+                            <div class="mega-sub-header">Education</div>
+                            <a href="course/bachelor-of-education-b-ed.php" class="mega-item-link">Bachelor of Education (B.Ed.)</a>
                         </div>
 
-                        <!-- Col 4: Faculty of Medical Science & Academic Calendar -->
+                        <!-- Col 3: Pharmacy & Medical Sciences -->
                         <div class="col-lg-3">
                             <div class="mega-column-title">
-                                <i class="fa-solid fa-heart-pulse text-gold me-1.5"></i> Faculty of Medical Science
+                                <i class="fa-solid fa-heart-pulse text-gold me-1.5"></i> Pharmacy &amp; Medical
                             </div>
                             
-                            <div class="mega-sub-header">AYUSH &amp; Medical Sciences</div>
-                            <a href="https://rnkmamc.in" target="_blank" class="mega-item-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square text-muted me-1" style="font-size: 0.65rem;"></i> School of Ayurveda &amp; Panchkarma
-                            </a>
-                            <a href="https://rnkmhmc.in" target="_blank" class="mega-item-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square text-muted me-1" style="font-size: 0.65rem;"></i> School of Homeopathy
-                            </a>
+                            <div class="mega-sub-header">Medical Science (AYUSH)</div>
+                            <a href="course/bams.php" class="mega-item-link fw-semibold text-primary"><i class="fa-solid fa-notes-medical text-gold me-1"></i> BAMS (Ayurvedic Medicine)</a>
+                            <a href="course/bhms.php" class="mega-item-link fw-semibold text-primary"><i class="fa-solid fa-stethoscope text-gold me-1"></i> BHMS (Homoeopathic Medicine)</a>
+                            <a href="faculty-of-medical-science.php" class="mega-item-link text-primary small fw-bold mt-1" style="font-size: 0.72rem;"><i class="fa-solid fa-hospital-user text-gold me-1"></i> Medical Sciences Faculty Overview &rarr;</a>
 
-                            <div class="mega-column-title mt-4">
-                                <i class="fa-solid fa-folder-open text-gold me-1.5"></i> Academic Resources
+                            <div class="mega-sub-header">Pharmacy (UG &amp; Diploma)</div>
+                            <a href="course/d-pharma.php" class="mega-item-link">Diploma in Pharmacy (D. Pharma)</a>
+                            <a href="course/about-b-pharma.php" class="mega-item-link">Bachelor of Pharmacy (B. Pharma)</a>
+
+                            <div class="mega-sub-header">Master of Pharmacy (M. Pharma)</div>
+                            <a href="course/m-pharma-pharmaceutics.php" class="mega-item-link">Pharmaceutics</a>
+                            <a href="course/m-pharma-pharmacology.php" class="mega-item-link">Pharmacology</a>
+                            <a href="course/m-pharma-pharmacognosy.php" class="mega-item-link">Pharmacognosy</a>
+                            <a href="course/m-pharma-pharmaceutical-quality-assurance.php" class="mega-item-link">Pharmaceutical Quality Assurance</a>
+                            <a href="course/m-pharma-industrial-pharmacy.php" class="mega-item-link">Industrial Pharmacy</a>
+                            <a href="course/m-pharma-pharmaceutical-chemistry.php" class="mega-item-link">Pharmaceutical Chemistry</a>
+
+                            <div class="p-2.5 rounded-3 mt-3 border border-custom" style="background: #fbf9f6;">
+                                <div class="fw-bold text-primary small mb-1" style="font-size: 0.73rem;"><i class="fa-solid fa-award text-gold me-1"></i> Constituent Pharmacy Colleges</div>
+                                <div class="d-flex flex-wrap gap-1 text-muted-custom" style="font-size: 0.7rem;">
+                                    <a href="school-of-pharmacy.php" class="text-primary text-decoration-none">School of Pharmacy</a> · 
+                                    <a href="college-of-pharmacy.php" class="text-primary text-decoration-none">College of Pharmacy</a> · 
+                                    <a href="institute-of-pharmacy.php" class="text-primary text-decoration-none">Institute of Pharmacy</a>
+                                </div>
                             </div>
-                            <a href="syllabus-scheme.php" class="mega-item-link"><i class="fa-solid fa-book-open text-muted me-1"></i> Syllabus &amp; Scheme</a>
-                            <a href="time-table.php" class="mega-item-link"><i class="fa-solid fa-clock text-muted me-1"></i> Class Time Table</a>
-                            <a href="so-po.php" class="mega-item-link"><i class="fa-solid fa-bullseye text-muted me-1"></i> Program Outcomes (SO / PO)</a>
+                        </div>
+
+                        <!-- Col 4: Agriculture, Sciences, Humanities & Ph.D. -->
+                        <div class="col-lg-3">
+                            <div class="mega-column-title">
+                                <i class="fa-solid fa-flask text-gold me-1.5"></i> Sciences &amp; Humanities
+                            </div>
+                            
+                            <div class="mega-sub-header">Agriculture</div>
+                            <a href="course/bachelor-of-agriculture.php" class="mega-item-link fw-semibold text-primary"><i class="fa-solid fa-wheat-awn text-gold me-1"></i> B.Sc. (Agriculture — 4 Years)</a>
+
+                            <div class="mega-sub-header">Fashion Design</div>
+                            <a href="course/diploma-in-fashion-design.php" class="mega-item-link">Diploma in Fashion Design</a>
+                            <a href="course/b-sc-fashion-design.php" class="mega-item-link">B.Sc. in Fashion Design</a>
+                            <a href="course/m-sc-fashion-design.php" class="mega-item-link">M.Sc. in Fashion Design</a>
+
+                            <div class="mega-sub-header">Social Work &amp; Library Science</div>
+                            <a href="course/bsw-bachelor-of-social-work.php" class="mega-item-link">Bachelor of Social Work (BSW)</a>
+                            <a href="course/msw-master-of-social-work-2.php" class="mega-item-link">Master of Social Work (MSW)</a>
+                            <a href="course/b-lib-i-sc.php" class="mega-item-link">Library Science (B.Lib. &amp; I.Sc.)</a>
+                            <a href="course/m-lib-i-sc.php" class="mega-item-link">Library Science (M.Lib. &amp; I.Sc.)</a>
+
+                            <div class="mega-sub-header">Basic Sciences &amp; Arts</div>
+                            <a href="department-of-science.php" class="mega-item-link">B.Sc. (PCM, ZBC, CS, Biochem)</a>
+                            <a href="department-of-science.php" class="mega-item-link">M.Sc. (Physics, Chem, Maths, Botany, Zoology)</a>
+                            <a href="course/ba.php" class="mega-item-link">Bachelor of Arts (B.A.)</a>
+                            <a href="department-of-arts.php" class="mega-item-link">M.A. (English, Hindi, Sociology, etc.)</a>
+
+                            <!-- Doctoral Research Ph.D. Box -->
+                            <div class="p-2.5 rounded-3 bg-secondary-tint border border-gold mt-3 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="badge bg-gold text-dark fw-bold" style="font-size: 0.65rem;">Doctoral</span>
+                                    <a href="course/ph-d.php" class="fw-bold text-primary text-decoration-none d-block small mt-0.5">Ph.D. Research Programs</a>
+                                    <div class="text-muted-custom" style="font-size: 0.68rem;">Doctoral Entrance Test (DET)</div>
+                                </div>
+                                <a href="course/ph-d.php" class="btn btn-sm btn-gold-pill py-1 px-2.5"><i class="fa-solid fa-arrow-right" style="font-size: 0.7rem;"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Mega Menu Bottom Action Banner -->
+                        <div class="col-12 mt-3 pt-3 border-top border-custom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge rounded-pill bg-gold text-dark fw-bold px-2.5 py-1" style="font-size: 0.72rem;">68 Programs</span>
+                                <span class="small text-muted-custom" style="font-size: 0.76rem;">All programs approved by UGC, AICTE, PCI, MP State Paramedical / Ayush Council</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <a href="programs.php" class="btn btn-sm btn-gold-pill px-3 py-1.5 fw-bold" style="font-size: 0.75rem;">
+                                    <i class="fa-solid fa-graduation-cap me-1"></i> View All 68 Programs Directory &rarr;
+                                </a>
+                                <a href="admission-procedure.php" class="btn btn-sm btn-outline-pill px-3 py-1.5 fw-medium" style="font-size: 0.75rem;">
+                                    <i class="fa-solid fa-paper-plane me-1"></i> Admission Procedure
+                                </a>
+                            </div>
                         </div>
 
                     </div>
@@ -381,7 +432,7 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
                     Admissions <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.65rem;"></i>
                 </a>
                 <ul class="dropdown-menu shadow border-custom rounded-3 py-2 mt-2" style="min-width: 260px;">
-                    <li><a class="dropdown-item py-1.5 small fw-bold" href="programs.php"><i class="fa-solid fa-graduation-cap text-gold me-2"></i> All Academic Programs</a></li>
+                    <li><a class="dropdown-item py-1.5 small fw-bold" href="programs.php"><i class="fa-solid fa-graduation-cap text-gold me-2"></i> All Programs</a></li>
                     <li><a class="dropdown-item py-1.5 small fw-semibold text-primary" href="apply-now.php"><i class="fa-solid fa-bolt text-gold me-2"></i> Apply Online 2026</a></li>
                     <li><hr class="dropdown-divider my-1"></li>
                     <li><a class="dropdown-item py-1.5 small" href="admission-assistance.php">Admission Assistance</a></li>
@@ -521,10 +572,54 @@ $isEventActive = in_array($currentScript, ['gallery.php', 'university-events.php
             <a href="index.php" class="nav-link py-1.5 px-2 rounded text-primary fw-bold bg-secondary-tint"><i class="fa-solid fa-house me-2"></i> Home</a>
             <a href="why-aku.php" class="nav-link py-1.5 px-2 rounded text-dark">About Us</a>
             <a href="academic-calendar.php" class="nav-link py-1.5 px-2 rounded text-dark">Academic Calendar</a>
-            <a href="department-of-computer-science-engineering.php" class="nav-link py-1.5 px-2 rounded text-dark">Faculty &amp; Departments</a>
+            <!-- Mobile Expandable Programs Accordion -->
+            <div class="my-1">
+                <button class="btn btn-light w-100 text-start py-2 px-2.5 rounded-3 d-flex align-items-center justify-content-between text-primary fw-bold small border" type="button" data-bs-toggle="collapse" data-bs-target="#mobileProgramsList" aria-expanded="false">
+                    <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-graduation-cap text-gold"></i> Programs (68)</span>
+                    <i class="fa-solid fa-chevron-down text-muted" style="font-size: 0.7rem;"></i>
+                </button>
+                <div class="collapse mt-1 p-2 bg-white rounded-3 border" id="mobileProgramsList">
+                    <a href="programs.php" class="d-block py-1 px-2 fw-bold text-gold text-decoration-none border-bottom mb-2 small"><i class="fa-solid fa-list-check me-1"></i> View All 68 Programs Directory &rarr;</a>
+                    
+                    <div class="fw-bold text-primary small text-uppercase mt-2 mb-1" style="font-size: 0.72rem; letter-spacing: 0.05em;"><i class="fa-solid fa-microchip text-gold me-1"></i> Engineering &amp; Technology</div>
+                    <a href="course/diploma-in-civil-engineering.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• Polytechnic / Diploma Engineering (7 Branches)</a>
+                    <a href="course/b-e-computer-science-engineering.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• Bachelor of Engineering (B.E. — 6 Branches)</a>
+                    <a href="course/m-tech-computer-science-engineering.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• Master of Technology (M.Tech — 7 Branches)</a>
+                    <div class="d-flex gap-2 ps-2 pt-1 mb-2">
+                        <a href="college-of-engineering.php" class="text-primary small fw-semibold text-decoration-none" style="font-size: 0.72rem;">College of Engg. &rarr;</a>
+                        <a href="school-of-engineering.php" class="text-primary small fw-semibold text-decoration-none" style="font-size: 0.72rem;">School of Engg. &rarr;</a>
+                    </div>
+                    
+                    <div class="fw-bold text-primary small text-uppercase mt-2 mb-1" style="font-size: 0.72rem; letter-spacing: 0.05em;"><i class="fa-solid fa-briefcase text-gold me-1"></i> Management, IT &amp; Law</div>
+                    <a href="course/bba.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• BBA / MBA / MBA in Hospital Administration</a>
+                    <a href="course/bca.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• DCA / PGDCA / BCA / MCA</a>
+                    <a href="course/ballb-5-year-course.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• B.A. LL.B. / LL.B. / LL.M.</a>
+                    <a href="course/bachelor-of-education-b-ed.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• Bachelor of Education (B.Ed.)</a>
+                    <a href="course/b-com-bachelor-of-commerce.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• B.Com / M.Com (Taxation)</a>
+                    
+                    <div class="fw-bold text-primary small text-uppercase mt-2 mb-1" style="font-size: 0.72rem; letter-spacing: 0.05em;"><i class="fa-solid fa-heart-pulse text-gold me-1"></i> Pharmacy &amp; Medical Sciences</div>
+                    <a href="faculty-of-medical-science.php" class="d-block py-1 ps-2 text-primary fw-semibold small text-decoration-none">• Medical Sciences: BAMS &amp; BHMS</a>
+                    <a href="course/d-pharma.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• D. Pharma / B. Pharma</a>
+                    <a href="course/m-pharma-pharmaceutics.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• M. Pharma (6 Specializations)</a>
+                    <div class="d-flex flex-wrap gap-2 ps-2 pt-1 mb-2">
+                        <a href="school-of-pharmacy.php" class="text-primary small fw-semibold text-decoration-none" style="font-size: 0.72rem;">School of Pharmacy</a> · 
+                        <a href="college-of-pharmacy.php" class="text-primary small fw-semibold text-decoration-none" style="font-size: 0.72rem;">College of Pharmacy</a> · 
+                        <a href="institute-of-pharmacy.php" class="text-primary small fw-semibold text-decoration-none" style="font-size: 0.72rem;">Institute of Pharmacy</a>
+                    </div>
+
+                    <div class="fw-bold text-primary small text-uppercase mt-2 mb-1" style="font-size: 0.72rem; letter-spacing: 0.05em;"><i class="fa-solid fa-flask text-gold me-1"></i> Sciences, Humanities &amp; Ph.D.</div>
+                    <a href="course/bachelor-of-agriculture.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• B.Sc. (Agriculture — 4 Years)</a>
+                    <a href="course/diploma-in-fashion-design.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• Fashion Design (Diploma, B.Sc., M.Sc.)</a>
+                    <a href="course/bsw-bachelor-of-social-work.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• Social Work (BSW, MSW)</a>
+                    <a href="course/b-lib-i-sc.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• Library Science (B.Lib., M.Lib.)</a>
+                    <a href="department-of-science.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• B.Sc. &amp; M.Sc. (Basic Sciences)</a>
+                    <a href="department-of-arts.php" class="d-block py-1 ps-2 text-dark small text-decoration-none">• B.A. &amp; M.A. (Arts &amp; Humanities)</a>
+                    <a href="course/ph-d.php" class="d-block py-1 ps-2 text-primary fw-bold small text-decoration-none">• Doctor of Philosophy (Ph.D.)</a>
+                </div>
+            </div>
+            
             <a href="about-the-section.php" class="nav-link py-1.5 px-2 rounded text-dark">Examination</a>
             <a href="anti-reggiging-committee.php" class="nav-link py-1.5 px-2 rounded text-dark">Committees</a>
-            <a href="programs.php" class="nav-link py-1.5 px-2 rounded text-dark fw-semibold">Academic Programs</a>
             <a href="admission-procedure.php" class="nav-link py-1.5 px-2 rounded text-dark">Admissions</a>
             <a href="placement-cell.php" class="nav-link py-1.5 px-2 rounded text-dark">Placements</a>
             <a href="research-committee.php" class="nav-link py-1.5 px-2 rounded text-dark">Research</a>

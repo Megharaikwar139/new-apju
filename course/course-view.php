@@ -21,7 +21,13 @@ $courseTitle = $course['title'] ?? ucwords(str_replace(['-', 'engg', 'cse', 'it'
 $degreeType = $course['degree_type'] ?? 'UG';
 $duration = $course['duration'] ?? '4 Years';
 $approvals = $course['approvals'] ?? 'UGC Recognized | AICTE / PCI Approved';
-$overview = $course['content'] ?? "The {$courseTitle} program at Dr. A.P.J. Abdul Kalam University is designed to equip students with solid theoretical foundations, advanced hands-on technical skills, and industry-oriented problem-solving competence.";
+$rawContent = trim($course['content'] ?? '');
+if (empty(strip_tags($rawContent))) {
+    $overview = "<p class=\"lead fs-6 mb-3\">The <strong>" . htmlspecialchars($courseTitle) . "</strong> at Dr. A.P.J. Abdul Kalam University, Indore is an advanced, industry-aligned " . htmlspecialchars($degreeType) . " degree program designed to provide students with rigorous academic depth, contemporary practical skills, and robust career preparation.</p>
+    <p>Conducted in accordance with approved statutory frameworks (" . htmlspecialchars($approvals) . "), this " . htmlspecialchars($duration) . " program blends foundational coursework with modern applied training, laboratory experimentation, and professional mentorship. Graduates are empowered with critical problem-solving capabilities, industry-standard competencies, and ethical leadership ready for competitive national and global career avenues.</p>";
+} else {
+    $overview = $rawContent;
+}
 $eligibility = $course['eligibility'] ?? "Passed qualifying 10+2 / Diploma / Graduation examination with required minimum aggregate marks from a recognized Board/University.";
 $keyFeatures = $course['key_features'] ?? '';
 $careerOpportunities = $course['career_opportunities'] ?? '';
@@ -59,6 +65,19 @@ if (!empty($careerOpportunities)) {
     }
 }
 
+if (empty($keyFeaturesHtml)) {
+    $keyFeaturesHtml = '<li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-circle-check text-gold mt-1 flex-shrink-0"></i> <span>Comprehensive industry-aligned curriculum reviewed by academic &amp; corporate experts.</span></li>
+    <li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-circle-check text-gold mt-1 flex-shrink-0"></i> <span>Advanced laboratory infrastructure with modern instrumentation &amp; computing facilities.</span></li>
+    <li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-circle-check text-gold mt-1 flex-shrink-0"></i> <span>Dedicated placement support, soft-skills development, and industry internship tie-ups.</span></li>
+    <li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-circle-check text-gold mt-1 flex-shrink-0"></i> <span>Statutory approval &amp; recognition ensuring broad eligibility for higher education &amp; public sector jobs.</span></li>';
+}
+
+if (empty($careerOpportunitiesHtml)) {
+    $careerOpportunitiesHtml = '<li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-briefcase text-gold mt-1 flex-shrink-0"></i> <span>Professional roles in leading corporate, industrial, and healthcare/public sector organizations.</span></li>
+    <li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-briefcase text-gold mt-1 flex-shrink-0"></i> <span>High-demand technical specialist, management consultant, and executive positions.</span></li>
+    <li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-briefcase text-gold mt-1 flex-shrink-0"></i> <span>Eligibility for state and central government competitive examinations and research fellowships.</span></li>
+    <li class="d-flex align-items-start gap-2.5"><i class="fa-solid fa-briefcase text-gold mt-1 flex-shrink-0"></i> <span>Strong academic springboard for advanced postgraduate or doctoral research programs.</span></li>';
+}
 $pageTitle = htmlspecialchars($courseTitle) . " - Dr. APJ Abdul Kalam University, Indore";
 include __DIR__ . "/../header.php";
 ?>
